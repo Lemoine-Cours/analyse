@@ -1,0 +1,67 @@
+% !TeX program = lualatex
+\documentclass[aspectratio=169,professionalfonts]{beamer}
+\makeatletter
+\def\input@path{{../../commun/theme-imt-atlantique/theme/}}
+\makeatother
+\usepackage[french]{babel}
+\usepackage{microtype,amsmath,amssymb,mathtools,graphicx}
+\usetheme{IMTAtlantique}
+\IMTSetAssetPath{../../commun/theme-imt-atlantique/assets/backgrounds/}
+\input{meta.tex}
+\title{\SLDeckTitle}
+\subtitle{\SLDeckSubtitle}
+\author{\SLDeckAuthor}
+\institute{\SLDeckInstitute}
+\date{}
+\IMTSetFooter{\SLFooterCourse}{\SLFooterTeacher}
+\IMTDisableAutomaticSectionPages
+
+% Composition locale : charte, fontes et fonds IMT inchangés.
+\setbeamerfont{normal text}{size=\fontsize{10.5}{13}}
+\setbeamerfont{itemize/enumerate body}{size=\fontsize{10.5}{13}}
+\setbeamerfont{frametitle}{size=\fontsize{17.5}{20.5}}
+\addtobeamertemplate{footline}{\vspace*{6mm}}{}
+\setbeamertemplate{frametitle}{%
+  \vspace*{2mm}%
+  \begin{beamercolorbox}[wd=\textwidth,sep=0pt]{frametitle}
+    \raggedright\usebeamerfont{frametitle}\insertframetitle\strut\par
+  \end{beamercolorbox}\vspace*{2mm}}
+\setbeamertemplate{itemize item}{\color{IMTCyan}\raise.15ex\hbox{\rule{.65ex}{.65ex}}}
+\setlength{\parskip}{1mm}
+\hyphenpenalty=10000\exhyphenpenalty=10000
+\raggedright
+\usetikzlibrary{arrows.meta,calc,positioning}
+\tikzset{axes/.style={-{Stealth[length=1.5mm]},IMTGray700,line width=.35pt},courb/.style={IMTNavy,line width=1pt},pointille/.style={dashed,IMTGray700,line width=.4pt}}
+\newcommand{\coursanalyse}{\fontsize{10.5}{13}\selectfont\setlength{\abovedisplayskip}{6pt}\setlength{\belowdisplayskip}{6pt}\setlength{\abovedisplayshortskip}{4pt}\setlength{\belowdisplayshortskip}{4pt}\vspace*{1mm}}
+
+\tcbset{coursbase/.style={enhanced,arc=1mm,boxrule=0pt,boxsep=0mm,coltext=IMTAnthracite,halign=flush left,halign title=flush left,fontupper=\sffamily\fontsize{10.5}{13}\selectfont,fonttitle=\sffamily\bfseries\fontsize{10}{12}\selectfont,titlerule=0pt,before skip=1mm,after skip=2mm,left=3mm,right=3mm,top=1.5mm,bottom=1.5mm,toptitle=1.3mm,bottomtitle=1.3mm}}
+\newtcolorbox{cours}[2][IMTCyan]{coursbase,colback=IMTCyan!9,colbacktitle=IMTCyan,coltitle=IMTNavy,title={#2}}
+\newtcolorbox{notion}[1]{coursbase,colback=IMTCyan!9,colbacktitle=IMTCyan,coltitle=IMTNavy,title={DÉFINITION\quad #1}}
+\newtcolorbox{theoreme}[1]{coursbase,colback=IMTNavy,colbacktitle=IMTNavy,coltitle=IMTGreen,coltext=white,before upper={\setbeamercolor{itemize/enumerate body}{fg=white}},title={THÉORÈME\quad #1},top=1.5mm,bottom=3mm}
+\newtcolorbox{resultat}[1]{coursbase,colback=IMTGreen!23,colbacktitle=IMTGreen,coltitle=IMTNavy,title={#1}}
+\newtcolorbox{exemple}[1]{coursbase,frame hidden,colback=IMTGray700!5,colbacktitle=IMTGray700!5,coltitle=IMTNavy,title={#1},borderline west={1.3pt}{0pt}{IMTOrange},top=1.5mm,bottom=2mm}
+\newcommand{\question}[1]{\par\vfill\vspace{2mm}\begin{tcolorbox}[enhanced,colback=IMTNavy,colframe=IMTNavy,arc=1mm,boxrule=0pt,boxsep=0pt,left=3mm,right=3mm,top=2mm,bottom=2mm,before skip=0mm,after skip=4mm,fontupper=\sffamily\fontsize{9.5}{12}\selectfont,coltext=white]\textcolor{IMTGreen}{\textbf{À vous}}\quad #1\end{tcolorbox}}
+\newcommand{\pivot}[1]{\textcolor{IMTOrange}{\mathbf{#1}}}
+\newcommand{\repere}[1]{{\color{IMTGray700}\fontsize{9}{11}\selectfont #1\par}\vspace{2mm}}
+\newcommand{\aug}[1]{\left(\begin{array}{ccc|c}#1\end{array}\right)}
+% Clôture positionnée dans la zone blanche du fond institutionnel.
+\renewcommand{\IMTFinalFrame}[2][]{%
+  \begingroup\IMTUseFinalBackground\IMTHideFooter
+  \begin{frame}[plain,noframenumbering]
+    \begin{tikzpicture}[remember picture,overlay]
+    \node[anchor=north west,inner sep=0pt,text width=.70\paperwidth]at([xshift=9mm,yshift=-36mm]current page.north west){%
+      {\IMTDisplayFont\bfseries\fontsize{29}{34}\selectfont\color{IMTNavy}#2\par}
+      \vspace{5mm}{\sffamily\fontsize{14}{18}\selectfont\color{IMTAnthracite}#1\par}
+      \vspace{5mm}\begin{tikzpicture}\fill[IMTCyan](0,0)rectangle(25mm,1mm);\fill[IMTGreen](26mm,0)rectangle(38mm,1mm);\end{tikzpicture}};
+    \end{tikzpicture}
+  \end{frame}\endgroup}
+
+
+\newcommand{\vcol}[1]{\begin{pmatrix}#1\end{pmatrix}}
+\newcommand{\R}{\mathbb R}
+\newcommand{\N}{\mathbb N}
+\begin{document}
+\IMTTitleFrame
+\input{body.tex}
+\IMTFinalFrame[\SLDeckSubtitle]{\SLDeckTitle}
+\end{document}

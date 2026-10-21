@@ -1,0 +1,3 @@
+[submodule "commun/theme-imt-atlantique"]
+	path = commun/theme-imt-atlantique
+	url = https://github.com/Lemoine-Cours/theme-imt-atlantique.git

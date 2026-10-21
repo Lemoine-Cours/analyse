@@ -1,0 +1,14 @@
+{
+  "title": null,
+  "status": "en attente des supports",
+  "language": "français",
+  "format": "Beamer 16:9 et PDF",
+  "level": null,
+  "session_duration": null,
+  "td_scope": "TD de base en priorité ; compléments séparés",
+  "td_driven": false,
+  "proofs_on_slides": false,
+  "notation": "Reprendre les notations des supports ; composition avec \\circ ; vecteurs colonnes.",
+  "graphics": "Charte IMT Atlantique ; lecture verticale ; une propriété par ligne ; colonnes seulement justifiées.",
+  "sources": []
+}
