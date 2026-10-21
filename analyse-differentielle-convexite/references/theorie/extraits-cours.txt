@@ -1,0 +1,5408 @@
+=== Cours original, page PDF 3 ===
+II.1. Accroissements finis et contrôle des
+variations
+Dans ce chapitre nous nous placerons dans les espaces euclidiens
+³− →
+Rn,〈• | •〉
+´
+et
+³− →
+Rp,〈• | •〉
+´
+,
+munis de leurs produits scalaires canoniques.
+Nous noterons par∥•∥les normes euclidiennes associées.
+Dans ce chapitre, nous allons utiliser la différentielle pour contrôler l’accroissement d’une
+fonction entre deux vecteurs. L ’idée fondamentale consiste à ramener l’étude d’une fonction
+définie sur
+− →
+Rn à celle d’une fonction d’une variable réelle en restreignant la fonction à un
+segment.
+II.1.1 Restriction à un segment et théorème des accroissements finis
+II.1.1.1 Restriction d’une fonction à un segment
+Soient U un ouvert de
+− →
+Rn et
+³
+⃗a,⃗b
+´
+∈U 2 tels que le segment [ ⃗a,⃗b] soit inclus dans U . Par
+définition,
+[⃗a,⃗b]=
+n
+⃗a+t( ⃗b− ⃗a) ;t∈[0,1]
+o
+.
+Ce segment est naturellement paramétré par la fonctionγ: [0, 1]− →
+− →
+Rn définie par
+γ(t)= ⃗a+t( ⃗b− ⃗a).
+On a alorsγ(0)= ⃗aetγ(1)= ⃗b.
+Ainsi, si f : U− →
+− →
+Rp est une fonction vectorielle, l’étude de f sur le segment [ ⃗a,⃗b] revient à
+étudier la fonction d’une variable réelleϕ=f◦γ.
+Proposition II.1.1.1 — Différentielle le long d’un segment.
+Soient U un ouvert de
+− →
+Rn,
+³
+⃗a,⃗b
+´
+∈U 2 tels que [⃗a,⃗b] ⊂U et f : U− →
+− →
+Rp une fonction vecto-
+rielle différentiable surU. Considérons la fonction
+ϕ: [0,1]− →
+− →
+Rp
+t7− →f
+³
+⃗a+t( ⃗b− ⃗a)
+´
+.
+Alorsϕest dérivable sur ]0,1[ et
+∀t∈]0,1[,ϕ ′(t)= − − − − − − − − →d f ⃗a+t( ⃗b−⃗a)(⃗b− ⃗a).
+Démonstration.
+Soient U un ouvert de
+− →
+Rn,
+³
+⃗a,⃗b
+´
+∈U 2 tels que [⃗a,⃗b] ⊂U et f : U− →
+− →
+Rp une fonction vectorielle
+différentiable surU.
+
+=== Cours original, page PDF 4 ===
+148Chapitre II.1. Accroissements finis et contrôle des variations
+Considérons la fonction ϕ définie dans l’énoncé et posonsγ(t) = ⃗a+t (⃗b− ⃗a) pour tout t∈ [0,1].
+La fonctionγest affine, donc dérivable sur ]0, 1[, et sa dérivée est donnée par
+∀t∈]0,1[,γ ′(t)= ⃗b− ⃗a.
+Commeϕ=f◦γ, la règle de la chaîne donne, pour toutt∈]0,1[,
+ϕ′(t)= − − − − →d f γ(t)
+¡
+γ′(t)
+¢
+.
+En utilisant les expressions deγ(t) et deγ ′(t), on obtient finalement
+∀t∈]0,1[,ϕ ′(t)= − − − − − − − − →d f ⃗a+t( ⃗b−⃗a)(⃗b− ⃗a).
+■
+■ Remarque II.1.1.1 — Interprétation.
+Le vecteur ⃗b− ⃗a donne la direction du segment [⃗a,⃗b]. La Proposition II.1.1.1 montre donc que
+la dérivée de la restriction defau segment est la dérivée defsuivant cette direction :
+ϕ′(t)=D ⃗b−⃗a f
+³
+⃗a+t( ⃗b− ⃗a)
+´
+.
+Le passage par un segment permet ainsi de transformer un problème posé dans
+− →
+Rn en un
+problème à une seule variable réelle. ■
+II.1.1.2 Théorème des accroissements finis pour une fonction à valeurs réelles
+Considérons maintenant une fonction f : U− →R . Sa restriction à un segment est une
+fonction d’une variable réelle à valeurs réelles. On peut donc lui appliquer le théorème des
+accroissements finis déjà connu en dimension un.
+Proposition II.1.1.2 — Théorème des accroissements finis.
+Soient U un ouvert de
+− →
+Rn,
+³
+⃗a,⃗b
+´
+∈U 2 avec ⃗a̸= ⃗b, tels que [ ⃗a,⃗b] ⊂U , et f : U− →R une
+fonction différentiable surU.
+Alors il existeθ∈]0, 1[ tel que
+f( ⃗b)−f( ⃗a)= − − − − − − − − →d f ⃗a+θ(⃗b−⃗a)(⃗b− ⃗a).
+Démonstration.
+Soient U un ouvert de
+− →
+Rn,
+³
+⃗a,⃗b
+´
+∈U 2 avec ⃗a̸= ⃗b, tels que [⃗a,⃗b] ⊂U , et f : U− →R une fonction
+différentiable surU.
+Considérons la fonctionϕ: [0,1]− →Rdéfinie par
+∀t∈[0,1],ϕ(t)=f
+³
+⃗a+t( ⃗b− ⃗a)
+´
+.
+Commefest différentiable surU, elle est continue surU.
+La fonctionϕest donc continue sur [0, 1].
+D’après la Proposition II.1.1.1, elle est en outre dérivable sur ]0, 1[.
+Le théorème des accroissements finis d’une variable réelle assure alors l’existence deθ∈ ]0,1[ tel
+que
+ϕ(1)−ϕ(0)=ϕ ′(θ).
+
+=== Cours original, page PDF 5 ===
+II.1.2 Contrôle de la différentielle et des accroissements 149
+Orϕ(1)=f( ⃗b) etϕ(0)=f( ⃗a), tandis que la Proposition II.1.1.1 donne
+ϕ′(θ)= − − − − − − − − →d f ⃗a+θ(⃗b−⃗a)(⃗b− ⃗a).
+Par conséquent,
+f( ⃗b)−f( ⃗a)= − − − − − − − − →d f ⃗a+θ(⃗b−⃗a)(⃗b− ⃗a).
+■
+■ Remarque II.1.1.2 — Position du vecteur intermédiaire.
+Dans la Proposition II.1.1.2, si l’on pose ⃗c= ⃗a+θ (⃗b− ⃗a), alors ⃗c∈ ]⃗a,⃗b[. Le théorème des
+accroissements finis peut donc également s’écrire
+f( ⃗b)−f( ⃗a)= − − →d f⃗c (⃗b− ⃗a)
+pour un certain vecteur ⃗csitué strictement entre ⃗aet ⃗b.■
+Corollaire II.1.1.1 — Théorème des accroissements finis et gradient.
+Soient U un ouvert de
+− →
+Rn,
+³
+⃗a,⃗b
+´
+∈U 2 avec ⃗a̸= ⃗b, tels que [ ⃗a,⃗b] ⊂U , et f : U− →R une
+fonction différentiable surU.
+Alors il existe ⃗c∈] ⃗a,⃗b[ tel que
+f( ⃗b)−f( ⃗a)=
+D
+⃗∇f( ⃗c)| ⃗b− ⃗a
+E
+.
+Démonstration.
+Soient U un ouvert de
+− →
+Rn,
+³
+⃗a,⃗b
+´
+∈U 2 avec ⃗a̸= ⃗b, tels que [⃗a,⃗b] ⊂U , et f : U− →R une fonction
+différentiable surU.
+D’après la Proposition II.1.1.2, il existe⃗c∈] ⃗a,⃗b[ tel que
+f( ⃗b)−f( ⃗a)= − − →d f⃗c (⃗b− ⃗a).
+Commefest à valeurs dansR, le théorème de représentation de Riesz nous donne
+∀⃗h∈
+− →
+Rn, − − →d f⃗c (⃗h)=
+D
+⃗∇f( ⃗c)| ⃗h
+E
+.
+En prenant ⃗h= ⃗b− ⃗a, on obtient
+f( ⃗b)−f( ⃗a)=
+D
+⃗∇f( ⃗c)| ⃗b− ⃗a
+E
+.
+■
+II.1.2 Contrôle de la différentielle et des accroissements
+Le théorème des accroissements finis avec égalité est propre au cas scalaire. Il serait tentant,
+pour une fonctionf:U− →
+− →
+Rp, d’affirmer qu’il existe⃗c∈] ⃗a,⃗b[ tel que
+f( ⃗b)−f( ⃗a)= − − →d f⃗c (⃗b− ⃗a).
+Cette affirmation est fausse en général lorsquep>1.
+
+=== Cours original, page PDF 6 ===
+150Chapitre II.1. Accroissements finis et contrôle des variations
+■ Remarque II.1.2.1 — Le théorème avec égalité est propre au cas scalaire.
+Considérons la fonction
+f: R− →
+− →
+R2
+t7− →
+µt 2
+t 3
+¶
+.
+On a
+f(1)−f(−1)=
+µ0
+2
+¶
+,
+tandis que, pour toutc∈]−1,1[,
+f ′(c)=
+µ 2c
+3c2
+¶
+.
+Une égalité de la formef(1)−f(−1)=f ′(c)(1−(−1)) imposerait donc
+µ0
+2
+¶
+=
+µ 4c
+6c2
+¶
+.
+La première composante impose c= 0, tandis que la seconde donnerait alors 2 = 0, ce qui
+est impossible. Il n’existe donc aucun même nombre c vérifiant simultanément les deux
+composantes.
+Dans le cas vectoriel, le résultat pertinent n’est donc plus une égalité, mais uneinégalité des
+accroissements finis. ■
+II.1.2.1 Norme d’une application linéaire
+Afin de contrôler la variation d’une fonction vectorielle, nous devons pouvoir mesurer la taille
+de sa différentielle. Comme une différentielle est une application linéaire, nous introduisons
+pour cela une norme sur l’espace des applications linéaires.
+Proposition II.1.2.1 — Existence et finitude du suprémum.
+Soient
+¡
+n,p
+¢
+∈
+¡
+N∗¢2 et − →L∈ − →L
+³− →
+Rn,
+− →
+Rp
+´
+.
+L ’ensemble n
+∥− →L( ⃗h)∥ | ⃗h∈
+− →
+Rn,∥ ⃗h∥ =1
+o
+est une partie non vide et majorée deR. Il admet donc un suprémum fini.
+Démonstration.
+Soient
+¡
+n,p
+¢
+∈
+¡
+N∗¢2 et − →L∈ − →L
+³− →
+Rn,
+− →
+Rp
+´
+.
+Montrons que l’ensemble
+A=
+n
+∥− →L( ⃗h)∥ | ⃗h∈
+− →
+Rn,∥ ⃗h∥ =1
+o
+est non vide et majoré.
+— Montrons queAest non vide.
+Comme n≥ 1, il existe un vecteur ⃗h∈
+− →
+Rn tel que ∥⃗h∥ = 1. Par conséquent, ∥− →L (⃗h)∥ ∈A , et
+donc
+A̸=∅.
+— Montrons queAest majoré.
+D’après le Lemme I.1.2.1, il existe une constanteC≥0 telle que, pour tout ⃗h∈
+− →
+Rn,
+∥− →L( ⃗h)∥ ≤C∥ ⃗h∥.
+
+=== Cours original, page PDF 7 ===
+II.1.2 Contrôle de la différentielle et des accroissements 151
+En particulier, pour tout ⃗h∈
+− →
+Rn tel que∥ ⃗h∥ =1, on obtient
+∥− →L( ⃗h)∥ ≤C.
+AinsiCest un majorant deA.
+L ’ensembleAétant une partie non vide et majorée deR, il admet un suprémum fini.■
+Définition II.1.2.1 — Norme d’une application linéaire.
+Soit − →L∈ − →L
+³− →
+Rn,
+− →
+Rp
+´
+. On appellenorme de − →Lle nombre
+∥− →L∥ =sup
+∥⃗h∥=1
+∥− →L( ⃗h)∥.
+Proposition II.1.2.2 — La norme opérateur est une norme.
+Soient
+¡
+n,p
+¢
+∈
+¡
+N∗¢2.
+L ’application
+− →N: − →L
+³− →
+Rn,
+− →
+Rp
+´
+− →R +
+− →L7− → ∥ − →L∥
+est une norme sur − →L
+³− →
+Rn,
+− →
+Rp
+´
+.
+Démonstration.
+Soient
+¡
+n,p
+¢
+∈
+¡
+N∗¢2.
+Montrons que l’application− →L7− → ∥− →L∥vérifie les propriétés d’une norme sur − →L
+³− →
+Rn,
+− →
+Rp
+´
+.
+— Montrons la positivité.
+Soit − →L∈ − →L
+³− →
+Rn,
+− →
+Rp
+´
+.
+Pour tout ⃗h∈
+− →
+Rn tel que∥ ⃗h∥ =1, on a
+∥− →L( ⃗h)∥ ≥0.
+Par conséquent,
+∥− →L∥ ≥0.
+— Montrons le caractère défini.
+Soit − →L∈ − →L
+³− →
+Rn,
+− →
+Rp
+´
+.
+Si − →L=0, alors, pour tout ⃗h∈
+− →
+Rn tel que∥ ⃗h∥ =1,
+∥− →L( ⃗h)∥ =0,
+et donc
+∥− →L∥ =0.
+Réciproquement, supposons que∥ − →L∥ =0.
+Soit ⃗h∈
+− →
+Rn. Si ⃗h= ⃗0, alors − →L( ⃗h)= ⃗0.
+Si ⃗h̸= ⃗0, alors
+°°°°°
+⃗h
+∥⃗h∥
+°°°°° =1. D’après la Définition II.1.2.1,
+°°°°°
+− →L
+Ã ⃗h
+∥⃗h∥
+!°°°°° ≤ ∥− →L∥ =0.
+
+=== Cours original, page PDF 8 ===
+152Chapitre II.1. Accroissements finis et contrôle des variations
+Par conséquent,
+− →L
+Ã ⃗h
+∥⃗h∥
+!
+=⃗0.
+Par linéarité de − →L, on obtient − →L( ⃗h)= ⃗0.
+Ainsi − →L( ⃗h)= ⃗0 pour tout ⃗h∈
+− →
+Rn, donc
+− →L=0.
+On a ainsi montré
+∥− →L∥ =0⇐ ⇒ − →L=0.
+— Montrons l’homogénéité.
+Soit
+³− →L,λ
+´
+∈ − →L
+³− →
+Rn,
+− →
+Rp
+´
+×R.
+Pour tout ⃗h∈
+− →
+Rn tel que∥ ⃗h∥ =1, on a
+∥(λ− →L)( ⃗h)∥ = ∥λ− →L( ⃗h)∥ = |λ|∥− →L( ⃗h)∥.
+En prenant le suprémum sur l’ensemble des vecteurs de norme 1, on obtient
+∥λ− →L∥ = |λ|∥ − →L∥.
+— Montrons l’inégalité triangulaire.
+Soit
+³− →L 1, − →L 2
+´
+∈
+³− →L
+³− →
+Rn,
+− →
+Rp
+´´2
+.
+Pour tout ⃗h∈
+− →
+Rn tel que∥ ⃗h∥ =1, l’inégalité triangulaire dans
+− →
+Rp donne
+∥(− →L 1 + − →L 2)(⃗h)∥ ≤∥− →L 1(⃗h)∥ + ∥− →L 2(⃗h)∥
+≤∥− →L 1∥ + ∥− →L 2∥.
+En prenant le suprémum sur l’ensemble des vecteurs de norme 1, on obtient
+∥− →L 1 + − →L 2∥ ≤ ∥− →L 1∥ + ∥− →L 2∥.
+L ’application− →L7− → ∥− →L∥vérifie donc toutes les propriétés d’une norme sur − →L
+³− →
+Rn,
+− →
+Rp
+´
+.■
+Proposition II.1.2.3 — Majoration par la norme d’une application linéaire.
+Soit − →L:
+− →
+Rn − →
+− →
+Rp une application linéaire. Alors
+∀⃗h∈
+− →
+Rn,∥ − →L( ⃗h)∥ ≤ ∥− →L∥∥ ⃗h∥.
+Démonstration.
+Soit − →L:
+− →
+Rn − →
+− →
+Rp une application linéaire et soit ⃗h∈
+− →
+Rn.
+Si ⃗h= ⃗0, alors − →L( ⃗h)= ⃗0 par linéarité et l’inégalité est immédiate.
+Supposons maintenant ⃗h̸= ⃗0. Comme
+⃗h= ∥ ⃗h∥
+⃗h
+∥⃗h∥
+,
+la linéarité de − →Ldonne
+− →L( ⃗h)= ∥ ⃗h∥− →L
+Ã ⃗h
+∥⃗h∥
+!
+.
+
+=== Cours original, page PDF 9 ===
+II.1.2 Contrôle de la différentielle et des accroissements 153
+Or le vecteur
+⃗h
+∥⃗h∥
+est de norme 1. Par définition de∥ − →L∥,
+°°°°°
+− →L
+Ã ⃗h
+∥⃗h∥
+!°°°°° ≤ ∥− →L∥.
+On en déduit
+∥− →L( ⃗h)∥ ≤ ∥− →L∥∥ ⃗h∥.
+■
+■ Remarque II.1.2.2 — Cas d’une forme linéaire.
+Soit − →L:
+− →
+Rn − →Rune forme linéaire.
+D’après le théorème de représentation de Riesz, il existe un unique vecteur⃗v∈
+− →
+Rn tel que
+∀⃗h∈
+− →
+Rn, − →L( ⃗h)=
+D
+⃗v| ⃗h
+E
+.
+L ’inégalité de Cauchy–Schwarz donne alors
+|− →L( ⃗h)| ≤ ∥⃗v∥∥⃗h∥,
+d’où∥− →L∥ ≤ ∥ ⃗v∥. Si ⃗v̸= ⃗0, en prenant ⃗h= ⃗v
+∥⃗v∥ , on a∥ ⃗h∥ =1 et
+|− →L( ⃗h)| =
+¿
+⃗v| ⃗v
+∥⃗v∥
+À
+= ∥⃗v∥.
+On obtient donc∥ − →L∥ = ∥ ⃗v∥; cette égalité reste évidemment vraie lorsque ⃗v= ⃗0.
+En particulier, si f : U− →R est différentiable en ⃗a, le vecteur qui représente la forme linéaire− − →d f ⃗a est précisément ⃗∇f( ⃗a). Ainsi,
+∥− − →d f ⃗a ∥ = ∥⃗∇f( ⃗a)∥.
+■
+Lorsque la matrice d’une application linéaire est connue, ses coefficients permettent d’obte-
+nir directement une majoration de sa norme. Cette estimation sera particulièrement utile pour
+majorer la norme d’une différentielle à partir de sa matrice jacobienne.
+Proposition II.1.2.4 — Majoration à partir des coefficients d’une matrice.
+Soit − →L :
+− →
+Rn − →
+− →
+Rp une application linéaire dont la matrice dans les bases canoniques est
+A=(a i j )1≤i≤p
+1≤j≤n
+. Alors
+∥− →L∥ ≤
+Ã pX
+i=1
+nX
+j=1
+a2
+i j
+!1/2
+.
+Démonstration.
+Soit − →L :
+− →
+Rn − →
+− →
+Rp une application linéaire dont la matrice dans les bases canoniques est
+A=(a i j )1≤i≤p
+1≤j≤n
+.
+Soit ⃗h=
+
+
+h1
+...
+hn
+
+ ∈
+− →
+Rn. Dans les bases canoniques, les coordonnées de − →L (⃗h) sont obtenues par le
+
+=== Cours original, page PDF 10 ===
+154Chapitre II.1. Accroissements finis et contrôle des variations
+produit matricielA ⃗h. On a donc
+− →L( ⃗h)=A ⃗h=
+
+
+nX
+j=1
+a1j h j
+...
+nX
+j=1
+ap j h j
+
+
+.
+Par définition de la norme euclidienne dans
+− →
+Rp, on obtient alors
+∥− →L( ⃗h)∥2 =
+pX
+i=1
+Ã
+nX
+j=1
+ai j h j
+!2
+. (II.1.1)
+Pour tout i∈{ 1,. .. ,p} , l’inégalité de Cauchy–Schwarz appliquée aux familles (ai1 , ... ,a i n) et
+(h1,. .. ,h n) donne Ã
+nX
+j=1
+ai j h j
+!2
+≤
+Ã
+nX
+j=1
+a2
+i j
+! Ã
+nX
+j=1
+h2
+j
+!
+.
+En sommant ces inégalités pouri∈{1,. .. ,p} et en utilisant (II.1.1), il vient
+∥− →L( ⃗h)∥2 ≤
+pX
+i=1
+"Ã
+nX
+j=1
+a2
+i j
+! Ã
+nX
+j=1
+h2
+j
+!#
+=
+Ã pX
+i=1
+nX
+j=1
+a2
+i j
+! Ã
+nX
+j=1
+h2
+j
+!
+.
+Or, par définition de la norme euclidienne dans
+− →
+Rn,
+nX
+j=1
+h2
+j = ∥⃗h∥2.
+Ainsi,
+∥− →L( ⃗h)∥2 ≤
+Ã pX
+i=1
+nX
+j=1
+a2
+i j
+!
+∥⃗h∥2.
+Les deux membres de cette inégalité étant positifs ou nuls, on peut en prendre la racine carrée.
+On obtient donc, pour tout ⃗h∈
+− →
+Rn,
+∥− →L( ⃗h)∥ ≤
+Ã pX
+i=1
+nX
+j=1
+a2
+i j
+!1/2
+∥⃗h∥.
+En particulier, pour tout ⃗h∈
+− →
+Rn tel que∥ ⃗h∥ =1, on a
+∥− →L( ⃗h)∥ ≤
+Ã pX
+i=1
+nX
+j=1
+a2
+i j
+!1/2
+.
+La quantité située dans le membre de droite est donc un majorant de l’ensemble
+n
+∥− →L( ⃗h)∥ | ⃗h∈
+− →
+Rn,∥ ⃗h∥ =1
+o
+.
+D’après la Définition II.1.2.1,
+∥− →L∥ =sup
+∥⃗h∥=1
+∥− →L( ⃗h)∥.
+Par conséquent,
+∥− →L∥ ≤
+Ã pX
+i=1
+nX
+j=1
+a2
+i j
+!1/2
+■
+
+=== Cours original, page PDF 11 ===
+II.1.2 Contrôle de la différentielle et des accroissements 155
+■ Remarque II.1.2.3 — Application à la matrice jacobienne.
+Soient U un ouvert de
+− →
+Rn et f : U− →
+− →
+Rp une fonction différentiable. Pour tout ⃗x∈U , la
+matrice de − − →d f⃗x dans les bases canoniques estJ f (⃗x). La Proposition II.1.2.4 donne donc
+∥− − →d f⃗x ∥ ≤
+Ã pX
+i=1
+nX
+j=1
+µ ∂f i
+∂x j
+(⃗x)
+¶2!1/2
+.
+■
+II.1.2.2 Inégalité des accroissements finis
+Nous disposons maintenant de l’outil nécessaire pour remplacer, dans le cas vectoriel,
+l’égalité du théorème des accroissements finis par une majoration de l’accroissement de la
+fonction.
+Proposition II.1.2.5 — Inégalité des accroissements finis.
+Soient U un ouvert de
+− →
+Rn,
+³
+⃗a,⃗b
+´
+∈U 2 tels que [⃗a,⃗b] ⊂U , et f : U− →
+− →
+Rp une fonction diffé-
+rentiable surU.
+Supposons qu’il existeM≥0 tel que
+∀⃗x∈[ ⃗a,⃗b],∥ − − →d f⃗x ∥ ≤M.
+Alors
+∥f( ⃗b)−f( ⃗a)∥ ≤M∥ ⃗b− ⃗a∥.
+Démonstration.
+Soient U un ouvert de
+− →
+Rn,
+³
+⃗a,⃗b
+´
+∈U 2 tels que [⃗a,⃗b] ⊂U , et f : U− →
+− →
+Rp une fonction différen-
+tiable surU.
+Supposons qu’il existeM≥0 tel que∥ − − →d f⃗x ∥ ≤Mpour tout ⃗x∈[ ⃗a,⃗b].
+— Sif( ⃗b)=f( ⃗a), alors∥f( ⃗b)−f( ⃗a)∥ =0 et le résultat est immédiat.
+— Supposons quef( ⃗b)̸=f( ⃗a) et posons
+⃗v= f( ⃗b)−f( ⃗a)
+∥f( ⃗b)−f( ⃗a)∥
+.
+On a alors∥ ⃗v∥ =1.
+Considérons la fonction à valeurs réellesϕ: [0, 1]− →Rdéfinie par
+∀t∈[0,1],ϕ(t)=
+D
+f
+³
+⃗a+t( ⃗b− ⃗a)
+´
+| ⃗v
+E
+.
+Comme [⃗a,⃗b]⊂U, on a ⃗a+t( ⃗b− ⃗a)∈Upour toutt∈[0, 1].
+La fonctionfétant différentiable surU, elle est continue surU.
+La fonction ϕ est donc continue sur [0,1]. De plus, la règle de la chaîne montre qu’elle est
+dérivable sur ]0, 1[.
+Le théorème des accroissements finis appliqué à ϕ sur [0,1] assure alors l’existence de
+θ∈]0, 1[ tel que
+ϕ(1)−ϕ(0)=ϕ ′(θ).
+
+=== Cours original, page PDF 12 ===
+156Chapitre II.1. Accroissements finis et contrôle des variations
+Par définition de ⃗v,
+ϕ(1)−ϕ(0)=
+D
+f( ⃗b)−f( ⃗a)| ⃗v
+E
+=
+D
+f( ⃗b)−f( ⃗a)|f( ⃗b)−f( ⃗a)
+E
+∥f( ⃗b)−f( ⃗a)∥
+=∥f( ⃗b)−f( ⃗a)∥.
+D’autre part, la règle de la chaîne donne
+ϕ′(θ)=
+D− − − − − − − − →d f ⃗a+θ(⃗b−⃗a)(⃗b− ⃗a)| ⃗v
+E
+.
+D’après l’inégalité de Cauchy–Schwarz et puisque∥⃗v∥ =1,
+|ϕ′(θ)| ≤
+°°°− − − − − − − − →d f ⃗a+θ(⃗b−⃗a)(⃗b− ⃗a)
+°°°.
+La Proposition II.1.2.3 donne alors
+|ϕ′(θ)| ≤
+°°°− − − − − − − − →d f ⃗a+θ(⃗b−⃗a)
+°°° ∥⃗b− ⃗a∥.
+Comme ⃗a+θ( ⃗b− ⃗a)∈[ ⃗a,⃗b], l’hypothèse de majoration de la différentielle donne
+|ϕ′(θ)| ≤M∥ ⃗b− ⃗a∥.
+Enfin,
+ϕ′(θ)=ϕ(1)−ϕ(0)= ∥f( ⃗b)−f( ⃗a)∥ ≥0.
+On a donc
+|ϕ′(θ)| = ∥f( ⃗b)−f( ⃗a)∥,
+et par conséquent
+∥f( ⃗b)−f( ⃗a)∥ ≤M∥ ⃗b− ⃗a∥.
+■
+Dans le cas d’une fonction à valeurs réelles, le théorème de représentation de Riesz permet
+de remplacer la norme de la différentielle par la norme du gradient.
+Corollaire II.1.2.1 — Inégalité des accroissements finis et gradient.
+Soient U un ouvert de
+− →
+Rn,
+³
+⃗a,⃗b
+´
+∈U 2 tels que [⃗a,⃗b] ⊂U , et f : U− →R une fonction différen-
+tiable surU. Supposons qu’il existeM≥0 tel que
+∀⃗x∈[ ⃗a,⃗b],∥ ⃗∇f( ⃗x)∥ ≤M.
+Alors
+|f( ⃗b)−f( ⃗a)| ≤M∥ ⃗b− ⃗a∥.
+Démonstration.
+Soient U un ouvert de
+− →
+Rn,
+³
+⃗a,⃗b
+´
+∈U 2 tels que [⃗a,⃗b] ⊂U , et f : U− →R une fonction différentiable
+surU. Supposons qu’il existeM≥0 tel que∥ ⃗∇f( ⃗x)∥ ≤Mpour tout ⃗x∈[ ⃗a,⃗b].
+D’après le théorème de représentation de Riesz, on a
+∀⃗x∈[ ⃗a,⃗b],∥ − − →d f⃗x ∥ = ∥⃗∇f( ⃗x)∥ ≤M.
+La Proposition II.1.2.5 donne donc
+|f( ⃗b)−f( ⃗a)| ≤M∥ ⃗b− ⃗a∥.
+■
+
+=== Cours original, page PDF 13 ===
+II.1.3 Fonctions lipschitziennes et conséquences 157
+II.1.3 Fonctions lipschitziennes et conséquences
+L ’inégalité des accroissements finis fournit une estimation valable entre deux vecteurs dès
+que la norme de la différentielle est majorée par une même constante sur le segment qui les relie.
+Lorsque cette estimation est valable pour tous les couples de vecteurs d’un même ensemble,
+elle conduit à la notion de fonction lipschitzienne.
+Définition II.1.3.1 — Ensemble convexe.
+Soit U une partie de
+− →
+Rn. On dit que U estconvexelorsque, pour tout
+³
+⃗a,⃗b
+´
+∈U 2, le segment
+reliant ⃗aà ⃗best entièrement contenu dansU, c’est-à-dire lorsque
+∀
+³
+⃗a,⃗b
+´
+∈U 2, [ ⃗a,⃗b]⊂U.
+■ Remarque II.1.3.1 — La convexité dans la suite du cours.
+Dans ce chapitre, nous utiliserons uniquement la propriété géométrique exprimée dans la
+Définition II.1.3.1 : si U est convexe, alors le segment reliant deux vecteurs quelconques de U
+reste dansU.
+La convexité des ensembles et des fonctions fera l’objet d’un chapitre ultérieur, où cette
+notion sera étudiée de manière plus complète. ■
+Définition II.1.3.2 — Fonction lipschitzienne.
+SoientUune partie de
+− →
+Rn,f:U− →
+− →
+Rp une fonction vectorielle etM≥0.
+On dit quefestM-lipschitzienne sur Ulorsque
+∀
+¡
+⃗x, ⃗y
+¢
+∈U 2,∥f( ⃗y)−f( ⃗x)∥ ≤M∥ ⃗y− ⃗x∥.
+On dit que f estlipschitzienne sur U lorsqu’il existe un réelM≥ 0 pour lequel cette propriété
+est vérifiée.
+Proposition II.1.3.1 — Une fonction lipschitzienne est continue.
+SoientUune partie de
+− →
+Rn etf:U− →
+− →
+Rp une fonction lipschitzienne surU.
+Alorsfest continue surU.
+Démonstration.
+SoientUune partie de
+− →
+Rn etf:U− →
+− →
+Rp une fonction lipschitzienne surU.
+Il existe doncM≥0 tel que
+∀
+¡
+⃗x, ⃗y
+¢
+∈U 2,∥f( ⃗y)−f( ⃗x)∥ ≤M∥ ⃗y− ⃗x∥.
+Soit ⃗a∈Uet soitε>0. Posons
+η= ε
+M+1 .
+On aη>0.
+Soit ⃗x∈Utel que∥ ⃗x− ⃗a∥ <η. Alors
+∥f( ⃗x)−f( ⃗a)∥ ≤M∥ ⃗x− ⃗a∥ <Mη= M
+M+1 ε<ε.
+D’après la Définition I.1.2.6,fest continue en ⃗a.
+Comme ⃗aest quelconque dansU,fest continue surU.■
+
+=== Cours original, page PDF 14 ===
+158Chapitre II.1. Accroissements finis et contrôle des variations
+Proposition II.1.3.2 — Différentielle bornée sur un ouvert convexe.
+SoientUun ouvert convexe de
+− →
+Rn etf:U− →
+− →
+Rp une fonction différentiable surU.
+S’il existeM≥0 tel que
+∀⃗x∈U,∥ − − →d f⃗x ∥ ≤M,
+alorsfestM-lipschitzienne surU.
+Démonstration.
+SoientUun ouvert convexe de
+− →
+Rn etf:U− →
+− →
+Rp une fonction différentiable surU.
+Supposons qu’il existeM≥0 tel que∥ − − →d f⃗x ∥ ≤Mpour tout ⃗x∈U.
+Soit
+³
+⃗a,⃗b
+´
+∈U 2.
+CommeUest convexe, le segment [ ⃗a,⃗b] est inclus dansU. La Proposition II.1.2.5 donne alors
+∥f( ⃗b)−f( ⃗a)∥ ≤M∥ ⃗b− ⃗a∥.
+Cette relation étant vraie pour tout
+³
+⃗a,⃗b
+´
+∈U 2, la fonctionfestM-lipschitzienne surU.■
+Corollaire II.1.3.1 — Gradient borné et fonction lipschitzienne.
+SoientUun ouvert convexe de
+− →
+Rn etf:U− →Rune fonction différentiable surU.
+S’il existeM≥0 tel que
+∀⃗x∈U,∥ ⃗∇f( ⃗x)∥ ≤M,
+alorsfestM-lipschitzienne surU.
+Démonstration.
+SoientUun ouvert convexe de
+− →
+Rn etf:U− →Rune fonction différentiable surU.
+Supposons qu’il existeM≥0 tel que∥ ⃗∇f( ⃗x)∥ ≤Mpour tout ⃗x∈U.
+D’après le théorème de représentation de Riesz, on a
+∀⃗x∈U,∥ − − →d f⃗x ∥ = ∥⃗∇f( ⃗x)∥ ≤M.
+La Proposition II.1.3.2 montre donc quefestM-lipschitzienne surU.■
+L ’inégalité des accroissements finis permet également de retrouver une propriété fondamen-
+tale de l’analyse à une variable : sur un domaine convexe, une fonction dont la différentielle est
+nulle partout ne peut varier.
+Corollaire II.1.3.2 — Différentielle nulle sur un ouvert convexe.
+SoientUun ouvert convexe de
+− →
+Rn etf:U− →
+− →
+Rp une fonction différentiable surU. Si
+∀⃗x∈U, − − →d f⃗x =0,
+alorsfest constante surU.
+Démonstration.
+Soient U un ouvert convexe de
+− →
+Rn et f : U− →
+− →
+Rp une fonction différentiable sur U . Supposons
+que − − →d f⃗x =0 pour tout ⃗x∈U.
+On a alors∥ − − →d f⃗x ∥ =0 pour tout ⃗x∈U. La Proposition II.1.3.2, appliquée avecM=0, donne
+∀
+³
+⃗a,⃗b
+´
+∈U 2,∥f( ⃗b)−f( ⃗a)∥ ≤0.
+Ainsif( ⃗b)=f( ⃗a) pour tout
+³
+⃗a,⃗b
+´
+∈U 2. La fonctionfest donc constante surU.■
+
+=== Cours original, page PDF 15 ===
+II.1.3 Fonctions lipschitziennes et conséquences 159
+Corollaire II.1.3.3 — Gradient nul sur un ouvert convexe.
+SoientUun ouvert convexe de
+− →
+Rn etf:U− →Rune fonction différentiable surU. Si
+∀⃗x∈U, ⃗∇f( ⃗x)= ⃗0,
+alorsfest constante surU.
+Démonstration.
+Soient U un ouvert convexe de
+− →
+Rn et f : U− →R une fonction différentiable sur U . Supposons
+que ⃗∇f( ⃗x)= ⃗0 pour tout ⃗x∈U.
+D’après le théorème de représentation de Riesz, la forme linéaire − − →d f⃗x est représentée par le
+vecteur ⃗∇f( ⃗x).
+On a donc − − →d f⃗x =0 pour tout ⃗x∈U.
+Le Corollaire II.1.3.2 montre alors quefest constante surU.■
+Méthodologie II.1.3.1 — Utiliser l’inégalité des accroissements finis.
+Pour utiliser l’inégalité des accroissements finis entre deux vecteurs⃗a et ⃗b, on pourra suivre
+la démarche suivante :
+1. vérifier que le segment [ ⃗a,⃗b] reste dans le domaine de définition ;
+2. calculer la différentielle − − →d f⃗x ou la matrice jacobienneJ f (⃗x) ;
+3. dans le cas scalaire, calculer le gradient ⃗∇f( ⃗x) ;
+4. majorer∥ − − →d f⃗x ∥sur le segment ou sur un ensemble convexe contenant ce segment ;
+5. appliquer l’inégalité
+∥f( ⃗b)−f( ⃗a)∥ ≤M∥ ⃗b− ⃗a∥.
+■ Remarque II.1.3.2 — Égalité ou inégalité.
+Il convient de bien distinguer les deux situations. Pour une fonction f : U− →R , le théorème
+des accroissements finis fournit l’existence d’un vecteur intermédiaire⃗c∈] ⃗a,⃗b[ tel que
+f( ⃗b)−f( ⃗a)= − − →d f⃗c (⃗b− ⃗a).
+Pour une fonction f : U− →
+− →
+Rp avec p> 1, une telle égalité n’est pas vraie en général. Si
+la norme de la différentielle est majorée par M sur le segment, on dispose en revanche de
+l’inégalité
+∥f( ⃗b)−f( ⃗a)∥ ≤M∥ ⃗b− ⃗a∥.
+■
+
+=== Cours original, page PDF 31 ===
+II.2. Fonctions de classeC 1 et
+différentiabilité
+Dans ce chapitre nous nous placerons dans les espaces euclidiens
+³− →
+Rn,〈• | •〉
+´
+et
+³− →
+Rp,〈• | •〉
+´
+,
+munis de leurs produits scalaires canoniques.
+Nous noterons par∥•∥les normes euclidiennes associées.
+Dans les chapitres précédents, nous avons défini la différentiabilité d’une fonction vectorielle
+par l’existence d’une application linéaire donnant son approximation au premier ordre. Nous
+avons également vu que l’existence des dérivées partielles ne suffit pas, à elle seule, à assurer la
+différentiabilité.
+L ’objectif de ce chapitre est de préciser la notion de régularité de classeC 1, puis d’établir un
+critère pratique permettant de déduire la différentiabilité et la régularité de classe C 1 à partir de
+la continuité des dérivées partielles.
+II.2.1 Fonctions de classeC 1
+II.2.1.1 Continuité de la différentielle
+Soient U un ouvert de
+− →
+Rn et f : U− →
+− →
+Rp une fonction différentiable sur U . À chaque
+vecteur ⃗x∈U est associée une application linéaire − − →d f⃗x ∈ − →L
+³− →
+Rn,
+− →
+Rp
+´
+. On peut donc considérer
+l’application
+d f: U− → − →L
+³− →
+Rn,
+− →
+Rp
+´
+⃗x7− → − − →d f⃗x .
+L ’espace des applications linéaires étant muni de la norme introduite dans le chapitre
+précédent, il est possible d’étudier la continuité de cette application.
+Définition II.2.1.1 — Continuité de la différentielle.
+SoientUun ouvert de
+− →
+Rn, ⃗a∈Uetf:U− →
+− →
+Rp une fonction différentiable surU.
+On dit que la différentielle defestcontinue en ⃗alorsque
+lim
+⃗x→⃗a
+°°°− − →d f⃗x − − − →d f ⃗a
+°°° =0.
+■ Remarque II.2.1.1 — Ce qui varie.
+Pour chaque ⃗x∈U, − − →d f⃗x est une application linéaire.
+La continuité de la différentielle signifie donc que les applications linéaires qui fournissent
+les approximations locales defvarient continûment avec le vecteur ⃗x.■
+
+=== Cours original, page PDF 32 ===
+176Chapitre II.2. Fonctions de classeC 1 et différentiabilité
+II.2.1.2 Fonctions de classeC 1
+Définition II.2.1.2 — Fonction de classeC 1.
+SoientUun ouvert de
+− →
+Rn etf:U− →
+− →
+Rp.
+On dit quefestde classeC 1 sur Ulorsquefest différentiable surUet que l’application
+d f: U− → − →L
+³− →
+Rn,
+− →
+Rp
+´
+⃗x7− → − − →d f⃗x
+est continue surU.
+■ Remarque II.2.1.2 — Différentiable et de classeC 1.
+Une fonction de classeC 1 est nécessairement différentiable.
+La réciproque est fausse en général : une fonction peut être différentiable sans que sa diffé-
+rentielle soit continue. Ainsi,
+f∈C 1(U)= ⇒fdifférentiable surU,
+mais l’implication réciproque n’est pas vraie en général.■
+II.2.1.3 Continuité de la différentielle, matrice jacobienne et dérivées partielles
+Munissons
+− →
+Rn et
+− →
+Rp de leurs bases canoniques.
+Pour toute fonction différentiable f : U− →
+− →
+Rp, la matrice jacobienne J f (⃗x) est la matrice de − − →d f⃗x
+dans ces bases.
+Nous identifierons naturellement Mp,n (R) à
+− − →
+Rpn en rangeant les coefficients d’une matrice
+comme les composantes d’un vecteur.
+Proposition II.2.1.1 — Continuité de la différentielle et matrice jacobienne.
+SoientUun ouvert de
+− →
+Rn etf:U− →
+− →
+Rp une fonction différentiable surU.
+Les propriétés suivantes sont équivalentes :
+(i) l’application ⃗x7− →− − →d f⃗x est continue surU;
+(ii) l’application ⃗x7− →J f (⃗x) est continue surU;
+(iii) toutes les dérivées partielles ∂f i
+∂x j
+sont continues surU.
+Démonstration.
+SoientUun ouvert de
+− →
+Rn etf:U− →
+− →
+Rp une fonction différentiable surU.
+— Montrons que (i)= ⇒(ii).
+Supposons que l’application⃗x7− →− − →d f⃗x est continue surU.
+Soit ⃗a∈U.
+Pour tout ⃗x∈U, la matrice de l’application linéaire − − →d f⃗x − − − →d f ⃗a dans les bases canoniques
+estJ f (⃗x)−J f (⃗a).
+Pour tout j∈{ 1, .. .,n} , la j -ième colonne de cette matrice est le vecteur de coordonnées
+de ³− − →d f⃗x − − − →d f ⃗a
+´
+(⃗e j ).
+Comme∥ ⃗e j ∥ =1, la Proposition II.1.2.3 donne
+°°°
+³− − →d f⃗x − − − →d f ⃗a
+´
+(⃗e j )
+°°° ≤
+°°°− − →d f⃗x − − − →d f ⃗a
+°°°.
+
+=== Cours original, page PDF 33 ===
+II.2.1 Fonctions de classeC 1 177
+Par conséquent,
+Ã pX
+i=1
+nX
+j=1
+µ ∂f i
+∂x j
+(⃗x)− ∂f i
+∂x j
+(⃗a)
+¶2!1/2
+≤
+p
+n
+°°°− − →d f⃗x − − − →d f ⃗a
+°°°.
+Le membre de droite tend vers 0 lorsque ⃗xtend vers ⃗a.
+AinsiJ f (⃗x) tend versJ f (⃗a) dans
+− − →
+Rpn .
+L ’application⃗x7− →J f (⃗x) est donc continue en ⃗a.
+Comme ⃗aest quelconque dansU, elle est continue surU.
+— Montrons que (ii)= ⇒(iii).
+Supposons que l’application⃗x7− →J f (⃗x) est continue surU.
+Pour tout ⃗x∈U, on a
+J f (⃗x)=
+
+
+∂f 1
+∂x1
+(⃗x)· · · ∂f 1
+∂xn
+(⃗x)
+... ...
+∂f p
+∂x1
+(⃗x)· · ·
+∂f p
+∂xn
+(⃗x)
+
+
+.
+En identifiant Mp,n (R) à
+− − →
+Rpn , les fonctions composantes de l’application⃗x7− →J f (⃗x) sont
+exactement les fonctions ∂f i
+∂x j
+.
+D’après le Corollaire I.1.2.3, toutes ces fonctions composantes sont continues surU.
+— Montrons que (iii)= ⇒(i).
+Supposons que toutes les dérivées partielles ∂f i
+∂x j
+sont continues surU.
+Soit ⃗a∈U.
+Pour tout ⃗x∈U, la matrice de − − →d f⃗x − − − →d f ⃗a dans les bases canoniques estJ f (⃗x)−J f (⃗a).
+D’après la Proposition II.1.2.4, on a
+°°°− − →d f⃗x − − − →d f ⃗a
+°°° ≤
+Ã pX
+i=1
+nX
+j=1
+µ ∂f i
+∂x j
+(⃗x)− ∂f i
+∂x j
+(⃗a)
+¶2!1/2
+.
+Toutes les dérivées partielles étant continues en⃗a, le membre de droite tend vers 0 lorsque
+⃗xtend vers ⃗a. Ainsi
+lim
+⃗x→⃗a
+°°°− − →d f⃗x − − − →d f ⃗a
+°°° =0.
+La différentielle est donc continue en ⃗a.
+Comme ⃗aest quelconque dansU, l’application ⃗x7− →− − →d f⃗x est continue surU.
+Ainsi les propriétés (i), (ii) et (iii) sont équivalentes.■
+D’après la Définition II.2.1.2 et la Proposition II.2.1.1, une fonction différentiable surU est
+donc de classeC 1 surUsi et seulement si toutes ses dérivées partielles sont continues surU.
+Cette caractérisation suppose toutefois que la fonction soit déjà différentiable. Le résultat suivant
+permet précisément de supprimer cette hypothèse préalable.
+
+=== Cours original, page PDF 34 ===
+178Chapitre II.2. Fonctions de classeC 1 et différentiabilité
+II.2.2 Dérivées partielles, différentiabilité et classeC 1
+II.2.2.1 Continuité des dérivées partielles et différentiabilité
+Proposition II.2.2.1 — Différentiabilité par continuité des dérivées partielles.
+SoientUun ouvert de
+− →
+Rn, ⃗a∈Uetf:U− →
+− →
+Rp.
+Supposons que les dérivées partielles ∂f
+∂x1
+, ... , ∂f
+∂xn
+existent dans un voisinage de ⃗a et soient
+continues en ⃗a.
+Alorsfest différentiable en ⃗aet, pour tout ⃗h=
+nX
+j=1
+h j⃗e j , on a
+− − →d f ⃗a(⃗h)=
+nX
+j=1
+h j
+∂f
+∂x j
+(⃗a).
+Démonstration.
+Soient U un ouvert de
+− →
+Rn, ⃗a∈U et f : U− →
+− →
+Rp une fonction dont les dérivées partielles
+∂f
+∂x1
+,. .. , ∂f
+∂xn
+existent dans un voisinage de ⃗aet sont continues en ⃗a.
+Comme les dérivées partielles considérées sont continues en ⃗a et qu’elles sont en nombre fini, il
+existe r> 0 tel que B(⃗a,r ) ⊂U , tel que toutes ces dérivées partielles soient définies sur B(⃗a,r ) et
+tel que
+∀j∈ 1,n,∀ ⃗x∈B( ⃗a,r),
+°°°°
+∂f
+∂x j
+(⃗x)− ∂f
+∂x j
+(⃗a)
+°°°° <1.
+Soit ⃗h=
+nX
+j=1
+h j⃗e j tel que∥ ⃗h∥ <ret, pour toutj∈ 0,n, posons
+⃗h(j) =
+jX
+k=1
+hk⃗ek, avec ⃗h(0) =⃗0 et ⃗h(n) = ⃗h.
+On a alors
+f( ⃗a+ ⃗h)−f( ⃗a)=
+nX
+j=1
+h
+f
+³
+⃗a+ ⃗h(j)
+´
+−f
+³
+⃗a+ ⃗h(j−1)
+´i
+.
+Pour toutj∈ 1,n, notonsI j le segment deRd’extrémités 0 eth j .
+Pour toutt∈I j , on a
+|t| ≤ |h j |,
+et donc
+t 2 ≤h 2
+j .
+Par définition de ⃗h(j−1) , on a
+⃗h(j−1) =
+j−1X
+k=1
+hk⃗ek.
+Par conséquent,
+⃗h(j−1) +t ⃗e j =
+j−1X
+k=1
+hk⃗ek +t ⃗e j .
+
+=== Cours original, page PDF 35 ===
+II.2.2 Dérivées partielles, différentiabilité et classeC 1 179
+La base canonique étant orthonormée, il vient
+°°°⃗h(j−1) +t ⃗e j
+°°°
+2
+=
+j−1X
+k=1
+h2
+k +t 2
+≤
+j−1X
+k=1
+h2
+k +h 2
+j
+=
+jX
+k=1
+h2
+k
+≤
+nX
+k=1
+h2
+k
+=∥⃗h∥2
+<r 2.
+Les deux membres étant positifs ou nuls, on en déduit que
+°°°⃗h(j−1) +t ⃗e j
+°°° <r.
+Ainsi,
+⃗a+ ⃗h(j−1) +t ⃗e j ∈B( ⃗a,r).
+Pour toutj∈ 1,n, notons
+J j =
+n
+t∈R| ⃗a+ ⃗h(j−1) +t ⃗e j ∈B( ⃗a,r)
+o
+.
+L ’ensembleJj est un intervalle ouvert deRet, d’après ce qui précède,I j ⊂J j .
+Considérons alors la fonction
+g j : J j − →
+− →
+Rp
+t7− →f
+³
+⃗a+ ⃗h(j−1) +t ⃗e j
+´
+.
+Comme les dérivées partielles de f existent sur B(⃗a,r ), la fonction g j est dérivable sur J j et,
+pour toutt∈J j , on a
+g ′
+j (t)= ∂f
+∂x j
+³
+⃗a+ ⃗h(j−1) +t ⃗e j
+´
+.
+Considérons alors la fonction
+ψj (t)=g j (t)−t ∂f
+∂x j
+(⃗a).
+Pour toutt∈J j , on a
+ψ′
+j (t)= ∂f
+∂x j
+³
+⃗a+ ⃗h(j−1) +t ⃗e j
+´
+− ∂f
+∂x j
+(⃗a).
+Posons
+ωj (⃗h)=sup
+t∈I j
+°°°°
+∂f
+∂x j
+³
+⃗a+ ⃗h(j−1) +t ⃗e j
+´
+− ∂f
+∂x j
+(⃗a)
+°°°°.
+Ce suprémum est bien défini puisque, pour tout t∈I j , la quantité dont on prend le suprémum
+est strictement inférieure à 1.
+On a alors, pour toutt∈I j , °°°ψ′
+j (t)
+°°° ≤ω j (⃗h).
+D’après la Proposition II.1.2.5 appliquée àψ j entre 0 eth j , on obtient
+°°ψj (h j )−ψ j (0)
+°° ≤ |h j |ω j (⃗h).
+
+=== Cours original, page PDF 36 ===
+180Chapitre II.2. Fonctions de classeC 1 et différentiabilité
+Or, pour toutt∈I j , nous avons montré que
+°°°⃗h(j−1) +t ⃗e j
+°°° ≤ ∥⃗h∥.
+Comme ∂f
+∂x j
+est continue en ⃗a, on en déduit que
+lim
+⃗h→⃗0
+ωj (⃗h)=0.
+Posons
+ω(⃗h)=max
+1≤j≤n
+ωj (⃗h).
+Le nombre de dérivées partielles étant fini, on a également
+lim
+⃗h→⃗0
+ω(⃗h)=0.
+Pour toutj∈ 1,n, par définition deψ j , on a
+ψj (h j )−ψ j (0)=g j (h j )−g j (0)−h j
+∂f
+∂x j
+(⃗a)
+=f
+³
+⃗a+ ⃗h(j)
+´
+−f
+³
+⃗a+ ⃗h(j−1)
+´
+−h j
+∂f
+∂x j
+(⃗a).
+Posons alors
+⃗r j (⃗h)=ψ j (h j )−ψ j (0).
+On obtient
+f
+³
+⃗a+ ⃗h(j)
+´
+−f
+³
+⃗a+ ⃗h(j−1)
+´
+=h j
+∂f
+∂x j
+(⃗a)+ ⃗r j (⃗h),
+avec
+∥⃗r j (⃗h)∥ ≤ |h j |ω j (⃗h)≤ |h j |ω(⃗h).
+En sommant ces égalités pourj∈ 1,n, on obtient
+f( ⃗a+ ⃗h)−f( ⃗a)=
+nX
+j=1
+h j
+∂f
+∂x j
+(⃗a)+ ⃗r(⃗h),
+où
+⃗r(⃗h)=
+nX
+j=1
+⃗r j (⃗h).
+D’après l’inégalité triangulaire,
+∥⃗r(⃗h)∥ ≤
+nX
+j=1
+∥⃗r j (⃗h)∥ ≤ω( ⃗h)
+nX
+j=1
+|h j |.
+D’après l’inégalité de Cauchy–Schwarz,
+Ã
+nX
+j=1
+|h j |
+!2
+≤
+Ã
+nX
+j=1
+12
+! Ã
+nX
+j=1
+h2
+j
+!
+=n∥⃗h∥2.
+Par conséquent,
+nX
+j=1
+|h j | ≤
+p
+n∥⃗h∥,
+
+=== Cours original, page PDF 37 ===
+II.2.2 Dérivées partielles, différentiabilité et classeC 1 181
+et donc
+∥⃗r(⃗h)∥ ≤
+p
+nω(⃗h)∥⃗h∥.
+Pour ⃗h̸= ⃗0, on en déduit
+0≤ ∥⃗r(⃗h)∥
+∥⃗h∥
+≤
+p
+nω(⃗h).
+Comme
+lim
+⃗h→⃗0
+ω(⃗h)=0,
+le théorème des gendarmes nous donne alors
+lim
+⃗h→⃗0
+∥⃗r(⃗h)∥
+∥⃗h∥
+=0.
+Ainsi,
+⃗r(⃗h)=o
+³
+∥⃗h∥
+´
+lorsque ⃗htend vers ⃗0
+Enfin, l’application
+− →L:
+− →
+Rn − →
+− →
+Rp
+⃗h=
+nX
+j=1
+h j⃗e j 7− →
+nX
+j=1
+h j
+∂f
+∂x j
+(⃗a)
+est linéaire. On a donc
+f( ⃗a+ ⃗h)=f( ⃗a)+ − →L( ⃗h)+o
+³
+∥⃗h∥
+´
+lorsque ⃗htend vers ⃗0
+D’après la Définition I.2.1.1,fest donc différentiable en ⃗aet
+− − →d f ⃗a(⃗h)= − →L( ⃗h)=
+nX
+j=1
+h j
+∂f
+∂x j
+(⃗a).
+■
+■ Remarque II.2.2.1 — Rôle de l’inégalité des accroissements finis.
+L ’inégalité des accroissements finis intervient précisément pour contrôler la différence entre
+les dérivées partielles prises près de ⃗aet les dérivées partielles prises en ⃗a.
+La continuité des dérivées partielles permet alors de montrer que l’erreur est négligeable
+devant∥ ⃗h∥. ■
+Corollaire II.2.2.1 — Continuité des dérivées partielles et classeC 1.
+SoientUun ouvert de
+− →
+Rn etf:U− →
+− →
+Rp.
+Supposons que toutes les dérivées partielles ∂f i
+∂x j
+existent et soient continues surU.
+Alorsfest de classeC 1 surU.
+Démonstration.
+Soient U un ouvert de
+− →
+Rn et f : U− →
+− →
+Rp une fonction telle que toutes les dérivées partielles ∂f i
+∂x j
+existent et soient continues surU.
+Pour tout j∈{ 1,. .. ,n} , la dérivée partielle vectorielle ∂f
+∂x j
+a pour fonctions composantes ∂f 1
+∂x j
+, .. .,
+∂f p
+∂x j
+.
+D’après le Corollaire I.1.2.3, elle est donc continue surU.
+
+=== Cours original, page PDF 38 ===
+182Chapitre II.2. Fonctions de classeC 1 et différentiabilité
+Soit ⃗a∈U.
+Les dérivées partielles vectorielles existent dans un voisinage de ⃗aet sont continues en ⃗a.
+La Proposition II.2.2.1 montre donc quefest différentiable en ⃗a.
+Comme ⃗aest quelconque dansU,fest différentiable surU.
+Enfin, toutes les dérivées partielles ∂f i
+∂x j
+étant continues sur U , la Proposition II.2.1.1 montre
+que l’application⃗x7− →− − →d f⃗x est continue surU.
+D’après la Définition II.2.1.2,fest donc de classeC 1 surU.■
+La continuité des dérivées partielles est une condition suffisante pour la différentiabilité,
+mais elle n’est pas nécessaire.
+■ Remarque II.2.2.2 — Une fonction différentiable qui n’est pas de classeC 1.
+Considérons la fonctionf:
+− →
+R2 − →Rdéfinie par
+f(x,y)=
+
+
+
+x2 sin
+µ 1
+x
+¶
+,x̸=0,
+0,x=0.
+Pourx̸=0, la fonction est de classeC 1. Soit maintenant ⃗a=
+µ 0
+a2
+¶
+. Pour ⃗h=
+µh1
+h2
+¶
+, on a
+|f( ⃗a+ ⃗h)−f( ⃗a)| ≤h 2
+1.
+Ainsi
+0≤ |f( ⃗a+ ⃗h)−f( ⃗a)|
+∥⃗h∥
+≤ |h1|.
+Comme lim
+⃗h→⃗0
+|h1| =0, le théorème d’encadrement donne
+lim
+⃗h→⃗0
+|f( ⃗a+ ⃗h)−f( ⃗a)|
+∥⃗h∥
+=0.
+La fonction f est donc différentiable en tout vecteur de la forme
+µ 0
+a2
+¶
+et sa différentielle y est
+nulle. Elle est par conséquent différentiable sur
+− →
+R2.
+Cependant, pourx̸=0,
+∂f
+∂x (x,y)=2xsin
+µ 1
+x
+¶
+−cos
+µ 1
+x
+¶
+,
+alors que
+∂f
+∂x (0,y)=0.
+La dérivée partielle ∂f
+∂x n’est pas continue au voisinage de la droitex= 0. D’après la Proposi-
+tion II.2.1.1,fn’est donc pas de classeC 1 au voisinage de cette droite.
+Cet exemple montre que la continuité des dérivées partielles est une condition suffisante de
+différentiabilité, mais qu’elle n’est pas nécessaire. ■
+
+=== Cours original, page PDF 39 ===
+II.2.2 Dérivées partielles, différentiabilité et classeC 1 183
+■ Remarque II.2.2.3 — Pourquoi la continuité intervient.
+Considérons la fonctionf:
+− →
+R2 − →Rdéfinie par
+f(x,y)=
+
+
+
+x2y
+x4 +y 2 , (x,y)̸=(0,0),
+0, (x,y)=(0,0).
+Les deux dérivées partielles existent en (0,0) et valent 0. Cependant, pour toutx̸=0, on a
+f(x,x 2)= 1
+2 .
+La fonction n’est donc pas continue en (0,0) et ne peut pas être différentiable en ce vecteur.
+Ainsi, l’existence des dérivées partielles ne suffit pas à assurer la différentiabilité. Le critère
+pratique repose sur une hypothèse supplémentaire essentielle : la continuité des dérivées
+partielles. ■
+Méthodologie II.2.2.1 — Étudier la régularité d’une fonction.
+Pour étudier la régularité d’une fonctionf : U− →
+− →
+Rp, on pourra suivre la démarche suivante :
+1. déterminer précisément le domaineUet vérifier qu’il est ouvert ;
+2. identifier les fonctions composantes lorsquep>1 ;
+3. calculer toutes les dérivées partielles ;
+4. étudier leur continuité ;
+5. si elles existent et sont continues surU, conclure quef∈C 1(U) ;
+6. en déduire quefest différentiable surU;
+7. construire la matrice jacobienneJ f (⃗a) ;
+8. écrire la différentielle à l’aide de la relation
+h− − →d f ⃗a(⃗h)
+i
+e’
+=J f (⃗a)[⃗h]e.
+Il faut toutefois garder à l’esprit que l’échec de la continuité des dérivées partielles ne permet
+pas, à lui seul, de conclure que la fonction n’est pas différentiable.
+II.2.2.2 Cas scalaire et fonctions composantes
+Dans le cas d’une fonctionf:U− →R, le gradient est le vecteur dont les coordonnées dans
+la base canonique sont les dérivées partielles def.
+Proposition II.2.2.2 — ClasseC 1 et gradient.
+SoientUun ouvert de
+− →
+Rn etf:U− →R.
+Les propriétés suivantes sont équivalentes :
+(i)fest de classeC 1 surU;
+(ii) toutes les dérivées partielles de f existent sur U et l’application⃗x7− →⃗∇f (⃗x) est conti-
+nue surU.
+Démonstration.
+SoientUun ouvert de
+− →
+Rn etf:U− →R.
+— Montrons que (i)= ⇒(ii).
+Supposons quefest de classeC 1 surU.
+D’après la Proposition II.2.1.1, toutes les dérivées partielles defsont continues surU.
+Comme elles sont les fonctions composantes de l’application⃗x7− →⃗∇f (⃗x), le Corollaire
+
+=== Cours original, page PDF 40 ===
+184Chapitre II.2. Fonctions de classeC 1 et différentiabilité
+I.1.2.3 montre que le gradient est continu surU.
+— Montrons que (ii)= ⇒(i).
+Supposons que toutes les dérivées partielles de f existent sur U et que l’application
+⃗x7− →⃗∇f( ⃗x) est continue surU.
+D’après le Corollaire I.1.2.3, toutes les dérivées partielles defsont continues surU.
+Le Corollaire II.2.2.1 montre alors quefest de classeC 1 surU.
+■
+■ Remarque II.2.2.4 — Différentielle et gradient.
+Dans le cas scalaire, le théorème de représentation de Riesz, vu en algèbre, associe à la forme
+linéaire − − →d f⃗x l’unique vecteur⃗∇f( ⃗x) tel que
+− − →d f⃗x (⃗h)=
+D
+⃗∇f( ⃗x)| ⃗h
+E
+.
+La continuité de la différentielle est donc équivalente à la continuité du gradient.■
+Proposition II.2.2.3 — ClasseC 1 et fonctions composantes.
+Soient U un ouvert de
+− →
+Rn et f : U− →
+− →
+Rp une fonction dont les fonctions composantes dans
+la base canonique sontf 1,. .. ,f p.
+La fonction f est de classe C 1 sur U si et seulement si chacune des fonctions fi : U− →R est
+de classeC 1 surU.
+Démonstration.
+Soient U un ouvert de
+− →
+Rn et f : U− →
+− →
+Rp une fonction dont les fonctions composantes dans la
+base canonique sontf 1, .. .,f p.
+— Montrons quefde classeC 1 implique que toutes les fonctionsf i sont de classeC 1.
+Supposons quefest de classeC 1 surU.
+D’après la Proposition II.2.1.1, toutes les dérivées partielles ∂f i
+∂x j
+existent et sont continues
+surU.
+Le Corollaire II.2.2.1 appliqué à chaque fonction fi montre que chacune d’elles est de
+classeC 1.
+— Montrons que toutes les fonctionsf i de classeC 1 impliquent quefest de classeC 1.
+Supposons que toutes les fonctionsf i sont de classeC 1 surU.
+Toutes les dérivées partielles ∂f i
+∂x j
+existent alors et sont continues surU.
+Le Corollaire II.2.2.1 montre donc quefest de classeC 1 surU.
+■
+II.2.3 Stabilité de la classeC 1
+Proposition II.2.3.1 — Combinaisons linéaires.
+SoientUun ouvert de
+− →
+Rn,f,g:U− →
+− →
+Rp deux fonctions de classeC 1 surUet (λ,µ)∈R 2.
+Alorsλf+µgest de classeC 1 surUet, pour tout ⃗a∈U,
+− − − − − − − − − − →d(λf+µg) ⃗a =λ − − →d f ⃗a +µ − − →d g⃗a.
+Démonstration.
+SoientUun ouvert de
+− →
+Rn,f,g:U− →
+− →
+Rp deux fonctions de classeC 1 surUet (λ,µ)∈R 2.
+
+=== Cours original, page PDF 41 ===
+II.2.3 Stabilité de la classeC 1 185
+D’après la Proposition I.4.1.1, la fonctionλf+µgest différentiable surUet
+∀⃗a∈U, − − − − − − − − − − →d(λf+µg) ⃗a =λ − − →d f ⃗a +µ − − →d g⃗a
+Pour tout (i,j)∈{1, .. .,p}×{1,. .. ,n}, on a
+∂(λf i +µg i )
+∂x j
+=λ ∂f i
+∂x j
++µ ∂g i
+∂x j
+.
+Les dérivées partielles defet degsont continues d’après la Proposition II.2.1.1.
+Toutes les dérivées partielles deλf+µgsont donc continues surU.
+La même Proposition montre alors queλf+µgest de classeC 1 surU.■
+Proposition II.2.3.2 — Produit de fonctions à valeurs réelles.
+SoientUun ouvert de
+− →
+Rn etf,g:U− →Rdeux fonctions de classeC 1 surU.
+Alorsf gest de classeC 1 surUet, pour tout ⃗a∈U,
+− − − − − →d(f g) ⃗a =f( ⃗a)− − →d g⃗a +g( ⃗a)− − →d f ⃗a.
+Démonstration.
+SoientUun ouvert de
+− →
+Rn etf,g:U− →Rdeux fonctions de classeC 1 surU.
+D’après la Proposition I.4.1.3,f gest différentiable surUet vérifie la formule annoncée.
+Pour toutj∈{1,. .. ,n},
+∂(f g)
+∂x j
+=f ∂g
+∂x j
++g ∂f
+∂x j
+.
+Les fonctions f et g sont continues puisqu’elles sont différentiables, et leurs dérivées partielles
+sont continues d’après la Proposition II.2.1.1.
+La dérivée partielle ∂(f g)
+∂x j
+est donc continue surUpour toutj.
+La Proposition II.2.1.1 montre alors quef gest de classeC 1 surU.■
+Proposition II.2.3.3 — Produit d’une fonction scalaire et d’une fonction vectorielle.
+SoientUun ouvert de
+− →
+Rn,λ:U− →Retf:U− →
+− →
+Rp deux fonctions de classeC 1 surU.
+Alorsλfest de classeC 1 surUet, pour tout
+³
+⃗a,⃗h
+´
+∈U×
+− →
+Rn,
+− − − − − →d(λf) ⃗a(⃗h)=λ( ⃗a)− − →d f ⃗a(⃗h)+ − − − →dλ ⃗a(⃗h)f( ⃗a).
+Démonstration.
+SoientUun ouvert de
+− →
+Rn,λ:U− →Retf:U− →
+− →
+Rp deux fonctions de classeC 1 surU.
+D’après la Proposition II.2.2.3, les fonctions composantesf 1,. .. ,f p sont de classeC 1 surU.
+La Proposition II.2.3.2 montre donc que chacune des fonctionsλf i est de classeC 1 surU.
+Les fonctions λf 1,. .. ,λf p étant les fonctions composantes de λf , la Proposition II.2.2.3 montre
+queλfest de classeC 1 surU.
+Enfin, la formule de la différentielle est celle du Corollaire I.4.1.4.■
+Proposition II.2.3.4 — Quotient de fonctions à valeurs réelles.
+SoientUun ouvert de
+− →
+Rn etf,g:U− →Rdeux fonctions de classeC 1 surU. Posons
+V=
+©
+⃗x∈U;g( ⃗x)̸=0
+ª
+.
+
+=== Cours original, page PDF 42 ===
+186Chapitre II.2. Fonctions de classeC 1 et différentiabilité
+AlorsVest un ouvert de
+− →
+Rn, la fonction f
+g est de classeC 1 surVet, pour tout ⃗a∈V,
+− − − − − →
+d
+µ f
+g
+¶
+⃗a
+= g( ⃗a)− − →d f ⃗a −f( ⃗a)− − →d g⃗a
+g( ⃗a)2 .
+Démonstration.
+SoientUun ouvert de
+− →
+Rn etf,g:U− →Rdeux fonctions de classeC 1 surU.
+PosonsV=
+©
+⃗x∈U;g( ⃗x)̸=0
+ª
+.
+Montrons tout d’abord queVest un ouvert.
+Soit ⃗a∈V.
+Commegest différentiable, elle est continue en ⃗a, etg( ⃗a)̸=0.
+Il existe doncr>0 tel que, pour tout ⃗x∈Uvérifiant∥ ⃗x− ⃗a∥ <r,
+|g(⃗x)−g( ⃗a)| < |g( ⃗a)|
+2 .
+On en déduit|g( ⃗x)| > |g( ⃗a)|
+2 >0.
+AinsiB( ⃗a,r)∩U⊂V.
+CommeUest ouvert, on peut choisirrassez petit pour avoirB( ⃗a,r)⊂U, et doncB( ⃗a,r)⊂V.
+Le vecteur ⃗aétant quelconque dansV, on a donc montré queVest ouvert.
+D’après la Proposition I.4.3.3, f
+g est différentiable sur V et sa différentielle est donnée par la
+formule annoncée.
+Pour toutj∈{1,. .. ,n},
+∂
+∂x j
+µ f
+g
+¶
+=
+g ∂f
+∂x j
+−f ∂g
+∂x j
+g 2 .
+SurV, les fonctionsf,get leurs dérivées partielles sont continues, etgne s’annule pas.
+Toutes les dérivées partielles de f
+g sont donc continues surV.
+La Proposition II.2.1.1 montre que f
+g est de classeC 1 surV.■
+■ Remarque II.2.3.1 — Le quotient reste une opération scalaire.
+La Proposition II.2.3.4 concerne deux fonctions à valeurs dans R. Elle ne définit aucune
+division de deux fonctions vectorielles. ■
+Proposition II.2.3.5 — Composition de fonctions de classeC 1.
+Soient U un ouvert de
+− →
+Rn, V un ouvert de
+− →
+Rp, f : U− →V et g : V− →
+− →
+Rq deux fonctions de
+classeC 1.
+Alorsg◦fest de classeC 1 surUet, pour tout ⃗a∈U,
+− − − − − − − →d(g◦f) ⃗a = − − − − − →d g f( ⃗a) ◦ − − →d f ⃗a.
+Démonstration.
+Soient U un ouvert de
+− →
+Rn, V un ouvert de
+− →
+Rp, f : U− →V et g : V− →
+− →
+Rq deux fonctions de classe
+C 1.
+D’après le Théorème I.4.2.1, la fonction g◦f est différentiable sur U et sa différentielle est
+
+=== Cours original, page PDF 43 ===
+II.2.3 Stabilité de la classeC 1 187
+donnée par la formule annoncée.
+Dans les bases canoniques, le Corollaire I.4.2.2 donne
+Jg◦f (⃗x)=J g (f( ⃗x))J f (⃗x).
+Les applications ⃗x7− →J f (⃗x) et ⃗y7− →J g (⃗y) sont continues d’après la Proposition II.2.1.1.
+De plus, f est continue puisqu’elle est différentiable. L ’application⃗x7− →J g (f (⃗x)) est donc conti-
+nue.
+Les coefficients du produit matriciel Jg (f (⃗x))J f (⃗x) sont des sommes finies de produits de fonc-
+tions continues ; ils sont donc continus.
+La Proposition II.2.1.1 montre alors queg◦fest de classeC 1 surU.■
+■ Remarque II.2.3.2 — Traduction matricielle.
+Dans les bases canoniques, on a
+Jg◦f (⃗a)=J g (f( ⃗a))J f (⃗a).
+■
+
+=== Cours original, page PDF 59 ===
+II.3. Différentielle seconde, Hessienne et
+régularitéC 2
+Dans ce chapitre nous nous placerons dans les espaces euclidiens
+³− →
+Rn,〈• | •〉
+´
+et
+³− →
+Rp,〈• | •〉
+´
+,
+munis de leurs produits scalaires canoniques.
+Nous noterons par∥•∥les normes euclidiennes associées.
+La différentielle − − →d f ⃗a décrit le comportement d’une fonction au premier ordre au voisinage
+d’un vecteur⃗a. Lorsque cette différentielle varie elle-même de manière différentiable, il devient
+possible d’étudier sa variation : on obtient alors la différentielle seconde. Comme au premier
+ordre, nous distinguerons soigneusement l’objet intrinsèque, la différentielle seconde, de sa
+représentation matricielle, la matrice hessienne dans le cas scalaire.
+II.3.1 Différentielle seconde
+II.3.1.1 De la différentielle à la différentielle seconde
+Soient U un ouvert de
+− →
+Rn et f : U− →
+− →
+Rp une fonction différentiable sur U . À chaque vecteur
+⃗x∈U est associée l’application linéaire− − →d f⃗x ∈ − →L
+³− →
+Rn,
+− →
+Rp
+´
+. La différentielle peut donc elle-même
+être considérée comme l’application
+d f: U− → − →L
+³− →
+Rn,
+− →
+Rp
+´
+⃗x7− → − − →d f⃗x .
+L ’espace des applications linéaires étant muni de la norme de la Définition II.1.2.1, nous pouvons
+étudier la différentiabilité de cette nouvelle fonction.
+Définition II.3.1.1 — Fonction deux fois différentiable.
+Soient U un ouvert de
+− →
+Rn, ⃗a∈U et f : U− →
+− →
+Rp une fonction différentiable dans un voisinage
+de ⃗a.
+On dit que f estdeux fois différentiable en ⃗a lorsque l’application⃗x7− →− − →d f⃗x est différentiable
+en ⃗a.
+Lorsque f est deux fois différentiable en ⃗a, sa différentielle − − − − − →d(d f) ⃗a est une application
+linéaire de
+− →
+Rn dans − →L
+³− →
+Rn,
+− →
+Rp
+´
+. Ainsi, pour chaque ⃗h∈
+− →
+Rn, − − − − − →d(d f) ⃗a(⃗h) est elle-même une appli-
+cation linéaire de
+− →
+Rn dans
+− →
+Rp et peut être évaluée en un second vecteur ⃗k.
+
+=== Cours original, page PDF 60 ===
+204Chapitre II.3. Différentielle seconde, Hessienne et régularitéC 2
+Définition II.3.1.2 — Différentielle seconde.
+SoientUun ouvert de
+− →
+Rn, ⃗a∈Uetf:U− →
+− →
+Rp une fonction deux fois différentiable en ⃗a.
+On appelledifférentielle seconde de f en ⃗al’application
+− − − →
+d 2 f⃗a :
+− →
+Rn ×
+− →
+Rn − →
+− →
+Rp
+(⃗h,⃗k)7− →
+³− − − − − →d(d f) ⃗a(⃗h)
+´
+(⃗k).
+Ainsi, pour tout
+³
+⃗h,⃗k
+´
+∈
+³− →
+Rn
+´2
+,
+− − − →
+d 2 f⃗a(⃗h,⃗k)=
+³− − − − − →d(d f) ⃗a(⃗h)
+´
+(⃗k).
+■ Remarque II.3.1.1 — Deux directions interviennent.
+La différentielle première − − →d f ⃗a agit sur une seule direction ⃗h, tandis que la différentielle
+seconde
+− − − →
+d 2 f⃗a agit sur deux directions ⃗h et ⃗k. Elle mesure la variation de la différentielle
+suivant ⃗h, puis évalue cette variation suivant ⃗k. ■
+II.3.1.2 Bilinéarité de la différentielle seconde
+Les applications bilinéaires ayant déjà été étudiées en algèbre, nous utiliserons directement
+cette notion.
+Proposition II.3.1.1 — Bilinéarité de la différentielle seconde.
+SoientUun ouvert de
+− →
+Rn, ⃗a∈Uetf:U− →
+− →
+Rp une fonction deux fois différentiable en ⃗a.
+Alors
+− − − →
+d 2 f⃗a :
+− →
+Rn ×
+− →
+Rn − →
+− →
+Rp est bilinéaire.
+Démonstration.
+Soient U un ouvert de
+− →
+Rn, ⃗a∈U et f : U− →
+− →
+Rp une fonction deux fois différentiable en ⃗a.
+Montrons que
+− − − →
+d 2 f⃗a est linéaire par rapport à chacune de ses deux variables :
+— Fixons ⃗k∈
+− →
+Rn. Comme − − − − − →d(d f) ⃗a est une application linéaire, on obtient
+∀
+³
+⃗h1,⃗h2,λ,µ
+´
+∈
+³− →
+Rn
+´2
+×R 2,
+− − − →
+d 2 f⃗a(λ⃗h1 +µ⃗h2,⃗k)=λ
+− − − →
+d 2 f⃗a(⃗h1,⃗k)+µ
+− − − →
+d 2 f⃗a(⃗h2,⃗k).
+L ’application est donc linéaire par rapport à son premier argument.
+— Fixons maintenant ⃗h∈
+− →
+Rn. Comme − − − − − →d(d f) ⃗a(⃗h) est une application linéaire, on obtient
+³
+⃗k1,⃗k2,λ,µ
+´
+∈
+³− →
+Rn
+´2
+×R 2,
+− − − →
+d 2 f⃗a(⃗h,λ⃗k1 +µ⃗k2)=λ
+− − − →
+d 2 f⃗a(⃗h,⃗k1)+µ
+− − − →
+d 2 f⃗a(⃗h,⃗k2).
+L ’application est donc linéaire par rapport à son second argument.
+Ainsi
+− − − →
+d 2 f⃗a est bilinéaire.■
+II.3.2 Dérivées partielles secondes et matrice hessienne
+II.3.2.1 Dérivées partielles secondes
+Soit e= (⃗e1,. .. ,⃗en) la base canonique de
+− →
+Rn. D’après la Proposition I.3.2.1, pour toute fonc-
+tion différentiablef, ∂f
+∂x j
+(⃗a)= − − →d f ⃗a(⃗e j ).
+
+=== Cours original, page PDF 61 ===
+II.3.2 Dérivées partielles secondes et matrice hessienne 205
+Définition II.3.2.1 — Dérivée partielle seconde.
+SoientUun ouvert de
+− →
+Rn, ⃗a∈Uetf:U− →
+− →
+Rp.
+Lorsque la fonction ∂f
+∂x j
+admet une dérivée partielle par rapport àx i en ⃗a, on note
+∂2 f
+∂xi ∂x j
+(⃗a)= ∂
+∂xi
+µ ∂f
+∂x j
+¶
+(⃗a).
+■ Remarque II.3.2.1 — Ordre des dérivations.
+Dans la notation ∂2 f
+∂xi ∂x j
+, on dérive d’abord par rapport àx j , puis par rapport àx i .
+À ce stade, rien ne permet encore d’affirmer que l’ordre des dérivations peut être échangé.■
+Proposition II.3.2.1 — Différentielle seconde et dérivées partielles secondes.
+SoientUun ouvert de
+− →
+Rn, ⃗a∈Uetf:U− →
+− →
+Rp une fonction deux fois différentiable en ⃗a.
+Alors, pour tout
+¡
+i,j
+¢
+∈ 1,n 2,
+− − − →
+d 2 f⃗a(⃗ei ,⃗e j )= ∂2 f
+∂xi ∂x j
+(⃗a).
+Démonstration.
+SoientUun ouvert de
+− →
+Rn, ⃗a∈Uetf:U− →
+− →
+Rp une fonction deux fois différentiable en ⃗a.
+Soit
+¡
+i,j
+¢
+∈ 1,n 2. Montrons la relation annoncée.
+Par définition, − − − →
+d 2 f⃗a(⃗ei ,⃗e j )=
+³− − − − − →d(d f) ⃗a(⃗ei )
+´
+(⃗e j ).
+Or, pour⃗x voisin de ⃗a, − − →d f⃗x (⃗e j ) = ∂f
+∂x j
+(⃗x). La variation de cette fonction suivant la direction⃗ei est
+donc ∂
+∂xi
+µ ∂f
+∂x j
+¶
+(⃗a). Par définition de la dérivée partielle seconde, on obtient
+− − − →
+d 2 f⃗a(⃗ei ,⃗e j )= ∂2 f
+∂xi ∂x j
+(⃗a).
+■
+Proposition II.3.2.2 — Expression de la différentielle seconde.
+SoientUun ouvert de
+− →
+Rn, ⃗a∈Uetf:U− →
+− →
+Rp une fonction deux fois différentiable en ⃗a.
+Pour ⃗h=
+nX
+i=1
+hi⃗ei et ⃗k=
+nX
+j=1
+k j⃗e j , on a
+− − − →
+d 2 f⃗a(⃗h,⃗k)=
+nX
+i=1
+nX
+j=1
+hi k j
+∂2 f
+∂xi ∂x j
+(⃗a).
+Démonstration.
+SoientUun ouvert de
+− →
+Rn, ⃗a∈Uetf:U− →
+− →
+Rp une fonction deux fois différentiable en ⃗a.
+Soient ⃗h=
+nX
+i=1
+hi⃗ei et ⃗k=
+nX
+j=1
+k j⃗e j .
+
+=== Cours original, page PDF 62 ===
+206Chapitre II.3. Différentielle seconde, Hessienne et régularitéC 2
+D’après la bilinéarité de
+− − − →
+d 2 f⃗a,
+− − − →
+d 2 f⃗a(⃗h,⃗k)=
+nX
+i=1
+nX
+j=1
+hi k j
+− − − →
+d 2 f⃗a(⃗ei ,⃗e j )
+=
+nX
+i=1
+nX
+j=1
+hi k j
+∂2 f
+∂xi ∂x j
+(⃗a),
+où la dernière égalité résulte de la Proposition II.3.2.1.■
+II.3.2.2 Matrice hessienne
+Considérons maintenant une fonction réelle f : U− →R deux fois différentiable en ⃗a. Sa
+différentielle seconde est alors une application bilinéaire à valeurs réelles.
+Définition II.3.2.2 — Matrice hessienne.
+SoientUun ouvert de
+− →
+Rn, ⃗a∈Uetf:U− →Rune fonction deux fois différentiable en ⃗a.
+On appellematrice hessienne de f en ⃗a dans la base canoniquela matrice
+H f (⃗a)=
+µ ∂2 f
+∂xi ∂x j
+(⃗a)
+¶
+1≤i,j≤n
+.
+■ Remarque II.3.2.2 — La symétrie n’est pas encore acquise.
+À ce stade, nous ne supposons pas que ∂2 f
+∂xi ∂x j
+= ∂2 f
+∂x j ∂xi
+. La symétrie éventuelle de la matrice
+hessienne sera obtenue plus loin comme conséquence des théorèmes de Schwarz et de
+Clairaut. ■
+Proposition II.3.2.3 — Représentation matricielle de la différentielle seconde.
+SoientUun ouvert de
+− →
+Rn, ⃗a∈Uetf:U− →Rune fonction deux fois différentiable en ⃗a.
+Pour tout
+³
+⃗h,⃗k
+´
+∈
+³− →
+Rn
+´2
+, on a
+− − − →
+d 2 f⃗a(⃗h,⃗k)=[ ⃗h] T
+e H f (⃗a)[⃗k]e.
+Démonstration.
+SoientUun ouvert de
+− →
+Rn, ⃗a∈Uetf:U− →Rune fonction deux fois différentiable en ⃗a.
+Soit
+³
+⃗h,⃗k
+´
+∈
+³− →
+Rn
+´2
+.
+Le produit matriciel s’écrit
+[⃗h] T
+e H f (⃗a)[⃗k]e =
+nX
+i=1
+nX
+j=1
+hi k j
+∂2 f
+∂xi ∂x j
+(⃗a).
+D’après la Proposition II.3.2.2, cette expression est précisément
+− − − →
+d 2 f⃗a(⃗h,⃗k).
+On a donc : − − − →
+d 2 f⃗a(⃗h,⃗k)=[ ⃗h] T
+e H f (⃗a)[⃗k]e.
+■
+
+=== Cours original, page PDF 63 ===
+II.3.2 Dérivées partielles secondes et matrice hessienne 207
+■ Remarque II.3.2.3 — Objet intrinsèque et représentation.
+La différentielle seconde
+− − − →
+d 2 f⃗a est une application bilinéaire intrinsèque, tandis que H f (⃗a)
+est sa représentation dans la base canonique. On retrouve ainsi la même distinction qu’au
+premier ordre :
+− − →d f ⃗a ← →Jf (⃗a),
+− − − →
+d 2 f⃗a ← →Hf (⃗a) dans le cas scalaire.
+■
+II.3.2.3 Fonctions vectorielles
+Soitf:U− →
+− →
+Rp une fonction vectorielle de fonctions composantesf 1,. .. ,f p.
+Proposition II.3.2.4 — Différentielle seconde et fonctions composantes.
+Soient U un ouvert de
+− →
+Rn, ⃗a∈U et f : U− →
+− →
+Rp une fonction deux fois différentiable en ⃗a, de
+fonctions composantesf 1,. .. ,f p.
+Alors, pour tout
+³
+⃗h,⃗k
+´
+∈
+³− →
+Rn
+´2
+,
+− − − →
+d 2 f⃗a(⃗h,⃗k)=
+
+
+− − − − − →
+d 2(f 1)⃗a(⃗h,⃗k)
+...
+− − − − − − →
+d 2(f p )⃗a(⃗h,⃗k)
+
+.
+Démonstration.
+Soient U un ouvert de
+− →
+Rn, ⃗a∈U et f : U− →
+− →
+Rp une fonction deux fois différentiable en ⃗a, de
+fonctions composantesf 1, .. .,f p.
+Soit
+³
+⃗h,⃗k
+´
+∈
+³− →
+Rn
+´2
+.
+Au premier ordre, la différentiation s’effectue composante par composante :
+− − →d f⃗x (⃗k)=
+
+
+− − − − →d(f 1)⃗x (⃗k)
+...
+− − − − − →d(f p )⃗x (⃗k)
+
+.
+En différentiant cette relation suivant⃗h en ⃗a, puis en utilisant la définition de la différentielle
+seconde, on obtient
+− − − →
+d 2 f⃗a(⃗h,⃗k)=
+
+
+− − − − − →
+d 2(f 1)⃗a(⃗h,⃗k)
+...
+− − − − − − →
+d 2(f p )⃗a(⃗h,⃗k)
+
+.
+■
+■ Remarque II.3.2.4 — Fonctions vectorielles.
+Lorsque p> 1, chacune des fonctions composantes fi possède sa propre matrice hessienne.
+Nous ne parlerons donc pas d’une unique matrice hessienne ordinaire pour une fonction à
+valeurs dans
+− →
+Rp. ■
+
+=== Cours original, page PDF 64 ===
+208Chapitre II.3. Différentielle seconde, Hessienne et régularitéC 2
+II.3.3 RégularitéC 2 et symétrie
+II.3.3.1 Fonctions de classeC 2
+Définition II.3.3.1 — Fonction de classeC 2.
+SoientUun ouvert de
+− →
+Rn etf:U− →
+− →
+Rp une fonction différentiable surU.
+On dit quefestde classeC 2 sur Ulorsque l’application
+d f: U− → − →L
+³− →
+Rn,
+− →
+Rp
+´
+⃗x7− → − − →d f⃗x
+est de classeC 1 surU.
+Proposition II.3.3.1 — Une fonction de classeC 2 est de classeC 1.
+SoientUun ouvert de
+− →
+Rn etf:U− →
+− →
+Rp une fonction de classeC 2 surU.
+Alorsfest de classeC 1 surU.
+Démonstration.
+SoientUun ouvert de
+− →
+Rn etf:U− →
+− →
+Rp une fonction de classeC 2 surU.
+Montrons quefest de classeC 1 surU.
+Par définition, l’application ⃗x7− → − − →d f⃗x est de classe C 1 sur U . Elle est donc continue sur U .
+Commefest différentiable surU, par définitionfest de classeC 1 surU.■
+II.3.3.2 Dérivées partielles secondes et classeC 2
+Proposition II.3.3.2 — ClasseC 2 et dérivées partielles secondes.
+SoientUun ouvert de
+− →
+Rn etf:U− →
+− →
+Rp une fonction de fonctions composantesf 1,. .. ,f p.
+Les propriétés suivantes sont équivalentes :
+(i)fest de classeC 2 surU;
+(ii) toutes les dérivées partielles secondes ∂2 fℓ
+∂xi ∂x j
+existent et sont continues surU.
+Démonstration.
+SoientUun ouvert de
+− →
+Rn etf:U− →
+− →
+Rp une fonction de fonctions composantesf 1, ... ,f p.
+— Montrons que (i)= ⇒(ii).
+Supposons quefest de classeC 2 surU.
+Par définition, l’application
+d f: U− → − →L
+³− →
+Rn,
+− →
+Rp
+´
+⃗x7− → − − →d f⃗x
+est de classeC 1 surU.
+En identifiant − →L
+³− →
+Rn,
+− →
+Rp
+´
+à Mp,n (R), puis à
+− − →
+Rpn , les fonctions composantes de cette appli-
+cation sont précisément les fonctions
+∂f ℓ
+∂x j
+,
+¡
+ℓ,j
+¢
+∈ 1,p × 1,n.
+D’après la Proposition II.2.2.3, chacune des fonctions ∂f ℓ
+∂x j
+est donc de classeC 1 surU.
+D’après la Proposition II.2.1.1 appliquée à chacune de ces fonctions à valeurs réelles,
+
+=== Cours original, page PDF 65 ===
+II.3.3 RégularitéC 2 et symétrie 209
+toutes leurs dérivées partielles existent et sont continues surU.
+Or, pour tout
+¡
+ℓ,i,j
+¢
+∈ 1,p × 1,n 2, ces dérivées partielles sont
+∂
+∂xi
+µ ∂f ℓ
+∂x j
+¶
+= ∂2 fℓ
+∂xi ∂x j
+.
+Toutes les dérivées partielles secondes ∂2 fℓ
+∂xi ∂x j
+existent donc et sont continues surU.
+— Montrons que (ii)= ⇒(i).
+Supposons que toutes les dérivées partielles secondes ∂2 fℓ
+∂xi ∂x j
+existent et sont continues
+surU.
+Pour tout
+¡
+ℓ,j
+¢
+∈ 1,p × 1,n, considérons la fonction
+∂f ℓ
+∂x j
+:U− →R.
+Pour touti∈ 1,n, sa dérivée partielle suivantx i est
+∂
+∂xi
+µ ∂f ℓ
+∂x j
+¶
+= ∂2 fℓ
+∂xi ∂x j
+.
+Par hypothèse, toutes ces dérivées partielles existent et sont continues surU.
+Le Corollaire II.2.2.1 montre donc que chaque fonction ∂f ℓ
+∂x j
+est de classeC 1 surU.
+Elle est en particulier continue surU.
+Ainsi toutes les dérivées partielles premières ∂f ℓ
+∂x j
+existent et sont continues surU.
+Le Corollaire II.2.2.1, appliqué cette fois àf, montre quefest de classeC 1 surU.
+En particulier,fest différentiable surUet l’application
+d f: U− → − →L
+³− →
+Rn,
+− →
+Rp
+´
+⃗x7− → − − →d f⃗x
+est donc bien définie.
+En identifiant − →L
+³− →
+Rn,
+− →
+Rp
+´
+à Mp,n (R), puis à
+− − →
+Rpn , ses fonctions composantes sont les fonc-
+tions ∂f ℓ
+∂x j
+.
+Nous avons montré que toutes ces fonctions sont de classeC 1 surU.
+D’après la Proposition II.2.2.3, l’application⃗x7− →− − →d f⃗x est donc de classeC 1 surU.
+Par définition,fest ainsi de classeC 2 surU.
+■
+Méthodologie II.3.3.1 — Établir la classeC 2.
+Pour montrer qu’une fonction est de classeC 2, on pourra suivre la démarche suivante :
+1. déterminer précisément son domaine de définition ;
+2. calculer ses dérivées partielles premières ;
+3. calculer toutes ses dérivées partielles secondes ;
+4. vérifier la continuité de ces dérivées partielles secondes ;
+5. conclure à l’aide de la Proposition II.3.3.2.
+Il ne faut pas utiliser l’égalité des dérivées croisées pour établir la classeC 2 : cette égalité sera
+obtenue ensuite.
+
+=== Cours original, page PDF 66 ===
+210Chapitre II.3. Différentielle seconde, Hessienne et régularitéC 2
+II.3.3.3 Théorèmes de Schwarz et de Clairaut
+Nous allons maintenant établir l’égalité des dérivées partielles croisées sous des hypothèses
+locales. La démonstration repose uniquement sur la Proposition II.1.1.2.
+Proposition II.3.3.3 — Théorème de Schwarz.
+SoientUun ouvert de
+− →
+Rn, ⃗a∈U,f:U− →Ret
+¡
+i,j
+¢
+∈ 1,n 2.
+Supposons que les dérivées partielles secondes ∂2 f
+∂xi ∂x j
+et ∂2 f
+∂x j ∂xi
+existent dans un voisinage
+de ⃗aet soient continues en ⃗a.
+Alors
+∂2 f
+∂xi ∂x j
+(⃗a)= ∂2 f
+∂x j ∂xi
+(⃗a).
+Démonstration.
+Soient U un ouvert de
+− →
+Rn, ⃗a∈U , f : U− →R et
+¡
+i,j
+¢
+∈ 1,n 2 tels que ∂2 f
+∂xi ∂x j
+et ∂2 f
+∂x j ∂xi
+existent
+dans un voisinage de ⃗aet soient continues en ⃗a.
+Sii=j, le résultat est immédiat. Supposons donci̸=j.
+Comme les deux dérivées partielles secondes existent dans un voisinage de⃗a et que U est ouvert,
+il existeρ>0 tel que
+B(⃗a,ρ)⊂U
+et tel que ∂2 f
+∂xi ∂x j
+et ∂2 f
+∂x j ∂xi
+soient définies surB( ⃗a,ρ).
+Soit (h,k ) ∈R 2 tel que
+0< |h| < ρ
+2 et 0< |k| < ρ
+2 .
+Pour tous réels t et s appartenant respectivement aux segments de R d’extrémités 0 eth, et 0 et
+k, on a
+|t| ≤ |h|et|s| ≤ |k|.
+Par conséquent,
+°°t⃗ei +s ⃗e j
+°° ≤|t|∥⃗ei ∥ + |s|∥⃗e j ∥
+=|t| + |s|
+≤|h| + |k|
+<ρ.
+Ainsi
+⃗a+t ⃗ei +s ⃗e j ∈B( ⃗a,ρ).
+Tous les vecteurs qui interviendront dans la suite appartiennent donc au voisinage sur lequel les
+dérivées partielles considérées existent.
+Considérons maintenant la quantité
+∆(h,k)=f( ⃗a+h ⃗ei +k ⃗e j )−f( ⃗a+h ⃗ei )−f( ⃗a+k ⃗e j )+f( ⃗a).
+Nous allons calculer cette même quantité de deux façons différentes.
+— Calculons d’abord∆(h,k) en faisant intervenir en premier la direction ⃗ei .
+Considérons la fonction
+ϕ: Ih − →R
+t7− →f( ⃗a+t ⃗ei +k ⃗e j )−f( ⃗a+t ⃗ei ),
+
+=== Cours original, page PDF 67 ===
+II.3.3 RégularitéC 2 et symétrie 211
+oùI h désigne le segment deRd’extrémités 0 eth.
+Par définition de∆(h,k),
+∆(h,k)=ϕ(h)−ϕ(0).
+La fonctionϕest continue surI h et dérivable sur son intérieur.
+Le théorème des accroissements finis assure donc l’existence deθ∈]0, 1[ tel que
+∆(h,k)=hϕ ′(θh).
+Or, pour touttappartenant à l’intérieur deI h,
+ϕ′(t)= ∂f
+∂xi
+(⃗a+t ⃗ei +k ⃗e j )− ∂f
+∂xi
+(⃗a+t ⃗ei ).
+En particulier,
+ϕ′(θh)= ∂f
+∂xi
+(⃗a+θh ⃗ei +k ⃗e j )− ∂f
+∂xi
+(⃗a+θh ⃗ei ).
+Considérons alors la fonction
+ψ: Ik − →R
+s7− → ∂f
+∂xi
+(⃗a+θh ⃗ei +s ⃗e j ),
+oùI k désigne le segment deRd’extrémités 0 etk.
+On a
+ϕ′(θh)=ψ(k)−ψ(0).
+Le théorème des accroissements finis appliqué àψassure l’existence deη∈]0, 1[ tel que
+ψ(k)−ψ(0)=kψ ′(ηk).
+Or
+ψ′(ηk)= ∂2 f
+∂x j ∂xi
+(⃗a+θh ⃗ei +ηk ⃗e j ).
+On obtient donc
+∆(h,k)=hk ∂2 f
+∂x j ∂xi
+(⃗a+θh ⃗ei +ηk ⃗e j ). (II.3.1)
+— Calculons maintenant∆(h,k) en faisant intervenir en premier la direction ⃗e j .
+Considérons la fonction
+eϕ: Ik − →R
+s7− →f( ⃗a+h ⃗ei +s ⃗e j )−f( ⃗a+s ⃗e j ).
+On a
+∆(h,k)= eϕ(k)− eϕ(0).
+Le théorème des accroissements finis assure l’existence deeη∈]0,1[ tel que
+∆(h,k)=k eϕ′(eηk).
+Or
+eϕ′(eηk)= ∂f
+∂x j
+(⃗a+h ⃗ei + eηk⃗e j )− ∂f
+∂x j
+(⃗a+ eηk⃗e j ).
+Considérons alors
+eψ: Ih − →R
+t7− → ∂f
+∂x j
+(⃗a+t ⃗ei + eηk⃗e j ).
+
+=== Cours original, page PDF 68 ===
+212Chapitre II.3. Différentielle seconde, Hessienne et régularitéC 2
+On a
+eϕ′(eηk)= eψ(h)− eψ(0).
+Une nouvelle application du théorème des accroissements finis assure l’existence de
+eθ∈]0, 1[ tel que
+eψ(h)− eψ(0)=h eψ′(eθh).
+Or
+eψ′(eθh)= ∂2 f
+∂xi ∂x j
+(⃗a+ eθh⃗ei + eηk⃗e j ).
+Ainsi
+∆(h,k)=hk ∂2 f
+∂xi ∂x j
+(⃗a+ eθh⃗ei + eηk⃗e j ). (II.3.2)
+Commeh̸=0 etk̸=0, les égalités (II.3.1) et (II.3.2) donnent
+∂2 f
+∂x j ∂xi
+(⃗a+θh ⃗ei +ηk ⃗e j )= ∂2 f
+∂xi ∂x j
+(⃗a+ eθh⃗ei + eηk⃗e j ).
+Comme
+¡
+θ,η, eθ, eη
+¢
+∈]0, 1[4, on a °°θh⃗ei +ηk ⃗e j
+°° ≤ |h| + |k|
+et °°eθh⃗ei + eηk⃗e j
+°° ≤ |h| + |k|.
+Par conséquent,
+lim
+(h,k)→(0,0)
+¡
+⃗a+θh ⃗ei +ηk ⃗e j
+¢
+= ⃗a
+et
+lim
+(h,k)→(0,0)
+¡
+⃗a+ eθh⃗ei + eηk⃗e j
+¢
+= ⃗a.
+Les fonctions ∂2 f
+∂x j ∂xi
+et ∂2 f
+∂xi ∂x j
+étant continues en ⃗a, on peut passer à la limite dans l’égalité
+précédente. On obtient
+∂2 f
+∂xi ∂x j
+(⃗a)= ∂2 f
+∂x j ∂xi
+(⃗a)
+■
+■ Remarque II.3.3.1 — Interprétation de la démonstration.
+La quantité ∆(h,k ) mesure l’effet combiné de deux petites variations, l’une suivant ⃗ei et
+l’autre suivant⃗e j . Il peut être calculé en effectuant ces deux variations dans un ordre ou dans
+l’autre. Le théorème des accroissements finis relie alors les deux calculs aux dérivées partielles
+croisées. ■
+Lorsque la fonction est de classe C 2, les hypothèses du théorème de Schwarz sont automati-
+quement satisfaites.
+Corollaire II.3.3.1 — Théorème de Clairaut.
+SoientUun ouvert de
+− →
+Rn etf:U− →Rune fonction de classeC 2 surU.
+Alors, pour tout ⃗a∈Uet tout
+¡
+i,j
+¢
+∈ 1,n 2,
+∂2 f
+∂xi ∂x j
+(⃗a)= ∂2 f
+∂x j ∂xi
+(⃗a).
+
+=== Cours original, page PDF 69 ===
+II.3.4 Règles de calcul au second ordre 213
+Démonstration.
+Soient U un ouvert de
+− →
+Rn et f : U− →R une fonction de classe C 2 sur U . Soient ⃗a∈U et¡
+i,j
+¢
+∈ 1,n 2.
+D’après la Proposition II.3.3.2, toutes les dérivées partielles secondes existent et sont continues
+sur U . Les hypothèses du théorème de Schwarz sont donc satisfaites en ⃗a, ce qui donne l’égalité
+annoncée. ■
+II.3.3.4 Symétrie de la différentielle seconde et de la Hessienne
+Proposition II.3.3.4 — Symétrie de la différentielle seconde.
+SoientUun ouvert de
+− →
+Rn,f:U− →Rune fonction de classeC 2 surUet ⃗a∈U.
+Alors, pour tout
+³
+⃗h,⃗k
+´
+∈
+³− →
+Rn
+´2
+,
+− − − →
+d 2 f⃗a(⃗h,⃗k)=
+− − − →
+d 2 f⃗a(⃗k, ⃗h).
+Démonstration.
+Soient U un ouvert de
+− →
+Rn, f : U− →R une fonction de classeC 2 sur U et ⃗a∈U . Soient⃗h=
+nX
+i=1
+hi⃗ei
+et ⃗k=
+nX
+j=1
+k j⃗e j .
+D’après la Proposition II.3.2.2,
+− − − →
+d 2 f⃗a(⃗h,⃗k)=
+nX
+i=1
+nX
+j=1
+hi k j
+∂2 f
+∂xi ∂x j
+(⃗a).
+Le théorème de Clairaut permet d’échanger les deux dérivations.
+En échangeant ensuite les indices i et j dans la somme, on obtient
+− − − →
+d 2 f⃗a(⃗h,⃗k) =
+− − − →
+d 2 f⃗a(⃗k, ⃗h). ■
+Corollaire II.3.3.2 — Symétrie de la matrice hessienne.
+SoientUun ouvert de
+− →
+Rn,f:U− →Rune fonction de classeC 2 surUet ⃗a∈U.
+Alors
+H f (⃗a)T =H f (⃗a).
+Démonstration.
+Soient U un ouvert de
+− →
+Rn, f : U− →R une fonction de classe C 2 sur U et ⃗a∈U . Montrons que
+H f (⃗a) est symétrique.
+Le coefficient ( i,j ) de H f (⃗a) est ∂2 f
+∂xi ∂x j
+(⃗a). D’après le théorème de Clairaut, il est égal au
+coefficient (j,i). La matriceH f (⃗a) est donc symétrique.■
+II.3.4 Règles de calcul au second ordre
+II.3.4.1 Combinaisons linéaires
+Proposition II.3.4.1 — Différentielle seconde d’une combinaison linéaire.
+Soient U un ouvert de
+− →
+Rn, ⃗a∈U , f,g : U− →
+− →
+Rp deux fonctions deux fois différentiables en ⃗a
+et (λ,µ)∈R 2.
+
+=== Cours original, page PDF 70 ===
+214Chapitre II.3. Différentielle seconde, Hessienne et régularitéC 2
+Alorsλf+µgest deux fois différentiable en ⃗aet
+− − − − − − − − − − − →
+d 2(λf+µg) ⃗a =λ
+− − − →
+d 2 f⃗a +µ
+− − − →
+d 2g⃗a.
+Démonstration.
+Soient U un ouvert de
+− →
+Rn, ⃗a∈U , f,g : U− →
+− →
+Rp deux fonctions deux fois différentiables en ⃗a et
+(λ,µ)∈R 2.
+Au premier ordre, − − − − − − − − − − →d(λf+µg) ⃗x =λ − − →d f⃗x +µ − − →d g⃗x .
+En différentiant cette relation en ⃗a, puis en évaluant successivement en ⃗het ⃗k, on obtient
+− − − − − − − − − − − →
+d 2(λf+µg) ⃗a(⃗h,⃗k)=λ
+− − − →
+d 2 f⃗a(⃗h,⃗k)+µ
+− − − →
+d 2g⃗a(⃗h,⃗k).
+■
+II.3.4.2 Produit de deux fonctions à valeurs réelles
+Proposition II.3.4.2 — Différentielle seconde d’un produit.
+Soient U un ouvert de
+− →
+Rn, ⃗a∈U et f,g : U− →R deux fonctions deux fois différentiables en⃗a.
+Alorsf gest deux fois différentiable en ⃗aet, pour tout
+³
+⃗h,⃗k
+´
+∈
+³− →
+Rn
+´2
+,
+− − − − − − →
+d 2(f g) ⃗a(⃗h,⃗k)=g( ⃗a)
+− − − →
+d 2 f⃗a(⃗h,⃗k)+f( ⃗a)
+− − − →
+d 2g⃗a(⃗h,⃗k)
++ − − →d f ⃗a(⃗h)− − →d g⃗a(⃗k)+ − − →d f ⃗a(⃗k)− − →d g⃗a(⃗h).
+Démonstration.
+Soient U un ouvert de
+− →
+Rn, ⃗a∈U et f,g : U− →R deux fonctions deux fois différentiables en ⃗a.
+Soit
+³
+⃗h,⃗k
+´
+∈
+³− →
+Rn
+´2
+.
+Pour ⃗xvoisin de ⃗a, la règle du produit au premier ordre donne
+− − − − − →d(f g) ⃗x (⃗k)=g( ⃗x)− − →d f⃗x (⃗k)+f( ⃗x)− − →d g⃗x (⃗k).
+En différentiant cette fonction suivant ⃗h en ⃗a et en appliquant la règle du produit à chacun des
+deux termes, on obtient
+− − − − − − →
+d 2(f g) ⃗a(⃗h,⃗k)= − − →d g⃗a(⃗h)− − →d f ⃗a(⃗k)+g( ⃗a)
+− − − →
+d 2 f⃗a(⃗h,⃗k)
++ − − →d f ⃗a(⃗h)− − →d g⃗a(⃗k)+f( ⃗a)
+− − − →
+d 2g⃗a(⃗h,⃗k).
+Les valeurs des différentielles étant réelles, les produits commutent, ce qui donne la formule
+annoncée. ■
+
+=== Cours original, page PDF 71 ===
+II.3.4 Règles de calcul au second ordre 215
+II.3.4.3 Composition
+Proposition II.3.4.3 — Différentielle seconde d’une composée.
+Soient U un ouvert de
+− →
+Rn, V un ouvert de
+− →
+Rp, f : U− →V et g : V− →
+− →
+Rq deux fonctions deux
+fois différentiables, et soit ⃗a∈U.
+Alorsg◦fest deux fois différentiable en ⃗aet, pour tout
+³
+⃗h,⃗k
+´
+∈
+³− →
+Rn
+´2
+,
+− − − − − − − − →
+d 2(g◦f) ⃗a(⃗h,⃗k)=
+− − − − − →
+d 2g f( ⃗a)
+³− − →d f ⃗a(⃗h), − − →d f ⃗a(⃗k)
+´
++ − − − − − →d g f( ⃗a)
+µ− − − →
+d 2 f⃗a(⃗h,⃗k)
+¶
+.
+Démonstration.
+Soient U un ouvert de
+− →
+Rn, V un ouvert de
+− →
+Rp, f : U− →V et g : V− →
+− →
+Rq deux fonctions deux
+fois différentiables, et soit ⃗a∈U.
+Soit
+³
+⃗h,⃗k
+´
+∈
+³− →
+Rn
+´2
+.
+La règle de composition au premier ordre donne, pour⃗xvoisin de ⃗a,
+− − − − − − − →d(g◦f) ⃗x (⃗k)= − − − − →d g f( ⃗x)
+³− − →d f⃗x (⃗k)
+´
+.
+Lorsque ⃗xvarie suivant ⃗h, la variation provient à la fois de − − − − →d g f( ⃗x) et de − − →d f⃗x (⃗k).
+En appliquant la règle de composition au premier terme et la règle de différentiation d’une
+application bilinéaire d’évaluation aux deux termes, on obtient
+− − − − − − − − →
+d 2(g◦f) ⃗a(⃗h,⃗k)=
+− − − − − →
+d 2g f( ⃗a)
+³− − →d f ⃗a(⃗h), − − →d f ⃗a(⃗k)
+´
++ − − − − − →d g f( ⃗a)
+µ− − − →
+d 2 f⃗a(⃗h,⃗k)
+¶
+.
+■
+Méthodologie II.3.4.1 — Étudier une fonction au second ordre.
+Pour étudier une fonction réelle f : U− →R au second ordre, on pourra suivre la démarche
+suivante :
+1. déterminer précisément son domaine de définition ;
+2. calculer ses dérivées partielles premières ;
+3. calculer toutes ses dérivées partielles secondes ;
+4. vérifier leur continuité lorsque l’on souhaite établir quefest de classeC 2 ;
+5. une fois la classe C 2 établie, utiliser le théorème de Clairaut pour identifier les dérivées
+croisées ;
+6. construire la matrice hessienneH f (⃗a) ;
+7. utiliser, lorsque cela est utile, la relation
+− − − →
+d 2 f⃗a(⃗h,⃗k)=[ ⃗h] T
+e H f (⃗a)[⃗k]e.
+
+=== Cours original, page PDF 85 ===
+II.4. Formules de Taylor au second ordre
+Dans ce chapitre nous nous placerons dans les espaces euclidiens
+³− →
+Rn,〈• | •〉
+´
+et
+³− →
+Rp,〈• | •〉
+´
+,
+munis de leurs produits scalaires canoniques.
+Nous noterons par∥•∥les normes euclidiennes associées.
+La différentiabilité fournit une approximation d’une fonction au premier ordre. La diffé-
+rentielle seconde permet maintenant d’améliorer cette approximation en tenant compte de
+la variation de la différentielle elle-même. Les formules de Taylor vont relier précisément les
+valeurs d’une fonction au voisinage d’un vecteur à ses différentielles première et seconde.
+II.4.1 Réduction à une fonction d’une variable
+II.4.1.1 Du premier ordre au second ordre
+Soient U un ouvert de
+− →
+Rn, ⃗a∈U et f : U− →
+− →
+Rp une fonction différentiable en ⃗a. Par défini-
+tion de la différentiabilité, lorsque ⃗htend vers ⃗0,
+f( ⃗a+ ⃗h)=f( ⃗a)+ − − →d f ⃗a(⃗h)+o
+³
+∥⃗h∥
+´
+.
+Cette relation constitue déjà une formule de Taylor au premier ordre. Ainsi, nous avons :
+Proposition II.4.1.1 — Formule de Taylor–Young à l’ordre un.
+SoientUun ouvert de
+− →
+Rn, ⃗a∈Uetf:U− →
+− →
+Rp une fonction différentiable en ⃗a.
+Alors, lorsque ⃗htend vers ⃗0,
+f( ⃗a+ ⃗h)=f( ⃗a)+ − − →d f ⃗a(⃗h)+o
+³
+∥⃗h∥
+´
+.
+■ Remarque II.4.1.1 — Approximation au premier ordre.
+Pour ⃗h suffisamment petit, la fonction est approchée au premier ordre par son application
+affine tangente :
+f( ⃗a+ ⃗h)≃f( ⃗a)+ − − →d f ⃗a(⃗h).
+Dans le cas d’une fonction à valeurs réelles, le théorème de représentation de Riesz, vu en
+algèbre, permet d’écrire cette approximation sous la forme
+f( ⃗a+ ⃗h)≃f( ⃗a)+
+D
+⃗∇f( ⃗a)| ⃗h
+E
+.
+■
+
+=== Cours original, page PDF 86 ===
+230Chapitre II.4. Formules de Taylor au second ordre
+II.4.1.2 Restriction d’une fonction à une droite
+Comme pour le théorème des accroissements finis, l’idée essentielle consiste à ramener
+l’étude d’une fonction de plusieurs variables à celle d’une fonction d’une seule variable réelle.
+Proposition II.4.1.2 — Dérivées de la restriction à une droite.
+Soient U un ouvert de
+− →
+Rn, f : U− →R une fonction de classe C 2 sur U , ⃗a∈U et ⃗h∈
+− →
+Rn tels
+que [⃗a, ⃗a+ ⃗h]⊂U.
+Pourϕ(t)=f( ⃗a+t ⃗h),t∈[0,1], on a
+ϕ′(t)= − − − − − →d f ⃗a+t ⃗h(⃗h)
+et
+ϕ′′(t)=
+− − − − − − →
+d 2 f⃗a+t ⃗h(⃗h,⃗h).
+Démonstration.
+Soient U un ouvert de
+− →
+Rn, f : U− →R une fonction de classe C 2 sur U , ⃗a∈U et ⃗h∈
+− →
+Rn tels que
+[⃗a, ⃗a+ ⃗h]⊂U.
+Considéronsϕ(t)=f( ⃗a+t ⃗h).
+Posonsγ(t)= ⃗a+t ⃗h.
+Commeγ ′(t)= ⃗hetϕ=f◦γ, la règle de composition au premier ordre donne
+ϕ′(t)= − − − − − →d f ⃗a+t ⃗h(⃗h).
+Le vecteur ⃗h étant fixé, la différentielle de l’application ⃗x7− → − − →d f⃗x (⃗h) en une direction ⃗u vaut− − − →
+d 2 f⃗x (⃗u,⃗h).
+En suivant la droite ⃗x= ⃗a+t ⃗h, la direction de variation est ⃗h; on obtient donc
+ϕ′′(t)=
+− − − − − − →
+d 2 f⃗a+t ⃗h(⃗h,⃗h).
+■
+Dans la base canonique, la représentation de la différentielle seconde par la matrice hessienne
+donne immédiatement
+ϕ′′(t)=[ ⃗h] T
+e H f (⃗a+t ⃗h)[⃗h]e.
+II.4.1.3 Une formule à une variable obtenue par les accroissements finis
+Nous allons établir la formule d’une variable réelle dont nous aurons besoin. Sa démonstra-
+tion repose uniquement sur le théorème des accroissements finis.
+Proposition II.4.1.3 — Formule de Taylor avec reste intermédiaire à une variable.
+Soient J un intervalle ouvert de R contenant [0,1] et ϕ : J− →R une fonction de classe C 2 sur
+J.
+Alors il existeθ∈]0, 1[ tel que
+ϕ(1)=ϕ(0)+ϕ ′(0)+ 1
+2 ϕ′′(θ).
+Démonstration.
+Soient J un intervalle ouvert de R contenant [0,1] et ϕ : J− →R une fonction de classe C 2 sur J.
+Montrons qu’il existeθ∈]0,1[ donnant la formule annoncée.
+PosonsR=ϕ(1)−ϕ(0)−ϕ ′(0) et considérons
+F(t)=ϕ(t)−ϕ(0)−tϕ ′(0)−t 2R.
+
+=== Cours original, page PDF 87 ===
+II.4.2 Formules de Taylor au second ordre 231
+On aF(0)=F(1)=0.
+Le théorème des accroissements finis appliqué à F sur [0,1] donne donc un réel c∈ ]0,1[ tel que
+F ′(c) = 0. Comme F ′(0) = 0, une seconde application du théorème des accroissements finis à F ′
+sur [0,c] donne un réelθ∈]0,c[ tel queF ′′(θ)=0. OrF ′′(t)=ϕ ′′(t)−2R, doncR= 1
+2 ϕ′′(θ).
+En revenant à la définition deR, on obtient
+ϕ(1)=ϕ(0)+ϕ ′(0)+ 1
+2 ϕ′′(θ).
+■
+II.4.2 Formules de Taylor au second ordre
+II.4.2.1 Formule avec reste intermédiaire
+Nous pouvons maintenant appliquer le résultat précédent à la restriction de f au segment
+reliant ⃗aà ⃗a+ ⃗h.
+Proposition II.4.2.1 — Formule de Taylor avec reste intermédiaire.
+Soient U un ouvert de
+− →
+Rn, f : U− →R une fonction de classe C 2 sur U , ⃗a∈U et ⃗h∈
+− →
+Rn tels
+que [⃗a, ⃗a+ ⃗h]⊂U.
+Alors il existeθ∈]0, 1[ tel que
+f( ⃗a+ ⃗h)=f( ⃗a)+ − − →d f ⃗a(⃗h)+ 1
+2
+− − − − − − →
+d 2 f⃗a+θ⃗h(⃗h,⃗h).
+Démonstration.
+Soient U un ouvert de
+− →
+Rn, f : U− →R une fonction de classe C 2 sur U , ⃗a∈U et ⃗h∈
+− →
+Rn tels que
+[⃗a, ⃗a+ ⃗h]⊂U.
+Considérons l’ouvert
+J=
+n
+t∈R| ⃗a+t ⃗h∈U
+o
+.
+Comme [0,1] ⊂J , quitte à remplacer J par sa composante connexe contenant [0 ,1], J est un
+intervalle ouvert. Considéronsϕ:J− →R,ϕ(t)=f( ⃗a+t ⃗h).
+D’après la Proposition II.4.1.2, on aϕ′(0)= − − →d f ⃗a(⃗h) etϕ ′′(t)=
+− − − − − − →
+d 2 f⃗a+t ⃗h(⃗h,⃗h).
+La Proposition II.4.1.3 fournit unθ∈]0,1[ tel que
+ϕ(1)=ϕ(0)+ϕ ′(0)+ 1
+2 ϕ′′(θ).
+Commeϕ(0)=f( ⃗a) etϕ(1)=f( ⃗a+ ⃗h), on obtient la formule annoncée.■
+■ Remarque II.4.2.1 — Le vecteur intermédiaire.
+En posant ⃗c= ⃗a+θ ⃗h, le vecteur ⃗c appartient au segment ouvert reliant ⃗a à ⃗a+ ⃗h. La formule
+précédente peut donc également s’écrire
+f( ⃗a+ ⃗h)=f( ⃗a)+ − − →d f ⃗a(⃗h)+ 1
+2
+− − − →
+d 2 f⃗c (⃗h,⃗h).
+■
+Corollaire II.4.2.1 — Formule de Taylor avec gradient et Hessienne.
+Soient U un ouvert de
+− →
+Rn, f : U− →R une fonction de classe C 2 sur U , ⃗a∈U et ⃗h∈
+− →
+Rn tels
+que [⃗a, ⃗a+ ⃗h]⊂U.
+
+=== Cours original, page PDF 88 ===
+232Chapitre II.4. Formules de Taylor au second ordre
+Alors il existeθ∈]0, 1[ tel que
+f( ⃗a+ ⃗h)=f( ⃗a)+
+D
+⃗∇f( ⃗a)| ⃗h
+E
++ 1
+2 [⃗h] T
+e H f (⃗a+θ ⃗h)[⃗h]e.
+Démonstration.
+Soient U un ouvert de
+− →
+Rn, f : U− →R une fonction de classe C 2 sur U , ⃗a∈U et ⃗h∈
+− →
+Rn tels que
+[⃗a, ⃗a+ ⃗h]⊂U.
+D’après le théorème de représentation de Riesz, nous avons− − →d f ⃗a(⃗h)=
+D
+⃗∇f( ⃗a)| ⃗h
+E
+.
+D’autre part, la représentation matricielle de la différentielle seconde donne
+− − − − − − →
+d 2 f⃗a+θ⃗h(⃗h,⃗h)=[ ⃗h] T
+e H f (⃗a+θ ⃗h)[⃗h]e
+La formule résulte donc directement de la Proposition II.4.2.1.■
+II.4.2.2 Formule de Taylor–Young à l’ordre deux
+La formule précédente évalue la différentielle seconde en un vecteur intermédiaire. Lorsque
+⃗h tend vers⃗0, ce vecteur tend vers ⃗a. La continuité des dérivées partielles secondes permet alors
+de remplacer cette différentielle seconde par celle en ⃗a, au prix d’un terme négligeable devant
+∥⃗h∥2.
+Proposition II.4.2.2 — Formule de Taylor–Young à l’ordre deux.
+SoientUun ouvert de
+− →
+Rn, ⃗a∈Uetf:U− →Rune fonction de classeC 2 surU.
+Alors, lorsque ⃗htend vers ⃗0,
+f( ⃗a+ ⃗h)=f( ⃗a)+ − − →d f ⃗a(⃗h)+ 1
+2
+− − − →
+d 2 f⃗a(⃗h,⃗h)+o
+³
+∥⃗h∥2
+´
+.
+Démonstration.
+SoientUun ouvert de
+− →
+Rn, ⃗a∈Uetf:U− →Rune fonction de classeC 2 surU.
+Montrons la formule de Taylor–Young à l’ordre deux au voisinage de⃗a.
+CommeUest ouvert et ⃗a∈U, il exister>0 tel queB( ⃗a,r)⊂U.
+Soit ⃗h∈
+− →
+Rn tel que∥ ⃗h∥ <r. Pour toutt∈[0, 1], on a
+∥t⃗h∥ =t∥ ⃗h∥ ≤ ∥⃗h∥ <r.
+Ainsi ⃗a+t ⃗h∈B( ⃗a,r)⊂Upour toutt∈[0,1], et donc [ ⃗a, ⃗a+ ⃗h]⊂U.
+D’après la formule de Taylor avec reste intermédiaire, il existeθ⃗h ∈]0, 1[ tel que
+f( ⃗a+ ⃗h)=f( ⃗a)+ − − →d f ⃗a(⃗h)
++ 1
+2
+− − − − − − − →
+d 2 f⃗a+θ⃗h
+⃗h(⃗h,⃗h).
+En ajoutant et retranchant 1
+2
+− − − →
+d 2 f⃗a(⃗h,⃗h), on obtient
+f( ⃗a+ ⃗h)=f( ⃗a)+ − − →d f ⃗a(⃗h)+ 1
+2
+− − − →
+d 2 f⃗a(⃗h,⃗h)+r( ⃗h),
+où
+r(⃗h)= 1
+2
+nX
+i=1
+nX
+j=1
+hi h j
+· ∂2 f
+∂xi ∂x j
+(⃗a+θ ⃗h
+⃗h)− ∂2 f
+∂xi ∂x j
+(⃗a)
+¸
+.
+
+=== Cours original, page PDF 89 ===
+II.4.3 Interprétation et conséquences 233
+Posons
+ε(⃗h)=max
+1≤i,j≤n
+¯¯¯¯
+∂2 f
+∂xi ∂x j
+(⃗a+θ ⃗h
+⃗h)− ∂2 f
+∂xi ∂x j
+(⃗a)
+¯¯¯¯.
+Comme∥θ ⃗h
+⃗h∥ ≤ ∥⃗h∥, le vecteur ⃗a+θ ⃗h
+⃗htend vers ⃗alorsque ⃗htend vers ⃗0.
+Les dérivées partielles secondes étant continues, on a
+lim
+⃗h→⃗0
+ε(⃗h)=0.
+De plus,
+|r(⃗h)| ≤ 1
+2 ε(⃗h)
+Ã
+nX
+i=1
+|hi |
+!2
+.
+D’après l’inégalité de Cauchy–Schwarz,
+Ã
+nX
+i=1
+|hi |
+!2
+≤
+Ã
+nX
+i=1
+12
+! Ã
+nX
+i=1
+h2
+i
+!
+=n∥ ⃗h∥2.
+Par conséquent,
+|r(⃗h)| ≤ n
+2 ε(⃗h)∥⃗h∥2.
+Pour ⃗h̸= ⃗0, on en déduit
+0≤ |r(⃗h)|
+∥⃗h∥2
+≤ n
+2 ε(⃗h).
+Comme
+lim
+⃗h→⃗0
+ε(⃗h)=0,
+le théorème d’encadrement donne
+lim
+⃗h→⃗0
+|r(⃗h)|
+∥⃗h∥2
+=0.
+Ainsi,r( ⃗h)=o
+³
+∥⃗h∥2
+´
+.■
+Corollaire II.4.2.2 — Taylor–Young avec gradient et Hessienne.
+SoientUun ouvert de
+− →
+Rn, ⃗a∈Uetf:U− →Rune fonction de classeC 2 surU.
+Alors, lorsque ⃗htend vers ⃗0,
+f( ⃗a+ ⃗h)=f( ⃗a)+
+D
+⃗∇f( ⃗a)| ⃗h
+E
++ 1
+2 [⃗h] T
+e H f (⃗a)[⃗h]e +o
+³
+∥⃗h∥2
+´
+.
+Démonstration.
+SoientUun ouvert de
+− →
+Rn, ⃗a∈Uetf:U− →Rune fonction de classeC 2 surU.
+Le théorème de représentation de Riesz donne − − →d f ⃗a(⃗h) =
+D
+⃗∇f( ⃗a)| ⃗h
+E
+, tandis que la représenta-
+tion matricielle de la différentielle seconde donne
+− − − →
+d 2 f⃗a(⃗h,⃗h)=[ ⃗h] T
+e H f (⃗a)[⃗h]e.
+Il suffit de substituer ces deux relations dans la Proposition II.4.2.2.■
+II.4.3 Interprétation et conséquences
+II.4.3.1 Écriture au voisinage d’un vecteur et approximation locale
+En posant ⃗h= ⃗x− ⃗a, la formule de Taylor–Young s’écrit directement en fonction de⃗x.
+
+=== Cours original, page PDF 90 ===
+234Chapitre II.4. Formules de Taylor au second ordre
+Proposition II.4.3.1 — Développement de Taylor au voisinage de ⃗a.
+SoientUun ouvert de
+− →
+Rn, ⃗a∈Uetf:U− →Rune fonction de classeC 2 surU.
+Alors, lorsque ⃗xtend vers ⃗a,
+f( ⃗x)=f( ⃗a)+
+­⃗∇f( ⃗a)| ⃗x− ⃗a
+®
++ 1
+2 [⃗x− ⃗a] T
+e H f (⃗a)[⃗x− ⃗a]e +o
+¡
+∥⃗x− ⃗a∥2¢
+.
+Démonstration.
+SoientUun ouvert de
+− →
+Rn, ⃗a∈Uetf:U− →Rune fonction de classeC 2 surU.
+Il suffit de poser ⃗h= ⃗x− ⃗adans le Corollaire II.4.2.2.■
+La formule de Taylor–Young fournit ainsi l’approximation locale au second ordre
+f( ⃗a+ ⃗h)≃f( ⃗a)+ − − →d f ⃗a(⃗h)+ 1
+2
+− − − →
+d 2 f⃗a(⃗h,⃗h),
+ou, dans le cas scalaire,
+f( ⃗a+ ⃗h)≃f( ⃗a)+
+D
+⃗∇f( ⃗a)| ⃗h
+E
++ 1
+2 [⃗h] T
+e H f (⃗a)[⃗h]e.
+■ Remarque II.4.3.1 — Premier ordre et second ordre.
+L ’approximation au premier ordre utilise la valeurf (⃗a) et la différentielle− − →d f ⃗a. L ’approximation
+au second ordre fait également intervenir
+− − − →
+d 2 f⃗a et prend ainsi en compte la variation de la
+sensibilité locale décrite par la différentielle première.■
+II.4.3.2 Cas où la différentielle première est nulle
+Une situation particulièrement importante apparaîtra dans la partie consacrée à l’optimisa-
+tion.
+Proposition II.4.3.2 — Taylor au voisinage d’un vecteur où − − →d f ⃗a =0.
+SoientUun ouvert de
+− →
+Rn, ⃗a∈Uetf:U− →Rune fonction de classeC 2 surU.
+Si − − →d f ⃗a =0, alors, lorsque ⃗htend vers ⃗0,
+f( ⃗a+ ⃗h)=f( ⃗a)+ 1
+2
+− − − →
+d 2 f⃗a(⃗h,⃗h)+o
+³
+∥⃗h∥2
+´
+.
+Dans la base canonique,
+f( ⃗a+ ⃗h)=f( ⃗a)+ 1
+2 [⃗h] T
+e H f (⃗a)[⃗h]e +o
+³
+∥⃗h∥2
+´
+.
+Démonstration.
+SoientUun ouvert de
+− →
+Rn, ⃗a∈Uetf:U− →Rune fonction de classeC 2 surU.
+Supposons que − − →d f ⃗a =0.
+La formule de Taylor–Young à l’ordre deux contient le terme− − →d f ⃗a(⃗h), qui est nul pour tout ⃗h∈
+− →
+Rn.
+Il reste donc
+f( ⃗a+ ⃗h)=f( ⃗a)+ 1
+2
+− − − →
+d 2 f⃗a(⃗h,⃗h)+o
+³
+∥⃗h∥2
+´
+.
+La représentation matricielle de la différentielle seconde donne la seconde écriture.■
+
+=== Cours original, page PDF 91 ===
+II.4.3 Interprétation et conséquences 235
+■ Remarque II.4.3.2 — Préparation à l’optimisation.
+Lorsque le terme du premier ordre est nul, le premier terme susceptible de décrire la variation
+de la fonction est 1
+2
+− − − →
+d 2 f⃗a(⃗h,⃗h). Cette observation sera fondamentale lorsque nous étudierons
+les extrema des fonctions de plusieurs variables. ■
+II.4.3.3 Contrôle de l’erreur du premier ordre
+La formule avec reste intermédiaire permet également de contrôler l’erreur commise lorsque
+l’on remplace une fonction par son approximation au premier ordre.
+Proposition II.4.3.3 — Majoration de l’erreur d’approximation au premier ordre.
+Soient U un ouvert de
+− →
+Rn, f : U− →R une fonction de classe C 2 sur U , ⃗a∈U et ⃗h∈
+− →
+Rn tels
+que [⃗a, ⃗a+ ⃗h]⊂U.
+Supposons qu’il existeM≥0 tel que
+∀⃗x∈[ ⃗a, ⃗a+ ⃗h],∥H f (⃗x)∥ ≤M,
+où H f (⃗x) est considérée comme la matrice d’une application linéaire de
+− →
+Rn dans lui-même.
+Alors ¯¯¯f( ⃗a+ ⃗h)−f( ⃗a)− − − →d f ⃗a(⃗h)
+¯¯¯ ≤ M
+2 ∥⃗h∥2.
+Démonstration.
+Soient U un ouvert de
+− →
+Rn, f : U− →R une fonction de classe C 2 sur U , ⃗a∈U et ⃗h∈
+− →
+Rn tels que
+[⃗a, ⃗a+ ⃗h]⊂U.
+Supposons qu’il existeM≥0 tel que∥H f (⃗x)∥ ≤Mpour tout ⃗x∈[ ⃗a, ⃗a+ ⃗h].
+D’après la formule de Taylor avec reste intermédiaire, il existeθ∈]0,1[ tel que
+f( ⃗a+ ⃗h)−f( ⃗a)− − − →d f ⃗a(⃗h)
+= 1
+2 [⃗h] T
+e H f (⃗a+θ ⃗h)[⃗h]e.
+L ’inégalité de Cauchy–Schwarz et la majoration associée à la norme d’une application linéaire
+donnent
+¯¯¯[⃗h] T
+e H f (⃗a+θ ⃗h)[⃗h]e
+¯¯¯ ≤∥⃗h∥
+°°°H f (⃗a+θ ⃗h)⃗h
+°°°
+≤M∥⃗h∥2.
+La majoration annoncée en découle.■
+II.4.3.4 Fonctions vectorielles
+La formule de Taylor–Young s’étend aux fonctions à valeurs vectorielles en raisonnant
+composante par composante.
+Proposition II.4.3.4 — Taylor–Young pour une fonction vectorielle.
+SoientUun ouvert de
+− →
+Rn, ⃗a∈Uetf:U− →
+− →
+Rp une fonction de classeC 2 surU.
+Alors, lorsque ⃗htend vers ⃗0,
+f( ⃗a+ ⃗h)=f( ⃗a)+ − − →d f ⃗a(⃗h)+ 1
+2
+− − − →
+d 2 f⃗a(⃗h,⃗h)+o
+³
+∥⃗h∥2
+´
+.
+
+=== Cours original, page PDF 92 ===
+236Chapitre II.4. Formules de Taylor au second ordre
+Démonstration.
+Soient U un ouvert de
+− →
+Rn, ⃗a∈U et f : U− →
+− →
+Rp une fonction de classe C 2 sur U , de fonctions
+composantesf 1,. .. ,f p.
+D’après la Proposition II.3.3.2, toutes les dérivées partielles secondes de chacune des fonctions
+composantes fi existent et sont continues sur U . En appliquant cette même proposition à
+chaque fonctionf i :U− →R, on en déduit quef i est de classeC 2 surUpour touti∈ 1,p.
+La Proposition II.4.2.2 appliquée à chaque fonction composante donne alors, pour touti∈  1,p ,
+fi (⃗a+ ⃗h)=f i (⃗a)+ − − − − →d(f i )⃗a(⃗h)+ 1
+2
+− − − − − →
+d 2(f i )⃗a(⃗h,⃗h)+r i (⃗h),
+où
+ri (⃗h)=o
+³
+∥⃗h∥2
+´
+lorsque ⃗htend vers ⃗0.
+Pour ⃗h̸= ⃗0, posons
+εi (⃗h)= ri (⃗h)
+∥⃗h∥2
+.
+Par définition du petito, on a, pour touti∈ 1,p,
+lim
+⃗h→⃗0
+εi (⃗h)=0.
+Posons
+⃗ε(⃗h)=
+
+
+ε1(⃗h)
+...
+εp(⃗h)
+
+.
+Comme le nombre de fonctions composantes est fini,
+°°°⃗ε(⃗h)
+°°°
+2
+=
+pX
+i=1
+¯¯¯εi (⃗h)
+¯¯¯
+2
+.
+Chaque terme de cette somme ayant pour limite 0, on obtient
+lim
+⃗h→⃗0
+°°°⃗ε(⃗h)
+°°° =0.
+Regroupons maintenant lespégalités obtenues composante par composante. On a
+f( ⃗a+ ⃗h)=f( ⃗a)+
+
+
+− − − − − →d(f 1)⃗a(⃗h)
+...
+− − − − − →d(f p )⃗a(⃗h)
+
+
++ 1
+2
+
+
+− − − − − →
+d 2(f 1)⃗a(⃗h,⃗h)
+...
+− − − − − − →
+d 2(f p )⃗a(⃗h,⃗h)
+
+ + ∥⃗h∥2⃗ε(⃗h).
+D’après les Propositions I.3.2.3, I.3.2.4 et I.3.2.2, appliquées aux bases canoniques et aux fonc-
+tions composantes, les composantes du vecteur − − →d f ⃗a(⃗h) sont
+− − − − − →d(f 1)⃗a(⃗h),. .. , − − − − − →d(f p )⃗a(⃗h).
+
+=== Cours original, page PDF 93 ===
+II.4.3 Interprétation et conséquences 237
+Ainsi 
+
+− − − − − →d(f 1)⃗a(⃗h)
+...
+− − − − − →d(f p )⃗a(⃗h)
+
+ = − − →d f ⃗a(⃗h).
+D’autre part, la Proposition II.3.2.4 donne
+
+
+− − − − − →
+d 2(f 1)⃗a(⃗h,⃗h)
+...
+− − − − − − →
+d 2(f p )⃗a(⃗h,⃗h)
+
+ =
+− − − →
+d 2 f⃗a(⃗h,⃗h).
+On obtient donc
+f( ⃗a+ ⃗h)=f( ⃗a)+ − − →d f ⃗a(⃗h)+ 1
+2
+− − − →
+d 2 f⃗a(⃗h,⃗h)+ ∥⃗h∥2⃗ε(⃗h).
+Comme
+lim
+⃗h→⃗0
+°°°⃗ε(⃗h)
+°°° =0,
+on a
+∥⃗h∥2⃗ε(⃗h)=o
+³
+∥⃗h∥2
+´
+.
+Par conséquent,
+f( ⃗a+ ⃗h)=f( ⃗a)+ − − →d f ⃗a(⃗h)+ 1
+2
+− − − →
+d 2 f⃗a(⃗h,⃗h)+o
+³
+∥⃗h∥2
+´
+■
+■ Remarque II.4.3.3 — Pas de vecteur intermédiaire commun dans le cas vectoriel.
+Pour une fonction à valeurs réelles, la formule avec reste intermédiaire fournit un unique
+nombre θ∈ ]0,1[. Pour une fonction à valeurs dans
+− →
+Rp avec p> 1, chaque fonction composante
+peut faire intervenir un nombre intermédiaire différent. On ne peut donc pas affirmer en
+général qu’il existe un mêmeθtel que
+f( ⃗a+ ⃗h)=f( ⃗a)+ − − →d f ⃗a(⃗h)+ 1
+2
+− − − − − − →
+d 2 f⃗a+θ⃗h(⃗h,⃗h).
+En revanche, la formule de Taylor–Young vectorielle reste valable.■
+Méthodologie II.4.3.1 — Construire un développement de Taylor d’ordre deux.
+Pour obtenir le développement de Taylor d’ordre deux d’une fonction réellef au voisinage
+de ⃗a, on pourra suivre la démarche suivante :
+1. vérifier quefest de classeC 2 au voisinage de ⃗a;
+2. calculerf( ⃗a) ;
+3. calculer le gradient ⃗∇f( ⃗a) ;
+4. calculer la matrice hessienneH f (⃗a) ;
+5. poser ⃗h= ⃗x− ⃗a;
+6. écrire
+f( ⃗a+ ⃗h)=f( ⃗a)+
+D
+⃗∇f( ⃗a)| ⃗h
+E
++ 1
+2 [⃗h] T
+e H f (⃗a)[⃗h]e +o
+³
+∥⃗h∥2
+´
+.
+■ Remarque II.4.3.4 — Les trois niveaux d’information.
+Au voisinage de ⃗a, la valeur f (⃗a) fournit l’information d’ordre zéro, la différentielle− − →d f ⃗a décrit
+la variation au premier ordre et la différentielle seconde
+− − − →
+d 2 f⃗a décrit la variation de cette
+
+=== Cours original, page PDF 94 ===
+238Chapitre II.4. Formules de Taylor au second ordre
+sensibilité au second ordre. ■
+
+=== Cours original, page PDF 109 ===
+II.5. Convexité
+Dans ce chapitre nous nous placerons dans les espaces euclidiens
+³− →
+Rn,〈• | •〉
+´
+et
+³− →
+Rp,〈• | •〉
+´
+,
+munis de leurs produits scalaires canoniques.
+Nous noterons par∥•∥les normes euclidiennes associées.
+La convexité est une propriété géométrique fondamentale en analyse et en optimisation.
+Pour un ensemble, elle signifie que le segment reliant deux de ses vecteurs reste entièrement
+dans l’ensemble. Pour une fonction, elle exprime que la valeur prise sur un segment reste
+sous la corde reliant les valeurs aux extrémités. Nous allons reprendre la notion d’ensemble
+convexe, introduite brièvement dans le chapitre sur les accroissements finis, puis étudier les
+fonctions convexes, la régularité qu’impose la convexité, puis leurs caractérisations à l’aide de la
+différentielle, du gradient et de la différentielle seconde.
+II.5.1 Ensembles convexes
+La convexité d’un ensemble a déjà été utilisée pour garantir que le segment reliant deux
+vecteurs reste dans le domaine d’une fonction. Nous allons maintenant en développer les
+principales propriétés.
+II.5.1.1 Segments et définition
+Pour deux vecteurs
+¡
+⃗x, ⃗y
+¢
+∈
+³− →
+Rn
+´2
+, le segment qui les relie est
+[⃗x, ⃗y]=
+©
+(1−t) ⃗x+t ⃗y;t∈[0, 1]
+ª
+=
+©
+⃗x+t( ⃗y− ⃗x) ;t∈[0, 1]
+ª
+.
+Définition II.5.1.1 — Ensemble convexe.
+Une partie C de
+− →
+Rn est diteconvexelorsque, pour tout
+¡
+⃗x, ⃗y
+¢
+∈C 2, le segment [⃗x, ⃗y] est inclus
+dansC, c’est-à-dire lorsque
+∀
+¡
+⃗x, ⃗y,t
+¢
+∈C 2 ×[0, 1], (1−t) ⃗x+t ⃗y∈C.
+■ Remarque II.5.1.1 — Interprétation géométrique.
+Dans un ensemble convexe, deux vecteurs quelconques peuvent être reliés par un segment
+sans quitter l’ensemble. ■
+
+=== Cours original, page PDF 110 ===
+254Chapitre II.5. Convexité
+II.5.1.2 Exemples et constructions d’ensembles convexes
+Proposition II.5.1.1 — L’espace entier est convexe.
+L ’espace
+− →
+Rn est convexe.
+Démonstration.
+Soitn∈N ∗. Montrons que
+− →
+Rn est convexe.
+Pour tout
+¡
+⃗x, ⃗y,t
+¢
+∈
+³− →
+Rn
+´2
+×[0, 1], le vecteur (1−t) ⃗x+t ⃗yappartient encore à
+− →
+Rn.
+La définition de la convexité est donc vérifiée.■
+Proposition II.5.1.2 — Boules convexes.
+Toute boule ouverte et toute boule fermée de
+− →
+Rn est convexe.
+Démonstration.
+Soient ⃗a∈
+− →
+Rn etr>0. Montrons que les boulesB( ⃗a,r) et B(⃗a,r) sont convexes.
+Soit
+¡
+⃗x, ⃗y,t
+¢
+∈ B(⃗a,r) 2 ×[0, 1] et posons ⃗z=(1−t) ⃗x+t ⃗y. Alors
+∥⃗z− ⃗a∥ =
+°°(1−t)( ⃗x− ⃗a)+t( ⃗y− ⃗a)
+°°
+≤(1−t)∥ ⃗x− ⃗a∥ +t∥ ⃗y− ⃗a∥
+≤(1−t)r+t r=r.
+Ainsi ⃗z∈ B(⃗a,r ) et la boule fermée est convexe. Si
+¡
+⃗x, ⃗y
+¢
+∈B (⃗a,r )2, la même estimation est stricte,
+donc∥ ⃗z− ⃗a∥ <r. La boule ouverte est également convexe.■
+La convexité apparaît naturellement dans les ensembles de solutions des systèmes linéaires
+étudiés en algèbre.
+Proposition II.5.1.3 — Ensemble des solutions d’un système linéaire.
+SoientA∈M p,n (R) et ⃗b∈
+− →
+Rp.
+Alors l’ensemble
+C=
+n
+⃗x∈
+− →
+Rn ;A ⃗x= ⃗b
+o
+est convexe.
+Démonstration.
+SoientA∈M p,n (R), ⃗b∈
+− →
+Rp etC={ ⃗x∈
+− →
+Rn ;A ⃗x= ⃗b}. Montrons queCest convexe.
+Soit
+¡
+⃗x, ⃗y,t
+¢
+∈C 2 ×[0, 1]. CommeA ⃗x=A ⃗y= ⃗b, la linéarité donne
+A
+¡
+(1−t) ⃗x+t ⃗y
+¢
+=(1−t) ⃗b+t ⃗b= ⃗b.
+Ainsi (1−t) ⃗x+t ⃗y∈C.■
+■ Remarque II.5.1.2 — Lien avec la méthode de Gauss.
+La méthode de Gauss permet de déterminer si le système A⃗x= ⃗b possède des solutions
+et, lorsqu’il en possède, de décrire l’ensemble de ces solutions. La proposition précédente
+montre que cet ensemble est nécessairement convexe, quelle que soit la forme obtenue après
+élimination. ■
+
+=== Cours original, page PDF 111 ===
+II.5.1 Ensembles convexes 255
+Proposition II.5.1.4 — Demi-espaces définis par une inégalité linéaire.
+Soient ⃗a∈
+− →
+Rn etβ∈R.
+Alors l’ensemble
+C=
+n
+⃗x∈
+− →
+Rn ; 〈⃗a| ⃗x〉 ≤β
+o
+est convexe.
+Démonstration.
+Soient ⃗a∈
+− →
+Rn,β∈RetC={ ⃗x; 〈⃗a| ⃗x〉 ≤β}. Montrons queCest convexe.
+Soit
+¡
+⃗x, ⃗y,t
+¢
+∈C 2 ×[0, 1].
+La linéarité du produit scalaire par rapport au second argument donne :
+­
+⃗a|(1−t) ⃗x+t ⃗y
+®
+=(1−t) 〈⃗a| ⃗x〉 +t
+­
+⃗a| ⃗y
+®
+≤(1−t)β+tβ=β.
+Ainsi (1−t) ⃗x+t ⃗y∈C.■
+Proposition II.5.1.5 — Intersection d’ensembles convexes.
+Toute intersection d’ensembles convexes de
+− →
+Rn est convexe.
+Démonstration.
+Soit (Ci )i∈I une famille d’ensembles convexes de
+− →
+Rn et posonsC=
+\
+i∈I
+Ci .
+Montrons queCest convexe.
+Soit
+¡
+⃗x, ⃗y,t
+¢
+∈C 2 ×[0, 1].
+Pour touti∈I, on a
+¡
+⃗x, ⃗y
+¢
+∈C 2
+i .
+CommeC i est convexe, (1−t) ⃗x+t ⃗y∈C i .
+Cette propriété étant vraie pour touti∈I, le vecteur (1−t) ⃗x+t ⃗yappartient à
+\
+i∈I
+Ci =C.■
+Proposition II.5.1.6 — Ensembles définis par plusieurs contraintes linéaires.
+Soient A et C deux matrices de tailles compatibles et⃗b, ⃗d deux vecteurs de tailles compatibles.
+L ’ensemble des vecteurs⃗xvérifiant simultanémentA ⃗x≤ ⃗betC ⃗x= ⃗dest convexe.
+Démonstration.
+Soient A et C deux matrices de tailles compatibles et ⃗b, ⃗d deux vecteurs de tailles compatibles.
+Considérons l’ensemble des vecteurs satisfaisantA⃗x≤ ⃗betC ⃗x= ⃗d.
+Chaque ligne du système d’inégalités définit un demi-espace convexe d’après la Proposition
+II.5.1.4.
+L ’ensemble défini parC⃗x= ⃗dest convexe d’après la Proposition II.5.1.3.
+L ’ensemble considéré est l’intersection de tous ces ensembles ; il est donc convexe d’après la
+Proposition II.5.1.5.■
+■ Remarque II.5.1.3 — Importance pour l’optimisation.
+Les contraintes linéaires utilisées en optimisation définissent naturellement des ensembles
+convexes. La convexité constitue ainsi le prolongement géométrique naturel de l’étude des
+systèmes linéaires. ■
+
+=== Cours original, page PDF 112 ===
+256Chapitre II.5. Convexité
+II.5.1.3 Combinaisons convexes
+Définition II.5.1.2 — Combinaison convexe.
+Soient
+¡
+⃗x1, .. .,⃗xp
+¢
+∈
+³− →
+Rn
+´p
+et (λ1,. .. ,λ p)∈R p
++ tels que
+pX
+i=1
+λi =1.
+Le vecteur
+pX
+i=1
+λi⃗xi est appelécombinaison convexedes vecteurs ⃗x1,. .. ,⃗xp.
+Pour p= 2, une combinaison convexe s’écrit (1−t )⃗x+t ⃗y avec t∈ [0,1] ; on retrouve donc
+exactement les vecteurs d’un segment.
+Proposition II.5.1.7 — Combinaisons convexes dans un ensemble convexe.
+SoitCun ensemble convexe de
+− →
+Rn.
+Pour tout
+¡
+⃗x1, ... ,⃗xp
+¢
+∈C p et tous (λ1, .. .,λ p)∈R p
++ tels que
+pX
+i=1
+λi =1, on a
+pX
+i=1
+λi⃗xi ∈C.
+Démonstration.
+Soit C un ensemble convexe de
+− →
+Rn. Soient
+¡
+⃗x1, .. .,⃗xp
+¢
+∈C p et (λ1,. .. ,λ p) ∈R p
++ tels que
+pX
+i=1
+λi = 1.
+Montrons le résultat par récurrence surp.
+— Pourp=2, il s’agit de la définition de la convexité.
+— [H.R] : Supposons le résultat vrai pourp−1 vecteurs.
+— Au rangp:
+Siλ p =1, la combinaison convexe est ⃗xp ∈C. Supposons doncλ p <1 et posons
+µi = λi
+1−λ p
+,i∈ 1,p−1.
+Les réelsµ i sont positifs et leur somme vaut 1.
+D’après[H.R], nous avons ⃗y=
+p−1X
+i=1
+µi⃗xi appartient àC.
+Or pX
+i=1
+λi⃗xi =(1−λ p)⃗y+λ p⃗xp.
+La convexité deCmontre que cette combinaison appartient àC.
+Ainsi, de proche en proche, la relation est vraie pour toutp≥2■
+II.5.1.4 Applications affines et convexité
+Les applications affines préservent naturellement les segments. Nous utiliserons ici une applica-
+tionf:
+− →
+Rn − →
+− →
+Rp de la formef( ⃗x)=A ⃗x+ ⃗b.
+Proposition II.5.1.8 — Image d’un ensemble convexe par une application affine.
+Soitf:
+− →
+Rn − →
+− →
+Rp une application affine définie parf( ⃗x)=A ⃗x+ ⃗b.
+SiCest un ensemble convexe de
+− →
+Rn, alorsf(C) est convexe.
+Démonstration.
+Soit f :
+− →
+Rn − →
+− →
+Rp une application affine définie par f (⃗x) =A ⃗x+ ⃗b, et soit C un ensemble convexe.
+Montrons quef(C) est convexe.
+Soit (⃗u, ⃗v,t ) ∈f (C )2 × [0,1]. Par définition de l’image, il existe
+¡
+⃗x, ⃗y
+¢
+∈C 2 tels que ⃗u=f (⃗x) et
+
+=== Cours original, page PDF 113 ===
+II.5.2 Fonctions convexes 257
+⃗v=f( ⃗y).
+Commefest affine, nous avons
+(1−t) ⃗u+t ⃗v=f
+¡
+(1−t) ⃗x+t ⃗y
+¢
+.
+La convexité deCimplique (1−t) ⃗x+t ⃗y∈C, donc
+(1−t) ⃗u+t ⃗v∈f(C)
+■
+Proposition II.5.1.9 — Image réciproque d’un ensemble convexe.
+Soitf:
+− →
+Rn − →
+− →
+Rp une application affine.
+SiDest un ensemble convexe de
+− →
+Rp, alorsf −1(D) est convexe.
+Démonstration.
+Soitf:
+− →
+Rn − →
+− →
+Rp une application affine et soitDun ensemble convexe de
+− →
+Rp.
+Montrons quef −1(D) est convexe.
+Soit
+¡
+⃗x, ⃗y,t
+¢
+∈
+¡
+f −1(D)
+¢2
+×[0, 1]. On a
+¡
+f( ⃗x),f( ⃗y)
+¢
+∈D 2.
+Commefest affine, nous avons
+f((1−t) ⃗x+t ⃗y)=(1−t)f( ⃗x)+t f( ⃗y).
+La convexité deDmontre que le membre de droite appartient àD.
+Ainsi (1−t) ⃗x+t ⃗y∈f −1(D).■
+II.5.2 Fonctions convexes
+II.5.2.1 Définition et interprétation
+Nous considérons maintenant des fonctions à valeurs réelles définies sur un ensemble convexe.
+Définition II.5.2.1 — Fonction convexe.
+SoientCune partie convexe de
+− →
+Rn etf:C− →R.
+On dit quefestconvexelorsque, pour tout
+¡
+⃗x, ⃗y,t
+¢
+∈C 2 ×[0, 1],
+f((1−t) ⃗x+t ⃗y)≤(1−t)f( ⃗x)+t f( ⃗y).
+■ Remarque II.5.2.1 — Interprétation géométrique.
+Pour une fonction convexe, la valeur prise en un vecteur du segment [⃗x, ⃗y] est inférieure ou
+égale à la valeur donnée par la corde reliant les points du graphe correspondant à⃗xet ⃗y.■
+Définition II.5.2.2 — Fonction strictement convexe.
+SoientCun ensemble convexe de
+− →
+Rn etf:C− →R.
+On dit quefeststrictement convexelorsque,pour tout
+¡
+⃗x, ⃗y,t
+¢
+∈C 2×]0, 1[ tel que ⃗x̸= ⃗y,
+f((1−t) ⃗x+t ⃗y)<(1−t)f( ⃗x)+t f( ⃗y).
+Toute fonction strictement convexe est en particulier convexe.
+
+=== Cours original, page PDF 114 ===
+258Chapitre II.5. Convexité
+II.5.2.2 Restriction à un segment et inégalité de Jensen
+Proposition II.5.2.1 — Convexité et restriction à un segment.
+SoientCun ensemble convexe de
+− →
+Rn etf:C− →R.
+La fonctionfest convexe surCsi et seulement si, pour tout
+¡
+⃗x, ⃗y
+¢
+∈C 2, la fonction
+ϕ⃗x,⃗y : [0,1]− →R
+t7− →f((1−t) ⃗x+t ⃗y)
+est convexe sur [0, 1].
+Démonstration.
+SoientCun ensemble convexe de
+− →
+Rn etf:C− →R.
+— Montrons que la convexité defimplique celle de toutes ses restrictions aux segments.
+Supposonsfconvexe et fixons
+¡
+⃗x, ⃗y
+¢
+∈C 2. Soit (s1,s 2,λ) ∈[0, 1]3.
+En posant ⃗z1 =(1−s 1)⃗x+s 1⃗yet ⃗z2 =(1−s 2)⃗x+s 2⃗y, on a
+(1−λ) ⃗z1 +λ⃗z2 = (1− ((1−λ)s 1 +λs 2))⃗x+ ((1−λ)s 1 +λs 2)⃗y.
+La convexité defdonne alors
+ϕ⃗x,⃗y ((1−λ)s 1 +λs 2)≤(1−λ)ϕ ⃗x,⃗y (s1)+λϕ ⃗x,⃗y (s2).
+Ainsiϕ ⃗x,⃗y est convexe.
+— Montrons que la convexité de toutes les restrictions aux segments implique celle def.
+Supposons que, pour tout
+¡
+⃗x, ⃗y
+¢
+∈C 2,ϕ ⃗x,⃗y est convexe.
+Pour toutt∈[0,1], on a
+ϕ⃗x,⃗y (t)≤(1−t)ϕ ⃗x,⃗y (0)+tϕ ⃗x,⃗y (1),
+soit
+f((1−t) ⃗x+t ⃗y)≤(1−t)f( ⃗x)+t f( ⃗y).
+La fonctionfest donc convexe.
+■
+Proposition II.5.2.2 — Inégalité de Jensen.
+SoientCun ensemble convexe de
+− →
+Rn etf:C− →Rune fonction convexe.
+Pour tout
+¡
+⃗x1, ... ,⃗xp
+¢
+∈C p et tous (λ1, .. .,λ p)∈R p
++ tels que
+pX
+i=1
+λi =1, on a
+f
+Ã pX
+i=1
+λi⃗xi
+!
+≤
+pX
+i=1
+λi f( ⃗xi ).
+Démonstration.
+Soient C un ensemble convexe de
+− →
+Rn, f : C− →R une fonction convexe,
+¡
+⃗x1,. .. ,⃗xp
+¢
+∈C p et
+(λ1, .. .,λ p)∈R p
++ tels que
+pX
+i=1
+λi =1.
+Montrons l’inégalité de Jensen par récurrence surp.
+— Pourp=2, il s’agit de la définition de la convexité.
+— [H.R] : Supposons le résultat vrai pourp−1 vecteurs.
+
+=== Cours original, page PDF 115 ===
+II.5.2 Fonctions convexes 259
+— Au rangp:
+Siλ p =1, l’inégalité est une égalité.
+Sinon, posons
+µi = λi
+1−λ p
+,i∈ 1,p−1.
+Les réelsµ i sont positifs et leur somme vaut 1.
+D’après[H.R], le vecteur ⃗y=
+p−1X
+i=1
+µi⃗xi appartient àCet vérifie
+f( ⃗y)≤
+p−1X
+i=1
+µi f( ⃗xi ).
+Comme
+pX
+i=1
+λi⃗xi =(1−λ p)⃗y+λ p⃗xp, la convexité defdonne
+f
+Ã pX
+i=1
+λi⃗xi
+!
+≤(1−λ p)f( ⃗y)+λ p f( ⃗xp)≤
+pX
+i=1
+λi f( ⃗xi ).
+Ainsi, de proche en proche, pour toutp≥2 l’inégalité de Jensen est vraie.■
+II.5.2.3 Stabilité de la convexité
+Proposition II.5.2.3 — Somme de fonctions convexes.
+SoientCun ensemble convexe,f,g:C− →Rdeux fonctions convexes et (λ,µ)∈R 2
++.
+Alorsλf+µgest convexe surC.
+Démonstration.
+SoientCun ensemble convexe,f,g:C− →Rdeux fonctions convexes et (λ,µ)∈R 2
++.
+Montrons queλf+µgest convexe surC.
+Pour tout
+¡
+⃗x, ⃗y,t
+¢
+∈C 2 ×[0, 1], la convexité defdonne
+f
+¡
+(1−t) ⃗x+t ⃗y
+¢
+≤(1−t)f( ⃗x)+t f( ⃗y), (II.5.1)
+et celle degdonne
+g
+¡
+(1−t) ⃗x+t ⃗y
+¢
+≤(1−t)g( ⃗x)+t g( ⃗y). (II.5.2)
+Comme (λ,µ)∈R 2
++, les multiplications parλetµconservent le sens des inégalités.
+Ainsi,λ×(II.5.1)+µ×(II.5.2) donne
+(λf+µg)
+¡
+(1−t) ⃗x+t ⃗y
+¢
+≤(1−t)(λf+µg)( ⃗x)
++t(λf+µg)( ⃗y).
+Cette inégalité étant vérifiée pour tout
+¡
+⃗x, ⃗y,t
+¢
+∈C 2 × [0,1], la fonction λf+µg est convexe sur
+C. ■
+Proposition II.5.2.4 — Composition avec une application affine.
+Soient D et C deux ensembles convexes, g : D− →C une application affine et f : C− →R une
+fonction convexe.
+Alorsf◦gest convexe surD.
+
+=== Cours original, page PDF 116 ===
+260Chapitre II.5. Convexité
+Démonstration.
+Soient D et C deux ensembles convexes, g : D− →C une application affine et f : C− →R une
+fonction convexe.
+Montrons quef◦gest convexe surD.
+Pour tout
+¡
+⃗x, ⃗y,t
+¢
+∈D 2 ×[0, 1], la convexité deDassure que (1−t) ⃗x+t ⃗y∈D.
+L ’affinité degdonne
+g
+¡
+(1−t) ⃗x+t ⃗y
+¢
+=(1−t)g( ⃗x)+t g( ⃗y). (II.5.3)
+Comme
+¡
+g(⃗x),g( ⃗y)
+¢
+∈C 2, la convexité defdonne
+f
+¡
+(1−t)g( ⃗x)+t g( ⃗y)
+¢
+≤(1−t)f(g( ⃗x))+t f(g( ⃗y)). (II.5.4)
+En utilisant (II.5.3) dans (II.5.4), on obtient
+(f◦g)
+¡
+(1−t) ⃗x+t ⃗y
+¢
+≤(1−t)(f◦g)( ⃗x)+t(f◦g)( ⃗y).
+Cette relation étant vérifiée pour tout
+¡
+⃗x, ⃗y,t
+¢
+∈D 2 × [0,1], la fonction f◦g est convexe sur D. ■
+Proposition II.5.2.5 — Maximum de fonctions convexes.
+SoientCun ensemble convexe etf 1, .. .,f p :C− →Rdes fonctions convexes.
+Alors la fonction définie parf( ⃗x)=max
+1≤i≤p
+fi (⃗x) est convexe surC.
+Démonstration.
+SoientCun ensemble convexe etf 1, ... ,f p :C− →Rdes fonctions convexes.
+Posonsf( ⃗x)=max
+1≤i≤p
+fi (⃗x).
+Pour tout
+¡
+⃗x, ⃗y,t
+¢
+∈C 2 ×[0, 1] et touti∈ 1,p,
+fi ((1−t) ⃗x+t ⃗y)≤(1−t)f i (⃗x)+t f i (⃗y)
+≤(1−t)f( ⃗x)+t f( ⃗y).
+En prenant le maximum suri, on obtient l’inégalité de convexité pourf.■
+II.5.2.4 Épigraphe et ensembles de sous-niveau
+Définition II.5.2.3 — Épigraphe.
+SoientCune partie de
+− →
+Rn etf:C− →R.
+On appelleépigraphe de fl’ensemble
+epi(f)=
+©
+(⃗x,α ) ∈C×R;α≥f( ⃗x)
+ª
+.
+Proposition II.5.2.6 — Convexité et épigraphe.
+SoientCun ensemble convexe de
+− →
+Rn etf:C− →R.
+La fonctionfest convexe si et seulement si son épigraphe est convexe dans
+− − − →
+Rn+1.
+Démonstration.
+SoientCun ensemble convexe de
+− →
+Rn etf:C− →R.
+— Montrons que la convexité defimplique celle de son épigraphe.
+Supposonsfconvexe.
+
+=== Cours original, page PDF 117 ===
+II.5.3 Continuité et différentiabilité des fonctions convexes 261
+Soit
+¡
+(⃗x,α ),
+¡
+⃗y,β
+¢
+,t
+¢
+∈epi(f) 2 ×[0, 1].
+On af( ⃗x)≤αetf( ⃗y)≤β, donc
+f((1−t) ⃗x+t ⃗y)≤(1−t)f( ⃗x)+t f( ⃗y)
+≤(1−t)α+tβ.
+Ainsi
+¡
+(1−t) ⃗x+t ⃗y,(1−t)α+tβ
+¢
+appartient à epi(f).
+— Montrons que la convexité de l’épigraphe implique celle def.
+Supposons epi(f ) convexe. Les vecteurs (⃗x,f (⃗x)) et (⃗y,f (⃗y)) appartiennent à l’épigraphe.
+Leur combinaison convexe y appartient donc également, ce qui signifie
+f((1−t) ⃗x+t ⃗y)≤(1−t)f( ⃗x)+t f( ⃗y).
+La fonctionfest convexe.
+■
+■ Remarque II.5.2.2 — Le graphe n’est pas l’objet convexe.
+Le graphe d’une fonction convexe n’est généralement pas un ensemble convexe. C’est son
+épigraphe qui possède cette propriété géométrique.■
+Définition II.5.2.4 — Ensemble de sous-niveau.
+SoientCune partie de
+− →
+Rn,f:C− →Retα∈R.
+On appelleensemble de sous-niveau de niveauαl’ensemble
+Cα =
+©
+⃗x∈C;f( ⃗x)≤α
+ª
+.
+Proposition II.5.2.7 — Sous-niveaux d’une fonction convexe.
+SoientCun ensemble convexe,f:C− →Rune fonction convexe etα∈R.
+Alors l’ensemble de sous-niveauCα est convexe.
+Démonstration.
+SoientCun ensemble convexe,f:C− →Rune fonction convexe etα∈R.
+Montrons queC α est convexe.
+Soit
+¡
+⃗x, ⃗y,t
+¢
+∈C 2
+α ×[0, 1]. On af( ⃗x)≤αetf( ⃗y)≤α.
+Par convexité def, nous obtenons
+f((1−t) ⃗x+t ⃗y)≤(1−t)f( ⃗x)+t f( ⃗y)≤α.
+Ainsi (1−t) ⃗x+t ⃗y∈C α.■
+■ Remarque II.5.2.3 — Contraintes convexes.
+Une contrainte de la forme f (⃗x) ≤α , avec f convexe, définit donc un ensemble convexe. Ce
+résultat sera particulièrement important pour la formulation des problèmes d’optimisation.■
+II.5.3 Continuité et différentiabilité des fonctions convexes
+La convexité ne constitue pas seulement une propriété géométrique. Sur un ouvert convexe,
+elle impose également une régularité importante : une fonction convexe est localement lip-
+schitzienne, donc continue. En revanche, la convexité ne suffit pas à assurer la différentiabilité.
+L ’étude des dérivées directionnelles permet de préciser cette distinction.
+
+=== Cours original, page PDF 118 ===
+262Chapitre II.5. Convexité
+II.5.3.1 Régularité locale des fonctions convexes
+Définition II.5.3.1 — Fonction localement lipschitzienne.
+SoientUune partie de
+− →
+Rn etf:U− →
+− →
+Rp.
+On dit que f estlocalement lipschitzienne sur U lorsque, pour tout⃗a∈U , il existe un voisinage
+Vde ⃗atel que la restriction defàU∩Vsoit lipschitzienne.
+Proposition II.5.3.1 — Une fonction convexe est localement lipschitzienne.
+SoientUun ouvert convexe de
+− →
+Rn etf:U− →Rune fonction convexe.
+Alorsfest localement lipschitzienne surU.
+Démonstration.
+SoientUun ouvert convexe de
+− →
+Rn etf:U− →Rune fonction convexe.
+Montrons quefest localement lipschitzienne surU.
+Soit ⃗a∈U. CommeUest ouvert, il exister>0 tel queB( ⃗a, 2r)⊂U.
+Considérons les 2n+1 vecteurs ⃗aet ⃗a±r ⃗ei , pouri∈ 1,n, et posons
+M=max
+©
+f( ⃗a),f( ⃗a+r ⃗ei ),f( ⃗a−r ⃗ei ) ;i∈ 1,n
+ª
+.
+Soit ⃗x= ⃗a+
+nX
+i=1
+hi⃗ei tel que
+nX
+i=1
+|hi | ≤r.
+Posons, pour touti∈ 1,n,
+λ+
+i = max(hi , 0)
+r ,λ −
+i = max(−hi ,0)
+r
+et
+λ0 =1−
+nX
+i=1
+¡
+λ+
+i +λ −
+i
+¢
+.
+Ces coefficients sont positifs ou nuls et leur somme vaut 1. De plus,
+⃗x=λ 0⃗a+
+nX
+i=1
+£
+λ+
+i (⃗a+r ⃗ei )+λ −
+i (⃗a−r ⃗ei )
+¤
+. (II.5.5)
+D’après l’inégalité de Jensen appliquée à (II.5.5), on obtientf( ⃗x)≤M.
+Supposons maintenant que
+nX
+i=1
+|hi | ≤r/2.
+Le vecteur 2⃗a− ⃗xvérifie également la condition précédente.
+Comme ⃗a= 1
+2⃗x+ 1
+2 (2⃗a− ⃗x), la convexité defdonne
+f( ⃗a)≤ 1
+2 f( ⃗x)+ 1
+2 f(2 ⃗a− ⃗x)≤ 1
+2 f( ⃗x)+ 1
+2 M.
+Ainsi, en posantm=2f( ⃗a)−M, on a
+m≤f( ⃗x)≤M(II.5.6)
+dès que
+nX
+i=1
+|hi | ≤r/2.
+Soit maintenant
+¡
+⃗x, ⃗y
+¢
+tel que
+nX
+i=1
+|xi −a i | ≤ r
+4 et
+nX
+i=1
+|y i −a i | ≤ r
+4 .
+
+=== Cours original, page PDF 119 ===
+II.5.3 Continuité et différentiabilité des fonctions convexes 263
+Posonsd=
+nX
+i=1
+|y i −x i |.
+Sid=0, l’inégalité de Lipschitz est immédiate.
+Supposonsd>0, posonsθ=2d/ret ⃗z= ⃗x+ 1
+θ (⃗y− ⃗x).
+On a 0<θ≤1 et nX
+i=1
+|zi −a i | ≤ r
+4 + r
+2 <r.
+Comme ⃗y=(1−θ) ⃗x+θ ⃗z, la convexité defet les bornes précédentes donnent
+f( ⃗y)−f( ⃗x)≤θ
+¡
+f( ⃗z)−f( ⃗x)
+¢
+≤ 2(M−m)
+r d.
+En échangeant ⃗xet ⃗y, on obtient
+|f( ⃗y)−f( ⃗x)| ≤ 2(M−m)
+r
+nX
+i=1
+|y i −x i |.
+D’après l’inégalité de Cauchy–Schwarz,
+nX
+i=1
+|y i −x i | ≤
+p
+n∥⃗y− ⃗x∥.
+Ainsi,
+|f( ⃗y)−f( ⃗x)| ≤ 2pn(M−m)
+r ∥⃗y− ⃗x∥.
+Enfin, la bouleB
+µ
+⃗a, r
+4pn
+¶
+est contenue dans l’ensemble des vecteurs⃗x vérifiant
+nX
+i=1
+|xi −ai | ≤r /4.
+La fonctionfest donc lipschitzienne dans un voisinage de ⃗a.
+Comme ⃗aest quelconque dansU,fest localement lipschitzienne surU.■
+Corollaire II.5.3.1 — Continuité des fonctions convexes.
+SoientUun ouvert convexe de
+− →
+Rn etf:U− →Rune fonction convexe.
+Alorsfest continue surU.
+Démonstration.
+SoientUun ouvert convexe de
+− →
+Rn etf:U− →Rune fonction convexe.
+D’après la Proposition II.5.3.1,fest localement lipschitzienne surU.
+D’après la Proposition II.1.3.1, toute fonction lipschitzienne est continue. Ainsif est continue
+en tout vecteur deU, donc continue surU.■
+II.5.3.2 Dérivées directionnelles d’une fonction convexe
+Définition II.5.3.2 — Dérivée directionnelle à droite.
+SoientUun ouvert de
+− →
+Rn,f:U− →Ret
+³
+⃗a,⃗h
+´
+∈U×
+− →
+Rn.
+Lorsque la limite existe, on appelledérivée directionnelle à droite de f en ⃗a suivant ⃗h le réel
+notéD +
+⃗h f( ⃗a) défini par
+D +
+⃗h f( ⃗a)=lim
+t→0 +
+f( ⃗a+t ⃗h)−f( ⃗a)
+t .
+
+=== Cours original, page PDF 120 ===
+264Chapitre II.5. Convexité
+Proposition II.5.3.2 — Existence des dérivées directionnelles à droite.
+SoientUun ouvert convexe de
+− →
+Rn,f:U− →Rune fonction convexe et
+³
+⃗a,⃗h
+´
+∈U×
+− →
+Rn.
+AlorsD +
+⃗h f( ⃗a) existe.
+Démonstration.
+SoientUun ouvert convexe de
+− →
+Rn,f:U− →Rune fonction convexe et
+³
+⃗a,⃗h
+´
+∈U×
+− →
+Rn.
+Montrons queD +
+⃗h f( ⃗a) existe.
+Si ⃗h= ⃗0, le quotient de différences est nul et le résultat est immédiat.
+Supposons donc ⃗h̸= ⃗0.
+CommeUest ouvert, il existeδ>0 tel que ⃗a+s ⃗h∈Upour touts∈[−δ,δ].
+Pourt∈]0,δ], posons
+q(t)= f( ⃗a+t ⃗h)−f( ⃗a)
+t .
+Soit (s,t ) ∈]0,δ] 2 tel ques<t. Comme
+⃗a+s ⃗h=
+³
+1− s
+t
+´
+⃗a+ s
+t (⃗a+t ⃗h),
+la convexité defdonne
+q(s)≤q(t). (II.5.7)
+La fonctionqest donc croissante sur ]0,δ].
+D’autre part, comme
+⃗a= t
+t+δ (⃗a−δ ⃗h)+ δ
+t+δ (⃗a+t ⃗h),
+la convexité defdonne, après réarrangement,
+q(t)≥ f( ⃗a)−f( ⃗a−δ ⃗h)
+δ . (II.5.8)
+Ainsi,qest croissante et minorée sur ]0,δ].
+Elle admet donc une limite finie lorsquettend vers 0 par valeurs positives, ce qui donne
+lim
+t→0 +
+f( ⃗a+t ⃗h)−f( ⃗a)
+t =D +
+⃗h f( ⃗a).
+■
+Corollaire II.5.3.2 — Dérivée directionnelle et différentielle.
+SoientUun ouvert convexe de
+− →
+Rn,f:U− →Rune fonction convexe, ⃗a∈Uet ⃗h∈
+− →
+Rn.
+Sifest différentiable en ⃗a, alors
+D +
+⃗h f( ⃗a)= − − →d f ⃗a(⃗h).
+Démonstration.
+SoientUun ouvert convexe de
+− →
+Rn,f:U− →Rune fonction convexe, ⃗a∈Uet ⃗h∈
+− →
+Rn.
+Supposons quefest différentiable en ⃗a.
+D’après la Définition I.2.1.1, lorsquettend vers 0, on a
+f( ⃗a+t ⃗h)−f( ⃗a)=t − − →d f ⃗a(⃗h)+o(|t|).
+Pourt>0, après division part, on obtient
+f( ⃗a+t ⃗h)−f( ⃗a)
+t = − − →d f ⃗a(⃗h)+o(1).
+
+=== Cours original, page PDF 121 ===
+II.5.4 Caractérisations différentielles de la convexité 265
+Par conséquent,
+lim
+t→0 +
+f( ⃗a+t ⃗h)−f( ⃗a)
+t = − − →d f ⃗a(⃗h),
+d’où le résultat. ■
+■ Remarque II.5.3.1 — Une fonction convexe n’est pas nécessairement différentiable.
+La convexité assure une régularité importante, mais elle n’implique pas la différentiabilité.
+Considérons la fonction f :
+− →
+Rn − →Rdéfinie par f (⃗x) = ∥⃗x∥. Pour tout
+¡
+⃗x, ⃗y,t
+¢
+∈
+³− →
+Rn
+´2
+× [0,1],
+l’inégalité triangulaire donne
+f((1−t) ⃗x+t ⃗y)≤(1−t)f( ⃗x)+t f( ⃗y),
+doncfest convexe.
+En revanche, pour tout ⃗h∈
+− →
+Rn \ {⃗0},
+lim
+t→0 +
+f(t ⃗h)−f( ⃗0)
+t = ∥⃗h∥
+alors que
+lim
+t→0 −
+f(t ⃗h)−f( ⃗0)
+t = −∥⃗h∥.
+La dérivée directionnelle usuelle n’existe donc pas en⃗0 suivant une direction non nulle. La
+fonctionfn’est donc pas différentiable en ⃗0.
+Cet exemple montre également que l’existence de toutes les dérivées directionnelles à droite
+ne suffit pas à assurer la différentiabilité : au point⃗0, l’application⃗h7− →D +
+⃗h f (⃗0) = ∥⃗h∥ n’est
+pas linéaire. ■
+II.5.4 Caractérisations différentielles de la convexité
+II.5.4.1 Caractérisation au premier ordre
+La différentiabilité permet de remplacer la comparaison avec les cordes par une comparaison
+avec l’approximation affine au premier ordre.
+Proposition II.5.4.1 — Caractérisation d’une fonction convexe différentiable.
+SoientUun ouvert convexe de
+− →
+Rn etf:U− →Rune fonction différentiable surU.
+Alorsfest convexe surUsi et seulement si
+∀
+¡
+⃗x, ⃗y
+¢
+∈U 2,f( ⃗y)≥f( ⃗x)+ − − →d f⃗x (⃗y− ⃗x).
+Démonstration.
+SoientUun ouvert convexe de
+− →
+Rn etf:U− →Rune fonction différentiable surU.
+— Montrons que la convexité defimplique l’inégalité du premier ordre.
+Supposons f convexe. Soit
+¡
+⃗x, ⃗y
+¢
+∈U 2 et posons ⃗h= ⃗y− ⃗x. Pour tout t∈ ]0,1], la convexité
+defdonne
+f( ⃗x+t ⃗h)≤(1−t)f( ⃗x)+t f( ⃗y). (II.5.9)
+Après soustraction def( ⃗x) puis division part>0 dans (II.5.9), on obtient
+f( ⃗x+t ⃗h)−f( ⃗x)
+t ≤f( ⃗y)−f( ⃗x).
+
+=== Cours original, page PDF 122 ===
+266Chapitre II.5. Convexité
+Commefest différentiable en ⃗x,
+lim
+t→0 +
+f( ⃗x+t ⃗h)−f( ⃗x)
+t = − − →d f⃗x (⃗h).
+Par conséquent,
+f( ⃗y)≥f( ⃗x)+ − − →d f⃗x (⃗y− ⃗x).
+— Montrons que l’inégalité du premier ordre implique la convexité def.
+Supposons que, pour tout
+¡
+⃗x, ⃗y
+¢
+∈U 2,
+f( ⃗y)≥f( ⃗x)+ − − →d f⃗x (⃗y− ⃗x).
+Soit
+¡
+⃗x, ⃗y,t
+¢
+∈U 2 × [0,1] et posons ⃗z= (1 −t )⃗x+t ⃗y. La convexité de U assure que ⃗z∈U .
+L ’hypothèse appliquée aux couples(⃗z, ⃗x) et
+¡
+⃗z, ⃗y
+¢
+donne
+f( ⃗x)≥f( ⃗z)+ − − →d f⃗z (⃗x− ⃗z) (II.5.10)
+et
+f( ⃗y)≥f( ⃗z)+ − − →d f⃗z (⃗y− ⃗z). (II.5.11)
+La combinaison (1−t)×(II.5.10)+t×(II.5.11) donne
+(1−t)f( ⃗x)+t f( ⃗y)≥f( ⃗z)+ − − →d f⃗z
+¡
+(1−t)( ⃗x− ⃗z)+t( ⃗y− ⃗z)
+¢
+=f( ⃗z),
+car (1 −t )(⃗x− ⃗z) +t (⃗y− ⃗z) =⃗0. Comme ⃗z= (1 −t )⃗x+t ⃗y, l’inégalité de convexité est vérifiée.
+■
+Corollaire II.5.4.1 — Caractérisation par le gradient.
+SoientUun ouvert convexe de
+− →
+Rn etf:U− →Rune fonction différentiable surU.
+Alorsfest convexe surUsi et seulement si
+∀
+¡
+⃗x, ⃗y
+¢
+∈U 2,f( ⃗y)≥f( ⃗x)+
+­⃗∇f( ⃗x)| ⃗y− ⃗x
+®
+.
+Démonstration.
+SoientUun ouvert convexe de
+− →
+Rn etf:U− →Rune fonction différentiable surU.
+D’après le théorème de représentation de Riesz, vu en algèbre, on a, pour tout
+³
+⃗x, ⃗h
+´
+∈U×
+− →
+Rn,
+− − →d f⃗x (⃗h)=
+D
+⃗∇f( ⃗x)| ⃗h
+E
+.
+En prenant ⃗h= ⃗y− ⃗x dans la Proposition II.5.4.1, on obtient directement la caractérisation
+annoncée. ■
+■ Remarque II.5.4.1 — La fonction est au-dessus de son approximation affine.
+Pour une fonction convexe différentiable, l’inégalité
+f( ⃗y)≥f( ⃗x)+ − − →d f⃗x (⃗y− ⃗x)
+montre que l’approximation affine au premier ordre en⃗x constitue une minoration globale
+de la fonction sur son domaine convexe. ■
+
+=== Cours original, page PDF 123 ===
+II.5.4 Caractérisations différentielles de la convexité 267
+II.5.4.2 Monotonie du gradient
+Proposition II.5.4.2 — Monotonie du gradient.
+Soient U un ouvert convexe de
+− →
+Rn et f : U− →R une fonction différentiable et convexe sur U .
+Alors, pour tout
+¡
+⃗x, ⃗y
+¢
+∈U 2, ­⃗∇f( ⃗y)− ⃗∇f( ⃗x)| ⃗y− ⃗x
+®
+≥0.
+Démonstration.
+Soient U un ouvert convexe de
+− →
+Rn et f : U− →R une fonction différentiable et convexe sur U .
+Soit
+¡
+⃗x, ⃗y
+¢
+∈U 2.
+D’après le Corollaire II.5.4.1, on a
+f( ⃗y)≥f( ⃗x)+
+­⃗∇f( ⃗x)| ⃗y− ⃗x
+®
+(II.5.12)
+et, en échangeant ⃗xet ⃗y,
+f( ⃗x)≥f( ⃗y)+
+­⃗∇f( ⃗y)| ⃗x− ⃗y
+®
+. (II.5.13)
+En additionnant (II.5.12) et (II.5.13), puis en utilisant ⃗x− ⃗y= −( ⃗y− ⃗x), on obtient
+­⃗∇f( ⃗y)− ⃗∇f( ⃗x)| ⃗y− ⃗x
+®
+≥0.
+■
+Proposition II.5.4.3 — Caractérisation par la monotonie du gradient.
+SoientUun ouvert convexe de
+− →
+Rn etf:U− →Rune fonction différentiable surU.
+Alorsfest convexe surUsi et seulement si
+∀
+¡
+⃗x, ⃗y
+¢
+∈U 2,
+­⃗∇f( ⃗y)− ⃗∇f( ⃗x)| ⃗y− ⃗x
+®
+≥0.
+Démonstration.
+SoientUun ouvert convexe de
+− →
+Rn etf:U− →Rune fonction différentiable surU.
+— Montrons que la convexité defimplique la monotonie de son gradient.
+C’est exactement la Proposition II.5.4.2.
+— Montrons que la monotonie du gradient implique la convexité def.
+Supposons le gradient monotone.
+Soit
+¡
+⃗x, ⃗y
+¢
+∈U 2 et posons ⃗h= ⃗y− ⃗x. Considéronsϕ(t)=f( ⃗x+t ⃗h) sur [0, 1].
+On a
+ϕ′(t)=
+D
+⃗∇f( ⃗x+t ⃗h)| ⃗h
+E
+.
+Pour 0 ≤s<t≤ 1, la monotonie du gradient appliquée aux vecteurs ⃗x+s ⃗h et ⃗x+t ⃗h donne
+(t−s)
+¡
+ϕ′(t)−ϕ ′(s)
+¢
+≥0.
+Commet−s>0, la fonctionϕ ′ est croissante.
+Le théorème des accroissements finis appliqué àϕsur [0,1] fournit unc∈]0,1[ tel que
+f( ⃗y)−f( ⃗x)=ϕ ′(c)≥ϕ ′(0)=
+­⃗∇f( ⃗x)| ⃗y− ⃗x
+®
+.
+La caractérisation au premier ordre montre donc quefest convexe.
+■
+
+=== Cours original, page PDF 124 ===
+268Chapitre II.5. Convexité
+II.5.4.3 Caractérisation au second ordre
+Lorsque f est de classe C 2, la convexité peut être caractérisée directement par le signe de la
+différentielle seconde.
+Proposition II.5.4.4 — Caractérisation de la convexité au second ordre.
+SoientUun ouvert convexe de
+− →
+Rn etf:U− →Rune fonction de classeC 2 surU.
+Alorsfest convexe surUsi et seulement si
+∀
+³
+⃗x, ⃗h
+´
+∈U×
+− →
+Rn,
+− − − →
+d 2 f⃗x (⃗h,⃗h)≥0.
+Démonstration.
+SoientUun ouvert convexe de
+− →
+Rn etf:U− →Rune fonction de classeC 2 surU.
+— Montrons que la convexité defimplique la positivité de la différentielle seconde.
+Supposonsfconvexe et soit
+³
+⃗x, ⃗h
+´
+∈U×
+− →
+Rn.
+Si ⃗h= ⃗0, alors
+− − − →
+d 2 f⃗x (⃗h,⃗h)=0 par bilinéarité. Supposons donc ⃗h̸= ⃗0.
+CommeUest ouvert et ⃗x∈U, il exister>0 tel queB( ⃗x,r)⊂U. Pour tout réelttel que
+0< |t| < r
+∥⃗h∥
+,
+on a∥t ⃗h∥ <r, et donc les vecteurs ⃗x+t ⃗het ⃗x−t ⃗happartiennent àU.
+La convexité appliquée au milieu de ce segment donne
+2f( ⃗x)≤f( ⃗x+t ⃗h)+f( ⃗x−t ⃗h). (II.5.14)
+D’après la formule de Taylor–Young,
+f( ⃗x+t ⃗h)=f( ⃗x)+t − − →d f⃗x (⃗h)+ t 2
+2
+− − − →
+d 2 f⃗x (⃗h,⃗h)+o(t 2) (II.5.15)
+et
+f( ⃗x−t ⃗h)=f( ⃗x)−t − − →d f⃗x (⃗h)+ t 2
+2
+− − − →
+d 2 f⃗x (⃗h,⃗h)+o(t 2). (II.5.16)
+En utilisant (II.5.15)+(II.5.16) dans (II.5.14), il existe une fonction ε définie au voisinage
+de 0 telle que
+lim
+t→0
+ε(t)=0
+et
+0≤t 2
+·− − − →
+d 2 f⃗x (⃗h,⃗h)+ε(t)
+¸
+.
+Pourt̸=0, après division part 2, il vient
+0≤
+− − − →
+d 2 f⃗x (⃗h,⃗h)+ε(t).
+En faisant tendretvers 0, on obtient
+− − − →
+d 2 f⃗x (⃗h,⃗h)≥0.
+— Montrons que la positivité de la différentielle seconde implique la convexité def.
+Supposons que
+− − − →
+d 2 f⃗x (⃗h,⃗h)≥0 pour tout
+³
+⃗x, ⃗h
+´
+∈U×
+− →
+Rn.
+Soit
+¡
+⃗x, ⃗y
+¢
+∈U 2, posons ⃗h= ⃗y− ⃗xet considéronsϕ(t)=f( ⃗x+t ⃗h) sur [0, 1].
+Pour toutt∈[0,1],
+ϕ′′(t)=
+− − − − − − →
+d 2 f⃗x+t ⃗h(⃗h,⃗h)≥0.
+
+=== Cours original, page PDF 125 ===
+II.5.5 Convexité stricte et convexité forte 269
+Le théorème des accroissements finis appliqué àϕ ′ montre queϕ ′ est croissante.
+Une nouvelle application du théorème des accroissements finis à ϕ sur [0,1] fournit
+c∈]0,1[ tel que
+f( ⃗y)−f( ⃗x)=ϕ ′(c)≥ϕ ′(0)= − − →d f⃗x (⃗y− ⃗x).
+D’après la Proposition II.5.4.1,fest convexe surU.
+■
+Corollaire II.5.4.2 — Caractérisation avec la Hessienne.
+SoientUun ouvert convexe de
+− →
+Rn etf:U− →Rune fonction de classeC 2 surU.
+Alorsfest convexe surUsi et seulement si
+∀
+³
+⃗x, ⃗h
+´
+∈U×
+− →
+Rn, [ ⃗h] T
+e H f (⃗x)[⃗h]e ≥0.
+Démonstration.
+SoientUun ouvert convexe de
+− →
+Rn etf:U− →Rune fonction de classeC 2 surU.
+La représentation matricielle de la différentielle seconde donne
+− − − →
+d 2 f⃗x (⃗h,⃗h)=[ ⃗h] T
+e H f (⃗x)[⃗h]e.
+Le résultat découle donc directement de la Proposition II.5.4.4.■
+■ Remarque II.5.4.2 — Différentielle seconde et matrice hessienne.
+La condition précédente exprime simplement la positivité de
+− − − →
+d 2 f⃗x (⃗h,⃗h) à l’aide de sa re-
+présentation matricielle. Elle permet de passer directement de l’objet intrinsèque
+− − − →
+d 2 f⃗x à la
+matrice hessienneH f (⃗x). ■
+II.5.5 Convexité stricte et convexité forte
+II.5.5.1 Positivité stricte de la différentielle seconde
+Proposition II.5.5.1 — Positivité stricte et stricte convexité.
+SoientUun ouvert convexe de
+− →
+Rn etf:U− →Rune fonction de classeC 2 surU.
+Si
+∀
+³
+⃗x, ⃗h
+´
+∈U×
+³− →
+Rn \ {⃗0}
+´
+,
+− − − →
+d 2 f⃗x (⃗h,⃗h)>0,
+alorsfest strictement convexe surU.
+Démonstration.
+SoientUun ouvert convexe de
+− →
+Rn etf:U− →Rune fonction de classeC 2 surU.
+Supposons que
+∀
+³
+⃗x, ⃗h
+´
+∈U×
+³− →
+Rn \ {⃗0}
+´
+,
+− − − →
+d 2 f⃗x (⃗h,⃗h)>0.
+Montrons quefest strictement convexe surU.
+Soit
+¡
+⃗x, ⃗y,t
+¢
+∈U 2×]0, 1[ tel que ⃗x̸= ⃗y, et posons ⃗h= ⃗y− ⃗x. On a alors ⃗h̸= ⃗0.
+CommeUest convexe, pour touts∈[0,1], le vecteur
+⃗x+s ⃗h=(1−s) ⃗x+s ⃗y
+
+=== Cours original, page PDF 126 ===
+270Chapitre II.5. Convexité
+appartient àU. On peut donc considérer la fonction
+ϕ: [0,1]− →R
+s7− →f( ⃗x+s ⃗h).
+La fonction f étant de classe C 2 sur U , la fonction ϕ est deux fois dérivable sur ]0,1[ et, pour
+touts∈]0,1[, on a
+ϕ′′(s)=
+− − − − − − →
+d 2 f⃗x+s ⃗h(⃗h,⃗h).
+Comme ⃗x+s ⃗h∈Uet ⃗h̸= ⃗0, l’hypothèse donne
+ϕ′′(s)>0.
+Montrons queϕ ′ est strictement croissante sur ]0,1[.
+Soit (s1,s 2) ∈]0, 1[2 tel ques 1 <s 2.
+Le théorème des accroissements finis appliqué à ϕ′ sur [ s1,s 2] assure l’existence d’un réel
+c∈]s 1,s 2[ tel que
+ϕ′(s2)−ϕ ′(s1)=(s 2 −s 1)ϕ′′(c).
+Commes 2 −s 1 >0 etϕ ′′(c)>0, on obtient
+ϕ′(s2)−ϕ ′(s1)>0,
+et donc
+ϕ′(s1)<ϕ ′(s2).
+Ainsiϕ ′ est strictement croissante sur ]0,1[.
+Appliquons maintenant le théorème des accroissements finis à ϕ sur les intervalles [0,t ] et [t, 1].
+Il existe
+(c1,c 2) ∈]0,t[×]t, 1[
+tel que
+ϕ(t)−ϕ(0)
+t =ϕ ′(c1)
+et
+ϕ(1)−ϕ(t)
+1−t =ϕ ′(c2).
+Commec 1 <c 2 et queϕ ′ est strictement croissante, on a
+ϕ′(c1)<ϕ ′(c2).
+Par conséquent,
+ϕ(t)−ϕ(0)
+t < ϕ(1)−ϕ(t)
+1−t .
+Commet∈]0,1[, on at(1−t)>0. En multipliant l’inégalité précédente part(1−t), il vient
+(1−t)
+¡
+ϕ(t)−ϕ(0)
+¢
+<t
+¡
+ϕ(1)−ϕ(t)
+¢
+.
+En développant les deux membres, on obtient
+(1−t)ϕ(t)−(1−t)ϕ(0)<tϕ(1)−tϕ(t),
+puis
+ϕ(t)<(1−t)ϕ(0)+tϕ(1).
+
+=== Cours original, page PDF 127 ===
+II.5.5 Convexité stricte et convexité forte 271
+Or, par définition deϕ,
+ϕ(0)=f( ⃗x),ϕ(1)=f( ⃗y)
+et
+ϕ(t)=f
+¡
+(1−t) ⃗x+t ⃗y
+¢
+.
+Ainsi,
+f
+¡
+(1−t) ⃗x+t ⃗y
+¢
+<(1−t)f( ⃗x)+t f( ⃗y).
+Cette inégalité étant vérifiée pour tout
+¡
+⃗x, ⃗y,t
+¢
+∈U 2×]0,1[ tel que ⃗x̸= ⃗y, la fonction f est stricte-
+ment convexe surU.■
+■ Remarque II.5.5.1 — La condition n’est que suffisante.
+La réciproque est fausse. Par exemple, la fonction f (x) =x 4 est strictement convexe sur
+R, alors que f ′′(0) = 0. La stricte convexité n’impose donc pas une positivité stricte de la
+différentielle seconde dans toutes les directions en tout vecteur.■
+II.5.5.2 Convexité forte
+La convexité forte renforce quantitativement la convexité et sera utile pour l’étude de l’uni-
+cité et de la stabilité des solutions en optimisation.
+Définition II.5.5.1 — Fonction fortement convexe.
+SoientCun ensemble convexe de
+− →
+Rn,f:C− →Retµ∈R ∗
++.
+On dit quefestµ-fortement convexelorsque, pour tout
+¡
+⃗x, ⃗y,t
+¢
+∈C 2 ×[0, 1],
+f((1−t) ⃗x+t ⃗y)≤(1−t)f( ⃗x)+t f( ⃗y)− µ
+2 t(1−t)∥ ⃗y− ⃗x∥2
+Si f est µ-fortement convexe, ⃗x̸= ⃗y et t∈ ]0,1[, le terme µ
+2 t(1 −t )∥⃗y− ⃗x∥2 est strictement
+positif. Toute fonction fortement convexe est donc strictement convexe.
+Proposition II.5.5.2 — Caractérisation de la forte convexité.
+SoientCun ensemble convexe de
+− →
+Rn,f:C− →Retµ∈R ∗
++.
+La fonctionfestµ-fortement convexe si et seulement si la fonctiong:C− →Rdéfinie par
+g(⃗x)=f( ⃗x)− µ
+2 ∥⃗x∥2
+est convexe.
+Démonstration.
+SoientCun ensemble convexe de
+− →
+Rn,f:C− →Rune fonction etµ∈R ∗
++.
+Posons g (⃗x) =f (⃗x) − µ
+2 ∥⃗x∥2 pour tout ⃗x∈C . Montrons que f est µ-fortement convexe sur C si
+et seulement sigest convexe surC.
+Pour tout
+¡
+⃗x, ⃗y,t
+¢
+∈C 2 ×[0, 1], le développement du produit scalaire donne l’identité
+∥(1−t) ⃗x+t ⃗y∥ 2 =(1−t)∥ ⃗x∥2 +t∥ ⃗y∥ 2 −t(1−t)∥ ⃗y− ⃗x∥2. (II.5.17)
+— Montrons que laµ-forte convexité defimplique la convexité deg.
+Supposonsfµ-fortement convexe. Pour tout
+¡
+⃗x, ⃗y,t
+¢
+∈C 2 ×[0, 1], on a
+f((1−t) ⃗x+t ⃗y)≤(1−t)f( ⃗x)+t f( ⃗y)− µ
+2 t(1−t)∥ ⃗y− ⃗x∥2. (II.5.18)
+
+=== Cours original, page PDF 128 ===
+272Chapitre II.5. Convexité
+En retranchant µ
+2 ∥(1 −t )⃗x+t ⃗y∥ 2 dans (II.5.18), puis en utilisant (II.5.17), on obtient direc-
+tement
+g((1−t) ⃗x+t ⃗y)≤(1−t)g( ⃗x)+t g( ⃗y).
+Ainsigest convexe surC.
+— Montrons que la convexité degimplique laµ-forte convexité def.
+Supposonsgconvexe. Pour tout
+¡
+⃗x, ⃗y,t
+¢
+∈C 2 ×[0, 1], on a
+g((1−t) ⃗x+t ⃗y)≤(1−t)g( ⃗x)+t g( ⃗y). (II.5.19)
+En remplaçantgpar sa définition dans (II.5.19), puis en utilisant (II.5.17), on obtient
+f((1−t) ⃗x+t ⃗y)≤(1−t)f( ⃗x)+t f( ⃗y)− µ
+2 t(1−t)∥ ⃗y− ⃗x∥2.
+Ainsifestµ-fortement convexe surC.
+Les deux propriétés sont donc équivalentes.■
+Proposition II.5.5.3 — Caractérisation au premier ordre de la forte convexité.
+SoientUun ouvert convexe de
+− →
+Rn,f:U− →Rune fonction différentiable surUetµ∈R ∗
++.
+La fonctionfestµ-fortement convexe si et seulement si
+∀
+¡
+⃗x, ⃗y
+¢
+∈U 2,f( ⃗y)≥f( ⃗x)+ − − →d f⃗x (⃗y− ⃗x)+ µ
+2 ∥⃗y− ⃗x∥2.
+Démonstration.
+SoientUun ouvert convexe de
+− →
+Rn,f:U− →Rune fonction différentiable surUetµ∈R ∗
++.
+Posonsg( ⃗x)=f( ⃗x)− µ
+2 ∥⃗x∥2.
+D’après la Proposition II.5.5.2, f est µ-fortement convexe si et seulement si g est convexe.
+D’après la Proposition II.5.4.1, cette dernière propriété est équivalente à
+g(⃗y)≥g( ⃗x)+ − − →d g⃗x (⃗y− ⃗x) (II.5.20)
+pour tout
+¡
+⃗x, ⃗y
+¢
+∈U 2.
+Pour tout
+³
+⃗x, ⃗h
+´
+∈U×
+− →
+Rn, on a
+− − →d g⃗x (⃗h)= − − →d f⃗x (⃗h)−µ
+D
+⃗x| ⃗h
+E
+. (II.5.21)
+De plus,
+∥⃗y∥ 2 = ∥⃗x∥2 +2
+­
+⃗x| ⃗y− ⃗x
+®
++ ∥⃗y− ⃗x∥2. (II.5.22)
+En remplaçantgdans (II.5.20), puis en utilisant (II.5.21) et (II.5.22), on obtient
+f( ⃗y)≥f( ⃗x)+ − − →d f⃗x (⃗y− ⃗x)+ µ
+2 ∥⃗y− ⃗x∥2.
+Toutes les transformations étant des équivalences, le résultat est démontré.■
+Proposition II.5.5.4 — Caractérisation au second ordre de la forte convexité.
+SoientUun ouvert convexe de
+− →
+Rn,f:U− →Rune fonction de classeC 2 surUetµ∈R ∗
++.
+Alorsfestµ-fortement convexe si et seulement si
+∀
+³
+⃗x, ⃗h
+´
+∈U×
+− →
+Rn,
+− − − →
+d 2 f⃗x (⃗h,⃗h)≥µ∥ ⃗h∥2.
+
+=== Cours original, page PDF 129 ===
+II.5.5 Convexité stricte et convexité forte 273
+Démonstration.
+SoientUun ouvert convexe de
+− →
+Rn,f:U− →Rune fonction de classeC 2 surUetµ∈R ∗
++.
+Posonsg( ⃗x)=f( ⃗x)− µ
+2 ∥⃗x∥2.
+D’après la Proposition II.5.5.2,festµ-fortement convexe si et seulement sigest convexe.
+Pour tout
+³
+⃗x, ⃗h
+´
+∈U×
+− →
+Rn, on a
+− − − →
+d 2g⃗x (⃗h,⃗h)=
+− − − →
+d 2 f⃗x (⃗h,⃗h)−µ∥ ⃗h∥2. (II.5.23)
+D’après la Proposition II.5.4.4,gest convexe si et seulement si
+− − − →
+d 2g⃗x (⃗h,⃗h)≥0
+pour tout
+³
+⃗x, ⃗h
+´
+∈U×
+− →
+Rn. En utilisant (II.5.23), cette condition est équivalente à
+− − − →
+d 2 f⃗x (⃗h,⃗h)≥µ∥ ⃗h∥2.
+■
+Méthodologie II.5.5.1 — Reconnaître et exploiter la convexité.
+Pour étudier la convexité d’une fonction f sur un domaine convexe U , on pourra choisir
+l’outil adapté à la régularité disponible :
+1. si f est convexe sur un ouvert convexe, utiliser le fait qu’elle est localement lipschit-
+zienne, donc continue ;
+2. si la différentiabilité n’est pas connue, exploiter l’existence des dérivées directionnelles
+à droite avant d’utiliser les critères différentiels ;
+3. à partir de la définition, étudierf((1−t) ⃗x+t ⃗y) pour
+¡
+⃗x, ⃗y,t
+¢
+∈U 2 ×[0, 1] ;
+4. sifest différentiable, utiliser la caractérisation au premier ordre
+f( ⃗y)≥f( ⃗x)+ − − →d f⃗x (⃗y− ⃗x);
+5. dans le cadre euclidien, utiliser le théorème de représentation de Riesz pour traduire
+cette condition à l’aide du gradient ;
+6. sifest de classeC 2, utiliser la condition
+− − − →
+d 2 f⃗x (⃗h,⃗h)≥0,
+ou, dans la base canonique,
+[⃗h] T
+e H f (⃗x)[⃗h]e ≥0;
+7. pour établir une forte convexité de paramètre µ∈R ∗
++, rechercher une minoration
+uniforme de la forme − − − →
+d 2 f⃗x (⃗h,⃗h)≥µ∥ ⃗h∥2.
+La convexité jouera un rôle central dans la partie suivante : elle permettra de transformer
+certaines conditions locales d’optimalité en conclusions globales, tandis que la convexité stricte
+et la forte convexité fourniront des résultats d’unicité et de stabilité.

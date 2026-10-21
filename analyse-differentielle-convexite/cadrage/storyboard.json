@@ -1,0 +1,1208 @@
+[
+  {
+    "id": "AC01",
+    "title": "Du modèle local à la forme globale",
+    "part": "Contrôle des variations",
+    "objectif": "Comprendre et utiliser : Du modèle local à la forme globale",
+    "idee_centrale": "Du modèle local à la forme globale",
+    "contenu_beamer": "\\begin{frame}[t]{Du modèle local à la forme globale}\n\\coursanalyse\nAu premier ordre, on approche une petite variation par une application linéaire.\n\\begin{cours}{Trois nouvelles questions}\n\\textbf{Contrôler :} quelle amplitude de variation peut-on garantir ?\n\n\\medskip\n\\textbf{Affiner :} que gagne-t-on avec le second ordre ?\n\n\\medskip\n\\textbf{Comparer :} comment reconnaître une fonction convexe ?\n\\end{cours}\n\\vfill Régularité, Taylor et convexité relient ces trois questions.\n\\note{Cours original, pages PDF 3,31,59,85,109. Résultats admis ; interprétation sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "3,31,59,85,109"
+    },
+    "prerequisites": [
+      "prérequis Analyse I et algèbre"
+    ],
+    "exemple": null,
+    "activite": "Faire reformuler le résultat et ses hypothèses.",
+    "notes_orales": "Cours original, pages PDF 3,31,59,85,109. Résultats admis ; interprétation sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "AC02",
+    "title": "Les objets du premier ordre",
+    "part": "Contrôle des variations",
+    "objectif": "Comprendre et utiliser : Les objets du premier ordre",
+    "idee_centrale": "Les objets du premier ordre",
+    "contenu_beamer": "\\begin{frame}[t]{Les objets du premier ordre}\n\\coursanalyse\n\\begin{cours}{Une notation, un rôle}\n\\textbf{Différentielle :} $\\df f{\\vec a}$ est une application linéaire.\n\n\\medskip\n\\textbf{Jacobienne :} $J_f(\\vec a)$ est sa matrice dans les bases canoniques.\n\n\\medskip\n\\textbf{Gradient, pour $f$ réelle :} $\\grad f(\\vec a)$ est un vecteur colonne.\n\\end{cours}\n\\[\\df f{\\vec a}(\\vec h)=\\ps{\\grad f(\\vec a)}{\\vec h}.\\]\n\\vfill Dans ce chapitre, les espaces sont euclidiens canoniques réels.\n\\note{Cours original, pages PDF 3,31. Résultats admis ; interprétation sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [
+      "\\df f{\\vec a}(\\vec h)=\\ps{\\grad f(\\vec a)}{\\vec h}."
+    ],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "3,31"
+    },
+    "prerequisites": [
+      "prérequis Analyse I et algèbre"
+    ],
+    "exemple": null,
+    "activite": "Faire reformuler le résultat et ses hypothèses.",
+    "notes_orales": "Cours original, pages PDF 3,31. Résultats admis ; interprétation sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "AC03",
+    "title": "Suivre un segment pour étudier une variation",
+    "part": "Contrôle des variations",
+    "objectif": "Comprendre et utiliser : Suivre un segment pour étudier une variation",
+    "idee_centrale": "Suivre un segment pour étudier une variation",
+    "contenu_beamer": "\\begin{frame}[t]{Suivre un segment pour étudier une variation}\n\\coursanalyse\nSi $[\\vec a,\\vec b]\\subset U$, on pose\n\\[\\vec\\gamma(t)=\\vec a+t(\\vec b-\\vec a),\\qquad\\varphi=f\\circ\\vec\\gamma.\\]\n\\begin{theoreme}{Si $f$ est différentiable sur l'ouvert $U$}\n\\[\\varphi'(t)=\\df f{\\vec\\gamma(t)}(\\vec b-\\vec a),\\qquad 0<t<1.\\]\n\\end{theoreme}\n\\begin{center}\\begin{tikzpicture}\n\\fill(0,0)circle(2pt)node[below]{$\\vec a$};\\fill(7,0)circle(2pt)node[below]{$\\vec b$};\\draw[IMTCyan,thick](0,0)--(7,0);\\fill[IMTOrange](3,0)circle(2pt)node[above]{$\\vec\\gamma(t)$};\\draw[-{Stealth},IMTNavy](1,-.8)--(5,-.8)node[midway,below]{$\\vec b-\\vec a$};\n\\end{tikzpicture}\\end{center}\n\\note{Cours original, pages PDF 3–4. Résultats admis ; interprétation sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [
+      "\\vec\\gamma(t)=\\vec a+t(\\vec b-\\vec a),\\qquad\\varphi=f\\circ\\vec\\gamma.",
+      "\\varphi'(t)=\\df f{\\vec\\gamma(t)}(\\vec b-\\vec a),\\qquad 0<t<1."
+    ],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "3–4"
+    },
+    "prerequisites": [
+      "AC02"
+    ],
+    "exemple": null,
+    "activite": "Faire reformuler le résultat et ses hypothèses.",
+    "notes_orales": "Cours original, pages PDF 3–4. Résultats admis ; interprétation sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "AC04",
+    "title": "Un ensemble convexe contient ses segments",
+    "part": "Contrôle des variations",
+    "objectif": "Comprendre et utiliser : Un ensemble convexe contient ses segments",
+    "idee_centrale": "Un ensemble convexe contient ses segments",
+    "contenu_beamer": "\\begin{frame}[t]{Un ensemble convexe contient ses segments}\n\\coursanalyse\n\\begin{notion}{Ensemble convexe}\n$C\\subset\\Rn n$ est convexe si, pour tous $\\vec a,\\vec b\\in C$,\n\\[\\forall t\\in[0,1],\\qquad(1-t)\\vec a+t\\vec b\\in C.\\]\n\\end{notion}\n\\begin{center}\\begin{tikzpicture}[scale=.7]\n\\fill[IMTCyan!12](0,0)ellipse[x radius=2,y radius=1.1];\\draw[IMTCyan](0,0)ellipse[x radius=2,y radius=1.1];\\draw[IMTNavy,thick](-1,-.3)--(1,.5);\\fill(-1,-.3)circle(2pt);\\fill(1,.5)circle(2pt);\\node at(0,-1.6){segment inclus};\n\\draw[IMTCyan,thick](7,0)circle(1.1);\\draw[IMTOrange,thick](5.9,0)--(8.1,0);\\fill(5.9,0)circle(2pt);\\fill(8.1,0)circle(2pt);\\node at(7,-1.6){un cercle n'est pas convexe};\n\\end{tikzpicture}\\end{center}\n\\vfill Les boules et les rectangles sont convexes. Un ouvert n'est pas forcément convexe.\n\\note{Cours original, pages PDF 13,109–112. Résultats admis ; interprétation sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [
+      "\\forall t\\in[0,1],\\qquad(1-t)\\vec a+t\\vec b\\in C."
+    ],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "13,109–112"
+    },
+    "prerequisites": [
+      "prérequis Analyse I et algèbre"
+    ],
+    "exemple": null,
+    "activite": "Faire reformuler le résultat et ses hypothèses.",
+    "notes_orales": "Cours original, pages PDF 13,109–112. Résultats admis ; interprétation sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "AC05",
+    "title": "La norme d’une application linéaire",
+    "part": "Contrôle des variations",
+    "objectif": "Comprendre et utiliser : La norme d’une application linéaire",
+    "idee_centrale": "La norme d’une application linéaire",
+    "contenu_beamer": "\\begin{frame}[t]{La norme d’une application linéaire}\n\\coursanalyse\n\\begin{notion}{Norme opérateur}\nPour $\\Lin L:\\Rn n\\to\\Rn p$ linéaire,\n\\[\\norm{\\Lin L}=\\sup_{\\norm{\\vec h}=1}\\norm{\\Lin L(\\vec h)}.\\]\n\\end{notion}\n\\begin{theoreme}{Contrôler une image}\n\\[\\forall\\vec h,\\qquad\\norm{\\Lin L(\\vec h)}\\le\\norm{\\Lin L}\\,\\norm{\\vec h}.\\]\n\\end{theoreme}\n\\vfill La norme opérateur mesure le plus grand facteur d'amplification des longueurs.\n\\note{Cours original, pages PDF 5–9. Résultats admis ; interprétation sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [
+      "\\norm{\\Lin L}=\\sup_{\\norm{\\vec h}=1}\\norm{\\Lin L(\\vec h)}.",
+      "\\forall\\vec h,\\qquad\\norm{\\Lin L(\\vec h)}\\le\\norm{\\Lin L}\\,\\norm{\\vec h}."
+    ],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "5–9"
+    },
+    "prerequisites": [
+      "prérequis Analyse I et algèbre"
+    ],
+    "exemple": null,
+    "activite": "Faire reformuler le résultat et ses hypothèses.",
+    "notes_orales": "Cours original, pages PDF 5–9. Résultats admis ; interprétation sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "AC06",
+    "title": "Voir l’amplification maximale",
+    "part": "Contrôle des variations",
+    "objectif": "Comprendre et utiliser : Voir l’amplification maximale",
+    "idee_centrale": "Voir l’amplification maximale",
+    "contenu_beamer": "\\begin{frame}[t]{Voir l’amplification maximale}\n\\coursanalyse\n\\begin{exemple}{Une application diagonale}\n\\[\\Lin L\\!\\left(\\vcol{x\\\\y}\\right)=\\vcol{-5x\\\\2y}.\\]\nLa norme de l'image vérifie $\\norm{\\Lin L(\\vec h)}\\le5\\norm{\\vec h}$.\n\\end{exemple}\n\\begin{resultat}{Une direction atteint la borne}\n$\\vec e_1=\\vcol{1\\\\0}$ est unitaire et $\\norm{\\Lin L(\\vec e_1)}=5$.\n\n\\medskip\nDonc $\\norm{\\Lin L}=5$.\n\\end{resultat}\n\\note{Cours original, pages PDF 5–9. Résultats admis ; interprétation sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [
+      "\\Lin L\\!\\left(\\vcol{x\\\\y}\\right)=\\vcol{-5x\\\\2y}."
+    ],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "5–9"
+    },
+    "prerequisites": [
+      "AC05"
+    ],
+    "exemple": "Exemple conceptuel distinct du TD de base",
+    "activite": "Faire reformuler le résultat et ses hypothèses.",
+    "notes_orales": "Cours original, pages PDF 5–9. Résultats admis ; interprétation sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "AC07",
+    "title": "Une borne à partir des coefficients",
+    "part": "Contrôle des variations",
+    "objectif": "Comprendre et utiliser : Une borne à partir des coefficients",
+    "idee_centrale": "Une borne à partir des coefficients",
+    "contenu_beamer": "\\begin{frame}[t]{Une borne à partir des coefficients}\n\\coursanalyse\n\\begin{theoreme}{Matrice $A=(a_{ij})$ dans les bases canoniques}\nLa norme opérateur euclidienne satisfait\n\\[\\norm A\\le\\sqrt{\\sum_{i,j}a_{ij}^2}.\\]\n\\end{theoreme}\n\\begin{cours}{Comment utiliser la borne ?}\nElle donne rapidement une majoration sans chercher la direction d'amplification maximale.\n\\end{cours}\n\\vfill Le membre de droite n'est pas en général la valeur exacte de la norme opérateur.\n\\note{Cours original, pages PDF 9–11. Résultats admis ; interprétation sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [
+      "\\norm A\\le\\sqrt{\\sum_{i,j}a_{ij}^2}."
+    ],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "9–11"
+    },
+    "prerequisites": [
+      "AC05"
+    ],
+    "exemple": null,
+    "activite": "Faire reformuler le résultat et ses hypothèses.",
+    "notes_orales": "Cours original, pages PDF 9–11. Résultats admis ; interprétation sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "AC08",
+    "title": "Accroissements finis : une égalité scalaire",
+    "part": "Contrôle des variations",
+    "objectif": "Comprendre et utiliser : Accroissements finis : une égalité scalaire",
+    "idee_centrale": "Accroissements finis : une égalité scalaire",
+    "contenu_beamer": "\\begin{frame}[t]{Accroissements finis : une égalité scalaire}\n\\coursanalyse\n\\begin{theoreme}{Fonction à valeurs réelles}\nSoient $f:U\\to\\R$ différentiable sur un ouvert $U$, $\\vec a\\ne\\vec b$ et $[\\vec a,\\vec b]\\subset U$.\nIl existe $\\theta\\in]0,1[$ tel que, pour $\\vec c=\\vec a+\\theta(\\vec b-\\vec a)$,\n\\[f(\\vec b)-f(\\vec a)=\\df f{\\vec c}(\\vec b-\\vec a).\\]\n\\end{theoreme}\n\\begin{resultat}{Avec le gradient}\n\\[f(\\vec b)-f(\\vec a)=\\ps{\\grad f(\\vec c)}{\\vec b-\\vec a}.\\]\n\\end{resultat}\n\\note{Cours original, pages PDF 4–5. Résultats admis ; interprétation sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [
+      "f(\\vec b)-f(\\vec a)=\\df f{\\vec c}(\\vec b-\\vec a).",
+      "f(\\vec b)-f(\\vec a)=\\ps{\\grad f(\\vec c)}{\\vec b-\\vec a}."
+    ],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "4–5"
+    },
+    "prerequisites": [
+      "AC03"
+    ],
+    "exemple": null,
+    "activite": "Faire reformuler le résultat et ses hypothèses.",
+    "notes_orales": "Cours original, pages PDF 4–5. Résultats admis ; interprétation sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "AC09",
+    "title": "Accroissements finis : une borne vectorielle",
+    "part": "Contrôle des variations",
+    "objectif": "Comprendre et utiliser : Accroissements finis : une borne vectorielle",
+    "idee_centrale": "Accroissements finis : une borne vectorielle",
+    "contenu_beamer": "\\begin{frame}[t]{Accroissements finis : une borne vectorielle}\n\\coursanalyse\n\\begin{theoreme}{Inégalité des accroissements finis}\nSoient $f:U\\to\\Rn p$ différentiable sur l'ouvert $U$ et $[\\vec a,\\vec b]\\subset U$.\nSi $\\norm{\\df f{\\vec x}}\\le M$ sur ce segment, alors\n\\[\\norm{f(\\vec b)-f(\\vec a)}\\le M\\norm{\\vec b-\\vec a}.\\]\n\\end{theoreme}\n\\begin{resultat}{Cas réel}\nOn peut remplacer la borne sur la différentielle par $\\norm{\\grad f(\\vec x)}\\le M$.\n\\end{resultat}\n\\vfill Pour une sortie vectorielle, ne pas supposer une égalité en un unique point intermédiaire.\n\\note{Cours original, pages PDF 11–13. Résultats admis ; interprétation sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [
+      "\\norm{f(\\vec b)-f(\\vec a)}\\le M\\norm{\\vec b-\\vec a}."
+    ],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "11–13"
+    },
+    "prerequisites": [
+      "AC03",
+      "AC05"
+    ],
+    "exemple": null,
+    "activite": "Faire reformuler le résultat et ses hypothèses.",
+    "notes_orales": "Cours original, pages PDF 11–13. Résultats admis ; interprétation sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "AC10",
+    "title": "Être lipschitzienne : une variation contrôlée",
+    "part": "Contrôle des variations",
+    "objectif": "Comprendre et utiliser : Être lipschitzienne : une variation contrôlée",
+    "idee_centrale": "Être lipschitzienne : une variation contrôlée",
+    "contenu_beamer": "\\begin{frame}[t]{Être lipschitzienne : une variation contrôlée}\n\\coursanalyse\n\\begin{notion}{Constante $M\\ge0$}\n$f:C\\to\\Rn p$ est $M$-lipschitzienne si\n\\[\\forall\\vec x,\\vec y\\in C,\\quad\\norm{f(\\vec y)-f(\\vec x)}\\le M\\norm{\\vec y-\\vec x}.\\]\n\\end{notion}\n\\begin{resultat}{Une garantie quantitative}\nUne variation d'entrée de taille $\\delta$ provoque une variation de sortie d'au plus $M\\delta$.\n\\end{resultat}\n\\vfill Toute fonction lipschitzienne est continue ; la réciproque est fausse.\n\\note{Cours original, pages PDF 13–14. Résultats admis ; interprétation sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [
+      "\\forall\\vec x,\\vec y\\in C,\\quad\\norm{f(\\vec y)-f(\\vec x)}\\le M\\norm{\\vec y-\\vec x}."
+    ],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "13–14"
+    },
+    "prerequisites": [
+      "AC09"
+    ],
+    "exemple": null,
+    "activite": "Faire reformuler le résultat et ses hypothèses.",
+    "notes_orales": "Cours original, pages PDF 13–14. Résultats admis ; interprétation sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "AC11",
+    "title": "Une borne locale devient un contrôle global",
+    "part": "Contrôle des variations",
+    "objectif": "Comprendre et utiliser : Une borne locale devient un contrôle global",
+    "idee_centrale": "Une borne locale devient un contrôle global",
+    "contenu_beamer": "\\begin{frame}[t]{Une borne locale devient un contrôle global}\n\\coursanalyse\n\\begin{theoreme}{Sur un ensemble convexe $K$}\nSoit $f$ différentiable sur un ouvert contenant $K$.\nSi $\\norm{\\df f{\\vec x}}\\le M$ pour tout $\\vec x\\in K$, alors $f$ est $M$-lipschitzienne sur $K$.\n\\end{theoreme}\n\\begin{cours}{Les deux vérifications}\n\\textbf{Géométrie :} les segments entre points de $K$ restent dans $K$.\n\n\\medskip\n\\textbf{Calcul :} la même constante $M$ majore la différentielle partout sur $K$.\n\\end{cours}\n\\vfill $K$ peut être une boule fermée ou un rectangle fermé : l'ouvert porte sur le domaine où $f$ est différentiable.\n\\note{Cours original, pages PDF 13–15. Résultats admis ; interprétation sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "13–15"
+    },
+    "prerequisites": [
+      "AC04",
+      "AC09",
+      "AC10"
+    ],
+    "exemple": null,
+    "activite": "Faire reformuler le résultat et ses hypothèses.",
+    "notes_orales": "Cours original, pages PDF 13–15. Résultats admis ; interprétation sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "AC12",
+    "title": "Exemple : contrôler une variation sur une boule",
+    "part": "Contrôle des variations",
+    "objectif": "Comprendre et utiliser : Exemple : contrôler une variation sur une boule",
+    "idee_centrale": "Exemple : contrôler une variation sur une boule",
+    "contenu_beamer": "\\begin{frame}[t]{Exemple : contrôler une variation sur une boule}\n\\coursanalyse\n\\begin{exemple}{$f(x,y)=x^2+4y^2$, sur $K=\\overline B(\\zero,2)$}\n\\[\\grad f(x,y)=\\vcol{2x\\\\8y},\\qquad\\norm{\\grad f(x,y)}\\le8\\norm{\\vec x}\\le16.\\]\nLa boule $K$ est convexe et $f$ est différentiable sur $\\Rn2$.\n\\end{exemple}\n\\begin{resultat}{Une borne valable pour tous les couples}\n\\[|f(\\vec b)-f(\\vec a)|\\le16\\norm{\\vec b-\\vec a},\\qquad\\vec a,\\vec b\\in K.\\]\n\\end{resultat}\n\\note{Cours original, pages PDF 11–15. Résultats admis ; interprétation sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [
+      "\\grad f(x,y)=\\vcol{2x\\\\8y},\\qquad\\norm{\\grad f(x,y)}\\le8\\norm{\\vec x}\\le16.",
+      "|f(\\vec b)-f(\\vec a)|\\le16\\norm{\\vec b-\\vec a},\\qquad\\vec a,\\vec b\\in K."
+    ],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "11–15"
+    },
+    "prerequisites": [
+      "AC11"
+    ],
+    "exemple": "Exemple conceptuel distinct du TD de base",
+    "activite": "Faire reformuler le résultat et ses hypothèses.",
+    "notes_orales": "Cours original, pages PDF 11–15. Résultats admis ; interprétation sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "AC13",
+    "title": "Une différentielle nulle force la constance",
+    "part": "Contrôle des variations",
+    "objectif": "Comprendre et utiliser : Une différentielle nulle force la constance",
+    "idee_centrale": "Une différentielle nulle force la constance",
+    "contenu_beamer": "\\begin{frame}[t]{Une différentielle nulle force la constance}\n\\coursanalyse\n\\begin{theoreme}{Sur un ouvert convexe non vide $U$}\nSi $f:U\\to\\Rn p$ est différentiable et\n\\[\\forall\\vec x\\in U,\\quad\\df f{\\vec x}=\\Lin0,\\]\nalors $f$ est constante sur $U$.\n\\end{theoreme}\n\\begin{resultat}{Pour une fonction réelle}\nUn gradient nul \\textbf{partout sur $U$} implique la constance.\n\\end{resultat}\n\\vfill Un gradient nul en un seul point ne suffit pas.\n\\note{Cours original, pages PDF 14–15. Résultats admis ; interprétation sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [
+      "\\forall\\vec x\\in U,\\quad\\df f{\\vec x}=\\Lin0,"
+    ],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "14–15"
+    },
+    "prerequisites": [
+      "AC11"
+    ],
+    "exemple": null,
+    "activite": "Faire reformuler le résultat et ses hypothèses.",
+    "notes_orales": "Cours original, pages PDF 14–15. Résultats admis ; interprétation sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "AC14",
+    "title": "La classe C1 : une différentielle continue",
+    "part": "Régularité C1",
+    "objectif": "Comprendre et utiliser : La classe C1 : une différentielle continue",
+    "idee_centrale": "La classe C1 : une différentielle continue",
+    "contenu_beamer": "\\begin{frame}[t]{La classe C1 : une différentielle continue}\n\\coursanalyse\n\\begin{notion}{Classe $\\mathcal C^1$ sur un ouvert $U$}\n$f$ est de classe $\\mathcal C^1$ si elle est différentiable sur $U$ et si\n\\[\\vec x\\longmapsto\\df f{\\vec x}\\]\nest continue pour la norme opérateur.\n\\end{notion}\n\\begin{resultat}{Le sens de la régularité}\nLe modèle linéaire varie continûment lorsque le point de départ se déplace.\n\\end{resultat}\n\\vfill Classe $\\mathcal C^1$ implique différentiabilité ; la réciproque est fausse.\n\\note{Cours original, pages PDF 31–33. Résultats admis ; interprétation sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [
+      "\\vec x\\longmapsto\\df f{\\vec x}"
+    ],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "31–33"
+    },
+    "prerequisites": [
+      "AC02",
+      "AC05"
+    ],
+    "exemple": null,
+    "activite": "Faire reformuler le résultat et ses hypothèses.",
+    "notes_orales": "Cours original, pages PDF 31–33. Résultats admis ; interprétation sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "AC15",
+    "title": "Le critère pratique de classe C1",
+    "part": "Régularité C1",
+    "objectif": "Comprendre et utiliser : Le critère pratique de classe C1",
+    "idee_centrale": "Le critère pratique de classe C1",
+    "contenu_beamer": "\\begin{frame}[t]{Le critère pratique de classe C1}\n\\coursanalyse\n\\begin{theoreme}{Dérivées partielles continues sur un ouvert}\n$f:U\\to\\Rn p$ est de classe $\\mathcal C^1$ si et seulement si toutes les dérivées partielles de ses composantes existent et sont continues sur $U$.\n\\end{theoreme}\n\\begin{cours}{Une méthode en trois étapes}\n\\textbf{1.} Calculer chaque dérivée partielle.\n\n\\medskip\n\\textbf{2.} Justifier sa continuité sur le domaine.\n\n\\medskip\n\\textbf{3.} Conclure $\\mathcal C^1$, donc différentiable.\n\\end{cours}\n\\note{Cours original, pages PDF 33–39. Résultats admis ; interprétation sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "33–39"
+    },
+    "prerequisites": [
+      "AC14"
+    ],
+    "exemple": null,
+    "activite": "Faire reformuler le résultat et ses hypothèses.",
+    "notes_orales": "Cours original, pages PDF 33–39. Résultats admis ; interprétation sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "AC16",
+    "title": "Un exemple de régularité",
+    "part": "Régularité C1",
+    "objectif": "Comprendre et utiliser : Un exemple de régularité",
+    "idee_centrale": "Un exemple de régularité",
+    "contenu_beamer": "\\begin{frame}[t]{Un exemple de régularité}\n\\coursanalyse\n\\begin{exemple}{$F(x,y)=\\vcol{xe^y\\\\x^2+\\cos y}$}\n\\[J_F(x,y)=\\begin{pmatrix}e^y&xe^y\\\\2x&-\\sin y\\end{pmatrix}.\\]\nLes quatre coefficients sont des fonctions continues sur $\\Rn2$.\n\\end{exemple}\n\\begin{resultat}{La conclusion utile}\n$F$ est de classe $\\mathcal C^1$ sur $\\Rn2$ ; on peut donc utiliser cette jacobienne pour calculer sa différentielle.\n\\end{resultat}\n\\note{Cours original, pages PDF 34–43. Résultats admis ; interprétation sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [
+      "J_F(x,y)=\\begin{pmatrix}e^y&xe^y\\\\2x&-\\sin y\\end{pmatrix}."
+    ],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "34–43"
+    },
+    "prerequisites": [
+      "AC15"
+    ],
+    "exemple": "Exemple conceptuel distinct du TD de base",
+    "activite": "Faire reformuler le résultat et ses hypothèses.",
+    "notes_orales": "Cours original, pages PDF 34–43. Résultats admis ; interprétation sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "AC17",
+    "title": "Ce que l’existence des partielles ne dit pas",
+    "part": "Régularité C1",
+    "objectif": "Comprendre et utiliser : Ce que l’existence des partielles ne dit pas",
+    "idee_centrale": "Ce que l’existence des partielles ne dit pas",
+    "contenu_beamer": "\\begin{frame}[t]{Ce que l’existence des partielles ne dit pas}\n\\coursanalyse\n\\begin{cours}{Trois niveaux à distinguer}\n\\textbf{Partielles existantes :} les variations selon les axes existent.\n\n\\medskip\n\\textbf{Différentiabilité :} un même modèle linéaire contrôle toutes les directions.\n\n\\medskip\n\\textbf{Classe $\\mathcal C^1$ :} ce modèle varie continûment avec le point.\n\\end{cours}\n\\begin{resultat}{Une condition suffisante pratique}\nDes partielles continues sur un ouvert donnent la classe $\\mathcal C^1$, et donc la différentiabilité.\n\\end{resultat}\n\\note{Cours original, pages PDF 34–39. Résultats admis ; interprétation sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "34–39"
+    },
+    "prerequisites": [
+      "AC14",
+      "AC15"
+    ],
+    "exemple": null,
+    "activite": "Faire reformuler le résultat et ses hypothèses.",
+    "notes_orales": "Cours original, pages PDF 34–39. Résultats admis ; interprétation sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "AC18",
+    "title": "Construire des fonctions de classe C1",
+    "part": "Régularité C1",
+    "objectif": "Comprendre et utiliser : Construire des fonctions de classe C1",
+    "idee_centrale": "Construire des fonctions de classe C1",
+    "contenu_beamer": "\\begin{frame}[t]{Construire des fonctions de classe C1}\n\\coursanalyse\n\\begin{theoreme}{Règles de stabilité}\n\\textbf{Somme et produit :} ils conservent la classe $\\mathcal C^1$ pour des fonctions réelles.\n\n\\medskip\n\\textbf{Quotient :} sur le domaine où le dénominateur ne s'annule pas.\n\n\\medskip\n\\textbf{Composition :} $g\\circ f$ est de classe $\\mathcal C^1$ si $f$ et $g$ le sont sur des ouverts compatibles.\n\\end{theoreme}\n\\vfill Les formules du premier ordre restent les mêmes ; on contrôle en plus leur continuité.\n\\note{Cours original, pages PDF 40–43. Résultats admis ; interprétation sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "40–43"
+    },
+    "prerequisites": [
+      "AC15"
+    ],
+    "exemple": null,
+    "activite": "Faire reformuler le résultat et ses hypothèses.",
+    "notes_orales": "Cours original, pages PDF 40–43. Résultats admis ; interprétation sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "AC19",
+    "title": "Pourquoi regarder le second ordre ?",
+    "part": "Second ordre",
+    "objectif": "Comprendre et utiliser : Pourquoi regarder le second ordre ?",
+    "idee_centrale": "Pourquoi regarder le second ordre ?",
+    "contenu_beamer": "\\begin{frame}[t]{Pourquoi regarder le second ordre ?}\n\\coursanalyse\n\\begin{cours}{Après l’approximation affine}\nLa différentielle première décrit la pente locale.\n\n\\medskip\nLa différentielle seconde décrit comment cette pente varie.\n\\end{cours}\n\\begin{center}\\begin{tikzpicture}[x=1.25cm,y=.65cm]\n\\draw[axes](-2.2,0)--(2.2,0);\\draw[axes](0,-.3)--(0,3.7);\n\\draw[courb,domain=-1.8:1.8,samples=50]plot(\\x,{\\x*\\x});\\draw[IMTOrange,thick](-1.8,0)--(1.8,0);\n\\node[anchor=west,align=left]at(3,2){$f(t)=t^2$\\\\[2mm]$f'(0)=0$, mais $f''(0)=2$.};\n\\end{tikzpicture}\\end{center}\n\\vfill Le second ordre apporte une information absente de la tangente.\n\\note{Cours original, pages PDF 59–60,85–90. Résultats admis ; interprétation sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "59–60,85–90"
+    },
+    "prerequisites": [
+      "AC02"
+    ],
+    "exemple": null,
+    "activite": "Faire reformuler le résultat et ses hypothèses.",
+    "notes_orales": "Cours original, pages PDF 59–60,85–90. Résultats admis ; interprétation sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "AC20",
+    "title": "La différentielle seconde agit sur deux directions",
+    "part": "Second ordre",
+    "objectif": "Comprendre et utiliser : La différentielle seconde agit sur deux directions",
+    "idee_centrale": "La différentielle seconde agit sur deux directions",
+    "contenu_beamer": "\\begin{frame}[t]{La différentielle seconde agit sur deux directions}\n\\coursanalyse\n\\begin{notion}{Deux fois différentiable en $\\vec a$}\nL'application $\\vec x\\mapsto\\df f{\\vec x}$ est différentiable en $\\vec a$ ; $f$ est différentiable dans un voisinage de ce point.\n\\end{notion}\n\\begin{notion}{Différentielle seconde}\n\\[\\ds f{\\vec a}(\\vec h,\\vec k)\n=\\bigl(\\df{(df)}{\\vec a}(\\vec h)\\bigr)(\\vec k).\\]\nElle est \\textbf{bilinéaire} : linéaire dans chacun des deux déplacements séparément.\n\\end{notion}\n\\vfill Le premier déplacement fait varier la différentielle ; le second évalue cette variation.\n\\note{Cours original, pages PDF 59–61. Résultats admis ; interprétation sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [
+      "\\ds f{\\vec a}(\\vec h,\\vec k)\n=\\bigl(\\df{(df)}{\\vec a}(\\vec h)\\bigr)(\\vec k)."
+    ],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "59–61"
+    },
+    "prerequisites": [
+      "AC14",
+      "AC19"
+    ],
+    "exemple": null,
+    "activite": "Faire reformuler le résultat et ses hypothèses.",
+    "notes_orales": "Cours original, pages PDF 59–61. Résultats admis ; interprétation sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "AC21",
+    "title": "L’ordre des dérivations partielles",
+    "part": "Second ordre",
+    "objectif": "Comprendre et utiliser : L’ordre des dérivations partielles",
+    "idee_centrale": "L’ordre des dérivations partielles",
+    "contenu_beamer": "\\begin{frame}[t]{L’ordre des dérivations partielles}\n\\coursanalyse\n\\begin{notion}{Dérivée partielle seconde}\n\\[\\frac{\\partial^2 f}{\\partial x_i\\partial x_j}\n=\\frac{\\partial}{\\partial x_i}\\left(\\frac{\\partial f}{\\partial x_j}\\right).\\]\nOn dérive \\textbf{d'abord selon $x_j$}, puis selon $x_i$.\n\\end{notion}\n\\begin{exemple}{Pour $f(x,y)=x^2y$}\n\\[\\frac{\\partial f}{\\partial y}=x^2,\\qquad\n\\frac{\\partial^2f}{\\partial x\\partial y}=2x.\\]\n\\end{exemple}\n\\vfill On n'échange pas encore les deux dérivations sans hypothèse de régularité.\n\\note{Cours original, pages PDF 61–62. Résultats admis ; interprétation sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [
+      "\\frac{\\partial^2 f}{\\partial x_i\\partial x_j}\n=\\frac{\\partial}{\\partial x_i}\\left(\\frac{\\partial f}{\\partial x_j}\\right).",
+      "\\frac{\\partial f}{\\partial y}=x^2,\\qquad\n\\frac{\\partial^2f}{\\partial x\\partial y}=2x."
+    ],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "61–62"
+    },
+    "prerequisites": [
+      "AC20"
+    ],
+    "exemple": "Exemple conceptuel distinct du TD de base",
+    "activite": "Faire reformuler le résultat et ses hypothèses.",
+    "notes_orales": "Cours original, pages PDF 61–62. Résultats admis ; interprétation sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "AC22",
+    "title": "La Hessienne rassemble les dérivées secondes",
+    "part": "Second ordre",
+    "objectif": "Comprendre et utiliser : La Hessienne rassemble les dérivées secondes",
+    "idee_centrale": "La Hessienne rassemble les dérivées secondes",
+    "contenu_beamer": "\\begin{frame}[t]{La Hessienne rassemble les dérivées secondes}\n\\coursanalyse\n\\begin{notion}{Fonction à valeurs réelles}\n\\[H_f(\\vec a)=\\left(\\frac{\\partial^2f}{\\partial x_i\\partial x_j}(\\vec a)\\right)_{1\\le i,j\\le n}.\\]\n\\end{notion}\nEn deux variables :\n\\[H_f=\\begin{pmatrix}\n\\dfrac{\\partial^2 f}{\\partial x^2}&\\dfrac{\\partial^2 f}{\\partial x\\partial y}\\\\\n\\dfrac{\\partial^2 f}{\\partial y\\partial x}&\\dfrac{\\partial^2 f}{\\partial y^2}\n\\end{pmatrix}.\\]\n\\vfill Une Hessienne est une matrice carrée de taille $n$ ; sa symétrie sera assurée par le théorème de Schwarz.\n\\note{Cours original, pages PDF 61–64. Résultats admis ; interprétation sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [
+      "H_f(\\vec a)=\\left(\\frac{\\partial^2f}{\\partial x_i\\partial x_j}(\\vec a)\\right)_{1\\le i,j\\le n}.",
+      "H_f=\\begin{pmatrix}\n\\dfrac{\\partial^2 f}{\\partial x^2}&\\dfrac{\\partial^2 f}{\\partial x\\partial y}\\\\\n\\dfrac{\\partial^2 f}{\\partial y\\partial x}&\\dfrac{\\partial^2 f}{\\partial y^2}\n\\end{pmatrix}."
+    ],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "61–64"
+    },
+    "prerequisites": [
+      "AC21"
+    ],
+    "exemple": null,
+    "activite": "Faire reformuler le résultat et ses hypothèses.",
+    "notes_orales": "Cours original, pages PDF 61–64. Résultats admis ; interprétation sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "AC23",
+    "title": "La classe C2 : un critère calculable",
+    "part": "Second ordre",
+    "objectif": "Comprendre et utiliser : La classe C2 : un critère calculable",
+    "idee_centrale": "La classe C2 : un critère calculable",
+    "contenu_beamer": "\\begin{frame}[t]{La classe C2 : un critère calculable}\n\\coursanalyse\n\\begin{notion}{Classe $\\mathcal C^2$ sur un ouvert $U$}\n$f$ est différentiable et l'application $\\vec x\\mapsto\\df f{\\vec x}$ est de classe $\\mathcal C^1$.\n\\end{notion}\n\\begin{theoreme}{Critère par les composantes}\n$f:U\\to\\Rn p$ est de classe $\\mathcal C^2$ si et seulement si toutes les dérivées partielles secondes de ses composantes existent et sont continues sur $U$.\n\\end{theoreme}\n\\vfill Une fonction de classe $\\mathcal C^2$ est aussi de classe $\\mathcal C^1$.\n\\note{Cours original, pages PDF 64–66. Résultats admis ; interprétation sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "64–66"
+    },
+    "prerequisites": [
+      "AC14",
+      "AC20",
+      "AC21"
+    ],
+    "exemple": null,
+    "activite": "Faire reformuler le résultat et ses hypothèses.",
+    "notes_orales": "Cours original, pages PDF 64–66. Résultats admis ; interprétation sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "AC24",
+    "title": "Schwarz : quand les dérivations s’échangent",
+    "part": "Second ordre",
+    "objectif": "Comprendre et utiliser : Schwarz : quand les dérivations s’échangent",
+    "idee_centrale": "Schwarz : quand les dérivations s’échangent",
+    "contenu_beamer": "\\begin{frame}[t]{Schwarz : quand les dérivations s’échangent}\n\\coursanalyse\n\\begin{theoreme}{Sous l’hypothèse $\\mathcal C^2$}\nSi $f$ est de classe $\\mathcal C^2$ sur un ouvert $U$,\n\\[\\frac{\\partial^2f}{\\partial x_i\\partial x_j}(\\vec a)\n=\\frac{\\partial^2f}{\\partial x_j\\partial x_i}(\\vec a),\\qquad\\vec a\\in U.\\]\n\\end{theoreme}\n\\begin{resultat}{Pour une fonction réelle}\nLa Hessienne est \\textbf{symétrique} : $H_f(\\vec a)^\\top=H_f(\\vec a)$.\n\\end{resultat}\n\\vfill La régularité justifie l'échange ; une simple ressemblance des formules ne remplace pas cette hypothèse.\n\\note{Cours original, pages PDF 66–68. Résultats admis ; interprétation sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [
+      "\\frac{\\partial^2f}{\\partial x_i\\partial x_j}(\\vec a)\n=\\frac{\\partial^2f}{\\partial x_j\\partial x_i}(\\vec a),\\qquad\\vec a\\in U."
+    ],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "66–68"
+    },
+    "prerequisites": [
+      "AC23"
+    ],
+    "exemple": null,
+    "activite": "Faire reformuler le résultat et ses hypothèses.",
+    "notes_orales": "Cours original, pages PDF 66–68. Résultats admis ; interprétation sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "AC25",
+    "title": "Un exemple de Hessienne",
+    "part": "Second ordre",
+    "objectif": "Comprendre et utiliser : Un exemple de Hessienne",
+    "idee_centrale": "Un exemple de Hessienne",
+    "contenu_beamer": "\\begin{frame}[t]{Un exemple de Hessienne}\n\\coursanalyse\n\\begin{exemple}{$f(x,y)=x^2+xy+2y^2+y^3$}\n\\[\\grad f(x,y)=\\vcol{2x+y\\\\x+4y+3y^2},\\qquad\nH_f(x,y)=\\begin{pmatrix}2&1\\\\1&4+6y\\end{pmatrix}.\\]\n\\end{exemple}\n\\begin{resultat}{Au point $\\zero$}\n\\[H_f(\\zero)=\\begin{pmatrix}2&1\\\\1&4\\end{pmatrix}.\\]\n\\end{resultat}\n\\vfill La fonction est polynomiale ; ses dérivées secondes sont continues.\n\\note{Cours original, pages PDF 61–68. Résultats admis ; interprétation sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [
+      "\\grad f(x,y)=\\vcol{2x+y\\\\x+4y+3y^2},\\qquad\nH_f(x,y)=\\begin{pmatrix}2&1\\\\1&4+6y\\end{pmatrix}.",
+      "H_f(\\zero)=\\begin{pmatrix}2&1\\\\1&4\\end{pmatrix}."
+    ],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "61–68"
+    },
+    "prerequisites": [
+      "AC22",
+      "AC23",
+      "AC24"
+    ],
+    "exemple": "Exemple conceptuel distinct du TD de base",
+    "activite": "Faire reformuler le résultat et ses hypothèses.",
+    "notes_orales": "Cours original, pages PDF 61–68. Résultats admis ; interprétation sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "AC26",
+    "title": "Relier différentielle seconde et Hessienne",
+    "part": "Second ordre",
+    "objectif": "Comprendre et utiliser : Relier différentielle seconde et Hessienne",
+    "idee_centrale": "Relier différentielle seconde et Hessienne",
+    "contenu_beamer": "\\begin{frame}[t]{Relier différentielle seconde et Hessienne}\n\\coursanalyse\n\\begin{theoreme}{Fonction réelle de classe $\\mathcal C^2$}\nDans les bases canoniques,\n\\[\\ds f{\\vec a}(\\vec h,\\vec k)=\\vec h^{\\top}H_f(\\vec a)\\vec k.\\]\n\\end{theoreme}\n\\begin{exemple}{Pour $H_f(\\zero)=\\left(\\begin{smallmatrix}2&1\\\\1&4\\end{smallmatrix}\\right)$}\nAvec $\\vec h=\\vcol{h_1\\\\h_2}$ et $\\vec k=\\vcol{k_1\\\\k_2}$,\n\\[\\ds f{\\zero}(\\vec h,\\vec k)=2h_1k_1+h_1k_2+h_2k_1+4h_2k_2.\\]\n\\end{exemple}\n\\note{Cours original, pages PDF 62–64. Résultats admis ; interprétation sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [
+      "\\ds f{\\vec a}(\\vec h,\\vec k)=\\vec h^{\\top}H_f(\\vec a)\\vec k.",
+      "\\ds f{\\zero}(\\vec h,\\vec k)=2h_1k_1+h_1k_2+h_2k_1+4h_2k_2."
+    ],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "62–64"
+    },
+    "prerequisites": [
+      "AC20",
+      "AC22",
+      "AC24"
+    ],
+    "exemple": "Exemple conceptuel distinct du TD de base",
+    "activite": "Faire reformuler le résultat et ses hypothèses.",
+    "notes_orales": "Cours original, pages PDF 62–64. Résultats admis ; interprétation sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "AC27",
+    "title": "Une même direction fait apparaître un carré",
+    "part": "Second ordre",
+    "objectif": "Comprendre et utiliser : Une même direction fait apparaître un carré",
+    "idee_centrale": "Une même direction fait apparaître un carré",
+    "contenu_beamer": "\\begin{frame}[t]{Une même direction fait apparaître un carré}\n\\coursanalyse\n\\begin{notion}{Forme quadratique associée}\n\\[\\ds f{\\vec a}(\\vec h,\\vec h)=\\vec h^{\\top}H_f(\\vec a)\\vec h.\\]\n\\end{notion}\n\\begin{exemple}{Dans l’exemple précédent, au point $\\zero$}\n\\[\\vec h^{\\top}H_f(\\zero)\\vec h\n=2h_1^2+2h_1h_2+4h_2^2.\\]\n\\end{exemple}\n\\vfill Le coefficient du terme croisé reçoit les \\textbf{deux} contributions hors diagonale.\n\\note{Cours original, pages PDF 62–64. Résultats admis ; interprétation sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [
+      "\\ds f{\\vec a}(\\vec h,\\vec h)=\\vec h^{\\top}H_f(\\vec a)\\vec h.",
+      "\\vec h^{\\top}H_f(\\zero)\\vec h\n=2h_1^2+2h_1h_2+4h_2^2."
+    ],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "62–64"
+    },
+    "prerequisites": [
+      "AC26"
+    ],
+    "exemple": "Exemple conceptuel distinct du TD de base",
+    "activite": "Faire reformuler le résultat et ses hypothèses.",
+    "notes_orales": "Cours original, pages PDF 62–64. Résultats admis ; interprétation sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "AC28",
+    "title": "Taylor–Young au second ordre",
+    "part": "Taylor",
+    "objectif": "Comprendre et utiliser : Taylor–Young au second ordre",
+    "idee_centrale": "Taylor–Young au second ordre",
+    "contenu_beamer": "\\begin{frame}[t]{Taylor–Young au second ordre}\n\\coursanalyse\n\\begin{theoreme}{Si $f:U\\to\\R$ est de classe $\\mathcal C^2$}\nPour $\\vec a\\in U$ ouvert et $\\vec h\\to\\zero$,\n\\[\\begin{aligned}\nf(\\vec a+\\vec h)={}&f(\\vec a)+\\df f{\\vec a}(\\vec h)\\\\\n&+\\frac12\\ds f{\\vec a}(\\vec h,\\vec h)+o(\\norm{\\vec h}^2).\n\\end{aligned}\\]\n\\end{theoreme}\n\\begin{resultat}{Ce qui s’ajoute au premier ordre}\nUn terme quadratique, avec le facteur $1/2$ ; le reste est négligeable devant le carré de la norme.\n\\end{resultat}\n\\note{Cours original, pages PDF 88–90. Résultats admis ; interprétation sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [
+      "\\begin{aligned}\nf(\\vec a+\\vec h)={}&f(\\vec a)+\\df f{\\vec a}(\\vec h)\\\\\n&+\\frac12\\ds f{\\vec a}(\\vec h,\\vec h)+o(\\norm{\\vec h}^2).\n\\end{aligned}"
+    ],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "88–90"
+    },
+    "prerequisites": [
+      "AC20",
+      "AC23"
+    ],
+    "exemple": null,
+    "activite": "Faire reformuler le résultat et ses hypothèses.",
+    "notes_orales": "Cours original, pages PDF 88–90. Résultats admis ; interprétation sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "AC29",
+    "title": "Lire le modèle quadratique",
+    "part": "Taylor",
+    "objectif": "Comprendre et utiliser : Lire le modèle quadratique",
+    "idee_centrale": "Lire le modèle quadratique",
+    "contenu_beamer": "\\begin{frame}[t]{Lire le modèle quadratique}\n\\coursanalyse\n\\begin{resultat}{Version gradient et Hessienne}\n\\[f(\\vec a+\\vec h)\\simeq f(\\vec a)+\\ps{\\grad f(\\vec a)}{\\vec h}\n+\\frac12\\vec h^\\top H_f(\\vec a)\\vec h.\\]\n\\end{resultat}\n\\begin{cours}{Trois informations au même point}\n\\textbf{Valeur :} $f(\\vec a)$.\n\n\\medskip\n\\textbf{Variation linéaire :} le gradient en $\\vec a$.\n\n\\medskip\n\\textbf{Variation quadratique :} la Hessienne en $\\vec a$.\n\\end{cours}\n\\note{Cours original, pages PDF 88–90. Résultats admis ; interprétation sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [
+      "f(\\vec a+\\vec h)\\simeq f(\\vec a)+\\ps{\\grad f(\\vec a)}{\\vec h}\n+\\frac12\\vec h^\\top H_f(\\vec a)\\vec h."
+    ],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "88–90"
+    },
+    "prerequisites": [
+      "AC26",
+      "AC28"
+    ],
+    "exemple": null,
+    "activite": "Faire reformuler le résultat et ses hypothèses.",
+    "notes_orales": "Cours original, pages PDF 88–90. Résultats admis ; interprétation sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "AC30",
+    "title": "Un exemple de Taylor au second ordre",
+    "part": "Taylor",
+    "objectif": "Comprendre et utiliser : Un exemple de Taylor au second ordre",
+    "idee_centrale": "Un exemple de Taylor au second ordre",
+    "contenu_beamer": "\\begin{frame}[t]{Un exemple de Taylor au second ordre}\n\\coursanalyse\n\\begin{exemple}{$f(x,y)=x^2+xy+2y^2+y^3$, au point $\\zero$}\n$f(\\zero)=0$, $\\grad f(\\zero)=\\zero$ et $H_f(\\zero)=\\left(\\begin{smallmatrix}2&1\\\\1&4\\end{smallmatrix}\\right)$.\n\\[f(h,k)=\\underbrace{h^2+hk+2k^2}_{\\text{modèle au second ordre}}+k^3.\\]\nPour $\\vec h=\\vcol{0{,}02\\\\-0{,}01}$, le modèle vaut $0{,}0004$.\n\\end{exemple}\n\\begin{resultat}{Interpréter l’écart}\nLa valeur exacte est $0{,}000399$ : le reste cubique vaut $-0{,}000001$.\n\\end{resultat}\n\\note{Cours original, pages PDF 88–90. Résultats admis ; interprétation sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [
+      "f(h,k)=\\underbrace{h^2+hk+2k^2}_{\\text{modèle au second ordre}}+k^3."
+    ],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "88–90"
+    },
+    "prerequisites": [
+      "AC25",
+      "AC29"
+    ],
+    "exemple": "Exemple conceptuel distinct du TD de base",
+    "activite": "Faire reformuler le résultat et ses hypothèses.",
+    "notes_orales": "Cours original, pages PDF 88–90. Résultats admis ; interprétation sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "AC31",
+    "title": "Taylor avec un point intermédiaire",
+    "part": "Taylor",
+    "objectif": "Comprendre et utiliser : Taylor avec un point intermédiaire",
+    "idee_centrale": "Taylor avec un point intermédiaire",
+    "contenu_beamer": "\\begin{frame}[t]{Taylor avec un point intermédiaire}\n\\coursanalyse\n\\begin{theoreme}{Version exacte, fonction réelle de classe $\\mathcal C^2$}\nSi $[\\vec a,\\vec a+\\vec h]\\subset U$, il existe $\\theta\\in]0,1[$ tel que\n\\[\\begin{aligned}\nf(\\vec a+\\vec h)={}&f(\\vec a)+\\df f{\\vec a}(\\vec h)\\\\\n&+\\frac12\\vec h^\\top H_f(\\vec a+\\theta\\vec h)\\vec h.\n\\end{aligned}\\]\n\\end{theoreme}\n\\begin{resultat}{Ne pas mélanger les deux formules}\nTaylor–Young utilise la Hessienne en $\\vec a$ avec un reste.\nLa formule exacte utilise une Hessienne en un point intermédiaire.\n\\end{resultat}\n\\note{Cours original, pages PDF 87–88. Résultats admis ; interprétation sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [
+      "\\begin{aligned}\nf(\\vec a+\\vec h)={}&f(\\vec a)+\\df f{\\vec a}(\\vec h)\\\\\n&+\\frac12\\vec h^\\top H_f(\\vec a+\\theta\\vec h)\\vec h.\n\\end{aligned}"
+    ],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "87–88"
+    },
+    "prerequisites": [
+      "AC28"
+    ],
+    "exemple": null,
+    "activite": "Faire reformuler le résultat et ses hypothèses.",
+    "notes_orales": "Cours original, pages PDF 87–88. Résultats admis ; interprétation sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "AC32",
+    "title": "Contrôler l’erreur de linéarisation",
+    "part": "Taylor",
+    "objectif": "Comprendre et utiliser : Contrôler l’erreur de linéarisation",
+    "idee_centrale": "Contrôler l’erreur de linéarisation",
+    "contenu_beamer": "\\begin{frame}[t]{Contrôler l’erreur de linéarisation}\n\\coursanalyse\n\\begin{theoreme}{Hessienne bornée sur le segment}\nSoit $f:U\\to\\R$ de classe $\\mathcal C^2$, avec $[\\vec a,\\vec a+\\vec h]\\subset U$.\nSi $\\norm{H_f(\\vec x)}\\le M$ sur ce segment, alors\n\\[\\left|f(\\vec a+\\vec h)-f(\\vec a)-\\df f{\\vec a}(\\vec h)\\right|\n\\le\\frac M2\\norm{\\vec h}^2.\\]\n\\end{theoreme}\n\\vfill Une Hessienne uniformément bornée donne une erreur \\textbf{quadratique} pour l'approximation affine.\n\\note{Cours original, pages PDF 93–94. Résultats admis ; interprétation sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [
+      "\\left|f(\\vec a+\\vec h)-f(\\vec a)-\\df f{\\vec a}(\\vec h)\\right|\n\\le\\frac M2\\norm{\\vec h}^2."
+    ],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "93–94"
+    },
+    "prerequisites": [
+      "AC05",
+      "AC31"
+    ],
+    "exemple": null,
+    "activite": "Faire reformuler le résultat et ses hypothèses.",
+    "notes_orales": "Cours original, pages PDF 93–94. Résultats admis ; interprétation sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "AC33",
+    "title": "Définir une fonction convexe",
+    "part": "Convexité",
+    "objectif": "Comprendre et utiliser : Définir une fonction convexe",
+    "idee_centrale": "Définir une fonction convexe",
+    "contenu_beamer": "\\begin{frame}[t]{Définir une fonction convexe}\n\\coursanalyse\n\\begin{notion}{Sur un ensemble convexe $C$}\n$f:C\\to\\R$ est convexe si, pour tous $\\vec x,\\vec y\\in C$ et $t\\in[0,1]$,\n\\[f((1-t)\\vec x+t\\vec y)\\le(1-t)f(\\vec x)+tf(\\vec y).\\]\n\\end{notion}\n\\begin{resultat}{Le sens de l’inégalité}\nLa valeur au point intermédiaire ne dépasse pas la moyenne pondérée des valeurs aux deux extrémités.\n\\end{resultat}\n\\vfill Le domaine doit lui-même contenir les segments utilisés.\n\\note{Cours original, pages PDF 113–114. Résultats admis ; interprétation sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [
+      "f((1-t)\\vec x+t\\vec y)\\le(1-t)f(\\vec x)+tf(\\vec y)."
+    ],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "113–114"
+    },
+    "prerequisites": [
+      "AC04"
+    ],
+    "exemple": null,
+    "activite": "Faire reformuler le résultat et ses hypothèses.",
+    "notes_orales": "Cours original, pages PDF 113–114. Résultats admis ; interprétation sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "AC34",
+    "title": "La courbe reste sous la corde",
+    "part": "Convexité",
+    "objectif": "Comprendre et utiliser : La courbe reste sous la corde",
+    "idee_centrale": "La courbe reste sous la corde",
+    "contenu_beamer": "\\begin{frame}[t]{La courbe reste sous la corde}\n\\coursanalyse\n\\begin{center}\\begin{tikzpicture}[x=1.3cm,y=.7cm]\n\\draw[axes](-.3,0)--(3.4,0)node[right]{$x$};\\draw[axes](0,-.3)--(0,5.2);\n\\draw[courb,domain=0:3,samples=60]plot(\\x,{.5*\\x*\\x});\n\\draw[IMTOrange,thick](.5,.125)--(2.5,3.125);\n\\fill(.5,.125)circle(2pt)node[below]{$a$};\\fill(2.5,3.125)circle(2pt)node[above left]{$b$};\n\\draw[pointille](1.5,1.125)--(1.5,1.625);\\fill[IMTCyan](1.5,1.125)circle(2pt);\\fill[IMTOrange](1.5,1.625)circle(2pt);\n\\node[anchor=west,align=left]at(4,3){\\textcolor{IMTOrange}{corde : moyenne des valeurs}\\\\[3mm]\\textcolor{IMTNavy}{courbe : valeur intermédiaire}};\n\\end{tikzpicture}\\end{center}\n\\begin{resultat}{Pour plusieurs variables}\nLa même comparaison se fait sur chaque segment du domaine.\n\\end{resultat}\n\\note{Cours original, pages PDF 113–114. Résultats admis ; interprétation sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "113–114"
+    },
+    "prerequisites": [
+      "AC33"
+    ],
+    "exemple": null,
+    "activite": "Faire reformuler le résultat et ses hypothèses.",
+    "notes_orales": "Cours original, pages PDF 113–114. Résultats admis ; interprétation sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "AC35",
+    "title": "Des exemples et un contre-exemple",
+    "part": "Convexité",
+    "objectif": "Comprendre et utiliser : Des exemples et un contre-exemple",
+    "idee_centrale": "Des exemples et un contre-exemple",
+    "contenu_beamer": "\\begin{frame}[t]{Des exemples et un contre-exemple}\n\\coursanalyse\n\\begin{exemple}{Fonctions convexes}\n\\textbf{Affine :} $f(\\vec x)=\\ps{\\vec c}{\\vec x}+d$ ; l'inégalité est une égalité.\n\n\\medskip\n\\textbf{Quadratique :} $f(\\vec x)=\\norm{\\vec x}^2$.\n\\end{exemple}\n\\begin{exemple}{Une fonction qui n’est pas convexe}\n$f(t)=-t^2$ : aux points $-1$ et $1$, la moyenne des valeurs vaut $-1$, alors que $f(0)=0$.\n\\end{exemple}\n\\vfill La convexité concerne toutes les paires et tous les poids, pas quelques points seulement.\n\\note{Cours original, pages PDF 113–115. Résultats admis ; interprétation sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "113–115"
+    },
+    "prerequisites": [
+      "AC33"
+    ],
+    "exemple": "Exemple conceptuel distinct du TD de base",
+    "activite": "Faire reformuler le résultat et ses hypothèses.",
+    "notes_orales": "Cours original, pages PDF 113–115. Résultats admis ; interprétation sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "AC36",
+    "title": "Le critère du premier ordre : un support affine",
+    "part": "Convexité",
+    "objectif": "Comprendre et utiliser : Le critère du premier ordre : un support affine",
+    "idee_centrale": "Le critère du premier ordre : un support affine",
+    "contenu_beamer": "\\begin{frame}[t]{Le critère du premier ordre : un support affine}\n\\coursanalyse\n\\begin{theoreme}{Fonction différentiable sur un ouvert convexe $U$}\n$f:U\\to\\R$ est convexe si et seulement si, pour tous $\\vec x,\\vec y\\in U$,\n\\[f(\\vec y)\\ge f(\\vec x)+\\ps{\\grad f(\\vec x)}{\\vec y-\\vec x}.\\]\n\\end{theoreme}\n\\begin{resultat}{Lecture géométrique}\nL'approximation affine tangente est un \\textbf{minorant global} de la fonction sur $U$.\n\\end{resultat}\n\\vfill Pour une fonction convexe : sous les cordes, au-dessus des tangentes.\n\\note{Cours original, pages PDF 121–123. Résultats admis ; interprétation sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [
+      "f(\\vec y)\\ge f(\\vec x)+\\ps{\\grad f(\\vec x)}{\\vec y-\\vec x}."
+    ],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "121–123"
+    },
+    "prerequisites": [
+      "AC02",
+      "AC33"
+    ],
+    "exemple": null,
+    "activite": "Faire reformuler le résultat et ses hypothèses.",
+    "notes_orales": "Cours original, pages PDF 121–123. Résultats admis ; interprétation sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "AC37",
+    "title": "Le critère de convexité par la Hessienne",
+    "part": "Convexité",
+    "objectif": "Comprendre et utiliser : Le critère de convexité par la Hessienne",
+    "idee_centrale": "Le critère de convexité par la Hessienne",
+    "contenu_beamer": "\\begin{frame}[t]{Le critère de convexité par la Hessienne}\n\\coursanalyse\n\\begin{theoreme}{Fonction réelle de classe $\\mathcal C^2$}\nSur un \\textbf{ouvert convexe} $U$,\n\\[f\\text{ convexe}\\quad\\Longleftrightarrow\\quad\n\\forall\\vec x\\in U,\\ \\forall\\vec h,\\quad\\vec h^\\top H_f(\\vec x)\\vec h\\ge0.\\]\n\\end{theoreme}\n\\begin{resultat}{Le lien avec l’algèbre}\nIl faut que la Hessienne soit \\textbf{positive semi-définie en tout point} du domaine.\n\\end{resultat}\n\\vfill Une valeur négative dans une direction et en un point suffit à exclure la convexité sur $U$.\n\\note{Cours original, pages PDF 124–125. Résultats admis ; interprétation sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [
+      "f\\text{ convexe}\\quad\\Longleftrightarrow\\quad\n\\forall\\vec x\\in U,\\ \\forall\\vec h,\\quad\\vec h^\\top H_f(\\vec x)\\vec h\\ge0."
+    ],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "124–125"
+    },
+    "prerequisites": [
+      "AC23",
+      "AC26",
+      "AC33"
+    ],
+    "exemple": null,
+    "activite": "Faire reformuler le résultat et ses hypothèses.",
+    "notes_orales": "Cours original, pages PDF 124–125. Résultats admis ; interprétation sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "AC38",
+    "title": "Lire le signe d’une matrice symétrique",
+    "part": "Convexité",
+    "objectif": "Comprendre et utiliser : Lire le signe d’une matrice symétrique",
+    "idee_centrale": "Lire le signe d’une matrice symétrique",
+    "contenu_beamer": "\\begin{frame}[t]{Lire le signe d’une matrice symétrique}\n\\coursanalyse\n\\begin{cours}{Pour une matrice réelle symétrique $H$}\n\\textbf{Positive semi-définie :} $\\vec h^\\top H\\vec h\\ge0$ pour tout $\\vec h$.\n\n\\medskip\n\\textbf{Définie positive :} $\\vec h^\\top H\\vec h>0$ pour tout $\\vec h\\ne\\zero$.\n\\end{cours}\n\\begin{theoreme}{Critère spectral}\nSemi-définie positive : toutes les valeurs propres sont $\\ge0$.\n\n\\medskip\nDéfinie positive : toutes les valeurs propres sont $>0$.\n\\end{theoreme}\n\\vfill Une décomposition en carrés peut éviter le calcul des valeurs propres.\n\\note{Cours original, pages PDF 124–126 ; prérequis d’algèbre. Résultats admis ; interprétation sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "124–126 ; prérequis d’algèbre"
+    },
+    "prerequisites": [
+      "prérequis Analyse I et algèbre"
+    ],
+    "exemple": null,
+    "activite": "Faire reformuler le résultat et ses hypothèses.",
+    "notes_orales": "Cours original, pages PDF 124–126 ; prérequis d’algèbre. Résultats admis ; interprétation sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "AC39",
+    "title": "Exemple : la convexité d’une quadratique",
+    "part": "Convexité",
+    "objectif": "Comprendre et utiliser : Exemple : la convexité d’une quadratique",
+    "idee_centrale": "Exemple : la convexité d’une quadratique",
+    "contenu_beamer": "\\begin{frame}[t]{Exemple : la convexité d’une quadratique}\n\\coursanalyse\n\\begin{exemple}{$q(x,y)=x^2+xy+2y^2+3x$}\n\\[H_q=\\begin{pmatrix}2&1\\\\1&4\\end{pmatrix}.\\]\nPour $\\vec h=\\vcol{h\\\\k}$,\n\\[\\vec h^\\top H_q\\vec h=2\\left(h+\\frac k2\\right)^2+\\frac72k^2\\ge0.\\]\n\\end{exemple}\n\\begin{resultat}{Conclusion sur tout le domaine}\nLa Hessienne est positive semi-définie partout ; $q$ est convexe sur $\\Rn2$.\n\\end{resultat}\n\\note{Cours original, pages PDF 124–125. Résultats admis ; interprétation sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [
+      "H_q=\\begin{pmatrix}2&1\\\\1&4\\end{pmatrix}.",
+      "\\vec h^\\top H_q\\vec h=2\\left(h+\\frac k2\\right)^2+\\frac72k^2\\ge0."
+    ],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "124–125"
+    },
+    "prerequisites": [
+      "AC37",
+      "AC38"
+    ],
+    "exemple": "Exemple conceptuel distinct du TD de base",
+    "activite": "Faire reformuler le résultat et ses hypothèses.",
+    "notes_orales": "Cours original, pages PDF 124–125. Résultats admis ; interprétation sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "AC40",
+    "title": "La stricte convexité",
+    "part": "Convexité",
+    "objectif": "Comprendre et utiliser : La stricte convexité",
+    "idee_centrale": "La stricte convexité",
+    "contenu_beamer": "\\begin{frame}[t]{La stricte convexité}\n\\coursanalyse\n\\begin{notion}{Une inégalité stricte entre points distincts}\nSur un ensemble convexe $C$, $f$ est strictement convexe si, pour $\\vec x\\ne\\vec y$ et $0<t<1$,\n\\[f((1-t)\\vec x+t\\vec y)<(1-t)f(\\vec x)+tf(\\vec y).\\]\n\\end{notion}\n\\begin{resultat}{Ce qui change}\nEntre deux points distincts, la valeur intermédiaire est strictement sous la corde.\n\\end{resultat}\n\\vfill Les extrémités $t=0$ et $t=1$ sont exclues de l'inégalité stricte.\n\\note{Cours original, pages PDF 114,126–127. Résultats admis ; interprétation sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [
+      "f((1-t)\\vec x+t\\vec y)<(1-t)f(\\vec x)+tf(\\vec y)."
+    ],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "114,126–127"
+    },
+    "prerequisites": [
+      "AC33"
+    ],
+    "exemple": null,
+    "activite": "Faire reformuler le résultat et ses hypothèses.",
+    "notes_orales": "Cours original, pages PDF 114,126–127. Résultats admis ; interprétation sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "AC41",
+    "title": "Hessienne définie positive : un critère suffisant",
+    "part": "Convexité",
+    "objectif": "Comprendre et utiliser : Hessienne définie positive : un critère suffisant",
+    "idee_centrale": "Hessienne définie positive : un critère suffisant",
+    "contenu_beamer": "\\begin{frame}[t]{Hessienne définie positive : un critère suffisant}\n\\coursanalyse\n\\begin{theoreme}{Sur un ouvert convexe $U$}\nSi $f:U\\to\\R$ est de classe $\\mathcal C^2$ et si $H_f(\\vec x)$ est définie positive pour tout $\\vec x\\in U$, alors $f$ est strictement convexe.\n\\end{theoreme}\n\\begin{exemple}{La réciproque est fausse}\n$f(t)=t^4$ est strictement convexe sur $\\R$, mais $f''(0)=0$.\n\\end{exemple}\n\\vfill Ne pas transformer cette condition suffisante en équivalence.\n\\note{Cours original, pages PDF 126–127. Résultats admis ; interprétation sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "126–127"
+    },
+    "prerequisites": [
+      "AC37",
+      "AC38",
+      "AC40"
+    ],
+    "exemple": "Exemple conceptuel distinct du TD de base",
+    "activite": "Faire reformuler le résultat et ses hypothèses.",
+    "notes_orales": "Cours original, pages PDF 126–127. Résultats admis ; interprétation sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "AC42",
+    "title": "Stricte ne signifie pas courbure uniforme",
+    "part": "Convexité",
+    "objectif": "Comprendre et utiliser : Stricte ne signifie pas courbure uniforme",
+    "idee_centrale": "Stricte ne signifie pas courbure uniforme",
+    "contenu_beamer": "\\begin{frame}[t]{Stricte ne signifie pas courbure uniforme}\n\\coursanalyse\n\\begin{exemple}{Deux fonctions strictement convexes}\n\\textbf{$f(t)=t^4$ :} $f''(t)=12t^2$ s'annule en $0$.\n\n\\medskip\n\\textbf{$g(t)=e^t$ :} $g''(t)=e^t>0$ partout, mais tend vers $0$ lorsque $t\\to-\\infty$.\n\\end{exemple}\n\\begin{resultat}{La question suivante}\nPeut-on imposer un même niveau de courbure strictement positif sur tout le domaine ?\n\\end{resultat}\n\\note{Cours original, pages PDF 126–129. Résultats admis ; interprétation sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "126–129"
+    },
+    "prerequisites": [
+      "AC41"
+    ],
+    "exemple": "Exemple conceptuel distinct du TD de base",
+    "activite": "Faire reformuler le résultat et ses hypothèses.",
+    "notes_orales": "Cours original, pages PDF 126–129. Résultats admis ; interprétation sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "AC43",
+    "title": "La forte convexité : un écart quantifié",
+    "part": "Convexité",
+    "objectif": "Comprendre et utiliser : La forte convexité : un écart quantifié",
+    "idee_centrale": "La forte convexité : un écart quantifié",
+    "contenu_beamer": "\\begin{frame}[t]{La forte convexité : un écart quantifié}\n\\coursanalyse\n\\begin{notion}{Paramètre uniforme $\\mu>0$}\nSur un ensemble convexe $C$, $f$ est $\\mu$-fortement convexe si, pour tous $\\vec x,\\vec y\\in C$ et $t\\in[0,1]$,\n\\[\\begin{aligned}\nf((1-t)\\vec x+t\\vec y)\\le{}&(1-t)f(\\vec x)+tf(\\vec y)\\\\\n&-\\frac\\mu2t(1-t)\\norm{\\vec y-\\vec x}^2.\n\\end{aligned}\\]\n\\end{notion}\n\\vfill Le même $\\mu$ doit convenir à tous les points et tous les segments du domaine.\n\\note{Cours original, pages PDF 127–128. Résultats admis ; interprétation sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [
+      "\\begin{aligned}\nf((1-t)\\vec x+t\\vec y)\\le{}&(1-t)f(\\vec x)+tf(\\vec y)\\\\\n&-\\frac\\mu2t(1-t)\\norm{\\vec y-\\vec x}^2.\n\\end{aligned}"
+    ],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "127–128"
+    },
+    "prerequisites": [
+      "AC40"
+    ],
+    "exemple": null,
+    "activite": "Faire reformuler le résultat et ses hypothèses.",
+    "notes_orales": "Cours original, pages PDF 127–128. Résultats admis ; interprétation sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "AC44",
+    "title": "Forte convexité et Hessienne",
+    "part": "Convexité",
+    "objectif": "Comprendre et utiliser : Forte convexité et Hessienne",
+    "idee_centrale": "Forte convexité et Hessienne",
+    "contenu_beamer": "\\begin{frame}[t]{Forte convexité et Hessienne}\n\\coursanalyse\n\\begin{theoreme}{Fonction réelle $\\mathcal C^2$ sur un ouvert convexe $U$}\nPour un paramètre fixé $\\mu>0$, $f$ est $\\mu$-fortement convexe si et seulement si\n\\[\\forall\\vec x\\in U,\\ \\forall\\vec h,\\qquad\n\\vec h^\\top H_f(\\vec x)\\vec h\\ge\\mu\\norm{\\vec h}^2.\\]\n\\end{theoreme}\n\\begin{resultat}{Lecture matricielle}\n$H_f(\\vec x)-\\mu I_n$ doit être positive semi-définie en tout point.\n\\end{resultat}\n\\vfill Des valeurs propres strictement positives point par point ne suffisent pas sans une même borne $\\mu>0$.\n\\note{Cours original, pages PDF 128–129. Résultats admis ; interprétation sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [
+      "\\forall\\vec x\\in U,\\ \\forall\\vec h,\\qquad\n\\vec h^\\top H_f(\\vec x)\\vec h\\ge\\mu\\norm{\\vec h}^2."
+    ],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "128–129"
+    },
+    "prerequisites": [
+      "AC37",
+      "AC43"
+    ],
+    "exemple": null,
+    "activite": "Faire reformuler le résultat et ses hypothèses.",
+    "notes_orales": "Cours original, pages PDF 128–129. Résultats admis ; interprétation sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "AC45",
+    "title": "Trouver un paramètre de forte convexité",
+    "part": "Convexité",
+    "objectif": "Comprendre et utiliser : Trouver un paramètre de forte convexité",
+    "idee_centrale": "Trouver un paramètre de forte convexité",
+    "contenu_beamer": "\\begin{frame}[t]{Trouver un paramètre de forte convexité}\n\\coursanalyse\n\\begin{exemple}{Pour $q(x,y)=x^2+xy+2y^2+3x$}\n\\[H_q-I_2=\\begin{pmatrix}1&1\\\\1&3\\end{pmatrix}.\\]\nPour $\\vec h=\\vcol{h\\\\k}$,\n\\[\\vec h^\\top(H_q-I_2)\\vec h=(h+k)^2+2k^2\\ge0.\\]\n\\end{exemple}\n\\begin{resultat}{Un paramètre valable}\n$q$ est $1$-fortement convexe sur $\\Rn2$.\nLe paramètre $1$ est une borne commode ; il n'est pas annoncé comme optimal.\n\\end{resultat}\n\\note{Cours original, pages PDF 128–129. Résultats admis ; interprétation sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [
+      "H_q-I_2=\\begin{pmatrix}1&1\\\\1&3\\end{pmatrix}.",
+      "\\vec h^\\top(H_q-I_2)\\vec h=(h+k)^2+2k^2\\ge0."
+    ],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "128–129"
+    },
+    "prerequisites": [
+      "AC39",
+      "AC44"
+    ],
+    "exemple": "Exemple conceptuel distinct du TD de base",
+    "activite": "Faire reformuler le résultat et ses hypothèses.",
+    "notes_orales": "Cours original, pages PDF 128–129. Résultats admis ; interprétation sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "AC46",
+    "title": "Un minorant plus précis que la tangente",
+    "part": "Convexité",
+    "objectif": "Comprendre et utiliser : Un minorant plus précis que la tangente",
+    "idee_centrale": "Un minorant plus précis que la tangente",
+    "contenu_beamer": "\\begin{frame}[t]{Un minorant plus précis que la tangente}\n\\coursanalyse\n\\begin{theoreme}{Fonction différentiable sur un ouvert convexe}\nPour $\\mu>0$, $f$ est $\\mu$-fortement convexe si et seulement si, pour tous $\\vec x,\\vec y$ du domaine,\n\\[\\begin{aligned}\nf(\\vec y)\\ge{}&f(\\vec x)+\\ps{\\grad f(\\vec x)}{\\vec y-\\vec x}\\\\\n&+\\frac\\mu2\\norm{\\vec y-\\vec x}^2.\n\\end{aligned}\\]\n\\end{theoreme}\n\\begin{resultat}{Une garantie quantitative}\nLa fonction reste au-dessus de son modèle affine, avec une marge quadratique uniforme.\n\\end{resultat}\n\\note{Cours original, pages PDF 128–129. Résultats admis ; interprétation sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [
+      "\\begin{aligned}\nf(\\vec y)\\ge{}&f(\\vec x)+\\ps{\\grad f(\\vec x)}{\\vec y-\\vec x}\\\\\n&+\\frac\\mu2\\norm{\\vec y-\\vec x}^2.\n\\end{aligned}"
+    ],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "128–129"
+    },
+    "prerequisites": [
+      "AC36",
+      "AC43"
+    ],
+    "exemple": null,
+    "activite": "Faire reformuler le résultat et ses hypothèses.",
+    "notes_orales": "Cours original, pages PDF 128–129. Résultats admis ; interprétation sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "AC47",
+    "title": "Convexe, stricte, forte : les implications",
+    "part": "Convexité",
+    "objectif": "Comprendre et utiliser : Convexe, stricte, forte : les implications",
+    "idee_centrale": "Convexe, stricte, forte : les implications",
+    "contenu_beamer": "\\begin{frame}[t]{Convexe, stricte, forte : les implications}\n\\coursanalyse\n\\begin{center}\\begin{tikzpicture}\n\\node[align=center]at(0,0){fortement\\\\convexe};\\node[align=center]at(5,0){strictement\\\\convexe};\\node at(10,0){convexe};\n\\draw[-{Stealth},thick,IMTCyan](1.5,0)--(3.4,0);\\draw[-{Stealth},thick,IMTCyan](6.6,0)--(8.7,0);\n\\end{tikzpicture}\\end{center}\n\\begin{cours}{Les réciproques sont fausses}\n\\textbf{Convexe sans être stricte :} une fonction affine sur $\\R$.\n\n\\medskip\n\\textbf{Stricte sans être forte sur $\\R$ :} $t\\mapsto t^4$.\n\\end{cours}\n\\vfill La convexité forte dépend d'une constante uniforme et du domaine considéré.\n\\note{Cours original, pages PDF 114,126–129. Résultats admis ; interprétation sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "114,126–129"
+    },
+    "prerequisites": [
+      "AC40",
+      "AC43"
+    ],
+    "exemple": null,
+    "activite": "Faire reformuler le résultat et ses hypothèses.",
+    "notes_orales": "Cours original, pages PDF 114,126–129. Résultats admis ; interprétation sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "AC48",
+    "title": "Une information en un point reste locale",
+    "part": "Convexité",
+    "objectif": "Comprendre et utiliser : Une information en un point reste locale",
+    "idee_centrale": "Une information en un point reste locale",
+    "contenu_beamer": "\\begin{frame}[t]{Une information en un point reste locale}\n\\coursanalyse\n\\begin{exemple}{$f(x,y)=x^2+xy+2y^2+y^3$}\n$H_f(\\zero)=\\left(\\begin{smallmatrix}2&1\\\\1&4\\end{smallmatrix}\\right)$ est définie positive.\n\n\\medskip\nMais au point $\\vec b=\\vcol{0\\\\-1}$,\n\\[H_f(\\vec b)=\\begin{pmatrix}2&1\\\\1&-2\\end{pmatrix},\\qquad\n\\vec e_2^\\top H_f(\\vec b)\\vec e_2=-2.\\]\n\\end{exemple}\n\\begin{resultat}{Conclusion}\nLa fonction n'est pas convexe sur $\\Rn2$ : il faut contrôler la Hessienne \\textbf{sur tout le domaine}.\n\\end{resultat}\n\\note{Cours original, pages PDF 124–129. Résultats admis ; interprétation sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [
+      "H_f(\\vec b)=\\begin{pmatrix}2&1\\\\1&-2\\end{pmatrix},\\qquad\n\\vec e_2^\\top H_f(\\vec b)\\vec e_2=-2."
+    ],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "124–129"
+    },
+    "prerequisites": [
+      "AC25",
+      "AC37"
+    ],
+    "exemple": "Exemple conceptuel distinct du TD de base",
+    "activite": "Faire reformuler le résultat et ses hypothèses.",
+    "notes_orales": "Cours original, pages PDF 124–129. Résultats admis ; interprétation sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "AC49",
+    "title": "Une démarche d’étude en quatre questions",
+    "part": "Convexité",
+    "objectif": "Comprendre et utiliser : Une démarche d’étude en quatre questions",
+    "idee_centrale": "Une démarche d’étude en quatre questions",
+    "contenu_beamer": "\\begin{frame}[t]{Une démarche d’étude en quatre questions}\n\\coursanalyse\n\\begin{cours}{Garder les hypothèses dans l’ordre}\n\\textbf{1. Domaine :} est-il ouvert ? Le domaine d'étude est-il convexe ?\n\n\\medskip\n\\textbf{2. Régularité :} les partielles nécessaires sont-elles continues ?\n\n\\medskip\n\\textbf{3. Objectif :} contrôler une variation, approcher par Taylor ou établir une convexité ?\n\n\\medskip\n\\textbf{4. Critère :} borne uniforme, développement au point ou signe de la Hessienne partout ?\n\\end{cours}\n\\vfill Ne pas remplacer une hypothèse globale par une vérification en un seul point.\n\\note{Cours original, pages PDF 3–129. Résultats admis ; interprétation sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "3–129"
+    },
+    "prerequisites": [
+      "AC11",
+      "AC15",
+      "AC23",
+      "AC28",
+      "AC37",
+      "AC44"
+    ],
+    "exemple": null,
+    "activite": "Faire reformuler le résultat et ses hypothèses.",
+    "notes_orales": "Cours original, pages PDF 3–129. Résultats admis ; interprétation sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "AC50",
+    "title": "Les liens essentiels du chapitre",
+    "part": "Convexité",
+    "objectif": "Comprendre et utiliser : Les liens essentiels du chapitre",
+    "idee_centrale": "Les liens essentiels du chapitre",
+    "contenu_beamer": "\\begin{frame}[t]{Les liens essentiels du chapitre}\n\\coursanalyse\n\\begin{cours}{Du local au global}\n\\textbf{Différentielle bornée + segments inclus :} contrôle des variations.\n\n\\medskip\n\\textbf{Partielles continues :} classe $\\mathcal C^1$ et différentiabilité.\n\n\\medskip\n\\textbf{Second ordre continu :} Taylor et Hessienne symétrique.\n\n\\medskip\n\\textbf{Hessienne positive partout + domaine convexe :} convexité.\n\n\\medskip\n\\textbf{Minoration uniforme par $\\mu I_n$ :} forte convexité.\n\\end{cours}\n\\vfill Les quatre pages suivantes sont des compléments séparés du socle.\n\\note{Cours original, pages PDF 3–129. Résultats admis ; interprétation sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "3–129"
+    },
+    "prerequisites": [
+      "AC49"
+    ],
+    "exemple": null,
+    "activite": "Faire reformuler le résultat et ses hypothèses.",
+    "notes_orales": "Cours original, pages PDF 3–129. Résultats admis ; interprétation sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "AC51",
+    "title": "Complément — Les limites du TAF vectoriel",
+    "part": "Compléments séparés",
+    "objectif": "Comprendre et utiliser : Complément — Les limites du TAF vectoriel",
+    "idee_centrale": "Complément — Les limites du TAF vectoriel",
+    "contenu_beamer": "\\begin{frame}[t]{Complément — Les limites du TAF vectoriel}\n\\coursanalyse\n\\begin{exemple}{Une courbe fermée}\n\\[F(t)=\\vcol{\\cos t\\\\\\sin t},\\qquad t\\in[0,2\\pi].\\]\n$F(2\\pi)-F(0)=\\zero$, mais $F'(t)=\\vcol{-\\sin t\\\\\\cos t}$ n'est jamais nul.\n\\end{exemple}\n\\begin{resultat}{Ce qui échoue}\nIl n'existe aucun $c\\in]0,2\\pi[$ tel que\n\\[F(2\\pi)-F(0)=2\\pi F'(c).\\]\n\\end{resultat}\n\\vfill Pour les sorties vectorielles, l'inégalité des accroissements finis reste l'outil général.\n\\note{Cours original, pages PDF 4–5,11–13. Résultats admis ; interprétation sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [
+      "F(t)=\\vcol{\\cos t\\\\\\sin t},\\qquad t\\in[0,2\\pi].",
+      "F(2\\pi)-F(0)=2\\pi F'(c)."
+    ],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "4–5,11–13"
+    },
+    "prerequisites": [
+      "AC08",
+      "AC09"
+    ],
+    "exemple": "Exemple conceptuel distinct du TD de base",
+    "activite": "Faire reformuler le résultat et ses hypothèses.",
+    "notes_orales": "Cours original, pages PDF 4–5,11–13. Résultats admis ; interprétation sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "AC52",
+    "title": "Complément — Différentiable sans être C1",
+    "part": "Compléments séparés",
+    "objectif": "Comprendre et utiliser : Complément — Différentiable sans être C1",
+    "idee_centrale": "Complément — Différentiable sans être C1",
+    "contenu_beamer": "\\begin{frame}[t]{Complément — Différentiable sans être C1}\n\\coursanalyse\n\\begin{exemple}{Une fonction réelle d’une variable}\n\\[f(t)=\\begin{cases}t^2\\sin(1/t),&t\\ne0,\\\\0,&t=0.\\end{cases}\\]\n$f$ est dérivable partout, avec $f'(0)=0$.\n\n\\medskip\nPour $t\\ne0$, $f'(t)=2t\\sin(1/t)-\\cos(1/t)$.\n\\end{exemple}\n\\begin{resultat}{La limite manquante}\n$f'$ oscille près de $0$ : elle n'est pas continue en $0$. Ainsi $f$ n'est pas de classe $\\mathcal C^1$ au voisinage de $0$.\n\\end{resultat}\n\\note{Cours original, pages PDF 38–39. Résultats admis ; interprétation sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [
+      "f(t)=\\begin{cases}t^2\\sin(1/t),&t\\ne0,\\\\0,&t=0.\\end{cases}"
+    ],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "38–39"
+    },
+    "prerequisites": [
+      "AC14",
+      "AC17"
+    ],
+    "exemple": "Exemple conceptuel distinct du TD de base",
+    "activite": "Faire reformuler le résultat et ses hypothèses.",
+    "notes_orales": "Cours original, pages PDF 38–39. Résultats admis ; interprétation sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "AC53",
+    "title": "Complément — Composer au second ordre",
+    "part": "Compléments séparés",
+    "objectif": "Comprendre et utiliser : Complément — Composer au second ordre",
+    "idee_centrale": "Complément — Composer au second ordre",
+    "contenu_beamer": "\\begin{frame}[t]{Complément — Composer au second ordre}\n\\coursanalyse\n\\begin{theoreme}{Applications $\\mathcal C^2$ sur des ouverts compatibles}\nPosons $\\vec u=\\df f{\\vec a}(\\vec h)$ et $\\vec v=\\df f{\\vec a}(\\vec k)$.\n\\[\\begin{aligned}\n\\ds{(g\\circ f)}{\\vec a}(\\vec h,\\vec k)\n={}&\\ds g{f(\\vec a)}(\\vec u,\\vec v)\\\\\n&+\\df g{f(\\vec a)}\\bigl(\\ds f{\\vec a}(\\vec h,\\vec k)\\bigr).\n\\end{aligned}\\]\n\\end{theoreme}\n\\begin{resultat}{Deux contributions}\nLa variation propre de $g$, puis la variation du modèle de $f$ transmise à travers $g$.\n\\end{resultat}\n\\note{Cours original, pages PDF 69–71. Résultats admis ; interprétation sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [
+      "\\begin{aligned}\n\\ds{(g\\circ f)}{\\vec a}(\\vec h,\\vec k)\n={}&\\ds g{f(\\vec a)}(\\vec u,\\vec v)\\\\\n&+\\df g{f(\\vec a)}\\bigl(\\ds f{\\vec a}(\\vec h,\\vec k)\\bigr).\n\\end{aligned}"
+    ],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "69–71"
+    },
+    "prerequisites": [
+      "AC18",
+      "AC20",
+      "AC23"
+    ],
+    "exemple": null,
+    "activite": "Faire reformuler le résultat et ses hypothèses.",
+    "notes_orales": "Cours original, pages PDF 69–71. Résultats admis ; interprétation sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "AC54",
+    "title": "Complément — Jensen pour une moyenne pondérée",
+    "part": "Compléments séparés",
+    "objectif": "Comprendre et utiliser : Complément — Jensen pour une moyenne pondérée",
+    "idee_centrale": "Complément — Jensen pour une moyenne pondérée",
+    "contenu_beamer": "\\begin{frame}[t]{Complément — Jensen pour une moyenne pondérée}\n\\coursanalyse\n\\begin{theoreme}{Fonction convexe sur un ensemble convexe $C$}\nPour $\\vec x_1,\\ldots,\\vec x_m\\in C$ et des poids $\\lambda_i\\ge0$ de somme $1$,\n\\[f\\!\\left(\\sum_{i=1}^m\\lambda_i\\vec x_i\\right)\n\\le\\sum_{i=1}^m\\lambda_i f(\\vec x_i).\\]\n\\end{theoreme}\n\\begin{resultat}{Une extension de la définition}\nDeux points deviennent une famille finie ; la moyenne des valeurs majore la valeur à la moyenne.\n\\end{resultat}\n\\vfill Les poids doivent être positifs ou nuls et leur somme doit valoir $1$.\n\\note{Cours original, pages PDF 114–115. Résultats admis ; interprétation sans démonstration.}\n\\end{frame}\n",
+    "equations": [
+      "f\\!\\left(\\sum_{i=1}^m\\lambda_i\\vec x_i\\right)\n\\le\\sum_{i=1}^m\\lambda_i f(\\vec x_i)."
+    ],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "114–115"
+    },
+    "prerequisites": [
+      "AC33"
+    ],
+    "exemple": null,
+    "activite": "Faire reformuler le résultat et ses hypothèses.",
+    "notes_orales": "Cours original, pages PDF 114–115. Résultats admis ; interprétation sans démonstration.",
+    "duree_estimee": null
+  }
+]

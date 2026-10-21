@@ -1,0 +1,17 @@
+{
+  "status": "ready_for_teacher_review",
+  "pages": 56,
+  "core_slides": 50,
+  "complement_slides": 4,
+  "pdf_sha256": "d35b9b6b5f6f7fe82d403425ba7f5350b8c04b05d186746bfa6906d370175aba",
+  "body_sha256_lf": "40c108a934e33ec1c6497caa1d1c5f0f4fda9bdef5f7fcc66f397889bffe9384",
+  "roles": "Rôles exécutés successivement par le même assistant ; pas de revue indépendante.",
+  "pipeline": "Profil vérifié en prepare-only, aucun agent autonome appelé.",
+  "reports": [
+    "calculs.json",
+    "scientifique.json",
+    "notations-dependances.json",
+    "visuel.json",
+    "paquet-autonome.json"
+  ]
+}

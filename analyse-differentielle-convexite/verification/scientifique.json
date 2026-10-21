@@ -1,0 +1,29 @@
+{
+  "status": "passed_for_teacher_review",
+  "review": "Relecture primaire du même assistant ; aucune revue indépendante.",
+  "domain": "Espaces euclidiens réels canoniques, dimensions positives ; fonctions sur ouverts pour les règles différentielles.",
+  "admitted": "Tous les résultats généraux sont admis sans démonstration.",
+  "checks": [
+    "TAF scalaire exact : différentiabilité sur un ouvert et segment inclus ; extrémités distinctes.",
+    "Sortie vectorielle : inégalité, sans supposer un même point intermédiaire pour toutes les composantes.",
+    "Norme opérateur et majoration par coefficients non confondues.",
+    "Borne uniforme sur K convexe contenu dans un ouvert, même si K est fermé.",
+    "Classe C1 et C2 définies avant leurs critères ; hypothèses de continuité des partielles conservées.",
+    "Ordre des dérivées secondes et symétrie sous C2.",
+    "Hessienne et différentielle seconde bilinéaire distinguées ; produit canonique h^T H k.",
+    "Taylor–Young : facteur 1/2 et reste o(norm(h)^2).",
+    "Taylor exact scalaire : Hessienne au point intermédiaire, segment inclus.",
+    "Critères de convexité sur un ouvert convexe, Hessienne contrôlée en tout point.",
+    "Définie positivité de la Hessienne : suffisante pour stricte convexité, non nécessaire.",
+    "Forte convexité : mu>0 uniforme ; facteur mu/2 ; même domaine pour toutes les comparaisons.",
+    "Le paramètre mu=1 de l’exemple est valable sans être annoncé optimal.",
+    "Contre-exemple t4 et exemple exp : stricte convexité sans borne uniforme sur R.",
+    "Compléments : contre-exemple vectoriel, C1 non nécessaire à la différentiabilité, chaîne seconde et Jensen."
+  ],
+  "exact_checks": "28 contrôles exacts : polynômes, dérivation, décompositions en carrés, approximations et figures.",
+  "limits": [
+    "Les contrôles exacts ne prouvent pas les théorèmes généraux.",
+    "Durée et niveau précis non fournis.",
+    "La relecture pédagogique finale revient à l’enseignant."
+  ]
+}

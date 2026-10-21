@@ -1,0 +1,14 @@
+{
+  "source": "PDF du cours, pages 3–15,31–43,59–71,85–94,109–129",
+  "notation": "Différentielle et différentielle seconde fléchées ; J_f et H_f ; gradient fléché ; normes euclidiennes et opérateur ; composition circ.",
+  "coordinates": "Vecteurs et coordonnées en colonnes ; h^T H k désigne le produit sur les colonnes canoniques.",
+  "mixed_partials": "Dériver d’abord selon x_j, puis x_i dans ∂²f/(∂x_i∂x_j).",
+  "strong_convexity": "mu>0 uniforme sur le domaine ; facteur mu/2 dans les deux inégalités.",
+  "adaptations": [
+    "Convexité du domaine définie avant la borne globale de Lipschitz.",
+    "Norme opérateur et majoration de Frobenius distinguées.",
+    "Extension explicite à un K convexe fermé contenu dans un ouvert de différentiabilité.",
+    "Forte convexité avec mu du cours, malgré m dans certains exercices.",
+    "Épigraphe, sous-niveaux et optimisation non nécessaires au socle ; pas de nouveaux prérequis."
+  ]
+}

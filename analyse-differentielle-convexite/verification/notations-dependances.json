@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "slides": 54,
+  "core_slides": 50,
+  "complement_slides": 4,
+  "coordinates": "Vecteurs colonnes ; couples de directions dans espaces produits autorisés.",
+  "composition": "circ explicite",
+  "prerequisites": "Graphe ordonné ; convexité des ensembles avant les conclusions globales.",
+  "limit": "Contrôle lexical et graphe déclaré complétés par relecture primaire, sans certification formelle."
+}

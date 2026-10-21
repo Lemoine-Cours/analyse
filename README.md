@@ -44,3 +44,7 @@ La compilation seule ne valide pas la mise en page. Inspecter les pages rendues,
 ## Calcul différentiel du premier ordre
 
 [Chapitre](calcul-differentiel-premier-ordre/README.md) · [PDF](calcul-differentiel-premier-ordre/exports/calcul-differentiel-premier-ordre.pdf) · [Beamer autonome](calcul-differentiel-premier-ordre/exports/calcul-differentiel-premier-ordre-sources.zip). 48 slides de socle, 4 compléments ; définitions, théorèmes admis, exemples, figures et contrôles.
+
+## Analyse différentielle et convexité
+
+[Chapitre](analyse-differentielle-convexite/README.md) · [PDF](analyse-differentielle-convexite/exports/analyse-differentielle-convexite.pdf) · [Sources autonomes](analyse-differentielle-convexite/exports/analyse-differentielle-convexite-sources.zip). 50 slides principales et 4 compléments : accroissements finis, régularité, Taylor et convexité.

@@ -1,0 +1,137 @@
+{
+  "role": "Le TD de base sélectionne les notions ; aucun corrigé projeté et plan organisé par notions.",
+  "source_pages_pdf": "TD original, pages 3–5",
+  "exercices": [
+    {
+      "exercice": 1,
+      "notions": "Norme opérateur",
+      "slides": [
+        "AC05",
+        "AC06",
+        "AC07",
+        "AC10"
+      ]
+    },
+    {
+      "exercice": 2,
+      "notions": "Accroissements sur une boule",
+      "slides": [
+        "AC04",
+        "AC08",
+        "AC09",
+        "AC11",
+        "AC12"
+      ]
+    },
+    {
+      "exercice": 3,
+      "notions": "Critère C1",
+      "slides": [
+        "AC14",
+        "AC15",
+        "AC16",
+        "AC18"
+      ]
+    },
+    {
+      "exercice": 4,
+      "notions": "Hessienne et symétrie",
+      "slides": [
+        "AC20",
+        "AC21",
+        "AC22",
+        "AC23",
+        "AC24",
+        "AC25"
+      ]
+    },
+    {
+      "exercice": 5,
+      "notions": "Taylor–Young",
+      "slides": [
+        "AC28",
+        "AC29",
+        "AC30"
+      ]
+    },
+    {
+      "exercice": 6,
+      "notions": "Convexité et forte convexité",
+      "slides": [
+        "AC04",
+        "AC33",
+        "AC37",
+        "AC38",
+        "AC40",
+        "AC41",
+        "AC43",
+        "AC44"
+      ]
+    },
+    {
+      "exercice": 7,
+      "notions": "Norme diagonale en dimension trois",
+      "slides": [
+        "AC05",
+        "AC06",
+        "AC07"
+      ]
+    },
+    {
+      "exercice": 8,
+      "notions": "Borne uniforme sur rectangle",
+      "slides": [
+        "AC04",
+        "AC09",
+        "AC11"
+      ]
+    },
+    {
+      "exercice": 9,
+      "notions": "Régularité vectorielle",
+      "slides": [
+        "AC14",
+        "AC15",
+        "AC16",
+        "AC18"
+      ]
+    },
+    {
+      "exercice": 10,
+      "notions": "Hessienne et forme quadratique",
+      "slides": [
+        "AC21",
+        "AC22",
+        "AC23",
+        "AC24",
+        "AC25",
+        "AC26",
+        "AC27"
+      ]
+    },
+    {
+      "exercice": 11,
+      "notions": "Taylor au second ordre",
+      "slides": [
+        "AC28",
+        "AC29",
+        "AC30"
+      ]
+    },
+    {
+      "exercice": 12,
+      "notions": "Convexité quadratique",
+      "slides": [
+        "AC37",
+        "AC38",
+        "AC39",
+        "AC40",
+        "AC41",
+        "AC43",
+        "AC44",
+        "AC45",
+        "AC46"
+      ]
+    }
+  ]
+}

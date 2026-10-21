@@ -1,0 +1,836 @@
+%% AC01
+\begin{frame}[t]{Du modèle local à la forme globale}
+\coursanalyse
+Au premier ordre, on approche une petite variation par une application linéaire.
+\begin{cours}{Trois nouvelles questions}
+\textbf{Contrôler :} quelle amplitude de variation peut-on garantir ?
+
+\medskip
+\textbf{Affiner :} que gagne-t-on avec le second ordre ?
+
+\medskip
+\textbf{Comparer :} comment reconnaître une fonction convexe ?
+\end{cours}
+\vfill Régularité, Taylor et convexité relient ces trois questions.
+\note{Cours original, pages PDF 3,31,59,85,109. Résultats admis ; interprétation sans démonstration.}
+\end{frame}
+
+%% AC02
+\begin{frame}[t]{Les objets du premier ordre}
+\coursanalyse
+\begin{cours}{Une notation, un rôle}
+\textbf{Différentielle :} $\df f{\vec a}$ est une application linéaire.
+
+\medskip
+\textbf{Jacobienne :} $J_f(\vec a)$ est sa matrice dans les bases canoniques.
+
+\medskip
+\textbf{Gradient, pour $f$ réelle :} $\grad f(\vec a)$ est un vecteur colonne.
+\end{cours}
+\[\df f{\vec a}(\vec h)=\ps{\grad f(\vec a)}{\vec h}.\]
+\vfill Dans ce chapitre, les espaces sont euclidiens canoniques réels.
+\note{Cours original, pages PDF 3,31. Résultats admis ; interprétation sans démonstration.}
+\end{frame}
+
+%% AC03
+\begin{frame}[t]{Suivre un segment pour étudier une variation}
+\coursanalyse
+Si $[\vec a,\vec b]\subset U$, on pose
+\[\vec\gamma(t)=\vec a+t(\vec b-\vec a),\qquad\varphi=f\circ\vec\gamma.\]
+\begin{theoreme}{Si $f$ est différentiable sur l'ouvert $U$}
+\[\varphi'(t)=\df f{\vec\gamma(t)}(\vec b-\vec a),\qquad 0<t<1.\]
+\end{theoreme}
+\begin{center}\begin{tikzpicture}
+\fill(0,0)circle(2pt)node[below]{$\vec a$};\fill(7,0)circle(2pt)node[below]{$\vec b$};\draw[IMTCyan,thick](0,0)--(7,0);\fill[IMTOrange](3,0)circle(2pt)node[above]{$\vec\gamma(t)$};\draw[-{Stealth},IMTNavy](1,-.8)--(5,-.8)node[midway,below]{$\vec b-\vec a$};
+\end{tikzpicture}\end{center}
+\note{Cours original, pages PDF 3–4. Résultats admis ; interprétation sans démonstration.}
+\end{frame}
+
+%% AC04
+\begin{frame}[t]{Un ensemble convexe contient ses segments}
+\coursanalyse
+\begin{notion}{Ensemble convexe}
+$C\subset\Rn n$ est convexe si, pour tous $\vec a,\vec b\in C$,
+\[\forall t\in[0,1],\qquad(1-t)\vec a+t\vec b\in C.\]
+\end{notion}
+\begin{center}\begin{tikzpicture}[scale=.7]
+\fill[IMTCyan!12](0,0)ellipse[x radius=2,y radius=1.1];\draw[IMTCyan](0,0)ellipse[x radius=2,y radius=1.1];\draw[IMTNavy,thick](-1,-.3)--(1,.5);\fill(-1,-.3)circle(2pt);\fill(1,.5)circle(2pt);\node at(0,-1.6){segment inclus};
+\draw[IMTCyan,thick](7,0)circle(1.1);\draw[IMTOrange,thick](5.9,0)--(8.1,0);\fill(5.9,0)circle(2pt);\fill(8.1,0)circle(2pt);\node at(7,-1.6){un cercle n'est pas convexe};
+\end{tikzpicture}\end{center}
+\vfill Les boules et les rectangles sont convexes. Un ouvert n'est pas forcément convexe.
+\note{Cours original, pages PDF 13,109–112. Résultats admis ; interprétation sans démonstration.}
+\end{frame}
+
+%% AC05
+\begin{frame}[t]{La norme d’une application linéaire}
+\coursanalyse
+\begin{notion}{Norme opérateur}
+Pour $\Lin L:\Rn n\to\Rn p$ linéaire,
+\[\norm{\Lin L}=\sup_{\norm{\vec h}=1}\norm{\Lin L(\vec h)}.\]
+\end{notion}
+\begin{theoreme}{Contrôler une image}
+\[\forall\vec h,\qquad\norm{\Lin L(\vec h)}\le\norm{\Lin L}\,\norm{\vec h}.\]
+\end{theoreme}
+\vfill La norme opérateur mesure le plus grand facteur d'amplification des longueurs.
+\note{Cours original, pages PDF 5–9. Résultats admis ; interprétation sans démonstration.}
+\end{frame}
+
+%% AC06
+\begin{frame}[t]{Voir l’amplification maximale}
+\coursanalyse
+\begin{exemple}{Une application diagonale}
+\[\Lin L\!\left(\vcol{x\\y}\right)=\vcol{-5x\\2y}.\]
+La norme de l'image vérifie $\norm{\Lin L(\vec h)}\le5\norm{\vec h}$.
+\end{exemple}
+\begin{resultat}{Une direction atteint la borne}
+$\vec e_1=\vcol{1\\0}$ est unitaire et $\norm{\Lin L(\vec e_1)}=5$.
+
+\medskip
+Donc $\norm{\Lin L}=5$.
+\end{resultat}
+\note{Cours original, pages PDF 5–9. Résultats admis ; interprétation sans démonstration.}
+\end{frame}
+
+%% AC07
+\begin{frame}[t]{Une borne à partir des coefficients}
+\coursanalyse
+\begin{theoreme}{Matrice $A=(a_{ij})$ dans les bases canoniques}
+La norme opérateur euclidienne satisfait
+\[\norm A\le\sqrt{\sum_{i,j}a_{ij}^2}.\]
+\end{theoreme}
+\begin{cours}{Comment utiliser la borne ?}
+Elle donne rapidement une majoration sans chercher la direction d'amplification maximale.
+\end{cours}
+\vfill Le membre de droite n'est pas en général la valeur exacte de la norme opérateur.
+\note{Cours original, pages PDF 9–11. Résultats admis ; interprétation sans démonstration.}
+\end{frame}
+
+%% AC08
+\begin{frame}[t]{Accroissements finis : une égalité scalaire}
+\coursanalyse
+\begin{theoreme}{Fonction à valeurs réelles}
+Soient $f:U\to\R$ différentiable sur un ouvert $U$, $\vec a\ne\vec b$ et $[\vec a,\vec b]\subset U$.
+Il existe $\theta\in]0,1[$ tel que, pour $\vec c=\vec a+\theta(\vec b-\vec a)$,
+\[f(\vec b)-f(\vec a)=\df f{\vec c}(\vec b-\vec a).\]
+\end{theoreme}
+\begin{resultat}{Avec le gradient}
+\[f(\vec b)-f(\vec a)=\ps{\grad f(\vec c)}{\vec b-\vec a}.\]
+\end{resultat}
+\note{Cours original, pages PDF 4–5. Résultats admis ; interprétation sans démonstration.}
+\end{frame}
+
+%% AC09
+\begin{frame}[t]{Accroissements finis : une borne vectorielle}
+\coursanalyse
+\begin{theoreme}{Inégalité des accroissements finis}
+Soient $f:U\to\Rn p$ différentiable sur l'ouvert $U$ et $[\vec a,\vec b]\subset U$.
+Si $\norm{\df f{\vec x}}\le M$ sur ce segment, alors
+\[\norm{f(\vec b)-f(\vec a)}\le M\norm{\vec b-\vec a}.\]
+\end{theoreme}
+\begin{resultat}{Cas réel}
+On peut remplacer la borne sur la différentielle par $\norm{\grad f(\vec x)}\le M$.
+\end{resultat}
+\vfill Pour une sortie vectorielle, ne pas supposer une égalité en un unique point intermédiaire.
+\note{Cours original, pages PDF 11–13. Résultats admis ; interprétation sans démonstration.}
+\end{frame}
+
+%% AC10
+\begin{frame}[t]{Être lipschitzienne : une variation contrôlée}
+\coursanalyse
+\begin{notion}{Constante $M\ge0$}
+$f:C\to\Rn p$ est $M$-lipschitzienne si
+\[\forall\vec x,\vec y\in C,\quad\norm{f(\vec y)-f(\vec x)}\le M\norm{\vec y-\vec x}.\]
+\end{notion}
+\begin{resultat}{Une garantie quantitative}
+Une variation d'entrée de taille $\delta$ provoque une variation de sortie d'au plus $M\delta$.
+\end{resultat}
+\vfill Toute fonction lipschitzienne est continue ; la réciproque est fausse.
+\note{Cours original, pages PDF 13–14. Résultats admis ; interprétation sans démonstration.}
+\end{frame}
+
+%% AC11
+\begin{frame}[t]{Une borne locale devient un contrôle global}
+\coursanalyse
+\begin{theoreme}{Sur un ensemble convexe $K$}
+Soit $f$ différentiable sur un ouvert contenant $K$.
+Si $\norm{\df f{\vec x}}\le M$ pour tout $\vec x\in K$, alors $f$ est $M$-lipschitzienne sur $K$.
+\end{theoreme}
+\begin{cours}{Les deux vérifications}
+\textbf{Géométrie :} les segments entre points de $K$ restent dans $K$.
+
+\medskip
+\textbf{Calcul :} la même constante $M$ majore la différentielle partout sur $K$.
+\end{cours}
+\vfill $K$ peut être une boule fermée ou un rectangle fermé : l'ouvert porte sur le domaine où $f$ est différentiable.
+\note{Cours original, pages PDF 13–15. Résultats admis ; interprétation sans démonstration.}
+\end{frame}
+
+%% AC12
+\begin{frame}[t]{Exemple : contrôler une variation sur une boule}
+\coursanalyse
+\begin{exemple}{$f(x,y)=x^2+4y^2$, sur $K=\overline B(\zero,2)$}
+\[\grad f(x,y)=\vcol{2x\\8y},\qquad\norm{\grad f(x,y)}\le8\norm{\vec x}\le16.\]
+La boule $K$ est convexe et $f$ est différentiable sur $\Rn2$.
+\end{exemple}
+\begin{resultat}{Une borne valable pour tous les couples}
+\[|f(\vec b)-f(\vec a)|\le16\norm{\vec b-\vec a},\qquad\vec a,\vec b\in K.\]
+\end{resultat}
+\note{Cours original, pages PDF 11–15. Résultats admis ; interprétation sans démonstration.}
+\end{frame}
+
+%% AC13
+\begin{frame}[t]{Une différentielle nulle force la constance}
+\coursanalyse
+\begin{theoreme}{Sur un ouvert convexe non vide $U$}
+Si $f:U\to\Rn p$ est différentiable et
+\[\forall\vec x\in U,\quad\df f{\vec x}=\Lin0,\]
+alors $f$ est constante sur $U$.
+\end{theoreme}
+\begin{resultat}{Pour une fonction réelle}
+Un gradient nul \textbf{partout sur $U$} implique la constance.
+\end{resultat}
+\vfill Un gradient nul en un seul point ne suffit pas.
+\note{Cours original, pages PDF 14–15. Résultats admis ; interprétation sans démonstration.}
+\end{frame}
+
+%% AC14
+\begin{frame}[t]{La classe C1 : une différentielle continue}
+\coursanalyse
+\begin{notion}{Classe $\mathcal C^1$ sur un ouvert $U$}
+$f$ est de classe $\mathcal C^1$ si elle est différentiable sur $U$ et si
+\[\vec x\longmapsto\df f{\vec x}\]
+est continue pour la norme opérateur.
+\end{notion}
+\begin{resultat}{Le sens de la régularité}
+Le modèle linéaire varie continûment lorsque le point de départ se déplace.
+\end{resultat}
+\vfill Classe $\mathcal C^1$ implique différentiabilité ; la réciproque est fausse.
+\note{Cours original, pages PDF 31–33. Résultats admis ; interprétation sans démonstration.}
+\end{frame}
+
+%% AC15
+\begin{frame}[t]{Le critère pratique de classe C1}
+\coursanalyse
+\begin{theoreme}{Dérivées partielles continues sur un ouvert}
+$f:U\to\Rn p$ est de classe $\mathcal C^1$ si et seulement si toutes les dérivées partielles de ses composantes existent et sont continues sur $U$.
+\end{theoreme}
+\begin{cours}{Une méthode en trois étapes}
+\textbf{1.} Calculer chaque dérivée partielle.
+
+\medskip
+\textbf{2.} Justifier sa continuité sur le domaine.
+
+\medskip
+\textbf{3.} Conclure $\mathcal C^1$, donc différentiable.
+\end{cours}
+\note{Cours original, pages PDF 33–39. Résultats admis ; interprétation sans démonstration.}
+\end{frame}
+
+%% AC16
+\begin{frame}[t]{Un exemple de régularité}
+\coursanalyse
+\begin{exemple}{$F(x,y)=\vcol{xe^y\\x^2+\cos y}$}
+\[J_F(x,y)=\begin{pmatrix}e^y&xe^y\\2x&-\sin y\end{pmatrix}.\]
+Les quatre coefficients sont des fonctions continues sur $\Rn2$.
+\end{exemple}
+\begin{resultat}{La conclusion utile}
+$F$ est de classe $\mathcal C^1$ sur $\Rn2$ ; on peut donc utiliser cette jacobienne pour calculer sa différentielle.
+\end{resultat}
+\note{Cours original, pages PDF 34–43. Résultats admis ; interprétation sans démonstration.}
+\end{frame}
+
+%% AC17
+\begin{frame}[t]{Ce que l’existence des partielles ne dit pas}
+\coursanalyse
+\begin{cours}{Trois niveaux à distinguer}
+\textbf{Partielles existantes :} les variations selon les axes existent.
+
+\medskip
+\textbf{Différentiabilité :} un même modèle linéaire contrôle toutes les directions.
+
+\medskip
+\textbf{Classe $\mathcal C^1$ :} ce modèle varie continûment avec le point.
+\end{cours}
+\begin{resultat}{Une condition suffisante pratique}
+Des partielles continues sur un ouvert donnent la classe $\mathcal C^1$, et donc la différentiabilité.
+\end{resultat}
+\note{Cours original, pages PDF 34–39. Résultats admis ; interprétation sans démonstration.}
+\end{frame}
+
+%% AC18
+\begin{frame}[t]{Construire des fonctions de classe C1}
+\coursanalyse
+\begin{theoreme}{Règles de stabilité}
+\textbf{Somme et produit :} ils conservent la classe $\mathcal C^1$ pour des fonctions réelles.
+
+\medskip
+\textbf{Quotient :} sur le domaine où le dénominateur ne s'annule pas.
+
+\medskip
+\textbf{Composition :} $g\circ f$ est de classe $\mathcal C^1$ si $f$ et $g$ le sont sur des ouverts compatibles.
+\end{theoreme}
+\vfill Les formules du premier ordre restent les mêmes ; on contrôle en plus leur continuité.
+\note{Cours original, pages PDF 40–43. Résultats admis ; interprétation sans démonstration.}
+\end{frame}
+
+%% AC19
+\begin{frame}[t]{Pourquoi regarder le second ordre ?}
+\coursanalyse
+\begin{cours}{Après l’approximation affine}
+La différentielle première décrit la pente locale.
+
+\medskip
+La différentielle seconde décrit comment cette pente varie.
+\end{cours}
+\begin{center}\begin{tikzpicture}[x=1.25cm,y=.65cm]
+\draw[axes](-2.2,0)--(2.2,0);\draw[axes](0,-.3)--(0,3.7);
+\draw[courb,domain=-1.8:1.8,samples=50]plot(\x,{\x*\x});\draw[IMTOrange,thick](-1.8,0)--(1.8,0);
+\node[anchor=west,align=left]at(3,2){$f(t)=t^2$\\[2mm]$f'(0)=0$, mais $f''(0)=2$.};
+\end{tikzpicture}\end{center}
+\vfill Le second ordre apporte une information absente de la tangente.
+\note{Cours original, pages PDF 59–60,85–90. Résultats admis ; interprétation sans démonstration.}
+\end{frame}
+
+%% AC20
+\begin{frame}[t]{La différentielle seconde agit sur deux directions}
+\coursanalyse
+\begin{notion}{Deux fois différentiable en $\vec a$}
+L'application $\vec x\mapsto\df f{\vec x}$ est différentiable en $\vec a$ ; $f$ est différentiable dans un voisinage de ce point.
+\end{notion}
+\begin{notion}{Différentielle seconde}
+\[\ds f{\vec a}(\vec h,\vec k)
+=\bigl(\df{(df)}{\vec a}(\vec h)\bigr)(\vec k).\]
+Elle est \textbf{bilinéaire} : linéaire dans chacun des deux déplacements séparément.
+\end{notion}
+\vfill Le premier déplacement fait varier la différentielle ; le second évalue cette variation.
+\note{Cours original, pages PDF 59–61. Résultats admis ; interprétation sans démonstration.}
+\end{frame}
+
+%% AC21
+\begin{frame}[t]{L’ordre des dérivations partielles}
+\coursanalyse
+\begin{notion}{Dérivée partielle seconde}
+\[\frac{\partial^2 f}{\partial x_i\partial x_j}
+=\frac{\partial}{\partial x_i}\left(\frac{\partial f}{\partial x_j}\right).\]
+On dérive \textbf{d'abord selon $x_j$}, puis selon $x_i$.
+\end{notion}
+\begin{exemple}{Pour $f(x,y)=x^2y$}
+\[\frac{\partial f}{\partial y}=x^2,\qquad
+\frac{\partial^2f}{\partial x\partial y}=2x.\]
+\end{exemple}
+\vfill On n'échange pas encore les deux dérivations sans hypothèse de régularité.
+\note{Cours original, pages PDF 61–62. Résultats admis ; interprétation sans démonstration.}
+\end{frame}
+
+%% AC22
+\begin{frame}[t]{La Hessienne rassemble les dérivées secondes}
+\coursanalyse
+\begin{notion}{Fonction à valeurs réelles}
+\[H_f(\vec a)=\left(\frac{\partial^2f}{\partial x_i\partial x_j}(\vec a)\right)_{1\le i,j\le n}.\]
+\end{notion}
+En deux variables :
+\[H_f=\begin{pmatrix}
+\dfrac{\partial^2 f}{\partial x^2}&\dfrac{\partial^2 f}{\partial x\partial y}\\
+\dfrac{\partial^2 f}{\partial y\partial x}&\dfrac{\partial^2 f}{\partial y^2}
+\end{pmatrix}.\]
+\vfill Une Hessienne est une matrice carrée de taille $n$ ; sa symétrie sera assurée par le théorème de Schwarz.
+\note{Cours original, pages PDF 61–64. Résultats admis ; interprétation sans démonstration.}
+\end{frame}
+
+%% AC23
+\begin{frame}[t]{La classe C2 : un critère calculable}
+\coursanalyse
+\begin{notion}{Classe $\mathcal C^2$ sur un ouvert $U$}
+$f$ est différentiable et l'application $\vec x\mapsto\df f{\vec x}$ est de classe $\mathcal C^1$.
+\end{notion}
+\begin{theoreme}{Critère par les composantes}
+$f:U\to\Rn p$ est de classe $\mathcal C^2$ si et seulement si toutes les dérivées partielles secondes de ses composantes existent et sont continues sur $U$.
+\end{theoreme}
+\vfill Une fonction de classe $\mathcal C^2$ est aussi de classe $\mathcal C^1$.
+\note{Cours original, pages PDF 64–66. Résultats admis ; interprétation sans démonstration.}
+\end{frame}
+
+%% AC24
+\begin{frame}[t]{Schwarz : quand les dérivations s’échangent}
+\coursanalyse
+\begin{theoreme}{Sous l’hypothèse $\mathcal C^2$}
+Si $f$ est de classe $\mathcal C^2$ sur un ouvert $U$,
+\[\frac{\partial^2f}{\partial x_i\partial x_j}(\vec a)
+=\frac{\partial^2f}{\partial x_j\partial x_i}(\vec a),\qquad\vec a\in U.\]
+\end{theoreme}
+\begin{resultat}{Pour une fonction réelle}
+La Hessienne est \textbf{symétrique} : $H_f(\vec a)^\top=H_f(\vec a)$.
+\end{resultat}
+\vfill La régularité justifie l'échange ; une simple ressemblance des formules ne remplace pas cette hypothèse.
+\note{Cours original, pages PDF 66–68. Résultats admis ; interprétation sans démonstration.}
+\end{frame}
+
+%% AC25
+\begin{frame}[t]{Un exemple de Hessienne}
+\coursanalyse
+\begin{exemple}{$f(x,y)=x^2+xy+2y^2+y^3$}
+\[\grad f(x,y)=\vcol{2x+y\\x+4y+3y^2},\qquad
+H_f(x,y)=\begin{pmatrix}2&1\\1&4+6y\end{pmatrix}.\]
+\end{exemple}
+\begin{resultat}{Au point $\zero$}
+\[H_f(\zero)=\begin{pmatrix}2&1\\1&4\end{pmatrix}.\]
+\end{resultat}
+\vfill La fonction est polynomiale ; ses dérivées secondes sont continues.
+\note{Cours original, pages PDF 61–68. Résultats admis ; interprétation sans démonstration.}
+\end{frame}
+
+%% AC26
+\begin{frame}[t]{Relier différentielle seconde et Hessienne}
+\coursanalyse
+\begin{theoreme}{Fonction réelle de classe $\mathcal C^2$}
+Dans les bases canoniques,
+\[\ds f{\vec a}(\vec h,\vec k)=\vec h^{\top}H_f(\vec a)\vec k.\]
+\end{theoreme}
+\begin{exemple}{Pour $H_f(\zero)=\left(\begin{smallmatrix}2&1\\1&4\end{smallmatrix}\right)$}
+Avec $\vec h=\vcol{h_1\\h_2}$ et $\vec k=\vcol{k_1\\k_2}$,
+\[\ds f{\zero}(\vec h,\vec k)=2h_1k_1+h_1k_2+h_2k_1+4h_2k_2.\]
+\end{exemple}
+\note{Cours original, pages PDF 62–64. Résultats admis ; interprétation sans démonstration.}
+\end{frame}
+
+%% AC27
+\begin{frame}[t]{Une même direction fait apparaître un carré}
+\coursanalyse
+\begin{notion}{Forme quadratique associée}
+\[\ds f{\vec a}(\vec h,\vec h)=\vec h^{\top}H_f(\vec a)\vec h.\]
+\end{notion}
+\begin{exemple}{Dans l’exemple précédent, au point $\zero$}
+\[\vec h^{\top}H_f(\zero)\vec h
+=2h_1^2+2h_1h_2+4h_2^2.\]
+\end{exemple}
+\vfill Le coefficient du terme croisé reçoit les \textbf{deux} contributions hors diagonale.
+\note{Cours original, pages PDF 62–64. Résultats admis ; interprétation sans démonstration.}
+\end{frame}
+
+%% AC28
+\begin{frame}[t]{Taylor–Young au second ordre}
+\coursanalyse
+\begin{theoreme}{Si $f:U\to\R$ est de classe $\mathcal C^2$}
+Pour $\vec a\in U$ ouvert et $\vec h\to\zero$,
+\[\begin{aligned}
+f(\vec a+\vec h)={}&f(\vec a)+\df f{\vec a}(\vec h)\\
+&+\frac12\ds f{\vec a}(\vec h,\vec h)+o(\norm{\vec h}^2).
+\end{aligned}\]
+\end{theoreme}
+\begin{resultat}{Ce qui s’ajoute au premier ordre}
+Un terme quadratique, avec le facteur $1/2$ ; le reste est négligeable devant le carré de la norme.
+\end{resultat}
+\note{Cours original, pages PDF 88–90. Résultats admis ; interprétation sans démonstration.}
+\end{frame}
+
+%% AC29
+\begin{frame}[t]{Lire le modèle quadratique}
+\coursanalyse
+\begin{resultat}{Version gradient et Hessienne}
+\[f(\vec a+\vec h)\simeq f(\vec a)+\ps{\grad f(\vec a)}{\vec h}
++\frac12\vec h^\top H_f(\vec a)\vec h.\]
+\end{resultat}
+\begin{cours}{Trois informations au même point}
+\textbf{Valeur :} $f(\vec a)$.
+
+\medskip
+\textbf{Variation linéaire :} le gradient en $\vec a$.
+
+\medskip
+\textbf{Variation quadratique :} la Hessienne en $\vec a$.
+\end{cours}
+\note{Cours original, pages PDF 88–90. Résultats admis ; interprétation sans démonstration.}
+\end{frame}
+
+%% AC30
+\begin{frame}[t]{Un exemple de Taylor au second ordre}
+\coursanalyse
+\begin{exemple}{$f(x,y)=x^2+xy+2y^2+y^3$, au point $\zero$}
+$f(\zero)=0$, $\grad f(\zero)=\zero$ et $H_f(\zero)=\left(\begin{smallmatrix}2&1\\1&4\end{smallmatrix}\right)$.
+\[f(h,k)=\underbrace{h^2+hk+2k^2}_{\text{modèle au second ordre}}+k^3.\]
+Pour $\vec h=\vcol{0{,}02\\-0{,}01}$, le modèle vaut $0{,}0004$.
+\end{exemple}
+\begin{resultat}{Interpréter l’écart}
+La valeur exacte est $0{,}000399$ : le reste cubique vaut $-0{,}000001$.
+\end{resultat}
+\note{Cours original, pages PDF 88–90. Résultats admis ; interprétation sans démonstration.}
+\end{frame}
+
+%% AC31
+\begin{frame}[t]{Taylor avec un point intermédiaire}
+\coursanalyse
+\begin{theoreme}{Version exacte, fonction réelle de classe $\mathcal C^2$}
+Si $[\vec a,\vec a+\vec h]\subset U$, il existe $\theta\in]0,1[$ tel que
+\[\begin{aligned}
+f(\vec a+\vec h)={}&f(\vec a)+\df f{\vec a}(\vec h)\\
+&+\frac12\vec h^\top H_f(\vec a+\theta\vec h)\vec h.
+\end{aligned}\]
+\end{theoreme}
+\begin{resultat}{Ne pas mélanger les deux formules}
+Taylor–Young utilise la Hessienne en $\vec a$ avec un reste.
+La formule exacte utilise une Hessienne en un point intermédiaire.
+\end{resultat}
+\note{Cours original, pages PDF 87–88. Résultats admis ; interprétation sans démonstration.}
+\end{frame}
+
+%% AC32
+\begin{frame}[t]{Contrôler l’erreur de linéarisation}
+\coursanalyse
+\begin{theoreme}{Hessienne bornée sur le segment}
+Soit $f:U\to\R$ de classe $\mathcal C^2$, avec $[\vec a,\vec a+\vec h]\subset U$.
+Si $\norm{H_f(\vec x)}\le M$ sur ce segment, alors
+\[\left|f(\vec a+\vec h)-f(\vec a)-\df f{\vec a}(\vec h)\right|
+\le\frac M2\norm{\vec h}^2.\]
+\end{theoreme}
+\vfill Une Hessienne uniformément bornée donne une erreur \textbf{quadratique} pour l'approximation affine.
+\note{Cours original, pages PDF 93–94. Résultats admis ; interprétation sans démonstration.}
+\end{frame}
+
+%% AC33
+\begin{frame}[t]{Définir une fonction convexe}
+\coursanalyse
+\begin{notion}{Sur un ensemble convexe $C$}
+$f:C\to\R$ est convexe si, pour tous $\vec x,\vec y\in C$ et $t\in[0,1]$,
+\[f((1-t)\vec x+t\vec y)\le(1-t)f(\vec x)+tf(\vec y).\]
+\end{notion}
+\begin{resultat}{Le sens de l’inégalité}
+La valeur au point intermédiaire ne dépasse pas la moyenne pondérée des valeurs aux deux extrémités.
+\end{resultat}
+\vfill Le domaine doit lui-même contenir les segments utilisés.
+\note{Cours original, pages PDF 113–114. Résultats admis ; interprétation sans démonstration.}
+\end{frame}
+
+%% AC34
+\begin{frame}[t]{La courbe reste sous la corde}
+\coursanalyse
+\begin{center}\begin{tikzpicture}[x=1.3cm,y=.7cm]
+\draw[axes](-.3,0)--(3.4,0)node[right]{$x$};\draw[axes](0,-.3)--(0,5.2);
+\draw[courb,domain=0:3,samples=60]plot(\x,{.5*\x*\x});
+\draw[IMTOrange,thick](.5,.125)--(2.5,3.125);
+\fill(.5,.125)circle(2pt)node[below]{$a$};\fill(2.5,3.125)circle(2pt)node[above left]{$b$};
+\draw[pointille](1.5,1.125)--(1.5,1.625);\fill[IMTCyan](1.5,1.125)circle(2pt);\fill[IMTOrange](1.5,1.625)circle(2pt);
+\node[anchor=west,align=left]at(4,3){\textcolor{IMTOrange}{corde : moyenne des valeurs}\\[3mm]\textcolor{IMTNavy}{courbe : valeur intermédiaire}};
+\end{tikzpicture}\end{center}
+\begin{resultat}{Pour plusieurs variables}
+La même comparaison se fait sur chaque segment du domaine.
+\end{resultat}
+\note{Cours original, pages PDF 113–114. Résultats admis ; interprétation sans démonstration.}
+\end{frame}
+
+%% AC35
+\begin{frame}[t]{Des exemples et un contre-exemple}
+\coursanalyse
+\begin{exemple}{Fonctions convexes}
+\textbf{Affine :} $f(\vec x)=\ps{\vec c}{\vec x}+d$ ; l'inégalité est une égalité.
+
+\medskip
+\textbf{Quadratique :} $f(\vec x)=\norm{\vec x}^2$.
+\end{exemple}
+\begin{exemple}{Une fonction qui n’est pas convexe}
+$f(t)=-t^2$ : aux points $-1$ et $1$, la moyenne des valeurs vaut $-1$, alors que $f(0)=0$.
+\end{exemple}
+\vfill La convexité concerne toutes les paires et tous les poids, pas quelques points seulement.
+\note{Cours original, pages PDF 113–115. Résultats admis ; interprétation sans démonstration.}
+\end{frame}
+
+%% AC36
+\begin{frame}[t]{Le critère du premier ordre : un support affine}
+\coursanalyse
+\begin{theoreme}{Fonction différentiable sur un ouvert convexe $U$}
+$f:U\to\R$ est convexe si et seulement si, pour tous $\vec x,\vec y\in U$,
+\[f(\vec y)\ge f(\vec x)+\ps{\grad f(\vec x)}{\vec y-\vec x}.\]
+\end{theoreme}
+\begin{resultat}{Lecture géométrique}
+L'approximation affine tangente est un \textbf{minorant global} de la fonction sur $U$.
+\end{resultat}
+\vfill Pour une fonction convexe : sous les cordes, au-dessus des tangentes.
+\note{Cours original, pages PDF 121–123. Résultats admis ; interprétation sans démonstration.}
+\end{frame}
+
+%% AC37
+\begin{frame}[t]{Le critère de convexité par la Hessienne}
+\coursanalyse
+\begin{theoreme}{Fonction réelle de classe $\mathcal C^2$}
+Sur un \textbf{ouvert convexe} $U$,
+\[f\text{ convexe}\quad\Longleftrightarrow\quad
+\forall\vec x\in U,\ \forall\vec h,\quad\vec h^\top H_f(\vec x)\vec h\ge0.\]
+\end{theoreme}
+\begin{resultat}{Le lien avec l’algèbre}
+Il faut que la Hessienne soit \textbf{positive semi-définie en tout point} du domaine.
+\end{resultat}
+\vfill Une valeur négative dans une direction et en un point suffit à exclure la convexité sur $U$.
+\note{Cours original, pages PDF 124–125. Résultats admis ; interprétation sans démonstration.}
+\end{frame}
+
+%% AC38
+\begin{frame}[t]{Lire le signe d’une matrice symétrique}
+\coursanalyse
+\begin{cours}{Pour une matrice réelle symétrique $H$}
+\textbf{Positive semi-définie :} $\vec h^\top H\vec h\ge0$ pour tout $\vec h$.
+
+\medskip
+\textbf{Définie positive :} $\vec h^\top H\vec h>0$ pour tout $\vec h\ne\zero$.
+\end{cours}
+\begin{theoreme}{Critère spectral}
+Semi-définie positive : toutes les valeurs propres sont $\ge0$.
+
+\medskip
+Définie positive : toutes les valeurs propres sont $>0$.
+\end{theoreme}
+\vfill Une décomposition en carrés peut éviter le calcul des valeurs propres.
+\note{Cours original, pages PDF 124–126 ; prérequis d’algèbre. Résultats admis ; interprétation sans démonstration.}
+\end{frame}
+
+%% AC39
+\begin{frame}[t]{Exemple : la convexité d’une quadratique}
+\coursanalyse
+\begin{exemple}{$q(x,y)=x^2+xy+2y^2+3x$}
+\[H_q=\begin{pmatrix}2&1\\1&4\end{pmatrix}.\]
+Pour $\vec h=\vcol{h\\k}$,
+\[\vec h^\top H_q\vec h=2\left(h+\frac k2\right)^2+\frac72k^2\ge0.\]
+\end{exemple}
+\begin{resultat}{Conclusion sur tout le domaine}
+La Hessienne est positive semi-définie partout ; $q$ est convexe sur $\Rn2$.
+\end{resultat}
+\note{Cours original, pages PDF 124–125. Résultats admis ; interprétation sans démonstration.}
+\end{frame}
+
+%% AC40
+\begin{frame}[t]{La stricte convexité}
+\coursanalyse
+\begin{notion}{Une inégalité stricte entre points distincts}
+Sur un ensemble convexe $C$, $f$ est strictement convexe si, pour $\vec x\ne\vec y$ et $0<t<1$,
+\[f((1-t)\vec x+t\vec y)<(1-t)f(\vec x)+tf(\vec y).\]
+\end{notion}
+\begin{resultat}{Ce qui change}
+Entre deux points distincts, la valeur intermédiaire est strictement sous la corde.
+\end{resultat}
+\vfill Les extrémités $t=0$ et $t=1$ sont exclues de l'inégalité stricte.
+\note{Cours original, pages PDF 114,126–127. Résultats admis ; interprétation sans démonstration.}
+\end{frame}
+
+%% AC41
+\begin{frame}[t]{Hessienne définie positive : un critère suffisant}
+\coursanalyse
+\begin{theoreme}{Sur un ouvert convexe $U$}
+Si $f:U\to\R$ est de classe $\mathcal C^2$ et si $H_f(\vec x)$ est définie positive pour tout $\vec x\in U$, alors $f$ est strictement convexe.
+\end{theoreme}
+\begin{exemple}{La réciproque est fausse}
+$f(t)=t^4$ est strictement convexe sur $\R$, mais $f''(0)=0$.
+\end{exemple}
+\vfill Ne pas transformer cette condition suffisante en équivalence.
+\note{Cours original, pages PDF 126–127. Résultats admis ; interprétation sans démonstration.}
+\end{frame}
+
+%% AC42
+\begin{frame}[t]{Stricte ne signifie pas courbure uniforme}
+\coursanalyse
+\begin{exemple}{Deux fonctions strictement convexes}
+\textbf{$f(t)=t^4$ :} $f''(t)=12t^2$ s'annule en $0$.
+
+\medskip
+\textbf{$g(t)=e^t$ :} $g''(t)=e^t>0$ partout, mais tend vers $0$ lorsque $t\to-\infty$.
+\end{exemple}
+\begin{resultat}{La question suivante}
+Peut-on imposer un même niveau de courbure strictement positif sur tout le domaine ?
+\end{resultat}
+\note{Cours original, pages PDF 126–129. Résultats admis ; interprétation sans démonstration.}
+\end{frame}
+
+%% AC43
+\begin{frame}[t]{La forte convexité : un écart quantifié}
+\coursanalyse
+\begin{notion}{Paramètre uniforme $\mu>0$}
+Sur un ensemble convexe $C$, $f$ est $\mu$-fortement convexe si, pour tous $\vec x,\vec y\in C$ et $t\in[0,1]$,
+\[\begin{aligned}
+f((1-t)\vec x+t\vec y)\le{}&(1-t)f(\vec x)+tf(\vec y)\\
+&-\frac\mu2t(1-t)\norm{\vec y-\vec x}^2.
+\end{aligned}\]
+\end{notion}
+\vfill Le même $\mu$ doit convenir à tous les points et tous les segments du domaine.
+\note{Cours original, pages PDF 127–128. Résultats admis ; interprétation sans démonstration.}
+\end{frame}
+
+%% AC44
+\begin{frame}[t]{Forte convexité et Hessienne}
+\coursanalyse
+\begin{theoreme}{Fonction réelle $\mathcal C^2$ sur un ouvert convexe $U$}
+Pour un paramètre fixé $\mu>0$, $f$ est $\mu$-fortement convexe si et seulement si
+\[\forall\vec x\in U,\ \forall\vec h,\qquad
+\vec h^\top H_f(\vec x)\vec h\ge\mu\norm{\vec h}^2.\]
+\end{theoreme}
+\begin{resultat}{Lecture matricielle}
+$H_f(\vec x)-\mu I_n$ doit être positive semi-définie en tout point.
+\end{resultat}
+\vfill Des valeurs propres strictement positives point par point ne suffisent pas sans une même borne $\mu>0$.
+\note{Cours original, pages PDF 128–129. Résultats admis ; interprétation sans démonstration.}
+\end{frame}
+
+%% AC45
+\begin{frame}[t]{Trouver un paramètre de forte convexité}
+\coursanalyse
+\begin{exemple}{Pour $q(x,y)=x^2+xy+2y^2+3x$}
+\[H_q-I_2=\begin{pmatrix}1&1\\1&3\end{pmatrix}.\]
+Pour $\vec h=\vcol{h\\k}$,
+\[\vec h^\top(H_q-I_2)\vec h=(h+k)^2+2k^2\ge0.\]
+\end{exemple}
+\begin{resultat}{Un paramètre valable}
+$q$ est $1$-fortement convexe sur $\Rn2$.
+Le paramètre $1$ est une borne commode ; il n'est pas annoncé comme optimal.
+\end{resultat}
+\note{Cours original, pages PDF 128–129. Résultats admis ; interprétation sans démonstration.}
+\end{frame}
+
+%% AC46
+\begin{frame}[t]{Un minorant plus précis que la tangente}
+\coursanalyse
+\begin{theoreme}{Fonction différentiable sur un ouvert convexe}
+Pour $\mu>0$, $f$ est $\mu$-fortement convexe si et seulement si, pour tous $\vec x,\vec y$ du domaine,
+\[\begin{aligned}
+f(\vec y)\ge{}&f(\vec x)+\ps{\grad f(\vec x)}{\vec y-\vec x}\\
+&+\frac\mu2\norm{\vec y-\vec x}^2.
+\end{aligned}\]
+\end{theoreme}
+\begin{resultat}{Une garantie quantitative}
+La fonction reste au-dessus de son modèle affine, avec une marge quadratique uniforme.
+\end{resultat}
+\note{Cours original, pages PDF 128–129. Résultats admis ; interprétation sans démonstration.}
+\end{frame}
+
+%% AC47
+\begin{frame}[t]{Convexe, stricte, forte : les implications}
+\coursanalyse
+\begin{center}\begin{tikzpicture}
+\node[align=center]at(0,0){fortement\\convexe};\node[align=center]at(5,0){strictement\\convexe};\node at(10,0){convexe};
+\draw[-{Stealth},thick,IMTCyan](1.5,0)--(3.4,0);\draw[-{Stealth},thick,IMTCyan](6.6,0)--(8.7,0);
+\end{tikzpicture}\end{center}
+\begin{cours}{Les réciproques sont fausses}
+\textbf{Convexe sans être stricte :} une fonction affine sur $\R$.
+
+\medskip
+\textbf{Stricte sans être forte sur $\R$ :} $t\mapsto t^4$.
+\end{cours}
+\vfill La convexité forte dépend d'une constante uniforme et du domaine considéré.
+\note{Cours original, pages PDF 114,126–129. Résultats admis ; interprétation sans démonstration.}
+\end{frame}
+
+%% AC48
+\begin{frame}[t]{Une information en un point reste locale}
+\coursanalyse
+\begin{exemple}{$f(x,y)=x^2+xy+2y^2+y^3$}
+$H_f(\zero)=\left(\begin{smallmatrix}2&1\\1&4\end{smallmatrix}\right)$ est définie positive.
+
+\medskip
+Mais au point $\vec b=\vcol{0\\-1}$,
+\[H_f(\vec b)=\begin{pmatrix}2&1\\1&-2\end{pmatrix},\qquad
+\vec e_2^\top H_f(\vec b)\vec e_2=-2.\]
+\end{exemple}
+\begin{resultat}{Conclusion}
+La fonction n'est pas convexe sur $\Rn2$ : il faut contrôler la Hessienne \textbf{sur tout le domaine}.
+\end{resultat}
+\note{Cours original, pages PDF 124–129. Résultats admis ; interprétation sans démonstration.}
+\end{frame}
+
+%% AC49
+\begin{frame}[t]{Une démarche d’étude en quatre questions}
+\coursanalyse
+\begin{cours}{Garder les hypothèses dans l’ordre}
+\textbf{1. Domaine :} est-il ouvert ? Le domaine d'étude est-il convexe ?
+
+\medskip
+\textbf{2. Régularité :} les partielles nécessaires sont-elles continues ?
+
+\medskip
+\textbf{3. Objectif :} contrôler une variation, approcher par Taylor ou établir une convexité ?
+
+\medskip
+\textbf{4. Critère :} borne uniforme, développement au point ou signe de la Hessienne partout ?
+\end{cours}
+\vfill Ne pas remplacer une hypothèse globale par une vérification en un seul point.
+\note{Cours original, pages PDF 3–129. Résultats admis ; interprétation sans démonstration.}
+\end{frame}
+
+%% AC50
+\begin{frame}[t]{Les liens essentiels du chapitre}
+\coursanalyse
+\begin{cours}{Du local au global}
+\textbf{Différentielle bornée + segments inclus :} contrôle des variations.
+
+\medskip
+\textbf{Partielles continues :} classe $\mathcal C^1$ et différentiabilité.
+
+\medskip
+\textbf{Second ordre continu :} Taylor et Hessienne symétrique.
+
+\medskip
+\textbf{Hessienne positive partout + domaine convexe :} convexité.
+
+\medskip
+\textbf{Minoration uniforme par $\mu I_n$ :} forte convexité.
+\end{cours}
+\vfill Les quatre pages suivantes sont des compléments séparés du socle.
+\note{Cours original, pages PDF 3–129. Résultats admis ; interprétation sans démonstration.}
+\end{frame}
+
+%% AC51
+\begin{frame}[t]{Complément — Les limites du TAF vectoriel}
+\coursanalyse
+\begin{exemple}{Une courbe fermée}
+\[F(t)=\vcol{\cos t\\\sin t},\qquad t\in[0,2\pi].\]
+$F(2\pi)-F(0)=\zero$, mais $F'(t)=\vcol{-\sin t\\\cos t}$ n'est jamais nul.
+\end{exemple}
+\begin{resultat}{Ce qui échoue}
+Il n'existe aucun $c\in]0,2\pi[$ tel que
+\[F(2\pi)-F(0)=2\pi F'(c).\]
+\end{resultat}
+\vfill Pour les sorties vectorielles, l'inégalité des accroissements finis reste l'outil général.
+\note{Cours original, pages PDF 4–5,11–13. Résultats admis ; interprétation sans démonstration.}
+\end{frame}
+
+%% AC52
+\begin{frame}[t]{Complément — Différentiable sans être C1}
+\coursanalyse
+\begin{exemple}{Une fonction réelle d’une variable}
+\[f(t)=\begin{cases}t^2\sin(1/t),&t\ne0,\\0,&t=0.\end{cases}\]
+$f$ est dérivable partout, avec $f'(0)=0$.
+
+\medskip
+Pour $t\ne0$, $f'(t)=2t\sin(1/t)-\cos(1/t)$.
+\end{exemple}
+\begin{resultat}{La limite manquante}
+$f'$ oscille près de $0$ : elle n'est pas continue en $0$. Ainsi $f$ n'est pas de classe $\mathcal C^1$ au voisinage de $0$.
+\end{resultat}
+\note{Cours original, pages PDF 38–39. Résultats admis ; interprétation sans démonstration.}
+\end{frame}
+
+%% AC53
+\begin{frame}[t]{Complément — Composer au second ordre}
+\coursanalyse
+\begin{theoreme}{Applications $\mathcal C^2$ sur des ouverts compatibles}
+Posons $\vec u=\df f{\vec a}(\vec h)$ et $\vec v=\df f{\vec a}(\vec k)$.
+\[\begin{aligned}
+\ds{(g\circ f)}{\vec a}(\vec h,\vec k)
+={}&\ds g{f(\vec a)}(\vec u,\vec v)\\
+&+\df g{f(\vec a)}\bigl(\ds f{\vec a}(\vec h,\vec k)\bigr).
+\end{aligned}\]
+\end{theoreme}
+\begin{resultat}{Deux contributions}
+La variation propre de $g$, puis la variation du modèle de $f$ transmise à travers $g$.
+\end{resultat}
+\note{Cours original, pages PDF 69–71. Résultats admis ; interprétation sans démonstration.}
+\end{frame}
+
+%% AC54
+\begin{frame}[t]{Complément — Jensen pour une moyenne pondérée}
+\coursanalyse
+\begin{theoreme}{Fonction convexe sur un ensemble convexe $C$}
+Pour $\vec x_1,\ldots,\vec x_m\in C$ et des poids $\lambda_i\ge0$ de somme $1$,
+\[f\!\left(\sum_{i=1}^m\lambda_i\vec x_i\right)
+\le\sum_{i=1}^m\lambda_i f(\vec x_i).\]
+\end{theoreme}
+\begin{resultat}{Une extension de la définition}
+Deux points deviennent une famille finie ; la moyenne des valeurs majore la valeur à la moyenne.
+\end{resultat}
+\vfill Les poids doivent être positifs ou nuls et leur somme doit valoir $1$.
+\note{Cours original, pages PDF 114–115. Résultats admis ; interprétation sans démonstration.}
+\end{frame}

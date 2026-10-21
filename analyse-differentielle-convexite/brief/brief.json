@@ -1,0 +1,25 @@
+{
+  "title": "Analyse différentielle et convexité",
+  "status": "génération directe demandée — mêmes consignes que le chapitre I",
+  "language": "français",
+  "format": "Beamer 16:9 et PDF",
+  "level": null,
+  "session_duration": null,
+  "td_driven": false,
+  "scope": "12 exercices de base en arrière-plan ; cours conceptuel sans corrigés, compléments séparés.",
+  "proofs_on_slides": false,
+  "max_frames": 54,
+  "core_slides": 50,
+  "complement_slides": 4,
+  "notation": "Différentielle et différentielle seconde fléchées, J_f, H_f, gradient fléché, vecteurs colonnes, composition circ, paramètre de forte convexité mu.",
+  "scientific_constraints": [
+    "Segments inclus dans le domaine et convexité avant conclusions globales.",
+    "TAF scalaire exact distinct de l’inégalité vectorielle.",
+    "Norme opérateur distincte de majoration de Frobenius.",
+    "C1 et C2, critères pratiques avec leurs hypothèses.",
+    "Ordre des dérivations partielles et symétrie sous C2.",
+    "Taylor scalaire au second ordre : facteur 1/2 et reste o(norm(h)^2).",
+    "Hessienne positive semi-définie pour convexité, définie positive seulement suffisante pour stricte convexité.",
+    "Forte convexité : paramètre mu>0 uniforme et facteur mu/2."
+  ]
+}
