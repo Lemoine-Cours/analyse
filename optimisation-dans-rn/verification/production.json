@@ -1,0 +1,6 @@
+{
+  "workflow": "Rôles exécutés successivement par le même assistant ; pas de délégation indépendante.",
+  "pipeline": "Profil enregistré et testé en prepare-only ; aucun appel multi-agents du pipeline pour cette production.",
+  "profile": "atelier-slides/examples/optimisation-dans-rn.json",
+  "theme_commit": "47b21a623fc515df81793bab23c6dc568e15d102"
+}

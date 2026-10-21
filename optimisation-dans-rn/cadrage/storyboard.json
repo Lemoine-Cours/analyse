@@ -1,0 +1,1158 @@
+[
+  {
+    "id": "OP01",
+    "title": "Optimiser : trois questions",
+    "prerequisites": [
+      "prérequis Analyse I-II et algèbre"
+    ],
+    "source_pdf_pages": [
+      35,
+      59
+    ],
+    "scope": "socle",
+    "objective": "Comprendre et savoir utiliser : optimiser : trois questions",
+    "central_idea": "Optimiser : trois questions",
+    "content_tex": "\\begin{cours}{Une démarche, trois étapes}\n\\textbf{Trouver des candidats}\\par Résoudre des équations issues des dérivées.\n\\medskip\\par\\textbf{Comprendre leur nature}\\par Minimum, maximum ou point selle ?\n\\medskip\\par\\textbf{Justifier la conclusion}\\par Distinguer existence, optimalité locale et optimalité globale.\n\\end{cours}\\vfill Les contraintes modifieront les directions dans lesquelles on peut se déplacer.",
+    "equations": "Voir content_tex : équations affichées en contexte.",
+    "example": "Exemple conceptuel distinct du TD quand présent dans content_tex.",
+    "activity": "Question orale : quelles hypothèses autorisent la conclusion de cette diapositive ?",
+    "speaker_notes": "Résultat admis sans preuve ; expliciter les hypothèses avant la conclusion.",
+    "estimated_minutes": null
+  },
+  {
+    "id": "OP02",
+    "title": "Le modèle linéaire prépare le calcul",
+    "prerequisites": [
+      "prérequis Analyse I-II et algèbre"
+    ],
+    "source_pdf_pages": [
+      3,
+      5
+    ],
+    "scope": "socle",
+    "objective": "Comprendre et savoir utiliser : le modèle linéaire prépare le calcul",
+    "central_idea": "Le modèle linéaire prépare le calcul",
+    "content_tex": "Soit $f:U\\subset\\Rn n\\to\\Rn n$ différentiable en $\\vec a$.\n\\begin{notion}{Au voisinage de $\\vec a$}\n\\[f(\\vec a+\\vec h)=f(\\vec a)+\\df f{\\vec a}(\\vec h)+o(\\norm{\\vec h}).\\]\n\\end{notion}\n\\begin{resultat}{L’idée}\nPour résoudre localement $f(\\vec x)=\\vec y$, commencer par examiner le modèle linéaire de $f$.\n\\end{resultat}\\vfill Un modèle linéaire inversible suggère une résolution locale unique.",
+    "equations": "Voir content_tex : équations affichées en contexte.",
+    "example": "Exemple conceptuel distinct du TD quand présent dans content_tex.",
+    "activity": "Question orale : quelles hypothèses autorisent la conclusion de cette diapositive ?",
+    "speaker_notes": "Résultat admis sans preuve ; expliciter les hypothèses avant la conclusion.",
+    "estimated_minutes": null
+  },
+  {
+    "id": "OP03",
+    "title": "Une inverse peut être seulement locale",
+    "prerequisites": [
+      "prérequis Analyse I-II et algèbre",
+      "OP02"
+    ],
+    "source_pdf_pages": [
+      3,
+      5
+    ],
+    "scope": "socle",
+    "objective": "Comprendre et savoir utiliser : une inverse peut être seulement locale",
+    "central_idea": "Une inverse peut être seulement locale",
+    "content_tex": "\\begin{notion}{Inversibilité locale en $\\vec a$}\nIl existe des voisinages ouverts $V$ de $\\vec a$ et $W$ de $f(\\vec a)$ tels que $f_{|V}:V\\to W$ soit bijective.\n\\end{notion}\n\\[\\vec x\\in V,\\quad \\vec y\\in W,\\qquad f(\\vec x)=\\vec y\\ \\Longleftrightarrow\\ \\vec x=(f_{|V})^{-1}(\\vec y).\\]\n\\vfill\\begin{resultat}{Deux restrictions essentielles}\nL’unicité concerne $V$ ; les valeurs visées appartiennent à $W$.\n\\end{resultat}",
+    "equations": "Voir content_tex : équations affichées en contexte.",
+    "example": "Exemple conceptuel distinct du TD quand présent dans content_tex.",
+    "activity": "Question orale : quelles hypothèses autorisent la conclusion de cette diapositive ?",
+    "speaker_notes": "Résultat admis sans preuve ; expliciter les hypothèses avant la conclusion.",
+    "estimated_minutes": null
+  },
+  {
+    "id": "OP04",
+    "title": "Un changement de variables régulier",
+    "prerequisites": [
+      "prérequis Analyse I-II et algèbre",
+      "OP03"
+    ],
+    "source_pdf_pages": [
+      3,
+      5
+    ],
+    "scope": "socle",
+    "objective": "Comprendre et savoir utiliser : un changement de variables régulier",
+    "central_idea": "Un changement de variables régulier",
+    "content_tex": "\\begin{notion}{Difféomorphisme de classe $C^1$}\nUne application bijective entre deux ouverts est un $C^1$-difféomorphisme si elle est de classe $C^1$ et si son inverse est aussi de classe $C^1$.\n\\end{notion}\n\\vfill\\begin{cours}{Pourquoi demander les deux régularités ?}\nOn peut calculer les dérivées dans les deux sens du changement de variables.\n\\end{cours}",
+    "equations": "Voir content_tex : équations affichées en contexte.",
+    "example": "Exemple conceptuel distinct du TD quand présent dans content_tex.",
+    "activity": "Question orale : quelles hypothèses autorisent la conclusion de cette diapositive ?",
+    "speaker_notes": "Résultat admis sans preuve ; expliciter les hypothèses avant la conclusion.",
+    "estimated_minutes": null
+  },
+  {
+    "id": "OP05",
+    "title": "Le théorème d’inversion locale",
+    "prerequisites": [
+      "prérequis Analyse I-II et algèbre",
+      "OP04"
+    ],
+    "source_pdf_pages": [
+      5
+    ],
+    "scope": "socle",
+    "objective": "Comprendre et savoir utiliser : le théorème d’inversion locale",
+    "central_idea": "Le théorème d’inversion locale",
+    "content_tex": "\\begin{theoreme}{Un critère au point considéré}\nSoit $U\\subset\\Rn n$ ouvert, $f:U\\to\\Rn n$ de classe $C^1$ et $\\vec a\\in U$.\n\\medskip\\par Si $J_f(\\vec a)$ est inversible, alors $f$ induit un $C^1$-difféomorphisme entre des voisinages de $\\vec a$ et de $f(\\vec a)$.\n\\end{theoreme}\n\\vfill\\begin{resultat}{À vérifier avant de conclure}\nMême dimension au départ et à l’arrivée ; régularité $C^1$ ; Jacobienne inversible au point.\n\\end{resultat}",
+    "equations": "Voir content_tex : équations affichées en contexte.",
+    "example": "Exemple conceptuel distinct du TD quand présent dans content_tex.",
+    "activity": "Question orale : quelles hypothèses autorisent la conclusion de cette diapositive ?",
+    "speaker_notes": "Résultat admis sans preuve ; expliciter les hypothèses avant la conclusion.",
+    "estimated_minutes": null
+  },
+  {
+    "id": "OP06",
+    "title": "Dériver l’inverse : au bon point",
+    "prerequisites": [
+      "prérequis Analyse I-II et algèbre",
+      "OP05"
+    ],
+    "source_pdf_pages": [
+      5,
+      6
+    ],
+    "scope": "socle",
+    "objective": "Comprendre et savoir utiliser : dériver l’inverse : au bon point",
+    "central_idea": "Dériver l’inverse : au bon point",
+    "content_tex": "On note $g=(f_{|V})^{-1}$ et $\\vec b=f(\\vec a)$.\n\\begin{resultat}{Formule}\n\\[J_g(\\vec b)=\\bigl[J_f(\\vec a)\\bigr]^{-1}.\\]\n\\end{resultat}\n\\[g\\circ f=\\operatorname{Id}_V,\\qquad J_g(f(\\vec a))\\,J_f(\\vec a)=I_n.\\]\n\\vfill\\begin{cours}{Attention aux points d’évaluation}\nLa dérivée de l’inverse se calcule en $\\vec b=f(\\vec a)$, et non automatiquement en $\\vec a$.\n\\end{cours}",
+    "equations": "Voir content_tex : équations affichées en contexte.",
+    "example": "Exemple conceptuel distinct du TD quand présent dans content_tex.",
+    "activity": "Question orale : quelles hypothèses autorisent la conclusion de cette diapositive ?",
+    "speaker_notes": "Résultat admis sans preuve ; expliciter les hypothèses avant la conclusion.",
+    "estimated_minutes": null
+  },
+  {
+    "id": "OP07",
+    "title": "Une inverse locale sans formule explicite",
+    "prerequisites": [
+      "prérequis Analyse I-II et algèbre",
+      "OP06"
+    ],
+    "source_pdf_pages": [
+      5,
+      6
+    ],
+    "scope": "socle",
+    "objective": "Comprendre et savoir utiliser : une inverse locale sans formule explicite",
+    "central_idea": "Une inverse locale sans formule explicite",
+    "content_tex": "\\begin{exemple}{Une application non linéaire}\n\\[f\\!\\left(\\vcol{x\\\\y}\\right)=\\vcol{2x+y\\\\x+y+y^2},\\qquad \\vec a=\\vcol{0\\\\0}.\\]\n\\end{exemple}\n\\[J_f(\\zero)=\\begin{pmatrix}2&1\\\\1&1\\end{pmatrix},\\qquad\\det J_f(\\zero)=1.\\]\n\\begin{resultat}{Conclusion locale}\nL’inverse existe au voisinage de $\\zero$ et\n\\[J_{f^{-1}}(\\zero)=\\begin{pmatrix}1&-1\\\\-1&2\\end{pmatrix}.\\]\n\\end{resultat}",
+    "equations": "Voir content_tex : équations affichées en contexte.",
+    "example": "Exemple conceptuel distinct du TD quand présent dans content_tex.",
+    "activity": "Question orale : quelles hypothèses autorisent la conclusion de cette diapositive ?",
+    "speaker_notes": "Résultat admis sans preuve ; expliciter les hypothèses avant la conclusion.",
+    "estimated_minutes": null
+  },
+  {
+    "id": "OP08",
+    "title": "Local ne signifie pas global",
+    "prerequisites": [
+      "prérequis Analyse I-II et algèbre",
+      "OP05"
+    ],
+    "source_pdf_pages": [
+      5,
+      6
+    ],
+    "scope": "socle",
+    "objective": "Comprendre et savoir utiliser : local ne signifie pas global",
+    "central_idea": "Local ne signifie pas global",
+    "content_tex": "\\begin{exemple}{La fonction sinus}\n$\\sin'(0)=1$ : une inverse existe près de $0$.\n\\medskip\\par Mais $\\sin(0)=\\sin(2\\pi)$ : le sinus n’est pas injectif sur $\\R$.\n\\end{exemple}\n\\begin{center}\\begin{tikzpicture}[x=.85cm,y=.7cm]\n\\draw[axes](-3.5,0)--(7,0)node[right]{$t$};\\draw[axes](0,-1.4)--(0,1.5);\n\\draw[courb,domain=-3.2:6.6,samples=100]plot(\\x,{sin(\\x r)});\n\\draw[IMTOrange,line width=2pt,domain=-.65:.65]plot(\\x,{sin(\\x r)});\n\\fill[IMTOrange](0,0)circle(2pt);\\fill[IMTNavy](6.283,0)circle(2pt);\n\\node[below]at(6.283,0){$2\\pi$};\\node[above right]at(.7,.9){\\small branche locale};\n\\end{tikzpicture}\\end{center}",
+    "equations": "Voir content_tex : équations affichées en contexte.",
+    "example": "Exemple conceptuel distinct du TD quand présent dans content_tex.",
+    "activity": "Question orale : quelles hypothèses autorisent la conclusion de cette diapositive ?",
+    "speaker_notes": "Résultat admis sans preuve ; expliciter les hypothèses avant la conclusion.",
+    "estimated_minutes": null
+  },
+  {
+    "id": "OP09",
+    "title": "Définir une fonction par une équation",
+    "prerequisites": [
+      "prérequis Analyse I-II et algèbre"
+    ],
+    "source_pdf_pages": [
+      9,
+      11
+    ],
+    "scope": "socle",
+    "objective": "Comprendre et savoir utiliser : définir une fonction par une équation",
+    "central_idea": "Définir une fonction par une équation",
+    "content_tex": "\\begin{notion}{Une relation implicite}\nUne équation $F(\\vec x,\\vec y)=\\zero$ relie des variables libres $\\vec x$ à des variables dépendantes $\\vec y$.\n\\end{notion}\n\\begin{cours}{La question}\nPrès d’une solution $(\\vec a,\\vec b)$, peut-on écrire une unique fonction\n\\[\\vec y=g(\\vec x),\\qquad g(\\vec a)=\\vec b\\ ?\\]\n\\end{cours}\\vfill Cette représentation est locale ; toute la relation n’est pas nécessairement un graphe.",
+    "equations": "Voir content_tex : équations affichées en contexte.",
+    "example": "Exemple conceptuel distinct du TD quand présent dans content_tex.",
+    "activity": "Question orale : quelles hypothèses autorisent la conclusion de cette diapositive ?",
+    "speaker_notes": "Résultat admis sans preuve ; expliciter les hypothèses avant la conclusion.",
+    "estimated_minutes": null
+  },
+  {
+    "id": "OP10",
+    "title": "Séparer les deux blocs de variables",
+    "prerequisites": [
+      "prérequis Analyse I-II et algèbre",
+      "OP09"
+    ],
+    "source_pdf_pages": [
+      10,
+      11
+    ],
+    "scope": "socle",
+    "objective": "Comprendre et savoir utiliser : séparer les deux blocs de variables",
+    "central_idea": "Séparer les deux blocs de variables",
+    "content_tex": "Soit $F:U\\subset\\Rn n\\times\\Rn m\\to\\Rn m$ de classe $C^1$.\n\\begin{cours}{Deux matrices aux rôles différents}\n\\[J_{\\vec x}F(\\vec a,\\vec b)\\in\\mathcal M_{m,n}(\\R),\\]\n\\[J_{\\vec y}F(\\vec a,\\vec b)\\in\\mathcal M_{m}(\\R).\\]\n\\end{cours}\n\\begin{resultat}{Le bloc décisif}\nPour exprimer $\\vec y$ en fonction de $\\vec x$, on teste l’inversibilité du bloc $J_{\\vec y}F$.\n\\end{resultat}",
+    "equations": "Voir content_tex : équations affichées en contexte.",
+    "example": "Exemple conceptuel distinct du TD quand présent dans content_tex.",
+    "activity": "Question orale : quelles hypothèses autorisent la conclusion de cette diapositive ?",
+    "speaker_notes": "Résultat admis sans preuve ; expliciter les hypothèses avant la conclusion.",
+    "estimated_minutes": null
+  },
+  {
+    "id": "OP11",
+    "title": "Le théorème des fonctions implicites",
+    "prerequisites": [
+      "prérequis Analyse I-II et algèbre",
+      "OP10"
+    ],
+    "source_pdf_pages": [
+      11
+    ],
+    "scope": "socle",
+    "objective": "Comprendre et savoir utiliser : le théorème des fonctions implicites",
+    "central_idea": "Le théorème des fonctions implicites",
+    "content_tex": "\\begin{theoreme}{Hypothèses et conclusion}\n$F$ est de classe $C^1$ sur un ouvert de $\\Rn n\\times\\Rn m$.\n\\medskip\\par $F(\\vec a,\\vec b)=\\zero$ et $J_{\\vec y}F(\\vec a,\\vec b)$ est inversible.\n\\medskip\\par Alors, près de $(\\vec a,\\vec b)$, l’équation $F(\\vec x,\\vec y)=\\zero$ équivaut à $\\vec y=g(\\vec x)$, pour une unique fonction locale $g$ de classe $C^1$ avec $g(\\vec a)=\\vec b$.\n\\end{theoreme}\n\\vfill\\textbf{Ordre des vérifications :} point solution, régularité, bloc inversible.",
+    "equations": "Voir content_tex : équations affichées en contexte.",
+    "example": "Exemple conceptuel distinct du TD quand présent dans content_tex.",
+    "activity": "Question orale : quelles hypothèses autorisent la conclusion de cette diapositive ?",
+    "speaker_notes": "Résultat admis sans preuve ; expliciter les hypothèses avant la conclusion.",
+    "estimated_minutes": null
+  },
+  {
+    "id": "OP12",
+    "title": "La dérivée d’une fonction implicite",
+    "prerequisites": [
+      "prérequis Analyse I-II et algèbre",
+      "OP11"
+    ],
+    "source_pdf_pages": [
+      11,
+      12
+    ],
+    "scope": "socle",
+    "objective": "Comprendre et savoir utiliser : la dérivée d’une fonction implicite",
+    "central_idea": "La dérivée d’une fonction implicite",
+    "content_tex": "\\begin{resultat}{Formule matricielle}\n\\[J_g(\\vec a)=-\\bigl[J_{\\vec y}F(\\vec a,\\vec b)\\bigr]^{-1}J_{\\vec x}F(\\vec a,\\vec b).\\]\n\\end{resultat}\n\\begin{exemple}{Une équation, deux variables réelles}\nSi $F(a,b)=0$ et $\\partial_yF(a,b)\\ne0$, alors\n\\[g'(a)=-\\frac{\\partial_xF(a,b)}{\\partial_yF(a,b)}.\\]\n\\end{exemple}\\vfill La dérivée s’obtient sans isoler explicitement la fonction $g$.",
+    "equations": "Voir content_tex : équations affichées en contexte.",
+    "example": "Exemple conceptuel distinct du TD quand présent dans content_tex.",
+    "activity": "Question orale : quelles hypothèses autorisent la conclusion de cette diapositive ?",
+    "speaker_notes": "Résultat admis sans preuve ; expliciter les hypothèses avant la conclusion.",
+    "estimated_minutes": null
+  },
+  {
+    "id": "OP13",
+    "title": "Une ellipse : choisir une branche",
+    "prerequisites": [
+      "prérequis Analyse I-II et algèbre",
+      "OP12"
+    ],
+    "source_pdf_pages": [
+      11,
+      12
+    ],
+    "scope": "socle",
+    "objective": "Comprendre et savoir utiliser : une ellipse : choisir une branche",
+    "central_idea": "Une ellipse : choisir une branche",
+    "content_tex": "\\begin{columns}[T,onlytextwidth]\\begin{column}{.48\\textwidth}\n\\begin{exemple}{Au point $\\vec a=\\vcol{2\\\\1}$}\n$F(x,y)=x^2+2y^2-6$.\n\\par $F(2,1)=0$.\n\\par $\\partial_yF(2,1)=4\\ne0$.\n\\[g'(2)=-\\frac44=-1.\\]\n\\end{exemple}\nLa branche supérieure est localement un graphe.\n\\end{column}\\begin{column}{.48\\textwidth}\\begin{tikzpicture}[scale=.9]\n\\draw[axes](-2.8,0)--(2.9,0)node[right]{$x$};\\draw[axes](0,-2)--(0,2.3)node[above]{$y$};\n\\draw[courb](0,0)ellipse(2.449 and 1.732);\n\\draw[IMTOrange,line width=2pt,domain=1.3:2.3,samples=40]plot(\\x,{sqrt((6-\\x*\\x)/2)});\n\\draw[IMTGreen!65!black,line width=1pt](1.3,1.7)--(2.7,.3);\n\\fill[IMTOrange](2,1)circle(2pt);\\node[above right]at(2,1){$\\vec a$};\n\\node[below]at(1.5,-2){\\small tangente de pente $-1$};\n\\end{tikzpicture}\\end{column}\\end{columns}",
+    "equations": "Voir content_tex : équations affichées en contexte.",
+    "example": "Exemple conceptuel distinct du TD quand présent dans content_tex.",
+    "activity": "Question orale : quelles hypothèses autorisent la conclusion de cette diapositive ?",
+    "speaker_notes": "Résultat admis sans preuve ; expliciter les hypothèses avant la conclusion.",
+    "estimated_minutes": null
+  },
+  {
+    "id": "OP14",
+    "title": "L’objectif et les points admissibles",
+    "prerequisites": [
+      "prérequis Analyse I-II et algèbre"
+    ],
+    "source_pdf_pages": [
+      35,
+      59
+    ],
+    "scope": "socle",
+    "objective": "Comprendre et savoir utiliser : l’objectif et les points admissibles",
+    "central_idea": "L’objectif et les points admissibles",
+    "content_tex": "\\begin{notion}{Un problème d’optimisation}\nPour une fonction $f:U\\subset\\Rn n\\to\\R$ et un ensemble $A\\subset U$, chercher\n\\[\\min_{\\vec x\\in A}f(\\vec x).\\]\n\\end{notion}\n\\begin{cours}{D’abord : sans contrainte}\nOn commence par $A=U$, avec $U$ ouvert. Autour de chaque point, toutes les petites directions sont autorisées.\n\\end{cours}\\vfill Une valeur minimale est un réel ; un minimiseur est un point de $A$.",
+    "equations": "Voir content_tex : équations affichées en contexte.",
+    "example": "Exemple conceptuel distinct du TD quand présent dans content_tex.",
+    "activity": "Question orale : quelles hypothèses autorisent la conclusion de cette diapositive ?",
+    "speaker_notes": "Résultat admis sans preuve ; expliciter les hypothèses avant la conclusion.",
+    "estimated_minutes": null
+  },
+  {
+    "id": "OP15",
+    "title": "Minimum local, minimum global",
+    "prerequisites": [
+      "prérequis Analyse I-II et algèbre",
+      "OP14"
+    ],
+    "source_pdf_pages": [
+      35,
+      36
+    ],
+    "scope": "socle",
+    "objective": "Comprendre et savoir utiliser : minimum local, minimum global",
+    "central_idea": "Minimum local, minimum global",
+    "content_tex": "\\begin{notion}{Minimum global sur $A$}\n$\\vec a\\in A$ et $f(\\vec a)\\le f(\\vec x)$ pour tout $\\vec x\\in A$.\n\\end{notion}\n\\begin{notion}{Minimum local sur $A$}\n$\\vec a\\in A$ et il existe $r>0$ tel que\n\\[\\vec x\\in A,\\ \\norm{\\vec x-\\vec a}<r\\quad\\Longrightarrow\\quad f(\\vec a)\\le f(\\vec x).\\]\n\\end{notion}\\vfill Pour un maximum, inverser les inégalités.",
+    "equations": "Voir content_tex : équations affichées en contexte.",
+    "example": "Exemple conceptuel distinct du TD quand présent dans content_tex.",
+    "activity": "Question orale : quelles hypothèses autorisent la conclusion de cette diapositive ?",
+    "speaker_notes": "Résultat admis sans preuve ; expliciter les hypothèses avant la conclusion.",
+    "estimated_minutes": null
+  },
+  {
+    "id": "OP16",
+    "title": "Un minimum strict : isoler la valeur",
+    "prerequisites": [
+      "prérequis Analyse I-II et algèbre",
+      "OP15"
+    ],
+    "source_pdf_pages": [
+      36
+    ],
+    "scope": "socle",
+    "objective": "Comprendre et savoir utiliser : un minimum strict : isoler la valeur",
+    "central_idea": "Un minimum strict : isoler la valeur",
+    "content_tex": "\\begin{notion}{Minimum local strict}\n$\\vec a\\in A$ et il existe $r>0$ tel que\n\\[\\vec x\\in A,\\quad 0<\\norm{\\vec x-\\vec a}<r\\quad\\Longrightarrow\\quad f(\\vec a)<f(\\vec x).\\]\n\\end{notion}\n\\begin{exemple}{Deux comportements}\n$f(t)=t^2$ a un minimum global strict en $0$.\n\\medskip\\par Une fonction constante a un minimum en chaque point, sans minimum strict sur $\\R$.\n\\end{exemple}\\vfill Un critère d’unicité ne garantit pas à lui seul l’existence d’un minimiseur.",
+    "equations": "Voir content_tex : équations affichées en contexte.",
+    "example": "Exemple conceptuel distinct du TD quand présent dans content_tex.",
+    "activity": "Question orale : quelles hypothèses autorisent la conclusion de cette diapositive ?",
+    "speaker_notes": "Résultat admis sans preuve ; expliciter les hypothèses avant la conclusion.",
+    "estimated_minutes": null
+  },
+  {
+    "id": "OP17",
+    "title": "Au premier ordre : les points critiques",
+    "prerequisites": [
+      "prérequis Analyse I-II et algèbre",
+      "OP15"
+    ],
+    "source_pdf_pages": [
+      36,
+      37
+    ],
+    "scope": "socle",
+    "objective": "Comprendre et savoir utiliser : au premier ordre : les points critiques",
+    "central_idea": "Au premier ordre : les points critiques",
+    "content_tex": "\\begin{theoreme}{Fermat — condition nécessaire}\nSi $f$ est différentiable sur l’ouvert $U$ et admet un extremum local en $\\vec a\\in U$, alors\n\\[\\grad f(\\vec a)=\\zero.\\]\n\\end{theoreme}\n\\begin{notion}{Point critique}\nUn point où $\\grad f$ s’annule.\n\\end{notion}\\vfill Tout extremum intérieur différentiable est critique ; tout point critique n’est pas un extremum.",
+    "equations": "Voir content_tex : équations affichées en contexte.",
+    "example": "Exemple conceptuel distinct du TD quand présent dans content_tex.",
+    "activity": "Question orale : quelles hypothèses autorisent la conclusion de cette diapositive ?",
+    "speaker_notes": "Résultat admis sans preuve ; expliciter les hypothèses avant la conclusion.",
+    "estimated_minutes": null
+  },
+  {
+    "id": "OP18",
+    "title": "Au bord : le gradient peut être non nul",
+    "prerequisites": [
+      "prérequis Analyse I-II et algèbre",
+      "OP17"
+    ],
+    "source_pdf_pages": [
+      37,
+      59
+    ],
+    "scope": "socle",
+    "objective": "Comprendre et savoir utiliser : au bord : le gradient peut être non nul",
+    "central_idea": "Au bord : le gradient peut être non nul",
+    "content_tex": "\\begin{exemple}{Minimiser $f(t)=t$ sur $[0,1]$}\nLe minimum est atteint en $0$, mais $f'(0)=1$.\n\\end{exemple}\n\\begin{center}\\begin{tikzpicture}[x=5cm,y=1.5cm]\n\\draw[axes](-.1,0)--(1.25,0)node[right]{$t$};\\draw[axes](0,-.15)--(0,1.3)node[above]{$f(t)$};\n\\draw[courb](0,0)--(1,1);\\fill[IMTOrange](0,0)circle(2pt);\\draw[pointille](1,1)--(1,0)node[below]{$1$};\\node[above left]at(0,0){$0$};\n\\end{tikzpicture}\\end{center}\n\\begin{resultat}{L’hypothèse décisive de Fermat}\nLe point doit être intérieur au domaine autorisé.\n\\end{resultat}",
+    "equations": "Voir content_tex : équations affichées en contexte.",
+    "example": "Exemple conceptuel distinct du TD quand présent dans content_tex.",
+    "activity": "Question orale : quelles hypothèses autorisent la conclusion de cette diapositive ?",
+    "speaker_notes": "Résultat admis sans preuve ; expliciter les hypothèses avant la conclusion.",
+    "estimated_minutes": null
+  },
+  {
+    "id": "OP19",
+    "title": "Au second ordre : une condition nécessaire",
+    "prerequisites": [
+      "prérequis Analyse I-II et algèbre",
+      "OP17"
+    ],
+    "source_pdf_pages": [
+      38,
+      39
+    ],
+    "scope": "socle",
+    "objective": "Comprendre et savoir utiliser : au second ordre : une condition nécessaire",
+    "central_idea": "Au second ordre : une condition nécessaire",
+    "content_tex": "\\begin{theoreme}{En un minimum intérieur}\nSi $f$ est de classe $C^2$ et admet un minimum local en $\\vec a$, alors\n\\[\\grad f(\\vec a)=\\zero,\\qquad \\vec h^{\\,T}H_f(\\vec a)\\vec h\\ge0\\quad\\text{pour tout }\\vec h.\\]\n\\end{theoreme}\n\\begin{cours}{Interprétation}\nLa Hessienne est positive semi-définie : aucune direction ne présente de courbure strictement négative au second ordre.\n\\end{cours}\\vfill Pour un maximum, la Hessienne est négative semi-définie.",
+    "equations": "Voir content_tex : équations affichées en contexte.",
+    "example": "Exemple conceptuel distinct du TD quand présent dans content_tex.",
+    "activity": "Question orale : quelles hypothèses autorisent la conclusion de cette diapositive ?",
+    "speaker_notes": "Résultat admis sans preuve ; expliciter les hypothèses avant la conclusion.",
+    "estimated_minutes": null
+  },
+  {
+    "id": "OP20",
+    "title": "Au second ordre : quand peut-on conclure ?",
+    "prerequisites": [
+      "prérequis Analyse I-II et algèbre",
+      "OP19"
+    ],
+    "source_pdf_pages": [
+      41,
+      42,
+      43
+    ],
+    "scope": "socle",
+    "objective": "Comprendre et savoir utiliser : au second ordre : quand peut-on conclure ?",
+    "central_idea": "Au second ordre : quand peut-on conclure ?",
+    "content_tex": "Au point critique $\\vec a$ d’une fonction $C^2$ :\n\\begin{theoreme}{Trois conclusions}\n$H_f(\\vec a)$ définie positive $\\Longrightarrow$ minimum local strict.\n\\medskip\\par $H_f(\\vec a)$ définie négative $\\Longrightarrow$ maximum local strict.\n\\medskip\\par $H_f(\\vec a)$ indéfinie $\\Longrightarrow$ point selle.\n\\end{theoreme}\n\\vfill\\begin{resultat}{Cas restant}\nUne Hessienne seulement semi-définie ne permet généralement pas de conclure.\n\\end{resultat}",
+    "equations": "Voir content_tex : équations affichées en contexte.",
+    "example": "Exemple conceptuel distinct du TD quand présent dans content_tex.",
+    "activity": "Question orale : quelles hypothèses autorisent la conclusion de cette diapositive ?",
+    "speaker_notes": "Résultat admis sans preuve ; expliciter les hypothèses avant la conclusion.",
+    "estimated_minutes": null
+  },
+  {
+    "id": "OP21",
+    "title": "En dimension deux : un test pratique",
+    "prerequisites": [
+      "prérequis Analyse I-II et algèbre",
+      "OP20"
+    ],
+    "source_pdf_pages": [
+      40,
+      41,
+      42
+    ],
+    "scope": "socle",
+    "objective": "Comprendre et savoir utiliser : en dimension deux : un test pratique",
+    "central_idea": "En dimension deux : un test pratique",
+    "content_tex": "Au point critique d’une fonction $C^2$, poser\n\\[H_f=\\begin{pmatrix}a&b\\\\b&c\\end{pmatrix},\\qquad \\Delta=ac-b^2.\\]\n\\begin{cours}{Lire le signe de la forme quadratique}\n\\begin{tabular}{@{}ll@{}}\n$\\Delta>0$ et $a>0$ & minimum local strict\\\\[2mm]\n$\\Delta>0$ et $a<0$ & maximum local strict\\\\[2mm]\n$\\Delta<0$ & point selle\\\\[2mm]\n$\\Delta=0$ & test indécis\n\\end{tabular}\n\\end{cours}\\vfill Vérifier d’abord $\\grad f=\\zero$.",
+    "equations": "Voir content_tex : équations affichées en contexte.",
+    "example": "Exemple conceptuel distinct du TD quand présent dans content_tex.",
+    "activity": "Question orale : quelles hypothèses autorisent la conclusion de cette diapositive ?",
+    "speaker_notes": "Résultat admis sans preuve ; expliciter les hypothèses avant la conclusion.",
+    "estimated_minutes": null
+  },
+  {
+    "id": "OP22",
+    "title": "Une Hessienne nulle ne dit pas tout",
+    "prerequisites": [
+      "prérequis Analyse I-II et algèbre",
+      "OP20"
+    ],
+    "source_pdf_pages": [
+      43
+    ],
+    "scope": "socle",
+    "objective": "Comprendre et savoir utiliser : une hessienne nulle ne dit pas tout",
+    "central_idea": "Une Hessienne nulle ne dit pas tout",
+    "content_tex": "\\begin{exemple}{Trois fonctions au point $\\zero$}\n\\begin{tabular}{@{}ll@{}}\n$f(x,y)=x^4+y^4$ & minimum strict\\\\[4mm]\n$g(x,y)=-x^4-y^4$ & maximum strict\\\\[4mm]\n$h(x,y)=x^4-y^4$ & point selle\n\\end{tabular}\n\\end{exemple}\n\\begin{resultat}{Même information au second ordre}\nLes trois gradients et les trois Hessiennes s’annulent en $\\zero$.\n\\end{resultat}\\vfill Il faut alors examiner directement le signe ou utiliser des termes d’ordre supérieur.",
+    "equations": "Voir content_tex : équations affichées en contexte.",
+    "example": "Exemple conceptuel distinct du TD quand présent dans content_tex.",
+    "activity": "Question orale : quelles hypothèses autorisent la conclusion de cette diapositive ?",
+    "speaker_notes": "Résultat admis sans preuve ; expliciter les hypothèses avant la conclusion.",
+    "estimated_minutes": null
+  },
+  {
+    "id": "OP23",
+    "title": "Un bol : minimum local et global",
+    "prerequisites": [
+      "prérequis Analyse I-II et algèbre",
+      "OP21"
+    ],
+    "source_pdf_pages": [
+      41,
+      43
+    ],
+    "scope": "socle",
+    "objective": "Comprendre et savoir utiliser : un bol : minimum local et global",
+    "central_idea": "Un bol : minimum local et global",
+    "content_tex": "\\begin{exemple}{Une somme de carrés}\n\\[f\\!\\left(\\vcol{x\\\\y}\\right)=(x+1)^2+3(y-2)^2.\\]\n\\end{exemple}\n\\[\\grad f=\\vcol{2(x+1)\\\\6(y-2)},\\qquad H_f=\\begin{pmatrix}2&0\\\\0&6\\end{pmatrix}.\\]\n\\begin{resultat}{Deux justifications complémentaires}\nLa Hessienne donne un minimum local strict en $\\vcol{-1\\\\2}$.\n\\par La somme de carrés montre directement qu’il est global et unique.\n\\end{resultat}",
+    "equations": "Voir content_tex : équations affichées en contexte.",
+    "example": "Exemple conceptuel distinct du TD quand présent dans content_tex.",
+    "activity": "Question orale : quelles hypothèses autorisent la conclusion de cette diapositive ?",
+    "speaker_notes": "Résultat admis sans preuve ; expliciter les hypothèses avant la conclusion.",
+    "estimated_minutes": null
+  },
+  {
+    "id": "OP24",
+    "title": "Un point selle : deux directions opposées",
+    "prerequisites": [
+      "prérequis Analyse I-II et algèbre",
+      "OP20"
+    ],
+    "source_pdf_pages": [
+      37,
+      42
+    ],
+    "scope": "socle",
+    "objective": "Comprendre et savoir utiliser : un point selle : deux directions opposées",
+    "central_idea": "Un point selle : deux directions opposées",
+    "content_tex": "\\begin{exemple}{Au voisinage de l’origine}\n$f(x,y)=x^2-2y^2$, avec $\\grad f(\\zero)=\\zero$.\n\\end{exemple}\n\\begin{center}\\begin{tikzpicture}[x=2cm,y=.8cm]\n\\draw[axes](-1.5,0)--(1.6,0)node[right]{$t$};\\draw[axes](0,-2.1)--(0,1.5);\n\\draw[IMTCyan,line width=1.2pt,domain=-1.1:1.1]plot(\\x,{\\x*\\x});\n\\draw[IMTOrange,line width=1.2pt,domain=-.95:.95]plot(\\x,{-2*\\x*\\x});\n\\node[right,IMTNavy]at(1.1,1.2){\\small $f(t,0)=t^2$};\\node[right,IMTNavy]at(.95,-1.8){\\small $f(0,t)=-2t^2$};\n\\end{tikzpicture}\\end{center}\nIl existe des points proches où $f>0$ et d’autres où $f<0$ : ni minimum ni maximum.",
+    "equations": "Voir content_tex : équations affichées en contexte.",
+    "example": "Exemple conceptuel distinct du TD quand présent dans content_tex.",
+    "activity": "Question orale : quelles hypothèses autorisent la conclusion de cette diapositive ?",
+    "speaker_notes": "Résultat admis sans preuve ; expliciter les hypothèses avant la conclusion.",
+    "estimated_minutes": null
+  },
+  {
+    "id": "OP25",
+    "title": "La convexité transforme le problème",
+    "prerequisites": [
+      "prérequis Analyse I-II et algèbre",
+      "OP17"
+    ],
+    "source_pdf_pages": [
+      43,
+      44
+    ],
+    "scope": "socle",
+    "objective": "Comprendre et savoir utiliser : la convexité transforme le problème",
+    "central_idea": "La convexité transforme le problème",
+    "content_tex": "\\begin{theoreme}{Un critère global}\nSoit $U$ ouvert convexe et $f:U\\to\\R$ convexe et différentiable. Pour $\\vec a\\in U$,\n\\[\\grad f(\\vec a)=\\zero\\quad\\Longleftrightarrow\\quad\\vec a\\text{ est un minimiseur global de }f.\\]\n\\end{theoreme}\n\\begin{resultat}{Pourquoi le critère fonctionne}\n\\[f(\\vec x)\\ge f(\\vec a)+\\ps{\\grad f(\\vec a)}{\\vec x-\\vec a}.\\]\nLe modèle affine fournit une borne inférieure globale.\n\\end{resultat}",
+    "equations": "Voir content_tex : équations affichées en contexte.",
+    "example": "Exemple conceptuel distinct du TD quand présent dans content_tex.",
+    "activity": "Question orale : quelles hypothèses autorisent la conclusion de cette diapositive ?",
+    "speaker_notes": "Résultat admis sans preuve ; expliciter les hypothèses avant la conclusion.",
+    "estimated_minutes": null
+  },
+  {
+    "id": "OP26",
+    "title": "Unicité et existence : deux questions",
+    "prerequisites": [
+      "prérequis Analyse I-II et algèbre",
+      "OP25"
+    ],
+    "source_pdf_pages": [
+      44
+    ],
+    "scope": "socle",
+    "objective": "Comprendre et savoir utiliser : unicité et existence : deux questions",
+    "central_idea": "Unicité et existence : deux questions",
+    "content_tex": "\\begin{theoreme}{Stricte convexité}\nUne fonction strictement convexe sur un ensemble convexe possède au plus un minimiseur global.\n\\end{theoreme}\n\\begin{exemple}{Un minimum peut manquer}\n$f(t)=e^t$ est strictement convexe sur $\\R$.\n\\par Son infimum vaut $0$, mais cette valeur n’est jamais atteinte.\n\\end{exemple}\\vfill\\textbf{À retenir :} « au plus un » ne signifie pas « il en existe un ».",
+    "equations": "Voir content_tex : équations affichées en contexte.",
+    "example": "Exemple conceptuel distinct du TD quand présent dans content_tex.",
+    "activity": "Question orale : quelles hypothèses autorisent la conclusion de cette diapositive ?",
+    "speaker_notes": "Résultat admis sans preuve ; expliciter les hypothèses avant la conclusion.",
+    "estimated_minutes": null
+  },
+  {
+    "id": "OP27",
+    "title": "Garantir l’existence sur un compact",
+    "prerequisites": [
+      "prérequis Analyse I-II et algèbre",
+      "OP15"
+    ],
+    "source_pdf_pages": [
+      45,
+      46
+    ],
+    "scope": "socle",
+    "objective": "Comprendre et savoir utiliser : garantir l’existence sur un compact",
+    "central_idea": "Garantir l’existence sur un compact",
+    "content_tex": "\\begin{theoreme}{Continuité et compacité}\nSi $A\\subset\\Rn n$ est non vide et compact, et si $f:A\\to\\R$ est continue, alors $f$ atteint un minimum et un maximum sur $A$.\n\\end{theoreme}\n\\begin{cours}{En dimension finie}\nUn ensemble est compact s’il est fermé et borné.\n\\end{cours}\\vfill Le théorème donne l’existence ; il ne donne pas directement les points où les valeurs sont atteintes.",
+    "equations": "Voir content_tex : équations affichées en contexte.",
+    "example": "Exemple conceptuel distinct du TD quand présent dans content_tex.",
+    "activity": "Question orale : quelles hypothèses autorisent la conclusion de cette diapositive ?",
+    "speaker_notes": "Résultat admis sans preuve ; expliciter les hypothèses avant la conclusion.",
+    "estimated_minutes": null
+  },
+  {
+    "id": "OP28",
+    "title": "Sur un domaine non borné : la coercivité",
+    "prerequisites": [
+      "prérequis Analyse I-II et algèbre",
+      "OP27"
+    ],
+    "source_pdf_pages": [
+      46
+    ],
+    "scope": "socle",
+    "objective": "Comprendre et savoir utiliser : sur un domaine non borné : la coercivité",
+    "central_idea": "Sur un domaine non borné : la coercivité",
+    "content_tex": "\\begin{notion}{Fonction coercive sur $\\Rn n$}\n\\[f(\\vec x)\\longrightarrow+\\infty\\qquad\\text{quand }\\norm{\\vec x}\\longrightarrow+\\infty.\\]\n\\end{notion}\n\\begin{theoreme}{Un minimum existe}\nUne fonction continue et coercive sur $\\Rn n$ atteint un minimum global.\n\\end{theoreme}\\vfill Intuition : les faibles valeurs ne peuvent pas s’échapper à l’infini.",
+    "equations": "Voir content_tex : équations affichées en contexte.",
+    "example": "Exemple conceptuel distinct du TD quand présent dans content_tex.",
+    "activity": "Question orale : quelles hypothèses autorisent la conclusion de cette diapositive ?",
+    "speaker_notes": "Résultat admis sans preuve ; expliciter les hypothèses avant la conclusion.",
+    "estimated_minutes": null
+  },
+  {
+    "id": "OP29",
+    "title": "Sans contrainte : une démarche fiable",
+    "prerequisites": [
+      "prérequis Analyse I-II et algèbre",
+      "OP17",
+      "OP20",
+      "OP25",
+      "OP27",
+      "OP28"
+    ],
+    "source_pdf_pages": [
+      47
+    ],
+    "scope": "socle",
+    "objective": "Comprendre et savoir utiliser : sans contrainte : une démarche fiable",
+    "central_idea": "Sans contrainte : une démarche fiable",
+    "content_tex": "\\begin{cours}{Du domaine à la conclusion}\n\\textbf{1. Domaine}\\quad Ouvert ? Bord ? Régularité de $f$ ?\n\\medskip\\par\\textbf{2. Existence}\\quad Compacité ou coercivité si nécessaire.\n\\medskip\\par\\textbf{3. Candidats}\\quad Résoudre $\\grad f(\\vec x)=\\zero$ à l’intérieur.\n\\medskip\\par\\textbf{4. Nature locale}\\quad Hessienne ou signe direct.\n\\medskip\\par\\textbf{5. Portée globale}\\quad Convexité, comparaison ou borne globale.\n\\end{cours}\\vfill Toujours préciser : local ou global, strict ou non.",
+    "equations": "Voir content_tex : équations affichées en contexte.",
+    "example": "Exemple conceptuel distinct du TD quand présent dans content_tex.",
+    "activity": "Question orale : quelles hypothèses autorisent la conclusion de cette diapositive ?",
+    "speaker_notes": "Résultat admis sans preuve ; expliciter les hypothèses avant la conclusion.",
+    "estimated_minutes": null
+  },
+  {
+    "id": "OP30",
+    "title": "Sous contraintes : changer l’ensemble autorisé",
+    "prerequisites": [
+      "prérequis Analyse I-II et algèbre",
+      "OP14",
+      "OP15"
+    ],
+    "source_pdf_pages": [
+      59,
+      60
+    ],
+    "scope": "socle",
+    "objective": "Comprendre et savoir utiliser : sous contraintes : changer l’ensemble autorisé",
+    "central_idea": "Sous contraintes : changer l’ensemble autorisé",
+    "content_tex": "\\begin{notion}{Ensemble admissible}\n\\[A=\\{\\vec x\\in U:F(\\vec x)=\\zero,\\quad g_j(\\vec x)\\le0\\ (1\\le j\\le p)\\}.\\]\n\\end{notion}\n\\begin{cours}{Un minimum relatif à $A$}\nOn compare $f(\\vec a)$ uniquement aux valeurs prises en des points admissibles, proches ou quelconques selon que le minimum est local ou global.\n\\end{cours}\\vfill Une direction favorable pour $f$ peut être interdite par les contraintes.",
+    "equations": "Voir content_tex : équations affichées en contexte.",
+    "example": "Exemple conceptuel distinct du TD quand présent dans content_tex.",
+    "activity": "Question orale : quelles hypothèses autorisent la conclusion de cette diapositive ?",
+    "speaker_notes": "Résultat admis sans preuve ; expliciter les hypothèses avant la conclusion.",
+    "estimated_minutes": null
+  },
+  {
+    "id": "OP31",
+    "title": "Le gradient ne doit plus forcément s’annuler",
+    "prerequisites": [
+      "prérequis Analyse I-II et algèbre",
+      "OP30",
+      "OP17"
+    ],
+    "source_pdf_pages": [
+      61,
+      62
+    ],
+    "scope": "socle",
+    "objective": "Comprendre et savoir utiliser : le gradient ne doit plus forcément s’annuler",
+    "central_idea": "Le gradient ne doit plus forcément s’annuler",
+    "content_tex": "\\begin{columns}[T,onlytextwidth]\\begin{column}{.47\\textwidth}\n\\begin{exemple}{Distance à l’origine}\nMinimiser $x^2+y^2$ sur la droite $x+y=2$.\n\\par Le point le plus proche est $\\vec a=\\vcol{1\\\\1}$.\n\\[\\grad f(\\vec a)=\\vcol{2\\\\2}\\ne\\zero.\\]\n\\end{exemple}\nLa variation s’annule le long de la droite, pas dans toutes les directions.\n\\end{column}\\begin{column}{.49\\textwidth}\\begin{tikzpicture}[scale=.9]\n\\draw[axes](-.3,0)--(3,0)node[right]{$x$};\\draw[axes](0,-.3)--(0,3)node[above]{$y$};\n\\draw[courb](0,0)circle(1.414);\\draw[IMTOrange,line width=1.2pt](-.4,2.4)--(2.4,-.4);\n\\draw[-{Stealth},IMTCyan,line width=1.2pt](1,1)--(1.8,1.8)node[above]{$\\grad f(\\vec a)$};\n\\fill[IMTNavy](1,1)circle(2pt);\\node[below right,xshift=1mm,yshift=-1mm]at(1,1){$\\vec a$};\\node[below]at(1.1,-1.85){\\small cercle tangent à la droite};\n\\end{tikzpicture}\\end{column}\\end{columns}",
+    "equations": "Voir content_tex : équations affichées en contexte.",
+    "example": "Exemple conceptuel distinct du TD quand présent dans content_tex.",
+    "activity": "Question orale : quelles hypothèses autorisent la conclusion de cette diapositive ?",
+    "speaker_notes": "Résultat admis sans preuve ; expliciter les hypothèses avant la conclusion.",
+    "estimated_minutes": null
+  },
+  {
+    "id": "OP32",
+    "title": "Une égalité doit être régulière",
+    "prerequisites": [
+      "prérequis Analyse I-II et algèbre",
+      "OP30"
+    ],
+    "source_pdf_pages": [
+      60,
+      62
+    ],
+    "scope": "socle",
+    "objective": "Comprendre et savoir utiliser : une égalité doit être régulière",
+    "central_idea": "Une égalité doit être régulière",
+    "content_tex": "\\begin{notion}{Régularité de $F(\\vec x)=0$ en $\\vec a$}\nPour une contrainte scalaire $C^1$, on demande\n\\[F(\\vec a)=0,\\qquad\\grad F(\\vec a)\\ne\\zero.\\]\n\\end{notion}\n\\begin{exemple}{Pourquoi vérifier cette hypothèse ?}\n$F(x,y)=x^2+y^2=0$ impose le seul point $\\zero$.\n\\par La fonction $f(x,y)=x$ y atteint son minimum admissible.\n\\par Mais $\\grad f(\\zero)\\ne\\lambda\\grad F(\\zero)$ pour tout $\\lambda$.\n\\end{exemple}",
+    "equations": "Voir content_tex : équations affichées en contexte.",
+    "example": "Exemple conceptuel distinct du TD quand présent dans content_tex.",
+    "activity": "Question orale : quelles hypothèses autorisent la conclusion de cette diapositive ?",
+    "speaker_notes": "Résultat admis sans preuve ; expliciter les hypothèses avant la conclusion.",
+    "estimated_minutes": null
+  },
+  {
+    "id": "OP33",
+    "title": "Les directions tangentes aux égalités",
+    "prerequisites": [
+      "prérequis Analyse I-II et algèbre",
+      "OP32",
+      "OP11"
+    ],
+    "source_pdf_pages": [
+      60,
+      61,
+      62,
+      63
+    ],
+    "scope": "socle",
+    "objective": "Comprendre et savoir utiliser : les directions tangentes aux égalités",
+    "central_idea": "Les directions tangentes aux égalités",
+    "content_tex": "Pour $A=\\{\\vec x:F(\\vec x)=\\zero\\}$, avec $F:U\\subset\\Rn n\\to\\Rn m$ de classe $C^1$ sur un ouvert et $\\operatorname{rang}J_F(\\vec a)=m$ :\n\\begin{notion}{Espace tangent}\n\\[T_{\\vec a}A=\\ker J_F(\\vec a)=\\{\\vec h:J_F(\\vec a)\\vec h=\\zero\\}.\\]\n\\end{notion}\n\\begin{resultat}{Une seule égalité régulière}\n\\[T_{\\vec a}A=\\{\\vec h:\\ps{\\grad F(\\vec a)}{\\vec h}=0\\}.\\]\nLe gradient de la contrainte est normal à l’espace tangent.\n\\end{resultat}",
+    "equations": "Voir content_tex : équations affichées en contexte.",
+    "example": "Exemple conceptuel distinct du TD quand présent dans content_tex.",
+    "activity": "Question orale : quelles hypothèses autorisent la conclusion de cette diapositive ?",
+    "speaker_notes": "Résultat admis sans preuve ; expliciter les hypothèses avant la conclusion.",
+    "estimated_minutes": null
+  },
+  {
+    "id": "OP34",
+    "title": "Définir le Lagrangien : le signe compte",
+    "prerequisites": [
+      "prérequis Analyse I-II et algèbre",
+      "OP30"
+    ],
+    "source_pdf_pages": [
+      65
+    ],
+    "scope": "socle",
+    "objective": "Comprendre et savoir utiliser : définir le lagrangien : le signe compte",
+    "central_idea": "Définir le Lagrangien : le signe compte",
+    "content_tex": "\\begin{notion}{Convention du cours — égalités}\nPour $F:U\\to\\Rn m$, on pose\n\\[L(\\vec x,\\vec\\lambda)=f(\\vec x)-\\ps{\\vec\\lambda}{F(\\vec x)},\\qquad\\vec\\lambda\\in\\Rn m.\\]\n\\end{notion}\n\\begin{resultat}{Stationnarité par rapport à $\\vec x$}\n\\[\\grad_{\\vec x}L=\\grad f-J_F^{\\,T}\\vec\\lambda.\\]\n\\end{resultat}\\vfill Les multiplicateurs d’égalité sont des réels sans restriction de signe.",
+    "equations": "Voir content_tex : équations affichées en contexte.",
+    "example": "Exemple conceptuel distinct du TD quand présent dans content_tex.",
+    "activity": "Question orale : quelles hypothèses autorisent la conclusion de cette diapositive ?",
+    "speaker_notes": "Résultat admis sans preuve ; expliciter les hypothèses avant la conclusion.",
+    "estimated_minutes": null
+  },
+  {
+    "id": "OP35",
+    "title": "Lagrange : obtenir des candidats",
+    "prerequisites": [
+      "prérequis Analyse I-II et algèbre",
+      "OP32",
+      "OP34"
+    ],
+    "source_pdf_pages": [
+      62,
+      65
+    ],
+    "scope": "socle",
+    "objective": "Comprendre et savoir utiliser : lagrange : obtenir des candidats",
+    "central_idea": "Lagrange : obtenir des candidats",
+    "content_tex": "\\begin{theoreme}{Une contrainte d’égalité}\nSoient $f,F:U\\to\\R$ de classe $C^1$ sur un ouvert $U$. Si $\\vec a$ est un extremum local sous $F=0$ et si $\\grad F(\\vec a)\\ne\\zero$, il existe $\\lambda\\in\\R$ tel que\n\\[\\begin{cases}\\grad f(\\vec a)-\\lambda\\grad F(\\vec a)=\\zero,\\\\F(\\vec a)=0.\\end{cases}\\]\n\\end{theoreme}\n\\begin{resultat}{Une condition nécessaire}\nRésoudre ce système fournit des candidats. Leur nature reste à justifier.\n\\end{resultat}",
+    "equations": "Voir content_tex : équations affichées en contexte.",
+    "example": "Exemple conceptuel distinct du TD quand présent dans content_tex.",
+    "activity": "Question orale : quelles hypothèses autorisent la conclusion de cette diapositive ?",
+    "speaker_notes": "Résultat admis sans preuve ; expliciter les hypothèses avant la conclusion.",
+    "estimated_minutes": null
+  },
+  {
+    "id": "OP36",
+    "title": "Plusieurs égalités : la même structure",
+    "prerequisites": [
+      "prérequis Analyse I-II et algèbre",
+      "OP35"
+    ],
+    "source_pdf_pages": [
+      62,
+      63,
+      65
+    ],
+    "scope": "socle",
+    "objective": "Comprendre et savoir utiliser : plusieurs égalités : la même structure",
+    "central_idea": "Plusieurs égalités : la même structure",
+    "content_tex": "\\begin{theoreme}{Contraintes indépendantes}\nSoient $f:U\\to\\R$ et $F:U\\to\\Rn m$ de classe $C^1$ sur un ouvert $U$.\nSi $\\vec a$ est un extremum local sous $F=\\zero$ et $\\operatorname{rang}J_F(\\vec a)=m$, alors il existe $\\vec\\lambda\\in\\Rn m$ tel que\n\\[\\grad f(\\vec a)=J_F(\\vec a)^T\\vec\\lambda,\\qquad F(\\vec a)=\\zero.\\]\n\\end{theoreme}\\vfill La condition de rang signifie que les gradients des $m$ contraintes sont linéairement indépendants.",
+    "equations": "Voir content_tex : équations affichées en contexte.",
+    "example": "Exemple conceptuel distinct du TD quand présent dans content_tex.",
+    "activity": "Question orale : quelles hypothèses autorisent la conclusion de cette diapositive ?",
+    "speaker_notes": "Résultat admis sans preuve ; expliciter les hypothèses avant la conclusion.",
+    "estimated_minutes": null
+  },
+  {
+    "id": "OP37",
+    "title": "Égalités affines et objectif convexe",
+    "prerequisites": [
+      "prérequis Analyse I-II et algèbre",
+      "OP25",
+      "OP36"
+    ],
+    "source_pdf_pages": [
+      69,
+      70
+    ],
+    "scope": "socle",
+    "objective": "Comprendre et savoir utiliser : égalités affines et objectif convexe",
+    "central_idea": "Égalités affines et objectif convexe",
+    "content_tex": "\\begin{theoreme}{Un candidat devient un minimum global}\nSur un ouvert convexe $U$, soit $f$ convexe différentiable et $F$ affine.\n\\medskip\\par Si $F(\\vec a)=\\zero$ et $\\grad f(\\vec a)=J_F^T\\vec\\lambda$, alors $\\vec a$ minimise $f$ sur $\\{\\vec x\\in U:F(\\vec x)=\\zero\\}$.\n\\end{theoreme}\n\\begin{resultat}{Unicité}\nSi $f$ est strictement convexe, ce minimiseur est unique.\n\\end{resultat}\\vfill La convexité fournit ici une conclusion globale, au-delà de Lagrange.",
+    "equations": "Voir content_tex : équations affichées en contexte.",
+    "example": "Exemple conceptuel distinct du TD quand présent dans content_tex.",
+    "activity": "Question orale : quelles hypothèses autorisent la conclusion de cette diapositive ?",
+    "speaker_notes": "Résultat admis sans preuve ; expliciter les hypothèses avant la conclusion.",
+    "estimated_minutes": null
+  },
+  {
+    "id": "OP38",
+    "title": "Lire géométriquement un multiplicateur",
+    "prerequisites": [
+      "prérequis Analyse I-II et algèbre",
+      "OP31",
+      "OP37"
+    ],
+    "source_pdf_pages": [
+      62,
+      65,
+      69,
+      70
+    ],
+    "scope": "socle",
+    "objective": "Comprendre et savoir utiliser : lire géométriquement un multiplicateur",
+    "central_idea": "Lire géométriquement un multiplicateur",
+    "content_tex": "\\begin{exemple}{Objectif et contrainte affine}\n$f(x,y)=x^2+y^2$,\\quad $F(x,y)=x+y-2$.\n\\end{exemple}\n\\[\\vec a=\\vcol{1\\\\1},\\qquad \\grad f(\\vec a)=\\vcol{2\\\\2}=2\\vcol{1\\\\1}=2\\grad F(\\vec a).\\]\n\\begin{resultat}{Conclusion et sens géométrique}\n$\\lambda=2$ avec la convention $L=f-\\lambda F$.\n\\par Le gradient de l’objectif est normal à la droite admissible.\n\\par La stricte convexité assure le minimum global unique.\n\\end{resultat}",
+    "equations": "Voir content_tex : équations affichées en contexte.",
+    "example": "Exemple conceptuel distinct du TD quand présent dans content_tex.",
+    "activity": "Question orale : quelles hypothèses autorisent la conclusion de cette diapositive ?",
+    "speaker_notes": "Résultat admis sans preuve ; expliciter les hypothèses avant la conclusion.",
+    "estimated_minutes": null
+  },
+  {
+    "id": "OP39",
+    "title": "Un candidat de Lagrange peut être un maximum",
+    "prerequisites": [
+      "prérequis Analyse I-II et algèbre",
+      "OP35"
+    ],
+    "source_pdf_pages": [
+      62,
+      65,
+      66
+    ],
+    "scope": "socle",
+    "objective": "Comprendre et savoir utiliser : un candidat de lagrange peut être un maximum",
+    "central_idea": "Un candidat de Lagrange peut être un maximum",
+    "content_tex": "\\begin{exemple}{Sur le cercle unité}\nMinimiser $f(x,y)=x$ sous $F(x,y)=x^2+y^2-1=0$.\n\\[\\vcol{1\\\\0}=\\lambda\\vcol{2x\\\\2y},\\qquad x^2+y^2=1.\\]\n\\end{exemple}\n\\begin{cours}{Deux candidats, deux natures}\n$\\vcol{-1\\\\0}$ : minimum global, de valeur $-1$.\n\\smallskip\\par $\\vcol{1\\\\0}$ : maximum global, de valeur $1$.\n\\end{cours}La borne $-1\\le x\\le1$ permet de conclure.",
+    "equations": "Voir content_tex : équations affichées en contexte.",
+    "example": "Exemple conceptuel distinct du TD quand présent dans content_tex.",
+    "activity": "Question orale : quelles hypothèses autorisent la conclusion de cette diapositive ?",
+    "speaker_notes": "Résultat admis sans preuve ; expliciter les hypothèses avant la conclusion.",
+    "estimated_minutes": null
+  },
+  {
+    "id": "OP40",
+    "title": "Inégalités : actives ou inactives ?",
+    "prerequisites": [
+      "prérequis Analyse I-II et algèbre",
+      "OP30"
+    ],
+    "source_pdf_pages": [
+      71
+    ],
+    "scope": "socle",
+    "objective": "Comprendre et savoir utiliser : inégalités : actives ou inactives ?",
+    "central_idea": "Inégalités : actives ou inactives ?",
+    "content_tex": "\\begin{notion}{Au point admissible $\\vec a$}\nLa contrainte $g_j\\le0$ est \\textbf{active} si $g_j(\\vec a)=0$.\n\\medskip\\par Elle est \\textbf{inactive} si $g_j(\\vec a)<0$.\n\\end{notion}\n\\[I(\\vec a)=\\{j:g_j(\\vec a)=0\\}.\\]\n\\begin{resultat}{Rôle local}\nUne contrainte inactive, continue, reste satisfaite dans un voisinage assez petit du point.\n\\end{resultat}",
+    "equations": "Voir content_tex : équations affichées en contexte.",
+    "example": "Exemple conceptuel distinct du TD quand présent dans content_tex.",
+    "activity": "Question orale : quelles hypothèses autorisent la conclusion de cette diapositive ?",
+    "speaker_notes": "Résultat admis sans preuve ; expliciter les hypothèses avant la conclusion.",
+    "estimated_minutes": null
+  },
+  {
+    "id": "OP41",
+    "title": "Complémentarité : un lien à sens unique",
+    "prerequisites": [
+      "prérequis Analyse I-II et algèbre",
+      "OP40"
+    ],
+    "source_pdf_pages": [
+      73
+    ],
+    "scope": "socle",
+    "objective": "Comprendre et savoir utiliser : complémentarité : un lien à sens unique",
+    "central_idea": "Complémentarité : un lien à sens unique",
+    "content_tex": "Pour $g_j(\\vec a)\\le0$ et $\\mu_j\\ge0$, la condition\n\\[\\mu_jg_j(\\vec a)=0\\]\nexprime la complémentarité.\n\\begin{cours}{Conséquences}\nContrainte inactive $\\Longrightarrow\\mu_j=0$.\n\\medskip\\par $\\mu_j>0\\Longrightarrow$ contrainte active.\n\\end{cours}\n\\begin{exemple}{Active avec multiplicateur nul}\n$f(x,y)=x^2+y^2$ sous $x\\le0$ : au minimum $\\zero$, la contrainte est active et $\\mu=0$ convient.\n\\end{exemple}",
+    "equations": "Voir content_tex : équations affichées en contexte.",
+    "example": "Exemple conceptuel distinct du TD quand présent dans content_tex.",
+    "activity": "Question orale : quelles hypothèses autorisent la conclusion de cette diapositive ?",
+    "speaker_notes": "Résultat admis sans preuve ; expliciter les hypothèses avant la conclusion.",
+    "estimated_minutes": null
+  },
+  {
+    "id": "OP42",
+    "title": "Le Lagrangien avec égalités et inégalités",
+    "prerequisites": [
+      "prérequis Analyse I-II et algèbre",
+      "OP34",
+      "OP40",
+      "OP41"
+    ],
+    "source_pdf_pages": [
+      73,
+      74
+    ],
+    "scope": "socle",
+    "objective": "Comprendre et savoir utiliser : le lagrangien avec égalités et inégalités",
+    "central_idea": "Le Lagrangien avec égalités et inégalités",
+    "content_tex": "On minimise $f$ sous $F=\\zero$ et $g_j\\le0$.\n\\begin{notion}{Convention complète}\n\\[L(\\vec x,\\vec\\lambda,\\vec\\mu)=f(\\vec x)-\\ps{\\vec\\lambda}{F(\\vec x)}+\\sum_{j=1}^p\\mu_jg_j(\\vec x).\\]\n\\end{notion}\n\\begin{cours}{Garder les signes cohérents}\nÉgalités : signe \\textbf{moins}, $\\lambda_i\\in\\R$.\n\\medskip\\par Inégalités $g_j\\le0$ : signe \\textbf{plus}, $\\mu_j\\ge0$.\n\\end{cours}\\vfill Une inégalité écrite dans l’autre sens doit d’abord être reformulée.",
+    "equations": "Voir content_tex : équations affichées en contexte.",
+    "example": "Exemple conceptuel distinct du TD quand présent dans content_tex.",
+    "activity": "Question orale : quelles hypothèses autorisent la conclusion de cette diapositive ?",
+    "speaker_notes": "Résultat admis sans preuve ; expliciter les hypothèses avant la conclusion.",
+    "estimated_minutes": null
+  },
+  {
+    "id": "OP43",
+    "title": "Qualifier les contraintes : l’hypothèse LICQ",
+    "prerequisites": [
+      "prérequis Analyse I-II et algèbre",
+      "OP40",
+      "OP36"
+    ],
+    "source_pdf_pages": [
+      71
+    ],
+    "scope": "socle",
+    "objective": "Comprendre et savoir utiliser : qualifier les contraintes : l’hypothèse licq",
+    "central_idea": "Qualifier les contraintes : l’hypothèse LICQ",
+    "content_tex": "\\begin{notion}{Indépendance au point admissible $\\vec a$}\nLa famille formée des gradients\n\\[\\grad F_i(\\vec a)\\ (1\\le i\\le m),\\qquad\\grad g_j(\\vec a)\\ (j\\in I(\\vec a))\\]\nest linéairement indépendante.\n\\end{notion}\n\\begin{resultat}{Quelles contraintes examiner ?}\nToutes les égalités et seulement les inégalités actives.\n\\end{resultat}\\vfill Cette qualification permet d’énoncer une condition nécessaire simple.",
+    "equations": "Voir content_tex : équations affichées en contexte.",
+    "example": "Exemple conceptuel distinct du TD quand présent dans content_tex.",
+    "activity": "Question orale : quelles hypothèses autorisent la conclusion de cette diapositive ?",
+    "speaker_notes": "Résultat admis sans preuve ; expliciter les hypothèses avant la conclusion.",
+    "estimated_minutes": null
+  },
+  {
+    "id": "OP44",
+    "title": "Le théorème KKT : une condition nécessaire",
+    "prerequisites": [
+      "prérequis Analyse I-II et algèbre",
+      "OP42",
+      "OP43"
+    ],
+    "source_pdf_pages": [
+      71,
+      72
+    ],
+    "scope": "socle",
+    "objective": "Comprendre et savoir utiliser : le théorème kkt : une condition nécessaire",
+    "central_idea": "Le théorème KKT : une condition nécessaire",
+    "content_tex": "\\begin{theoreme}{Karush–Kuhn–Tucker}\nSupposons $f$, les $F_i$ et les $g_j$ de classe $C^1$ sur l’ouvert $U$.\n\\medskip\\par Si $\\vec a$ est un minimum local admissible et si la qualification LICQ est satisfaite en $\\vec a$, alors il existe $\\vec\\lambda\\in\\Rn m$ et $\\vec\\mu\\in\\R^p$ satisfaisant les conditions KKT.\n\\end{theoreme}\n\\begin{resultat}{Portée du théorème}\nSous ces hypothèses, tout minimum local est parmi les candidats KKT.\n\\end{resultat}\\vfill Sans convexité, un candidat KKT n’est pas forcément un minimum.",
+    "equations": "Voir content_tex : équations affichées en contexte.",
+    "example": "Exemple conceptuel distinct du TD quand présent dans content_tex.",
+    "activity": "Question orale : quelles hypothèses autorisent la conclusion de cette diapositive ?",
+    "speaker_notes": "Résultat admis sans preuve ; expliciter les hypothèses avant la conclusion.",
+    "estimated_minutes": null
+  },
+  {
+    "id": "OP45",
+    "title": "Les quatre conditions KKT",
+    "prerequisites": [
+      "prérequis Analyse I-II et algèbre",
+      "OP44"
+    ],
+    "source_pdf_pages": [
+      71,
+      74
+    ],
+    "scope": "socle",
+    "objective": "Comprendre et savoir utiliser : les quatre conditions kkt",
+    "central_idea": "Les quatre conditions KKT",
+    "content_tex": "\\begin{cours}{À vérifier séparément}\n\\textbf{Stationnarité}\n\\[\\grad f(\\vec a)-J_F(\\vec a)^T\\vec\\lambda+\\sum_j\\mu_j\\grad g_j(\\vec a)=\\zero.\\]\n\\textbf{Admissibilité}\\quad $F(\\vec a)=\\zero$,\\quad $g_j(\\vec a)\\le0$.\n\\medskip\\par\\textbf{Signe des multiplicateurs}\\quad $\\mu_j\\ge0$.\n\\medskip\\par\\textbf{Complémentarité}\\quad $\\mu_jg_j(\\vec a)=0$.\n\\end{cours}\\vfill Les multiplicateurs $\\lambda_i$ restent sans restriction de signe.",
+    "equations": "Voir content_tex : équations affichées en contexte.",
+    "example": "Exemple conceptuel distinct du TD quand présent dans content_tex.",
+    "activity": "Question orale : quelles hypothèses autorisent la conclusion de cette diapositive ?",
+    "speaker_notes": "Résultat admis sans preuve ; expliciter les hypothèses avant la conclusion.",
+    "estimated_minutes": null
+  },
+  {
+    "id": "OP46",
+    "title": "Une contrainte active arrête la descente",
+    "prerequisites": [
+      "prérequis Analyse I-II et algèbre",
+      "OP45"
+    ],
+    "source_pdf_pages": [
+      73,
+      74,
+      75
+    ],
+    "scope": "socle",
+    "objective": "Comprendre et savoir utiliser : une contrainte active arrête la descente",
+    "central_idea": "Une contrainte active arrête la descente",
+    "content_tex": "\\begin{exemple}{Un minimum sur une frontière}\n$f(x,y)=(x-2)^2+y^2$,\\quad $g(x,y)=x\\le0$.\n\\par À $\\vec a=\\zero$, la contrainte est active.\n\\[\\grad f(\\vec a)+\\mu\\grad g(\\vec a)=\\vcol{-4\\\\0}+\\mu\\vcol{1\\\\0}=\\zero\\quad\\Longrightarrow\\quad\\mu=4.\\]\n\\end{exemple}\n\\begin{resultat}{Sens du signe}\nLa direction de descente vers les $x>0$ est interdite.\n\\par Sur $x\\le0$, $(x-2)^2+y^2\\ge4=f(\\zero)$ : le minimum est global.\n\\end{resultat}",
+    "equations": "Voir content_tex : équations affichées en contexte.",
+    "example": "Exemple conceptuel distinct du TD quand présent dans content_tex.",
+    "activity": "Question orale : quelles hypothèses autorisent la conclusion de cette diapositive ?",
+    "speaker_notes": "Résultat admis sans preuve ; expliciter les hypothèses avant la conclusion.",
+    "estimated_minutes": null
+  },
+  {
+    "id": "OP47",
+    "title": "Une contrainte inactive ne change rien ici",
+    "prerequisites": [
+      "prérequis Analyse I-II et algèbre",
+      "OP45"
+    ],
+    "source_pdf_pages": [
+      73,
+      74,
+      75
+    ],
+    "scope": "socle",
+    "objective": "Comprendre et savoir utiliser : une contrainte inactive ne change rien ici",
+    "central_idea": "Une contrainte inactive ne change rien ici",
+    "content_tex": "\\begin{exemple}{Un minimum à l’intérieur de la région autorisée}\n$f(x,y)=(x+1)^2+y^2$,\\quad $g(x,y)=x-1\\le0$.\n\\[\\vec a=\\vcol{-1\\\\0},\\qquad g(\\vec a)=-2<0.\\]\n\\end{exemple}\n\\begin{resultat}{Conséquences}\nLa complémentarité impose $\\mu=0$.\n\\par La stationnarité devient $\\grad f(\\vec a)=\\zero$.\n\\par La somme de carrés donne un minimum global unique, admissible.\n\\end{resultat}",
+    "equations": "Voir content_tex : équations affichées en contexte.",
+    "example": "Exemple conceptuel distinct du TD quand présent dans content_tex.",
+    "activity": "Question orale : quelles hypothèses autorisent la conclusion de cette diapositive ?",
+    "speaker_notes": "Résultat admis sans preuve ; expliciter les hypothèses avant la conclusion.",
+    "estimated_minutes": null
+  },
+  {
+    "id": "OP48",
+    "title": "En problème convexe : KKT suffit",
+    "prerequisites": [
+      "prérequis Analyse I-II et algèbre",
+      "OP25",
+      "OP45"
+    ],
+    "source_pdf_pages": [
+      74,
+      75
+    ],
+    "scope": "socle",
+    "objective": "Comprendre et savoir utiliser : en problème convexe : kkt suffit",
+    "central_idea": "En problème convexe : KKT suffit",
+    "content_tex": "\\begin{theoreme}{Optimalité globale}\nSur un ouvert convexe $U$, supposons $f$ et les $g_j$ convexes différentiables, et $F$ affine.\n\\medskip\\par Tout point admissible satisfaisant les quatre conditions KKT est un minimiseur global.\n\\medskip\\par Si $f$ est strictement convexe, ce minimiseur est unique.\n\\end{theoreme}\n\\begin{resultat}{Hypothèses à distinguer}\nCette suffisance ne demande pas LICQ. La qualification sert au théorème de nécessité précédent.\n\\end{resultat}",
+    "equations": "Voir content_tex : équations affichées en contexte.",
+    "example": "Exemple conceptuel distinct du TD quand présent dans content_tex.",
+    "activity": "Question orale : quelles hypothèses autorisent la conclusion de cette diapositive ?",
+    "speaker_notes": "Résultat admis sans preuve ; expliciter les hypothèses avant la conclusion.",
+    "estimated_minutes": null
+  },
+  {
+    "id": "OP49",
+    "title": "Avec inégalités : organiser les cas",
+    "prerequisites": [
+      "prérequis Analyse I-II et algèbre",
+      "OP43",
+      "OP45",
+      "OP48"
+    ],
+    "source_pdf_pages": [
+      76
+    ],
+    "scope": "socle",
+    "objective": "Comprendre et savoir utiliser : avec inégalités : organiser les cas",
+    "central_idea": "Avec inégalités : organiser les cas",
+    "content_tex": "\\begin{cours}{Une méthode de résolution}\n\\textbf{1. Préparer}\\quad Écrire toutes les inégalités sous la forme $g_j\\le0$.\n\\medskip\\par\\textbf{2. Séparer}\\quad Envisager les ensembles de contraintes actives.\n\\medskip\\par\\textbf{3. Calculer}\\quad Poser $\\mu_j=0$ pour les inactives et résoudre la stationnarité.\n\\medskip\\par\\textbf{4. Filtrer}\\quad Vérifier admissibilité, signes et complémentarité.\n\\medskip\\par\\textbf{5. Conclure}\\quad Utiliser la convexité ou un autre argument adapté.\n\\end{cours}\\vfill Pour que ces candidats couvrent tous les minima, vérifier les hypothèses du théorème de nécessité.",
+    "equations": "Voir content_tex : équations affichées en contexte.",
+    "example": "Exemple conceptuel distinct du TD quand présent dans content_tex.",
+    "activity": "Question orale : quelles hypothèses autorisent la conclusion de cette diapositive ?",
+    "speaker_notes": "Résultat admis sans preuve ; expliciter les hypothèses avant la conclusion.",
+    "estimated_minutes": null
+  },
+  {
+    "id": "OP50",
+    "title": "Trois cadres, trois conditions de stationnarité",
+    "prerequisites": [
+      "prérequis Analyse I-II et algèbre",
+      "OP17",
+      "OP36",
+      "OP45"
+    ],
+    "source_pdf_pages": [
+      37,
+      65,
+      71,
+      74
+    ],
+    "scope": "socle",
+    "objective": "Comprendre et savoir utiliser : trois cadres, trois conditions de stationnarité",
+    "central_idea": "Trois cadres, trois conditions de stationnarité",
+    "content_tex": "\\setlength{\\abovedisplayskip}{3pt}\\setlength{\\belowdisplayskip}{3pt}\\begin{cours}{Sans contrainte — point intérieur}\n\\[\\grad f(\\vec a)=\\zero.\\]\n\\end{cours}\n\\begin{cours}{Égalités régulières}\n\\[\\grad f(\\vec a)-J_F(\\vec a)^T\\vec\\lambda=\\zero.\\]\n\\end{cours}\n\\begin{cours}{Égalités et inégalités — qualification LICQ}\n\\[\\grad f(\\vec a)-J_F(\\vec a)^T\\vec\\lambda+\\sum_j\\mu_j\\grad g_j(\\vec a)=\\zero.\\]\nAdmissibilité, $\\mu_j\\ge0$ et complémentarité complètent KKT.\n\\end{cours}",
+    "equations": "Voir content_tex : équations affichées en contexte.",
+    "example": "Exemple conceptuel distinct du TD quand présent dans content_tex.",
+    "activity": "Question orale : quelles hypothèses autorisent la conclusion de cette diapositive ?",
+    "speaker_notes": "Résultat admis sans preuve ; expliciter les hypothèses avant la conclusion.",
+    "estimated_minutes": null
+  },
+  {
+    "id": "OP51",
+    "title": "Complément — dérivée implicite par un système",
+    "prerequisites": [
+      "prérequis Analyse I-II et algèbre",
+      "OP12"
+    ],
+    "source_pdf_pages": [
+      12,
+      13
+    ],
+    "scope": "complément",
+    "objective": "Comprendre et savoir utiliser : complément — dérivée implicite par un système",
+    "central_idea": "Complément — dérivée implicite par un système",
+    "content_tex": "\\repere{COMPLÉMENT 1/4 · Calcul matriciel}\nAu point solution, poser $A=J_{\\vec x}F(\\vec a,\\vec b)$ et $B=J_{\\vec y}F(\\vec a,\\vec b)$, avec $B$ inversible.\n\\begin{resultat}{Éviter de calculer explicitement $B^{-1}$}\n\\[B\\,J_g(\\vec a)=-A.\\]\n\\end{resultat}\n\\begin{cours}{Colonne par colonne}\nLa colonne $k$ de $J_g(\\vec a)$ est la solution du système dont le second membre est l’opposé de la colonne $k$ de $A$.\n\\end{cours}\\vfill Le pivot de Gauss permet de traiter les seconds membres simultanément.",
+    "equations": "Voir content_tex : équations affichées en contexte.",
+    "example": "Exemple conceptuel distinct du TD quand présent dans content_tex.",
+    "activity": "Question orale : quelles hypothèses autorisent la conclusion de cette diapositive ?",
+    "speaker_notes": "Résultat admis sans preuve ; expliciter les hypothèses avant la conclusion.",
+    "estimated_minutes": null
+  },
+  {
+    "id": "OP52",
+    "title": "Complément — le second ordre sur la tangente",
+    "prerequisites": [
+      "prérequis Analyse I-II et algèbre",
+      "OP33",
+      "OP36",
+      "OP20"
+    ],
+    "source_pdf_pages": [
+      67,
+      68,
+      69
+    ],
+    "scope": "complément",
+    "objective": "Comprendre et savoir utiliser : complément — le second ordre sur la tangente",
+    "central_idea": "Complément — le second ordre sur la tangente",
+    "content_tex": "\\repere{COMPLÉMENT 2/4 · Contraintes d’égalité}\n$f,F_i$ sont $C^2$ ; $\\vec a$ est admissible régulier et stationnaire pour $L=f-\\sum_i\\lambda_iF_i$.\n\\begin{resultat}{La bonne Hessienne et les bonnes directions}\n\\[H_{\\vec x}L=H_f-\\sum_i\\lambda_iH_{F_i},\\qquad\\vec h\\in T_{\\vec a}A.\\]\n\\end{resultat}\n\\begin{cours}{Minimum sous égalités}\nNécessaire : $\\vec h^{\\,T}H_{\\vec x}L\\vec h\\ge0$ sur $T_{\\vec a}A$.\n\\medskip\\par Suffisant pour un minimum local strict : cette quantité est $>0$ pour tout $\\vec h\\ne\\zero$ de $T_{\\vec a}A$.\n\\end{cours}",
+    "equations": "Voir content_tex : équations affichées en contexte.",
+    "example": "Exemple conceptuel distinct du TD quand présent dans content_tex.",
+    "activity": "Question orale : quelles hypothèses autorisent la conclusion de cette diapositive ?",
+    "speaker_notes": "Résultat admis sans preuve ; expliciter les hypothèses avant la conclusion.",
+    "estimated_minutes": null
+  },
+  {
+    "id": "OP53",
+    "title": "Complément — un problème quadratique",
+    "prerequisites": [
+      "prérequis Analyse I-II et algèbre",
+      "OP36",
+      "OP37"
+    ],
+    "source_pdf_pages": [
+      66,
+      67,
+      69,
+      70
+    ],
+    "scope": "complément",
+    "objective": "Comprendre et savoir utiliser : complément — un problème quadratique",
+    "central_idea": "Complément — un problème quadratique",
+    "content_tex": "\\repere{COMPLÉMENT 3/4 · Un système linéaire structuré}\n\\[q(\\vec x)=\\tfrac12\\vec x^{\\,T}Q\\vec x+\\vec c^{\\,T}\\vec x,\\qquad Q=Q^T,\\qquad A\\vec x=\\vec b.\\]\n\\begin{resultat}{Stationnarité et admissibilité}\n\\[\\begin{pmatrix}Q&-A^T\\\\A&0\\end{pmatrix}\\vcol{\\vec x\\\\\\vec\\lambda}=\\vcol{-\\vec c\\\\\\vec b}.\\]\n\\end{resultat}\n\\vfill Si $Q$ est définie positive et $A$ de rang plein en lignes, le système admet une unique solution et son point $\\vec x$ est le minimiseur global unique.",
+    "equations": "Voir content_tex : équations affichées en contexte.",
+    "example": "Exemple conceptuel distinct du TD quand présent dans content_tex.",
+    "activity": "Question orale : quelles hypothèses autorisent la conclusion de cette diapositive ?",
+    "speaker_notes": "Résultat admis sans preuve ; expliciter les hypothèses avant la conclusion.",
+    "estimated_minutes": null
+  },
+  {
+    "id": "OP54",
+    "title": "Complément — une borne quantitative",
+    "prerequisites": [
+      "prérequis Analyse I-II et algèbre",
+      "OP25",
+      "OP26"
+    ],
+    "source_pdf_pages": [
+      44,
+      45
+    ],
+    "scope": "complément",
+    "objective": "Comprendre et savoir utiliser : complément — une borne quantitative",
+    "central_idea": "Complément — une borne quantitative",
+    "content_tex": "\\repere{COMPLÉMENT 4/4 · Forte convexité}\n\\begin{notion}{Forte convexité de paramètre $\\mu>0$}\nPour $f$ différentiable sur un ouvert convexe, pour tous $\\vec x,\\vec y$,\n\\[f(\\vec y)\\ge f(\\vec x)+\\ps{\\grad f(\\vec x)}{\\vec y-\\vec x}+\\tfrac\\mu2\\norm{\\vec y-\\vec x}^2.\\]\n\\end{notion}\n\\begin{resultat}{Si un point critique $\\vec a$ existe}\n\\[f(\\vec x)-f(\\vec a)\\ge\\tfrac\\mu2\\norm{\\vec x-\\vec a}^2.\\]\nIl est le minimiseur global unique ; la borne mesure l’écart à la valeur optimale.\n\\end{resultat}",
+    "equations": "Voir content_tex : équations affichées en contexte.",
+    "example": "Exemple conceptuel distinct du TD quand présent dans content_tex.",
+    "activity": "Question orale : quelles hypothèses autorisent la conclusion de cette diapositive ?",
+    "speaker_notes": "Résultat admis sans preuve ; expliciter les hypothèses avant la conclusion.",
+    "estimated_minutes": null
+  }
+]

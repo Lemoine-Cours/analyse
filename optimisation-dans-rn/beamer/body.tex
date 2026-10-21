@@ -1,0 +1,755 @@
+%% OP01
+\begin{frame}[t]{Optimiser : trois questions}
+\coursanalyse
+\begin{cours}{Une démarche, trois étapes}
+\textbf{Trouver des candidats}\par Résoudre des équations issues des dérivées.
+\medskip\par\textbf{Comprendre leur nature}\par Minimum, maximum ou point selle ?
+\medskip\par\textbf{Justifier la conclusion}\par Distinguer existence, optimalité locale et optimalité globale.
+\end{cours}\vfill Les contraintes modifieront les directions dans lesquelles on peut se déplacer.
+\note{Source : cours original, pages PDF 35, 59. Résultats admis sans preuve. Exemples de compréhension distincts du TD de base.}
+\end{frame}
+
+%% OP02
+\begin{frame}[t]{Le modèle linéaire prépare le calcul}
+\coursanalyse
+Soit $f:U\subset\Rn n\to\Rn n$ différentiable en $\vec a$.
+\begin{notion}{Au voisinage de $\vec a$}
+\[f(\vec a+\vec h)=f(\vec a)+\df f{\vec a}(\vec h)+o(\norm{\vec h}).\]
+\end{notion}
+\begin{resultat}{L’idée}
+Pour résoudre localement $f(\vec x)=\vec y$, commencer par examiner le modèle linéaire de $f$.
+\end{resultat}\vfill Un modèle linéaire inversible suggère une résolution locale unique.
+\note{Source : cours original, pages PDF 3, 5. Résultats admis sans preuve. Exemples de compréhension distincts du TD de base.}
+\end{frame}
+
+%% OP03
+\begin{frame}[t]{Une inverse peut être seulement locale}
+\coursanalyse
+\begin{notion}{Inversibilité locale en $\vec a$}
+Il existe des voisinages ouverts $V$ de $\vec a$ et $W$ de $f(\vec a)$ tels que $f_{|V}:V\to W$ soit bijective.
+\end{notion}
+\[\vec x\in V,\quad \vec y\in W,\qquad f(\vec x)=\vec y\ \Longleftrightarrow\ \vec x=(f_{|V})^{-1}(\vec y).\]
+\vfill\begin{resultat}{Deux restrictions essentielles}
+L’unicité concerne $V$ ; les valeurs visées appartiennent à $W$.
+\end{resultat}
+\note{Source : cours original, pages PDF 3, 5. Résultats admis sans preuve. Exemples de compréhension distincts du TD de base.}
+\end{frame}
+
+%% OP04
+\begin{frame}[t]{Un changement de variables régulier}
+\coursanalyse
+\begin{notion}{Difféomorphisme de classe $C^1$}
+Une application bijective entre deux ouverts est un $C^1$-difféomorphisme si elle est de classe $C^1$ et si son inverse est aussi de classe $C^1$.
+\end{notion}
+\vfill\begin{cours}{Pourquoi demander les deux régularités ?}
+On peut calculer les dérivées dans les deux sens du changement de variables.
+\end{cours}
+\note{Source : cours original, pages PDF 3, 5. Résultats admis sans preuve. Exemples de compréhension distincts du TD de base.}
+\end{frame}
+
+%% OP05
+\begin{frame}[t]{Le théorème d’inversion locale}
+\coursanalyse
+\begin{theoreme}{Un critère au point considéré}
+Soit $U\subset\Rn n$ ouvert, $f:U\to\Rn n$ de classe $C^1$ et $\vec a\in U$.
+\medskip\par Si $J_f(\vec a)$ est inversible, alors $f$ induit un $C^1$-difféomorphisme entre des voisinages de $\vec a$ et de $f(\vec a)$.
+\end{theoreme}
+\vfill\begin{resultat}{À vérifier avant de conclure}
+Même dimension au départ et à l’arrivée ; régularité $C^1$ ; Jacobienne inversible au point.
+\end{resultat}
+\note{Source : cours original, pages PDF 5. Résultats admis sans preuve. Exemples de compréhension distincts du TD de base.}
+\end{frame}
+
+%% OP06
+\begin{frame}[t]{Dériver l’inverse : au bon point}
+\coursanalyse
+On note $g=(f_{|V})^{-1}$ et $\vec b=f(\vec a)$.
+\begin{resultat}{Formule}
+\[J_g(\vec b)=\bigl[J_f(\vec a)\bigr]^{-1}.\]
+\end{resultat}
+\[g\circ f=\operatorname{Id}_V,\qquad J_g(f(\vec a))\,J_f(\vec a)=I_n.\]
+\vfill\begin{cours}{Attention aux points d’évaluation}
+La dérivée de l’inverse se calcule en $\vec b=f(\vec a)$, et non automatiquement en $\vec a$.
+\end{cours}
+\note{Source : cours original, pages PDF 5, 6. Résultats admis sans preuve. Exemples de compréhension distincts du TD de base.}
+\end{frame}
+
+%% OP07
+\begin{frame}[t]{Une inverse locale sans formule explicite}
+\coursanalyse
+\begin{exemple}{Une application non linéaire}
+\[f\!\left(\vcol{x\\y}\right)=\vcol{2x+y\\x+y+y^2},\qquad \vec a=\vcol{0\\0}.\]
+\end{exemple}
+\[J_f(\zero)=\begin{pmatrix}2&1\\1&1\end{pmatrix},\qquad\det J_f(\zero)=1.\]
+\begin{resultat}{Conclusion locale}
+L’inverse existe au voisinage de $\zero$ et
+\[J_{f^{-1}}(\zero)=\begin{pmatrix}1&-1\\-1&2\end{pmatrix}.\]
+\end{resultat}
+\note{Source : cours original, pages PDF 5, 6. Résultats admis sans preuve. Exemples de compréhension distincts du TD de base.}
+\end{frame}
+
+%% OP08
+\begin{frame}[t]{Local ne signifie pas global}
+\coursanalyse
+\begin{exemple}{La fonction sinus}
+$\sin'(0)=1$ : une inverse existe près de $0$.
+\medskip\par Mais $\sin(0)=\sin(2\pi)$ : le sinus n’est pas injectif sur $\R$.
+\end{exemple}
+\begin{center}\begin{tikzpicture}[x=.85cm,y=.7cm]
+\draw[axes](-3.5,0)--(7,0)node[right]{$t$};\draw[axes](0,-1.4)--(0,1.5);
+\draw[courb,domain=-3.2:6.6,samples=100]plot(\x,{sin(\x r)});
+\draw[IMTOrange,line width=2pt,domain=-.65:.65]plot(\x,{sin(\x r)});
+\fill[IMTOrange](0,0)circle(2pt);\fill[IMTNavy](6.283,0)circle(2pt);
+\node[below]at(6.283,0){$2\pi$};\node[above right]at(.7,.9){\small branche locale};
+\end{tikzpicture}\end{center}
+\note{Source : cours original, pages PDF 5, 6. Résultats admis sans preuve. Exemples de compréhension distincts du TD de base.}
+\end{frame}
+
+%% OP09
+\begin{frame}[t]{Définir une fonction par une équation}
+\coursanalyse
+\begin{notion}{Une relation implicite}
+Une équation $F(\vec x,\vec y)=\zero$ relie des variables libres $\vec x$ à des variables dépendantes $\vec y$.
+\end{notion}
+\begin{cours}{La question}
+Près d’une solution $(\vec a,\vec b)$, peut-on écrire une unique fonction
+\[\vec y=g(\vec x),\qquad g(\vec a)=\vec b\ ?\]
+\end{cours}\vfill Cette représentation est locale ; toute la relation n’est pas nécessairement un graphe.
+\note{Source : cours original, pages PDF 9, 11. Résultats admis sans preuve. Exemples de compréhension distincts du TD de base.}
+\end{frame}
+
+%% OP10
+\begin{frame}[t]{Séparer les deux blocs de variables}
+\coursanalyse
+Soit $F:U\subset\Rn n\times\Rn m\to\Rn m$ de classe $C^1$.
+\begin{cours}{Deux matrices aux rôles différents}
+\[J_{\vec x}F(\vec a,\vec b)\in\mathcal M_{m,n}(\R),\]
+\[J_{\vec y}F(\vec a,\vec b)\in\mathcal M_{m}(\R).\]
+\end{cours}
+\begin{resultat}{Le bloc décisif}
+Pour exprimer $\vec y$ en fonction de $\vec x$, on teste l’inversibilité du bloc $J_{\vec y}F$.
+\end{resultat}
+\note{Source : cours original, pages PDF 10, 11. Résultats admis sans preuve. Exemples de compréhension distincts du TD de base.}
+\end{frame}
+
+%% OP11
+\begin{frame}[t]{Le théorème des fonctions implicites}
+\coursanalyse
+\begin{theoreme}{Hypothèses et conclusion}
+$F$ est de classe $C^1$ sur un ouvert de $\Rn n\times\Rn m$.
+\medskip\par $F(\vec a,\vec b)=\zero$ et $J_{\vec y}F(\vec a,\vec b)$ est inversible.
+\medskip\par Alors, près de $(\vec a,\vec b)$, l’équation $F(\vec x,\vec y)=\zero$ équivaut à $\vec y=g(\vec x)$, pour une unique fonction locale $g$ de classe $C^1$ avec $g(\vec a)=\vec b$.
+\end{theoreme}
+\vfill\textbf{Ordre des vérifications :} point solution, régularité, bloc inversible.
+\note{Source : cours original, pages PDF 11. Résultats admis sans preuve. Exemples de compréhension distincts du TD de base.}
+\end{frame}
+
+%% OP12
+\begin{frame}[t]{La dérivée d’une fonction implicite}
+\coursanalyse
+\begin{resultat}{Formule matricielle}
+\[J_g(\vec a)=-\bigl[J_{\vec y}F(\vec a,\vec b)\bigr]^{-1}J_{\vec x}F(\vec a,\vec b).\]
+\end{resultat}
+\begin{exemple}{Une équation, deux variables réelles}
+Si $F(a,b)=0$ et $\partial_yF(a,b)\ne0$, alors
+\[g'(a)=-\frac{\partial_xF(a,b)}{\partial_yF(a,b)}.\]
+\end{exemple}\vfill La dérivée s’obtient sans isoler explicitement la fonction $g$.
+\note{Source : cours original, pages PDF 11, 12. Résultats admis sans preuve. Exemples de compréhension distincts du TD de base.}
+\end{frame}
+
+%% OP13
+\begin{frame}[t]{Une ellipse : choisir une branche}
+\coursanalyse
+\begin{columns}[T,onlytextwidth]\begin{column}{.48\textwidth}
+\begin{exemple}{Au point $\vec a=\vcol{2\\1}$}
+$F(x,y)=x^2+2y^2-6$.
+\par $F(2,1)=0$.
+\par $\partial_yF(2,1)=4\ne0$.
+\[g'(2)=-\frac44=-1.\]
+\end{exemple}
+La branche supérieure est localement un graphe.
+\end{column}\begin{column}{.48\textwidth}\begin{tikzpicture}[scale=.9]
+\draw[axes](-2.8,0)--(2.9,0)node[right]{$x$};\draw[axes](0,-2)--(0,2.3)node[above]{$y$};
+\draw[courb](0,0)ellipse(2.449 and 1.732);
+\draw[IMTOrange,line width=2pt,domain=1.3:2.3,samples=40]plot(\x,{sqrt((6-\x*\x)/2)});
+\draw[IMTGreen!65!black,line width=1pt](1.3,1.7)--(2.7,.3);
+\fill[IMTOrange](2,1)circle(2pt);\node[above right]at(2,1){$\vec a$};
+\node[below]at(1.5,-2){\small tangente de pente $-1$};
+\end{tikzpicture}\end{column}\end{columns}
+\note{Source : cours original, pages PDF 11, 12. Résultats admis sans preuve. Exemples de compréhension distincts du TD de base.}
+\end{frame}
+
+%% OP14
+\begin{frame}[t]{L’objectif et les points admissibles}
+\coursanalyse
+\begin{notion}{Un problème d’optimisation}
+Pour une fonction $f:U\subset\Rn n\to\R$ et un ensemble $A\subset U$, chercher
+\[\min_{\vec x\in A}f(\vec x).\]
+\end{notion}
+\begin{cours}{D’abord : sans contrainte}
+On commence par $A=U$, avec $U$ ouvert. Autour de chaque point, toutes les petites directions sont autorisées.
+\end{cours}\vfill Une valeur minimale est un réel ; un minimiseur est un point de $A$.
+\note{Source : cours original, pages PDF 35, 59. Résultats admis sans preuve. Exemples de compréhension distincts du TD de base.}
+\end{frame}
+
+%% OP15
+\begin{frame}[t]{Minimum local, minimum global}
+\coursanalyse
+\begin{notion}{Minimum global sur $A$}
+$\vec a\in A$ et $f(\vec a)\le f(\vec x)$ pour tout $\vec x\in A$.
+\end{notion}
+\begin{notion}{Minimum local sur $A$}
+$\vec a\in A$ et il existe $r>0$ tel que
+\[\vec x\in A,\ \norm{\vec x-\vec a}<r\quad\Longrightarrow\quad f(\vec a)\le f(\vec x).\]
+\end{notion}\vfill Pour un maximum, inverser les inégalités.
+\note{Source : cours original, pages PDF 35, 36. Résultats admis sans preuve. Exemples de compréhension distincts du TD de base.}
+\end{frame}
+
+%% OP16
+\begin{frame}[t]{Un minimum strict : isoler la valeur}
+\coursanalyse
+\begin{notion}{Minimum local strict}
+$\vec a\in A$ et il existe $r>0$ tel que
+\[\vec x\in A,\quad 0<\norm{\vec x-\vec a}<r\quad\Longrightarrow\quad f(\vec a)<f(\vec x).\]
+\end{notion}
+\begin{exemple}{Deux comportements}
+$f(t)=t^2$ a un minimum global strict en $0$.
+\medskip\par Une fonction constante a un minimum en chaque point, sans minimum strict sur $\R$.
+\end{exemple}\vfill Un critère d’unicité ne garantit pas à lui seul l’existence d’un minimiseur.
+\note{Source : cours original, pages PDF 36. Résultats admis sans preuve. Exemples de compréhension distincts du TD de base.}
+\end{frame}
+
+%% OP17
+\begin{frame}[t]{Au premier ordre : les points critiques}
+\coursanalyse
+\begin{theoreme}{Fermat — condition nécessaire}
+Si $f$ est différentiable sur l’ouvert $U$ et admet un extremum local en $\vec a\in U$, alors
+\[\grad f(\vec a)=\zero.\]
+\end{theoreme}
+\begin{notion}{Point critique}
+Un point où $\grad f$ s’annule.
+\end{notion}\vfill Tout extremum intérieur différentiable est critique ; tout point critique n’est pas un extremum.
+\note{Source : cours original, pages PDF 36, 37. Résultats admis sans preuve. Exemples de compréhension distincts du TD de base.}
+\end{frame}
+
+%% OP18
+\begin{frame}[t]{Au bord : le gradient peut être non nul}
+\coursanalyse
+\begin{exemple}{Minimiser $f(t)=t$ sur $[0,1]$}
+Le minimum est atteint en $0$, mais $f'(0)=1$.
+\end{exemple}
+\begin{center}\begin{tikzpicture}[x=5cm,y=1.5cm]
+\draw[axes](-.1,0)--(1.25,0)node[right]{$t$};\draw[axes](0,-.15)--(0,1.3)node[above]{$f(t)$};
+\draw[courb](0,0)--(1,1);\fill[IMTOrange](0,0)circle(2pt);\draw[pointille](1,1)--(1,0)node[below]{$1$};\node[above left]at(0,0){$0$};
+\end{tikzpicture}\end{center}
+\begin{resultat}{L’hypothèse décisive de Fermat}
+Le point doit être intérieur au domaine autorisé.
+\end{resultat}
+\note{Source : cours original, pages PDF 37, 59. Résultats admis sans preuve. Exemples de compréhension distincts du TD de base.}
+\end{frame}
+
+%% OP19
+\begin{frame}[t]{Au second ordre : une condition nécessaire}
+\coursanalyse
+\begin{theoreme}{En un minimum intérieur}
+Si $f$ est de classe $C^2$ et admet un minimum local en $\vec a$, alors
+\[\grad f(\vec a)=\zero,\qquad \vec h^{\,T}H_f(\vec a)\vec h\ge0\quad\text{pour tout }\vec h.\]
+\end{theoreme}
+\begin{cours}{Interprétation}
+La Hessienne est positive semi-définie : aucune direction ne présente de courbure strictement négative au second ordre.
+\end{cours}\vfill Pour un maximum, la Hessienne est négative semi-définie.
+\note{Source : cours original, pages PDF 38, 39. Résultats admis sans preuve. Exemples de compréhension distincts du TD de base.}
+\end{frame}
+
+%% OP20
+\begin{frame}[t]{Au second ordre : quand peut-on conclure ?}
+\coursanalyse
+Au point critique $\vec a$ d’une fonction $C^2$ :
+\begin{theoreme}{Trois conclusions}
+$H_f(\vec a)$ définie positive $\Longrightarrow$ minimum local strict.
+\medskip\par $H_f(\vec a)$ définie négative $\Longrightarrow$ maximum local strict.
+\medskip\par $H_f(\vec a)$ indéfinie $\Longrightarrow$ point selle.
+\end{theoreme}
+\vfill\begin{resultat}{Cas restant}
+Une Hessienne seulement semi-définie ne permet généralement pas de conclure.
+\end{resultat}
+\note{Source : cours original, pages PDF 41, 42, 43. Résultats admis sans preuve. Exemples de compréhension distincts du TD de base.}
+\end{frame}
+
+%% OP21
+\begin{frame}[t]{En dimension deux : un test pratique}
+\coursanalyse
+Au point critique d’une fonction $C^2$, poser
+\[H_f=\begin{pmatrix}a&b\\b&c\end{pmatrix},\qquad \Delta=ac-b^2.\]
+\begin{cours}{Lire le signe de la forme quadratique}
+\begin{tabular}{@{}ll@{}}
+$\Delta>0$ et $a>0$ & minimum local strict\\[2mm]
+$\Delta>0$ et $a<0$ & maximum local strict\\[2mm]
+$\Delta<0$ & point selle\\[2mm]
+$\Delta=0$ & test indécis
+\end{tabular}
+\end{cours}\vfill Vérifier d’abord $\grad f=\zero$.
+\note{Source : cours original, pages PDF 40, 41, 42. Résultats admis sans preuve. Exemples de compréhension distincts du TD de base.}
+\end{frame}
+
+%% OP22
+\begin{frame}[t]{Une Hessienne nulle ne dit pas tout}
+\coursanalyse
+\begin{exemple}{Trois fonctions au point $\zero$}
+\begin{tabular}{@{}ll@{}}
+$f(x,y)=x^4+y^4$ & minimum strict\\[4mm]
+$g(x,y)=-x^4-y^4$ & maximum strict\\[4mm]
+$h(x,y)=x^4-y^4$ & point selle
+\end{tabular}
+\end{exemple}
+\begin{resultat}{Même information au second ordre}
+Les trois gradients et les trois Hessiennes s’annulent en $\zero$.
+\end{resultat}\vfill Il faut alors examiner directement le signe ou utiliser des termes d’ordre supérieur.
+\note{Source : cours original, pages PDF 43. Résultats admis sans preuve. Exemples de compréhension distincts du TD de base.}
+\end{frame}
+
+%% OP23
+\begin{frame}[t]{Un bol : minimum local et global}
+\coursanalyse
+\begin{exemple}{Une somme de carrés}
+\[f\!\left(\vcol{x\\y}\right)=(x+1)^2+3(y-2)^2.\]
+\end{exemple}
+\[\grad f=\vcol{2(x+1)\\6(y-2)},\qquad H_f=\begin{pmatrix}2&0\\0&6\end{pmatrix}.\]
+\begin{resultat}{Deux justifications complémentaires}
+La Hessienne donne un minimum local strict en $\vcol{-1\\2}$.
+\par La somme de carrés montre directement qu’il est global et unique.
+\end{resultat}
+\note{Source : cours original, pages PDF 41, 43. Résultats admis sans preuve. Exemples de compréhension distincts du TD de base.}
+\end{frame}
+
+%% OP24
+\begin{frame}[t]{Un point selle : deux directions opposées}
+\coursanalyse
+\begin{exemple}{Au voisinage de l’origine}
+$f(x,y)=x^2-2y^2$, avec $\grad f(\zero)=\zero$.
+\end{exemple}
+\begin{center}\begin{tikzpicture}[x=2cm,y=.8cm]
+\draw[axes](-1.5,0)--(1.6,0)node[right]{$t$};\draw[axes](0,-2.1)--(0,1.5);
+\draw[IMTCyan,line width=1.2pt,domain=-1.1:1.1]plot(\x,{\x*\x});
+\draw[IMTOrange,line width=1.2pt,domain=-.95:.95]plot(\x,{-2*\x*\x});
+\node[right,IMTNavy]at(1.1,1.2){\small $f(t,0)=t^2$};\node[right,IMTNavy]at(.95,-1.8){\small $f(0,t)=-2t^2$};
+\end{tikzpicture}\end{center}
+Il existe des points proches où $f>0$ et d’autres où $f<0$ : ni minimum ni maximum.
+\note{Source : cours original, pages PDF 37, 42. Résultats admis sans preuve. Exemples de compréhension distincts du TD de base.}
+\end{frame}
+
+%% OP25
+\begin{frame}[t]{La convexité transforme le problème}
+\coursanalyse
+\begin{theoreme}{Un critère global}
+Soit $U$ ouvert convexe et $f:U\to\R$ convexe et différentiable. Pour $\vec a\in U$,
+\[\grad f(\vec a)=\zero\quad\Longleftrightarrow\quad\vec a\text{ est un minimiseur global de }f.\]
+\end{theoreme}
+\begin{resultat}{Pourquoi le critère fonctionne}
+\[f(\vec x)\ge f(\vec a)+\ps{\grad f(\vec a)}{\vec x-\vec a}.\]
+Le modèle affine fournit une borne inférieure globale.
+\end{resultat}
+\note{Source : cours original, pages PDF 43, 44. Résultats admis sans preuve. Exemples de compréhension distincts du TD de base.}
+\end{frame}
+
+%% OP26
+\begin{frame}[t]{Unicité et existence : deux questions}
+\coursanalyse
+\begin{theoreme}{Stricte convexité}
+Une fonction strictement convexe sur un ensemble convexe possède au plus un minimiseur global.
+\end{theoreme}
+\begin{exemple}{Un minimum peut manquer}
+$f(t)=e^t$ est strictement convexe sur $\R$.
+\par Son infimum vaut $0$, mais cette valeur n’est jamais atteinte.
+\end{exemple}\vfill\textbf{À retenir :} « au plus un » ne signifie pas « il en existe un ».
+\note{Source : cours original, pages PDF 44. Résultats admis sans preuve. Exemples de compréhension distincts du TD de base.}
+\end{frame}
+
+%% OP27
+\begin{frame}[t]{Garantir l’existence sur un compact}
+\coursanalyse
+\begin{theoreme}{Continuité et compacité}
+Si $A\subset\Rn n$ est non vide et compact, et si $f:A\to\R$ est continue, alors $f$ atteint un minimum et un maximum sur $A$.
+\end{theoreme}
+\begin{cours}{En dimension finie}
+Un ensemble est compact s’il est fermé et borné.
+\end{cours}\vfill Le théorème donne l’existence ; il ne donne pas directement les points où les valeurs sont atteintes.
+\note{Source : cours original, pages PDF 45, 46. Résultats admis sans preuve. Exemples de compréhension distincts du TD de base.}
+\end{frame}
+
+%% OP28
+\begin{frame}[t]{Sur un domaine non borné : la coercivité}
+\coursanalyse
+\begin{notion}{Fonction coercive sur $\Rn n$}
+\[f(\vec x)\longrightarrow+\infty\qquad\text{quand }\norm{\vec x}\longrightarrow+\infty.\]
+\end{notion}
+\begin{theoreme}{Un minimum existe}
+Une fonction continue et coercive sur $\Rn n$ atteint un minimum global.
+\end{theoreme}\vfill Intuition : les faibles valeurs ne peuvent pas s’échapper à l’infini.
+\note{Source : cours original, pages PDF 46. Résultats admis sans preuve. Exemples de compréhension distincts du TD de base.}
+\end{frame}
+
+%% OP29
+\begin{frame}[t]{Sans contrainte : une démarche fiable}
+\coursanalyse
+\begin{cours}{Du domaine à la conclusion}
+\textbf{1. Domaine}\quad Ouvert ? Bord ? Régularité de $f$ ?
+\medskip\par\textbf{2. Existence}\quad Compacité ou coercivité si nécessaire.
+\medskip\par\textbf{3. Candidats}\quad Résoudre $\grad f(\vec x)=\zero$ à l’intérieur.
+\medskip\par\textbf{4. Nature locale}\quad Hessienne ou signe direct.
+\medskip\par\textbf{5. Portée globale}\quad Convexité, comparaison ou borne globale.
+\end{cours}\vfill Toujours préciser : local ou global, strict ou non.
+\note{Source : cours original, pages PDF 47. Résultats admis sans preuve. Exemples de compréhension distincts du TD de base.}
+\end{frame}
+
+%% OP30
+\begin{frame}[t]{Sous contraintes : changer l’ensemble autorisé}
+\coursanalyse
+\begin{notion}{Ensemble admissible}
+\[A=\{\vec x\in U:F(\vec x)=\zero,\quad g_j(\vec x)\le0\ (1\le j\le p)\}.\]
+\end{notion}
+\begin{cours}{Un minimum relatif à $A$}
+On compare $f(\vec a)$ uniquement aux valeurs prises en des points admissibles, proches ou quelconques selon que le minimum est local ou global.
+\end{cours}\vfill Une direction favorable pour $f$ peut être interdite par les contraintes.
+\note{Source : cours original, pages PDF 59, 60. Résultats admis sans preuve. Exemples de compréhension distincts du TD de base.}
+\end{frame}
+
+%% OP31
+\begin{frame}[t]{Le gradient ne doit plus forcément s’annuler}
+\coursanalyse
+\begin{columns}[T,onlytextwidth]\begin{column}{.47\textwidth}
+\begin{exemple}{Distance à l’origine}
+Minimiser $x^2+y^2$ sur la droite $x+y=2$.
+\par Le point le plus proche est $\vec a=\vcol{1\\1}$.
+\[\grad f(\vec a)=\vcol{2\\2}\ne\zero.\]
+\end{exemple}
+La variation s’annule le long de la droite, pas dans toutes les directions.
+\end{column}\begin{column}{.49\textwidth}\begin{tikzpicture}[scale=.9]
+\draw[axes](-.3,0)--(3,0)node[right]{$x$};\draw[axes](0,-.3)--(0,3)node[above]{$y$};
+\draw[courb](0,0)circle(1.414);\draw[IMTOrange,line width=1.2pt](-.4,2.4)--(2.4,-.4);
+\draw[-{Stealth},IMTCyan,line width=1.2pt](1,1)--(1.8,1.8)node[above]{$\grad f(\vec a)$};
+\fill[IMTNavy](1,1)circle(2pt);\node[below right,xshift=1mm,yshift=-1mm]at(1,1){$\vec a$};\node[below]at(1.1,-1.85){\small cercle tangent à la droite};
+\end{tikzpicture}\end{column}\end{columns}
+\note{Source : cours original, pages PDF 61, 62. Résultats admis sans preuve. Exemples de compréhension distincts du TD de base.}
+\end{frame}
+
+%% OP32
+\begin{frame}[t]{Une égalité doit être régulière}
+\coursanalyse
+\begin{notion}{Régularité de $F(\vec x)=0$ en $\vec a$}
+Pour une contrainte scalaire $C^1$, on demande
+\[F(\vec a)=0,\qquad\grad F(\vec a)\ne\zero.\]
+\end{notion}
+\begin{exemple}{Pourquoi vérifier cette hypothèse ?}
+$F(x,y)=x^2+y^2=0$ impose le seul point $\zero$.
+\par La fonction $f(x,y)=x$ y atteint son minimum admissible.
+\par Mais $\grad f(\zero)\ne\lambda\grad F(\zero)$ pour tout $\lambda$.
+\end{exemple}
+\note{Source : cours original, pages PDF 60, 62. Résultats admis sans preuve. Exemples de compréhension distincts du TD de base.}
+\end{frame}
+
+%% OP33
+\begin{frame}[t]{Les directions tangentes aux égalités}
+\coursanalyse
+Pour $A=\{\vec x:F(\vec x)=\zero\}$, avec $F:U\subset\Rn n\to\Rn m$ de classe $C^1$ sur un ouvert et $\operatorname{rang}J_F(\vec a)=m$ :
+\begin{notion}{Espace tangent}
+\[T_{\vec a}A=\ker J_F(\vec a)=\{\vec h:J_F(\vec a)\vec h=\zero\}.\]
+\end{notion}
+\begin{resultat}{Une seule égalité régulière}
+\[T_{\vec a}A=\{\vec h:\ps{\grad F(\vec a)}{\vec h}=0\}.\]
+Le gradient de la contrainte est normal à l’espace tangent.
+\end{resultat}
+\note{Source : cours original, pages PDF 60, 61, 62, 63. Résultats admis sans preuve. Exemples de compréhension distincts du TD de base.}
+\end{frame}
+
+%% OP34
+\begin{frame}[t]{Définir le Lagrangien : le signe compte}
+\coursanalyse
+\begin{notion}{Convention du cours — égalités}
+Pour $F:U\to\Rn m$, on pose
+\[L(\vec x,\vec\lambda)=f(\vec x)-\ps{\vec\lambda}{F(\vec x)},\qquad\vec\lambda\in\Rn m.\]
+\end{notion}
+\begin{resultat}{Stationnarité par rapport à $\vec x$}
+\[\grad_{\vec x}L=\grad f-J_F^{\,T}\vec\lambda.\]
+\end{resultat}\vfill Les multiplicateurs d’égalité sont des réels sans restriction de signe.
+\note{Source : cours original, pages PDF 65. Résultats admis sans preuve. Exemples de compréhension distincts du TD de base.}
+\end{frame}
+
+%% OP35
+\begin{frame}[t]{Lagrange : obtenir des candidats}
+\coursanalyse
+\begin{theoreme}{Une contrainte d’égalité}
+Soient $f,F:U\to\R$ de classe $C^1$ sur un ouvert $U$. Si $\vec a$ est un extremum local sous $F=0$ et si $\grad F(\vec a)\ne\zero$, il existe $\lambda\in\R$ tel que
+\[\begin{cases}\grad f(\vec a)-\lambda\grad F(\vec a)=\zero,\\F(\vec a)=0.\end{cases}\]
+\end{theoreme}
+\begin{resultat}{Une condition nécessaire}
+Résoudre ce système fournit des candidats. Leur nature reste à justifier.
+\end{resultat}
+\note{Source : cours original, pages PDF 62, 65. Résultats admis sans preuve. Exemples de compréhension distincts du TD de base.}
+\end{frame}
+
+%% OP36
+\begin{frame}[t]{Plusieurs égalités : la même structure}
+\coursanalyse
+\begin{theoreme}{Contraintes indépendantes}
+Soient $f:U\to\R$ et $F:U\to\Rn m$ de classe $C^1$ sur un ouvert $U$.
+Si $\vec a$ est un extremum local sous $F=\zero$ et $\operatorname{rang}J_F(\vec a)=m$, alors il existe $\vec\lambda\in\Rn m$ tel que
+\[\grad f(\vec a)=J_F(\vec a)^T\vec\lambda,\qquad F(\vec a)=\zero.\]
+\end{theoreme}\vfill La condition de rang signifie que les gradients des $m$ contraintes sont linéairement indépendants.
+\note{Source : cours original, pages PDF 62, 63, 65. Résultats admis sans preuve. Exemples de compréhension distincts du TD de base.}
+\end{frame}
+
+%% OP37
+\begin{frame}[t]{Égalités affines et objectif convexe}
+\coursanalyse
+\begin{theoreme}{Un candidat devient un minimum global}
+Sur un ouvert convexe $U$, soit $f$ convexe différentiable et $F$ affine.
+\medskip\par Si $F(\vec a)=\zero$ et $\grad f(\vec a)=J_F^T\vec\lambda$, alors $\vec a$ minimise $f$ sur $\{\vec x\in U:F(\vec x)=\zero\}$.
+\end{theoreme}
+\begin{resultat}{Unicité}
+Si $f$ est strictement convexe, ce minimiseur est unique.
+\end{resultat}\vfill La convexité fournit ici une conclusion globale, au-delà de Lagrange.
+\note{Source : cours original, pages PDF 69, 70. Résultats admis sans preuve. Exemples de compréhension distincts du TD de base.}
+\end{frame}
+
+%% OP38
+\begin{frame}[t]{Lire géométriquement un multiplicateur}
+\coursanalyse
+\begin{exemple}{Objectif et contrainte affine}
+$f(x,y)=x^2+y^2$,\quad $F(x,y)=x+y-2$.
+\end{exemple}
+\[\vec a=\vcol{1\\1},\qquad \grad f(\vec a)=\vcol{2\\2}=2\vcol{1\\1}=2\grad F(\vec a).\]
+\begin{resultat}{Conclusion et sens géométrique}
+$\lambda=2$ avec la convention $L=f-\lambda F$.
+\par Le gradient de l’objectif est normal à la droite admissible.
+\par La stricte convexité assure le minimum global unique.
+\end{resultat}
+\note{Source : cours original, pages PDF 62, 65, 69, 70. Résultats admis sans preuve. Exemples de compréhension distincts du TD de base.}
+\end{frame}
+
+%% OP39
+\begin{frame}[t]{Un candidat de Lagrange peut être un maximum}
+\coursanalyse
+\begin{exemple}{Sur le cercle unité}
+Minimiser $f(x,y)=x$ sous $F(x,y)=x^2+y^2-1=0$.
+\[\vcol{1\\0}=\lambda\vcol{2x\\2y},\qquad x^2+y^2=1.\]
+\end{exemple}
+\begin{cours}{Deux candidats, deux natures}
+$\vcol{-1\\0}$ : minimum global, de valeur $-1$.
+\smallskip\par $\vcol{1\\0}$ : maximum global, de valeur $1$.
+\end{cours}La borne $-1\le x\le1$ permet de conclure.
+\note{Source : cours original, pages PDF 62, 65, 66. Résultats admis sans preuve. Exemples de compréhension distincts du TD de base.}
+\end{frame}
+
+%% OP40
+\begin{frame}[t]{Inégalités : actives ou inactives ?}
+\coursanalyse
+\begin{notion}{Au point admissible $\vec a$}
+La contrainte $g_j\le0$ est \textbf{active} si $g_j(\vec a)=0$.
+\medskip\par Elle est \textbf{inactive} si $g_j(\vec a)<0$.
+\end{notion}
+\[I(\vec a)=\{j:g_j(\vec a)=0\}.\]
+\begin{resultat}{Rôle local}
+Une contrainte inactive, continue, reste satisfaite dans un voisinage assez petit du point.
+\end{resultat}
+\note{Source : cours original, pages PDF 71. Résultats admis sans preuve. Exemples de compréhension distincts du TD de base.}
+\end{frame}
+
+%% OP41
+\begin{frame}[t]{Complémentarité : un lien à sens unique}
+\coursanalyse
+Pour $g_j(\vec a)\le0$ et $\mu_j\ge0$, la condition
+\[\mu_jg_j(\vec a)=0\]
+exprime la complémentarité.
+\begin{cours}{Conséquences}
+Contrainte inactive $\Longrightarrow\mu_j=0$.
+\medskip\par $\mu_j>0\Longrightarrow$ contrainte active.
+\end{cours}
+\begin{exemple}{Active avec multiplicateur nul}
+$f(x,y)=x^2+y^2$ sous $x\le0$ : au minimum $\zero$, la contrainte est active et $\mu=0$ convient.
+\end{exemple}
+\note{Source : cours original, pages PDF 73. Résultats admis sans preuve. Exemples de compréhension distincts du TD de base.}
+\end{frame}
+
+%% OP42
+\begin{frame}[t]{Le Lagrangien avec égalités et inégalités}
+\coursanalyse
+On minimise $f$ sous $F=\zero$ et $g_j\le0$.
+\begin{notion}{Convention complète}
+\[L(\vec x,\vec\lambda,\vec\mu)=f(\vec x)-\ps{\vec\lambda}{F(\vec x)}+\sum_{j=1}^p\mu_jg_j(\vec x).\]
+\end{notion}
+\begin{cours}{Garder les signes cohérents}
+Égalités : signe \textbf{moins}, $\lambda_i\in\R$.
+\medskip\par Inégalités $g_j\le0$ : signe \textbf{plus}, $\mu_j\ge0$.
+\end{cours}\vfill Une inégalité écrite dans l’autre sens doit d’abord être reformulée.
+\note{Source : cours original, pages PDF 73, 74. Résultats admis sans preuve. Exemples de compréhension distincts du TD de base.}
+\end{frame}
+
+%% OP43
+\begin{frame}[t]{Qualifier les contraintes : l’hypothèse LICQ}
+\coursanalyse
+\begin{notion}{Indépendance au point admissible $\vec a$}
+La famille formée des gradients
+\[\grad F_i(\vec a)\ (1\le i\le m),\qquad\grad g_j(\vec a)\ (j\in I(\vec a))\]
+est linéairement indépendante.
+\end{notion}
+\begin{resultat}{Quelles contraintes examiner ?}
+Toutes les égalités et seulement les inégalités actives.
+\end{resultat}\vfill Cette qualification permet d’énoncer une condition nécessaire simple.
+\note{Source : cours original, pages PDF 71. Résultats admis sans preuve. Exemples de compréhension distincts du TD de base.}
+\end{frame}
+
+%% OP44
+\begin{frame}[t]{Le théorème KKT : une condition nécessaire}
+\coursanalyse
+\begin{theoreme}{Karush–Kuhn–Tucker}
+Supposons $f$, les $F_i$ et les $g_j$ de classe $C^1$ sur l’ouvert $U$.
+\medskip\par Si $\vec a$ est un minimum local admissible et si la qualification LICQ est satisfaite en $\vec a$, alors il existe $\vec\lambda\in\Rn m$ et $\vec\mu\in\R^p$ satisfaisant les conditions KKT.
+\end{theoreme}
+\begin{resultat}{Portée du théorème}
+Sous ces hypothèses, tout minimum local est parmi les candidats KKT.
+\end{resultat}\vfill Sans convexité, un candidat KKT n’est pas forcément un minimum.
+\note{Source : cours original, pages PDF 71, 72. Résultats admis sans preuve. Exemples de compréhension distincts du TD de base.}
+\end{frame}
+
+%% OP45
+\begin{frame}[t]{Les quatre conditions KKT}
+\coursanalyse
+\begin{cours}{À vérifier séparément}
+\textbf{Stationnarité}
+\[\grad f(\vec a)-J_F(\vec a)^T\vec\lambda+\sum_j\mu_j\grad g_j(\vec a)=\zero.\]
+\textbf{Admissibilité}\quad $F(\vec a)=\zero$,\quad $g_j(\vec a)\le0$.
+\medskip\par\textbf{Signe des multiplicateurs}\quad $\mu_j\ge0$.
+\medskip\par\textbf{Complémentarité}\quad $\mu_jg_j(\vec a)=0$.
+\end{cours}\vfill Les multiplicateurs $\lambda_i$ restent sans restriction de signe.
+\note{Source : cours original, pages PDF 71, 74. Résultats admis sans preuve. Exemples de compréhension distincts du TD de base.}
+\end{frame}
+
+%% OP46
+\begin{frame}[t]{Une contrainte active arrête la descente}
+\coursanalyse
+\begin{exemple}{Un minimum sur une frontière}
+$f(x,y)=(x-2)^2+y^2$,\quad $g(x,y)=x\le0$.
+\par À $\vec a=\zero$, la contrainte est active.
+\[\grad f(\vec a)+\mu\grad g(\vec a)=\vcol{-4\\0}+\mu\vcol{1\\0}=\zero\quad\Longrightarrow\quad\mu=4.\]
+\end{exemple}
+\begin{resultat}{Sens du signe}
+La direction de descente vers les $x>0$ est interdite.
+\par Sur $x\le0$, $(x-2)^2+y^2\ge4=f(\zero)$ : le minimum est global.
+\end{resultat}
+\note{Source : cours original, pages PDF 73, 74, 75. Résultats admis sans preuve. Exemples de compréhension distincts du TD de base.}
+\end{frame}
+
+%% OP47
+\begin{frame}[t]{Une contrainte inactive ne change rien ici}
+\coursanalyse
+\begin{exemple}{Un minimum à l’intérieur de la région autorisée}
+$f(x,y)=(x+1)^2+y^2$,\quad $g(x,y)=x-1\le0$.
+\[\vec a=\vcol{-1\\0},\qquad g(\vec a)=-2<0.\]
+\end{exemple}
+\begin{resultat}{Conséquences}
+La complémentarité impose $\mu=0$.
+\par La stationnarité devient $\grad f(\vec a)=\zero$.
+\par La somme de carrés donne un minimum global unique, admissible.
+\end{resultat}
+\note{Source : cours original, pages PDF 73, 74, 75. Résultats admis sans preuve. Exemples de compréhension distincts du TD de base.}
+\end{frame}
+
+%% OP48
+\begin{frame}[t]{En problème convexe : KKT suffit}
+\coursanalyse
+\begin{theoreme}{Optimalité globale}
+Sur un ouvert convexe $U$, supposons $f$ et les $g_j$ convexes différentiables, et $F$ affine.
+\medskip\par Tout point admissible satisfaisant les quatre conditions KKT est un minimiseur global.
+\medskip\par Si $f$ est strictement convexe, ce minimiseur est unique.
+\end{theoreme}
+\begin{resultat}{Hypothèses à distinguer}
+Cette suffisance ne demande pas LICQ. La qualification sert au théorème de nécessité précédent.
+\end{resultat}
+\note{Source : cours original, pages PDF 74, 75. Résultats admis sans preuve. Exemples de compréhension distincts du TD de base.}
+\end{frame}
+
+%% OP49
+\begin{frame}[t]{Avec inégalités : organiser les cas}
+\coursanalyse
+\begin{cours}{Une méthode de résolution}
+\textbf{1. Préparer}\quad Écrire toutes les inégalités sous la forme $g_j\le0$.
+\medskip\par\textbf{2. Séparer}\quad Envisager les ensembles de contraintes actives.
+\medskip\par\textbf{3. Calculer}\quad Poser $\mu_j=0$ pour les inactives et résoudre la stationnarité.
+\medskip\par\textbf{4. Filtrer}\quad Vérifier admissibilité, signes et complémentarité.
+\medskip\par\textbf{5. Conclure}\quad Utiliser la convexité ou un autre argument adapté.
+\end{cours}\vfill Pour que ces candidats couvrent tous les minima, vérifier les hypothèses du théorème de nécessité.
+\note{Source : cours original, pages PDF 76. Résultats admis sans preuve. Exemples de compréhension distincts du TD de base.}
+\end{frame}
+
+%% OP50
+\begin{frame}[t]{Trois cadres, trois conditions de stationnarité}
+\coursanalyse
+\setlength{\abovedisplayskip}{3pt}\setlength{\belowdisplayskip}{3pt}\begin{cours}{Sans contrainte — point intérieur}
+\[\grad f(\vec a)=\zero.\]
+\end{cours}
+\begin{cours}{Égalités régulières}
+\[\grad f(\vec a)-J_F(\vec a)^T\vec\lambda=\zero.\]
+\end{cours}
+\begin{cours}{Égalités et inégalités — qualification LICQ}
+\[\grad f(\vec a)-J_F(\vec a)^T\vec\lambda+\sum_j\mu_j\grad g_j(\vec a)=\zero.\]
+Admissibilité, $\mu_j\ge0$ et complémentarité complètent KKT.
+\end{cours}
+\note{Source : cours original, pages PDF 37, 65, 71, 74. Résultats admis sans preuve. Exemples de compréhension distincts du TD de base.}
+\end{frame}
+
+%% OP51
+\begin{frame}[t]{Complément — dérivée implicite par un système}
+\coursanalyse
+\repere{COMPLÉMENT 1/4 · Calcul matriciel}
+Au point solution, poser $A=J_{\vec x}F(\vec a,\vec b)$ et $B=J_{\vec y}F(\vec a,\vec b)$, avec $B$ inversible.
+\begin{resultat}{Éviter de calculer explicitement $B^{-1}$}
+\[B\,J_g(\vec a)=-A.\]
+\end{resultat}
+\begin{cours}{Colonne par colonne}
+La colonne $k$ de $J_g(\vec a)$ est la solution du système dont le second membre est l’opposé de la colonne $k$ de $A$.
+\end{cours}\vfill Le pivot de Gauss permet de traiter les seconds membres simultanément.
+\note{Source : cours original, pages PDF 12, 13. Résultats admis sans preuve. Exemples de compréhension distincts du TD de base.}
+\end{frame}
+
+%% OP52
+\begin{frame}[t]{Complément — le second ordre sur la tangente}
+\coursanalyse
+\repere{COMPLÉMENT 2/4 · Contraintes d’égalité}
+$f,F_i$ sont $C^2$ ; $\vec a$ est admissible régulier et stationnaire pour $L=f-\sum_i\lambda_iF_i$.
+\begin{resultat}{La bonne Hessienne et les bonnes directions}
+\[H_{\vec x}L=H_f-\sum_i\lambda_iH_{F_i},\qquad\vec h\in T_{\vec a}A.\]
+\end{resultat}
+\begin{cours}{Minimum sous égalités}
+Nécessaire : $\vec h^{\,T}H_{\vec x}L\vec h\ge0$ sur $T_{\vec a}A$.
+\medskip\par Suffisant pour un minimum local strict : cette quantité est $>0$ pour tout $\vec h\ne\zero$ de $T_{\vec a}A$.
+\end{cours}
+\note{Source : cours original, pages PDF 67, 68, 69. Résultats admis sans preuve. Exemples de compréhension distincts du TD de base.}
+\end{frame}
+
+%% OP53
+\begin{frame}[t]{Complément — un problème quadratique}
+\coursanalyse
+\repere{COMPLÉMENT 3/4 · Un système linéaire structuré}
+\[q(\vec x)=\tfrac12\vec x^{\,T}Q\vec x+\vec c^{\,T}\vec x,\qquad Q=Q^T,\qquad A\vec x=\vec b.\]
+\begin{resultat}{Stationnarité et admissibilité}
+\[\begin{pmatrix}Q&-A^T\\A&0\end{pmatrix}\vcol{\vec x\\\vec\lambda}=\vcol{-\vec c\\\vec b}.\]
+\end{resultat}
+\vfill Si $Q$ est définie positive et $A$ de rang plein en lignes, le système admet une unique solution et son point $\vec x$ est le minimiseur global unique.
+\note{Source : cours original, pages PDF 66, 67, 69, 70. Résultats admis sans preuve. Exemples de compréhension distincts du TD de base.}
+\end{frame}
+
+%% OP54
+\begin{frame}[t]{Complément — une borne quantitative}
+\coursanalyse
+\repere{COMPLÉMENT 4/4 · Forte convexité}
+\begin{notion}{Forte convexité de paramètre $\mu>0$}
+Pour $f$ différentiable sur un ouvert convexe, pour tous $\vec x,\vec y$,
+\[f(\vec y)\ge f(\vec x)+\ps{\grad f(\vec x)}{\vec y-\vec x}+\tfrac\mu2\norm{\vec y-\vec x}^2.\]
+\end{notion}
+\begin{resultat}{Si un point critique $\vec a$ existe}
+\[f(\vec x)-f(\vec a)\ge\tfrac\mu2\norm{\vec x-\vec a}^2.\]
+Il est le minimiseur global unique ; la borne mesure l’écart à la valeur optimale.
+\end{resultat}
+\note{Source : cours original, pages PDF 44, 45. Résultats admis sans preuve. Exemples de compréhension distincts du TD de base.}
+\end{frame}

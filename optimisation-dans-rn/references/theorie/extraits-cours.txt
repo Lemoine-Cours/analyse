@@ -1,0 +1,2867 @@
+=== Cours original, page PDF 3 ===
+III.1. Théorèmes d’inversion locale et des
+fonctions implicites
+Dans ce chapitre nous nous placerons dans les espaces euclidiens
+³− →
+Rn,〈• | •〉
+´
+et
+³− →
+Rp,〈• | •〉
+´
+,
+munis de leurs produits scalaires canoniques.
+Nous noterons par∥•∥les normes euclidiennes associées.
+La méthode de Gauss permet de résoudre un système linéaire
+A⃗x= ⃗b
+lorsque la matriceAest inversible.
+Dans ce chapitre, nous allons rencontrer le problème analogue pour une fonction non linéaire :
+f( ⃗x)= ⃗y.
+Au voisinage d’un vecteur⃗a, une fonction différentiable est décrite au premier ordre par sa diffé-
+rentielle. La résolution locale d’une équation non linéaire sera donc gouvernée par la résolution
+d’un système linéaire associé à− − →d f ⃗a.
+Le théorème d’inversion locale précisera cette idée. Le théorème des fonctions implicites per-
+mettra ensuite de résoudre localement un système d’équations
+F(⃗x, ⃗y)= ⃗0
+par rapport à certaines variables. Là encore, le calcul reposera sur la résolution d’un système
+linéaire par la méthode de Gauss.
+III.1.1 Du système linéaire au système non linéaire
+III.1.1.1 Résolution locale et différentielle
+Considérons l’application linéaire− →L :
+− →
+Rn − →
+− →
+Rn. Résoudre l’équation− →L (⃗x) = ⃗y pour tout
+⃗y∈
+− →
+Rn revient à demander que − →L soit inversible. Dans la base canonique e, si A est la matrice
+de − →L, le problème devient
+A[⃗x]e =[ ⃗y] e.
+Les résultats du cours d’algèbre donnent les équivalences
+− →Linversible⇐ ⇒Ainversible⇐ ⇒detA̸=0.
+La méthode de Gauss fournit alors une méthode effective de résolution du système.
+■ Remarque III.1.1.1 — Rôle de la méthode de Gauss.
+Il n’est pas nécessaire de calculer explicitement A−1 pour résoudre le système A⃗x= ⃗b. La
+méthode de Gauss permet de le résoudre directement.
+Cette remarque restera valable dans tout le chapitre : lorsqu’une formule fera apparaîtreA−1⃗b,
+
+=== Cours original, page PDF 4 ===
+292Chapitre III.1. Théorèmes d’inversion locale et des fonctions implicites
+on pourra en pratique calculer le résultat en résolvant
+A⃗x= ⃗b
+par élimination de Gauss. ■
+Considérons maintenant un ouvert U de
+− →
+Rn, une fonction f : U− →
+− →
+Rn différentiable en
+⃗a∈Uet un accroissement ⃗hsuffisamment petit. On a
+f( ⃗a+ ⃗h)=f( ⃗a)+ − − →d f ⃗a(⃗h)+o(∥ ⃗h∥).
+Ainsi, pour résoudre localement
+f( ⃗a+ ⃗h)=f( ⃗a)+ ⃗k,
+le problème linéarisé est − − →d f ⃗a(⃗h)= ⃗k.
+Dans la base canoniquee, cette relation s’écrit
+J f (⃗a)[⃗h]e =[⃗k]e.
+Nous retrouvons donc exactement un système linéaire.
+■ Remarque III.1.1.2 — Idée fondamentale.
+Le problème non linéairef( ⃗x)= ⃗yest localement gouverné par le système linéaire
+J f (⃗a)[⃗h]e =[⃗k]e.
+Si cette matrice est inversible, la méthode de Gauss permet de résoudre l’équation linéarisée.
+Le théorème d’inversion locale montrera que cette propriété d’inversibilité persiste, locale-
+ment, pour la fonction non linéaire elle-même. ■
+III.1.1.2 Applications localement inversibles
+Définition III.1.1.1 — Inversibilité locale.
+SoientUun ouvert de
+− →
+Rn,f:U− →
+− →
+Rn une fonction et ⃗a∈U.
+On dit que f estlocalement inversible en ⃗a lorsqu’il existe un voisinage ouvertU0 de ⃗a et un
+voisinage ouvertV 0 def( ⃗a) tels que la restriction
+f|U0 :U 0 − →V0
+soit bijective.
+Définition III.1.1.2 — Difféomorphisme de classeC 1.
+SoientUetVdeux ouverts de
+− →
+Rn etf:U− →Vune application.
+On dit quefest undifféomorphisme de classeC 1 lorsque :
+—fest bijective ;
+—fest de classeC 1 surU;
+—f −1 est de classeC 1 surV.
+III.1.1.3 Point fixe d’une contraction
+La démonstration du théorème d’inversion locale reposera sur un résultat de point fixe.
+Dans le cadre de ce cours, nous pouvons l’établir directement à partir de la compacité.
+
+=== Cours original, page PDF 5 ===
+III.1.2 Théorème d’inversion locale 293
+Définition III.1.1.3 — Contraction.
+SoientKune partie de
+− →
+Rn etT:K− →Kune application.
+On dit queTest unecontractionlorsqu’il existeq∈[0, 1[ tel que
+∀
+¡
+⃗x, ⃗y
+¢
+∈K 2,∥T( ⃗x)−T( ⃗y)∥ ≤q∥ ⃗x− ⃗y∥.
+Proposition III.1.1.1 — Point fixe d’une contraction sur un compact.
+SoientKune partie compacte non vide de
+− →
+Rn etT:K− →Kune contraction.
+Alors il existe un unique ⃗x∗ ∈Ktel que
+T(⃗x∗)= ⃗x∗.
+Démonstration.
+Soient K une partie compacte non vide de
+− →
+Rn et T : K− →K une contraction. Il existe donc
+q∈[0,1[ tel que
+∀
+¡
+⃗x, ⃗y
+¢
+∈K 2,∥T( ⃗x)−T( ⃗y)∥ ≤q∥ ⃗x− ⃗y∥.
+Montrons queTpossède un unique point fixe dansK.
+Considérons la fonction
+ϕ: K− →R
+⃗x7− → ∥T( ⃗x)− ⃗x∥.
+Comme T est lipschitzienne, elle est continue. La fonction ϕ est donc continue. Le compact K
+étant non vide,ϕatteint son minimum en un vecteur ⃗x∗ ∈K. Posonsm=ϕ( ⃗x∗)≥0.
+Supposons quem>0. CommeT( ⃗x∗)∈K, la minimalité de ⃗x∗ donne
+m≤ϕ(T( ⃗x∗)).
+Or
+ϕ(T(⃗x∗))=∥T(T( ⃗x∗))−T( ⃗x∗)∥
+≤q∥T( ⃗x∗)− ⃗x∗∥
+=qm.
+Ainsi m≤qm . Comme q< 1 et m> 0, cette relation est impossible. Par conséquent m= 0, et
+donc
+T(⃗x∗)= ⃗x∗.
+Montrons l’unicité. Soit
+¡
+⃗x∗,⃗y ∗¢
+∈K 2 un couple de points fixes deT. On a
+∥⃗x∗ −⃗y ∗∥ =∥T(⃗x∗)−T( ⃗y ∗)∥
+≤q∥⃗x∗ −⃗y ∗∥.
+Commeq<1, on obtient∥ ⃗x∗ −⃗y ∗∥ =0, donc ⃗x∗ = ⃗y ∗.■
+III.1.2 Théorème d’inversion locale
+III.1.2.1 Énoncé et démonstration
+Nous disposons maintenant des outils nécessaires pour passer du problème linéarisé à
+l’inversibilité locale de la fonction non linéaire.
+
+=== Cours original, page PDF 6 ===
+294Chapitre III.1. Théorèmes d’inversion locale et des fonctions implicites
+Proposition III.1.2.1 — Théorème d’inversion locale.
+SoientUun ouvert de
+− →
+Rn,f:U− →
+− →
+Rn une fonction de classeC 1 surUet ⃗a∈U.
+Supposons que − − →d f ⃗a soit inversible.
+Alors il existe un voisinage ouvertU 0 de ⃗aet un voisinage ouvertV 0 def( ⃗a) tels que
+f|U0 :U 0 − →V0
+soit un difféomorphisme de classeC 1.
+De plus, pour tout ⃗x∈U 0, − − − − − − − − →
+d(f −1) f( ⃗x) =
+³− − →d f⃗x
+´−1
+.
+Démonstration.
+Soient U un ouvert de
+− →
+Rn, f : U− →
+− →
+Rn une fonction de classe C 1 sur U et ⃗a∈U . Supposons que− − →d f ⃗a soit inversible.
+Posons − →A= − − →d f ⃗a et fixons q∈ ]0,1[. Montrons d’abord l’existence et l’unicité locale d’une solution
+def( ⃗x)= ⃗y.
+Pour ⃗yproche def( ⃗a), considérons l’applicationT ⃗y définie par
+T⃗y (⃗x)= ⃗x− − →A
+−1 ¡
+f( ⃗x)− ⃗y
+¢
+. (III.1.1)
+Un vecteur ⃗x est un point fixe de T⃗y si et seulement si f (⃗x) = ⃗y. En effet, l’égalité T⃗y (⃗x) = ⃗x
+équivaut à − →A
+−1
+(f( ⃗x)− ⃗y)= ⃗0, puis àf( ⃗x)= ⃗ypuisque − →A
+−1
+est injective.
+Pour tout ⃗x∈U, la différentielle deT ⃗y est
+− − − − − →d(T ⃗y )⃗x = − →I− − →A
+−1
+◦ − − →d f⃗x .
+En particulier,
+− − − − − →d(T ⃗y )⃗a = − →I− − →A
+−1− →A=0.
+Comme f est de classe C 1 sur U , l’application⃗x7− →− − →d f⃗x est continue sur U . Il existe donc r> 0
+tel que
+B(⃗a,r)⊂U
+et
+∀⃗x∈ B(⃗a,r),
+°°°− →I− − →A
+−1
+◦ − − →d f⃗x
+°°° ≤q. (III.1.2)
+La boule B(⃗a,r ) étant convexe, l’inégalité des accroissements finis appliquée à T⃗y et (III.1.2)
+donnent
+∀(⃗x,⃗z) ∈ B(⃗a,r) 2,∥T ⃗y (⃗x)−T ⃗y (⃗z)∥ ≤q∥ ⃗x− ⃗z∥. (III.1.3)
+AinsiT ⃗y est une contraction sur la boule dès qu’elle laisse cette boule stable.
+D’après (III.1.1),
+T⃗y (⃗a)− ⃗a= − →A
+−1 ¡
+⃗y−f( ⃗a)
+¢
+,
+d’où
+∥T⃗y (⃗a)− ⃗a∥ ≤ ∥− →A
+−1
+∥∥⃗y−f( ⃗a)∥.
+Posons
+s= (1−q)r
+2∥− →A
+−1
+∥
+.
+Pour tout ⃗y∈B(f( ⃗a),s), on obtient
+∥T⃗y (⃗a)− ⃗a∥ < 1−q
+2 r.
+
+=== Cours original, page PDF 7 ===
+III.1.2 Théorème d’inversion locale 295
+Par conséquent, pour tout ⃗x∈ B(⃗a,r),
+∥T⃗y (⃗x)− ⃗a∥ ≤∥T⃗y (⃗x)−T ⃗y (⃗a)∥ + ∥T⃗y (⃗a)− ⃗a∥
+<qr+ 1−q
+2 r= 1+q
+2 r<r.
+Ainsi
+T⃗y
+³
+B(⃗a,r)
+´
+⊂B( ⃗a,r)⊂ B(⃗a,r).
+La boule fermée B(⃗a,r ) est compacte. D’après la Proposition III.1.1.1, T⃗y possède donc un
+unique point fixe dans cette boule. D’après(III.1.1), il existe ainsi un unique ⃗x∈B (⃗a,r ) tel que
+f( ⃗x)= ⃗y, pour tout ⃗y∈B(f( ⃗a),s).
+Posons
+V0 =B(f( ⃗a),s) etU 0 =B( ⃗a,r)∩f −1(V0).
+Commefest continue,U 0 est ouvert. La restrictionf |U0 :U 0 − →V0 est bijective.
+Montrons maintenant que son application réciproque est continue. Posons, pour tout⃗x∈B (⃗a,r ),
+G(⃗x)= ⃗x− − →A
+−1 ¡
+f( ⃗x)−f( ⃗a)
+¢
+.
+La relation (III.1.3) donne, pour tout (⃗x,⃗z) ∈B( ⃗a,r) 2,
+∥G(⃗x)−G( ⃗z)∥ ≤q∥ ⃗x− ⃗z∥.
+Or
+⃗x− ⃗z=G( ⃗x)−G( ⃗z)+ − →A
+−1 ¡
+f( ⃗x)−f( ⃗z)
+¢
+.
+On en déduit
+∥⃗x− ⃗z∥ ≤ ∥− →A
+−1
+∥
+1−q ∥f( ⃗x)−f( ⃗z)∥.
+L ’application réciproque est donc lipschitzienne surV0, et en particulier continue.
+Montrons ensuite que − − →d f⃗x est inversible pour tout ⃗x∈U 0. Soient ⃗x∈U 0 et ⃗h∈
+− →
+Rn tels que− − →d f⃗x (⃗h)= ⃗0. D’après (III.1.2),
+⃗h=
+³− →I− − →A
+−1
+◦ − − →d f⃗x
+´
+(⃗h)
+et donc
+∥⃗h∥ ≤q∥ ⃗h∥.
+Comme q< 1, on a⃗h= ⃗0. La différentielle − − →d f⃗x est donc injective. Comme elle est une application
+linéaire de
+− →
+Rn dans lui-même, elle est inversible.
+Posons g=f −1. Soient ⃗x0 ∈U 0 et ⃗y0 =f (⃗x0) ∈V 0. Soit ⃗k∈
+− →
+Rn suffisamment petit pour que
+⃗y0 +⃗k∈V 0, et posons ⃗h=g( ⃗y0 +⃗k)−g( ⃗y0). On a alors ⃗x0 +⃗h∈U 0 et
+⃗k=f( ⃗x0 +⃗h)−f( ⃗x0).
+La différentiabilité defen ⃗x0 donne
+⃗k= − − − →d f⃗x0(⃗h)+r( ⃗h),r( ⃗h)=o(∥ ⃗h∥). (III.1.4)
+La continuité de g assure que⃗h→ ⃗0 lorsque ⃗k→ ⃗0. De plus, la majoration lipschitzienne obtenue
+précédemment donne
+∥⃗h∥ ≤ ∥− →A
+−1
+∥
+1−q ∥⃗k∥.
+
+=== Cours original, page PDF 8 ===
+296Chapitre III.1. Théorèmes d’inversion locale et des fonctions implicites
+Comme
+lim
+⃗h→⃗0
+∥r(⃗h)∥
+∥⃗h∥
+=0,
+on a
+0≤ ∥r(⃗h)∥
+∥⃗k∥
+≤ ∥− →A
+−1
+∥
+1−q
+∥r(⃗h)∥
+∥⃗h∥
+.
+Le théorème d’encadrement donne alors
+lim
+⃗k→⃗0
+∥r(⃗h)∥
+∥⃗k∥
+=0.
+En appliquant
+³− − − →d f⃗x0
+´−1
+à (III.1.4), on obtient
+⃗h=
+³− − − →d f⃗x0
+´−1
+(⃗k)+o(∥ ⃗k∥).
+Or
+⃗h=g( ⃗y0 +⃗k)−g( ⃗y0).
+La fonctiongest donc différentiable en ⃗y0 et
+− − − →d g⃗y0 =
+³− − − →d f⃗x0
+´−1
+.
+Comme ⃗x0 est quelconque dansU 0, on obtient
+∀⃗x∈U 0,
+− − − − − − − − →
+d(f −1) f( ⃗x) =
+³− − →d f⃗x
+´−1
+.
+Enfin, l’application⃗y7− →J f (g (⃗y)) est continue sur V0 et son déterminant ne s’annule pas. La
+formule M −1 = (detM )−1 Com(M)T montre, à l’aide de la continuité des fonctions polynomiales
+et du quotient, que ⃗y7− →J f (g (⃗y))−1 est continue. Par conséquent, ⃗y7− →J g (⃗y) est continue.
+D’après la caractérisation de la classeC 1 par la continuité de la jacobienne, g est de classe C 1
+surV 0. ■
+III.1.2.2 Formulation matricielle
+Proposition III.1.2.2 — Critère matriciel d’inversion locale.
+SoientUun ouvert de
+− →
+Rn,f:U− →
+− →
+Rn une fonction de classeC 1 surUet ⃗a∈U.
+Si
+detJ f (⃗a)̸=0,
+alorsfest localement inversible en ⃗a. De plus,
+J f −1(f( ⃗a))=J f (⃗a)−1.
+Démonstration.
+Soient U un ouvert de
+− →
+Rn, f : U− →
+− →
+Rn une fonction de classe C 1 sur U et ⃗a∈U tels que
+detJ f (⃗a)̸=0.
+La condition detJ f (⃗a) ̸= 0 est équivalente à l’inversibilité de la matrice représentant− − →d f ⃗a dans
+les bases canoniques. Ainsi − − →d f ⃗a est inversible et la Proposition III.1.2.1 s’applique.
+La formule matricielle s’obtient en représentant dans les bases canoniques l’égalité
+− − − − − − − − →
+d(f −1) f( ⃗a) =
+³− − →d f ⃗a
+´−1
+.
+■
+
+=== Cours original, page PDF 9 ===
+III.1.3 Théorème des fonctions implicites 297
+III.1.2.3 Différentielle de l’application réciproque et méthode de Gauss
+La relation
+J f −1(f( ⃗a))=J f (⃗a)−1
+ne signifie pas qu’il faille calculer explicitement une matrice inverse.
+Proposition III.1.2.3 — Calcul par systèmes linéaires.
+Soient U un ouvert de
+− →
+Rn, f : U− →
+− →
+Rn une fonction de classe C 1 sur U et ⃗a∈U tels que
+detJ f (⃗a)̸=0. PosonsA=J f (⃗a).
+Pour déterminerJ f −1(f( ⃗a)), il suffit de résoudre, pour toutj∈ 1,n, le système
+A⃗z j = ⃗e j .
+Le vecteur ⃗z j obtenu constitue laj-ième colonne deJ f −1(f( ⃗a)).
+Démonstration.
+Soient U un ouvert de
+− →
+Rn, f : U− →
+− →
+Rn une fonction de classe C 1 sur U et ⃗a∈U tels que
+detJ f (⃗a)̸=0. PosonsA=J f (⃗a).
+D’après la Proposition III.1.2.2,J f −1(f (⃗a)) =A −1. Pour tout j∈  1,n , la j -ième colonne de A−1
+estA −1⃗e j . Elle est donc l’unique solution du système
+A⃗z j = ⃗e j .
+Ce système peut être résolu directement par la méthode de Gauss.■
+■ Remarque III.1.2.1 — Retour au chapitre d’algèbre.
+Le calcul différentiel ne remplace donc pas la méthode de Gauss. Il conduit au contraire à de
+nouveaux systèmes linéaires dans lesquels la méthode de Gauss redevient l’outil de calcul
+fondamental. ■
+III.1.3 Théorème des fonctions implicites
+III.1.3.1 Équations implicites et différentielles par blocs
+Considérons un ouvert U de
+− →
+Rn ×
+− →
+Rm et une fonction F : U− →
+− →
+Rm. Pour
+¡
+⃗x, ⃗y
+¢
+∈U , avec
+⃗x∈
+− →
+Rn et ⃗y∈
+− →
+Rm, nous souhaitons résoudre l’équation
+F(⃗x, ⃗y)= ⃗0
+par rapport au vecteur ⃗y. Autrement dit, nous cherchons localement une fonction g telle que
+⃗y=g( ⃗x) et
+F(⃗x,g( ⃗x))= ⃗0.
+Supposons maintenant queF soit différentiable en
+³
+⃗a,⃗b
+´
+∈U . Pour un accroissement
+³
+⃗h,⃗k
+´
+∈
+− →
+Rn ×
+− →
+Rm, la différentielle de F se décompose naturellement suivant les deux groupes de variables.
+Définition III.1.3.1 — Différentielles partielles par blocs.
+SoientUun ouvert de
+− →
+Rn ×
+− →
+Rm,F:U− →
+− →
+Rm une fonction différentiable en
+³
+⃗a,⃗b
+´
+∈U.
+
+=== Cours original, page PDF 10 ===
+298Chapitre III.1. Théorèmes d’inversion locale et des fonctions implicites
+On appelledifférentielle partielle de F par rapport au bloc ⃗xl’application linéaire
+− − − − − − →d⃗x F(⃗a,⃗b) :
+− →
+Rn − →
+− →
+Rm
+⃗h7− → − − − − − →d F(⃗a,⃗b)(⃗h,⃗0),
+etdifférentielle partielle de F par rapport au bloc ⃗yl’application linéaire
+− − − − − − →d⃗y F(⃗a,⃗b) :
+− →
+Rm − →
+− →
+Rm
+⃗k7− → − − − − − →d F(⃗a,⃗b)(⃗0,⃗k).
+Proposition III.1.3.1 — Décomposition de la différentielle.
+SoientUun ouvert de
+− →
+Rn ×
+− →
+Rm,F:U− →
+− →
+Rm une fonction différentiable en
+³
+⃗a,⃗b
+´
+∈U.
+Pour tout
+³
+⃗h,⃗k
+´
+∈
+− →
+Rn ×
+− →
+Rm,
+− − − − − →d F(⃗a,⃗b)(⃗h,⃗k)= − − − − − − →d⃗x F(⃗a,⃗b)(⃗h)+ − − − − − − →d⃗y F(⃗a,⃗b)(⃗k).
+Démonstration.
+Soient U un ouvert de
+− →
+Rn ×
+− →
+Rm, F : U− →
+− →
+Rm une fonction différentiable en
+³
+⃗a,⃗b
+´
+∈U et
+³
+⃗h,⃗k
+´
+∈
+− →
+Rn ×
+− →
+Rm.
+On a ³
+⃗h,⃗k
+´
+=
+³
+⃗h,⃗0
+´
++
+³
+⃗0,⃗k
+´
+.
+Par linéarité de la différentielle,
+− − − − − →d F(⃗a,⃗b)(⃗h,⃗k)= − − − − − →d F(⃗a,⃗b)(⃗h,⃗0)+ − − − − − →d F(⃗a,⃗b)(⃗0,⃗k)
+=− − − − − − →d⃗x F(⃗a,⃗b)(⃗h)+ − − − − − − →d⃗y F(⃗a,⃗b)(⃗k).
+■
+Dans les bases canoniques, nous noterons J⃗xF (⃗a,⃗b) et J⃗y F (⃗a,⃗b) les matrices respectives de
+− − − − − − →d⃗x F(⃗a,⃗b) et − − − − − − →d⃗y F(⃗a,⃗b). La matrice jacobienne complète s’écrit alors par blocs :
+JF (⃗a,⃗b)=
+³
+J⃗xF( ⃗a,⃗b)J ⃗y F( ⃗a,⃗b)
+´
+.
+Supposons que F (⃗a,⃗b) =⃗0. Nous cherchons une variation ⃗k du vecteur ⃗y permettant de
+compenser une variation ⃗h du vecteur ⃗x tout en conservant l’équationF (⃗x, ⃗y) =⃗0. Au premier
+ordre, cette compensation impose − − − − − →d F(⃗a,⃗b)(⃗h,⃗k)= ⃗0,
+c’est-à-dire − − − − − − →d⃗x F(⃗a,⃗b)(⃗h)+ − − − − − − →d⃗y F(⃗a,⃗b)(⃗k)= ⃗0.
+Dans les bases canoniques, on obtient
+J⃗y F( ⃗a,⃗b)[⃗k]e = −J⃗xF( ⃗a,⃗b)[⃗h]e.
+■ Remarque III.1.3.1 — Un système linéaire.
+Pour une variation ⃗h donnée, déterminer la variation correspondante ⃗k revient donc à ré-
+soudre le système linéaire
+J⃗y F( ⃗a,⃗b)[⃗k]e = −J⃗xF( ⃗a,⃗b)[⃗h]e.
+
+=== Cours original, page PDF 11 ===
+III.1.3 Théorème des fonctions implicites 299
+C’est exactement un problème de résolution par la méthode de Gauss.
+Le théorème des fonctions implicites montrera que si la différentielle partielle − − − − − − →d⃗y F(⃗a,⃗b) est
+inversible, alors la fonction implicite existe effectivement au voisinage du vecteur étudié.■
+III.1.3.2 Construction à partir de l’inversion locale
+Pour transformer le problème implicite en un problème d’inversion locale, considérons
+l’application
+Φ: U− →
+− →
+Rn ×
+− →
+Rm
+¡
+⃗x, ⃗y
+¢
+7− →
+¡
+⃗x,F( ⃗x, ⃗y)
+¢
+.
+Proposition III.1.3.2 — Différentielle deΦ.
+SoientUun ouvert de
+− →
+Rn ×
+− →
+Rm,F:U− →
+− →
+Rm une fonction de classeC 1 surUet
+³
+⃗a,⃗b
+´
+∈U.
+Pour tout
+³
+⃗h,⃗k
+´
+∈
+− →
+Rn ×
+− →
+Rm,
+− − − − − →dΦ (⃗a,⃗b)(⃗h,⃗k)=
+³
+⃗h, − − − − − − →d⃗x F(⃗a,⃗b)(⃗h)+ − − − − − − →d⃗y F(⃗a,⃗b)(⃗k)
+´
+.
+Dans les bases canoniques,
+JΦ(⃗a,⃗b)=
+µ In 0
+J⃗xF( ⃗a,⃗b)J ⃗y F( ⃗a,⃗b)
+¶
+.
+Démonstration.
+SoientUun ouvert de
+− →
+Rn ×
+− →
+Rm,F:U− →
+− →
+Rm une fonction de classeC 1 surUet
+³
+⃗a,⃗b
+´
+∈U.
+La première composante de Φ est la projection
+¡
+⃗x, ⃗y
+¢
+7− →⃗x, dont la différentielle appliquée à³
+⃗h,⃗k
+´
+est ⃗h. La seconde composante deΦestF. On a donc
+− − − − − →dΦ (⃗a,⃗b)(⃗h,⃗k)=
+³
+⃗h, − − − − − →d F(⃗a,⃗b)(⃗h,⃗k)
+´
+.
+La Proposition III.1.3.1 donne alors
+− − − − − →d F(⃗a,⃗b)(⃗h,⃗k)= − − − − − − →d⃗x F(⃗a,⃗b)(⃗h)+ − − − − − − →d⃗y F(⃗a,⃗b)(⃗k),
+d’où la première relation. La seconde s’obtient en représentant cette différentielle dans les bases
+canoniques. ■
+Proposition III.1.3.3 — Inversibilité de − − →dΦet méthode de Gauss.
+SoientUun ouvert de
+− →
+Rn ×
+− →
+Rm,F:U− →
+− →
+Rm une fonction de classeC 1 surUet
+³
+⃗a,⃗b
+´
+∈U.
+Alors − − − − − →dΦ (⃗a,⃗b) est inversible si et seulement si − − − − − − →d⃗y F(⃗a,⃗b) est inversible.
+Démonstration.
+SoientUun ouvert de
+− →
+Rn ×
+− →
+Rm,F:U− →
+− →
+Rm une fonction de classeC 1 surUet
+³
+⃗a,⃗b
+´
+∈U.
+Montrons que − − − − − →dΦ (⃗a,⃗b) est inversible si et seulement si − − − − − − →d⃗y F(⃗a,⃗b) est inversible.
+Pour (⃗u, ⃗v) ∈
+− →
+Rn ×
+− →
+Rm, considérons le système
+− − − − − →dΦ (⃗a,⃗b)(⃗h,⃗k)= (⃗u, ⃗v).
+D’après la Proposition III.1.3.2, ce système équivaut à
+⃗h= ⃗u(III.1.5)
+
+=== Cours original, page PDF 12 ===
+300Chapitre III.1. Théorèmes d’inversion locale et des fonctions implicites
+et − − − − − − →d⃗x F(⃗a,⃗b)(⃗h)+ − − − − − − →d⃗y F(⃗a,⃗b)(⃗k)= ⃗v. (III.1.6)
+En reportant (III.1.5) dans (III.1.6), on obtient
+− − − − − − →d⃗y F(⃗a,⃗b)(⃗k)= ⃗v− − − − − − − →d⃗x F(⃗a,⃗b)(⃗u).
+Il existe donc une unique solution
+³
+⃗h,⃗k
+´
+pour tout (⃗u, ⃗v) si et seulement si − − − − − − →d⃗y F(⃗a,⃗b) est inversible.
+Dans les bases canoniques, la seconde étape revient à résoudre
+J⃗y F( ⃗a,⃗b)[⃗k]e =[ ⃗v] e −J ⃗xF( ⃗a,⃗b)[⃗u]e,
+ce que permet précisément la méthode de Gauss lorsqueJ ⃗y F( ⃗a,⃗b) est inversible.■
+■ Remarque III.1.3.2 — Élimination par blocs.
+La matrice
+JΦ(⃗a,⃗b)=
+µ In 0
+J⃗xF( ⃗a,⃗b)J ⃗y F( ⃗a,⃗b)
+¶
+est triangulaire par blocs. La résolution du système associé reproduit exactement le principe
+de l’élimination de Gauss :
+1. la première ligne de blocs donne ⃗h;
+2. on reporte cette valeur dans la seconde ;
+3. on résout alors un système de matriceJ ⃗y F( ⃗a,⃗b).
+Le passage du théorème d’inversion locale au théorème des fonctions implicites est donc
+directement relié à la structure de l’élimination de Gauss.■
+III.1.3.3 Énoncé et démonstration
+Proposition III.1.3.4 — Théorème des fonctions implicites.
+Soient U un ouvert de
+− →
+Rn ×
+− →
+Rm, F : U− →
+− →
+Rm une fonction de classe C 1 sur U et
+³
+⃗a,⃗b
+´
+∈U tel
+que
+F( ⃗a,⃗b)= ⃗0.
+Supposons que − − − − − − →d⃗y F(⃗a,⃗b) :
+− →
+Rm − →
+− →
+Rm soit inversible.
+Alors il existe un voisinage ouvert V de ⃗a, un voisinage ouvert W de ⃗b et une unique fonction
+g:V− →Wde classeC 1 surVtelle que
+g( ⃗a)= ⃗b
+et
+∀⃗x∈V,F( ⃗x,g( ⃗x))= ⃗0.
+De plus,
+− − →d g⃗a = −
+³− − − − − − →d⃗y F(⃗a,⃗b)
+´−1
+◦ − − − − − − →d⃗x F(⃗a,⃗b).
+Démonstration.
+Soient U un ouvert de
+− →
+Rn ×
+− →
+Rm, F : U− →
+− →
+Rm une fonction de classe C 1 sur U et
+³
+⃗a,⃗b
+´
+∈U tels
+queF( ⃗a,⃗b)= ⃗0. Supposons que − − − − − − →d⃗y F(⃗a,⃗b) soit inversible.
+Considérons l’applicationΦ:U− →
+− →
+Rn ×
+− →
+Rm définie par
+Φ(⃗x, ⃗y)=
+¡
+⃗x,F( ⃗x, ⃗y)
+¢
+.
+
+=== Cours original, page PDF 13 ===
+III.1.3 Théorème des fonctions implicites 301
+Comme F est de classe C 1 sur U , Φ est de classe C 1 sur U . D’après la Proposition III.1.3.3,− − − − − →dΦ (⃗a,⃗b) est inversible. Le théorème d’inversion locale s’applique donc àΦ au voisinage de
+³
+⃗a,⃗b
+´
+.
+CommeF( ⃗a,⃗b)= ⃗0, on a
+Φ(⃗a,⃗b)=
+¡
+⃗a,⃗0
+¢
+.
+Pour ⃗x suffisamment proche de ⃗a, la première composante de Φ étant ⃗x, il existe une fonction g
+telle que
+Φ−1(⃗x,⃗0)=
+¡
+⃗x,g( ⃗x)
+¢
+.
+En appliquantΦ, on obtient
+Φ(⃗x,g( ⃗x))=
+¡
+⃗x,⃗0
+¢
+,
+donc
+F(⃗x,g( ⃗x))= ⃗0.
+La fonction g est de classe C 1 puisqu’elle est une composante de Φ−1, et g (⃗a) = ⃗b. L ’unicité
+découle de l’injectivité locale deΦ.
+Calculons maintenant la différentielle deg. Pour tout ⃗xdans le voisinageVde ⃗a, on a
+F(⃗x,g( ⃗x))= ⃗0. (III.1.7)
+En différentiant (III.1.7) en ⃗a et en appliquant la règle de la chaîne à un accroissement ⃗h∈
+− →
+Rn,
+on obtient − − − − − − →d⃗x F(⃗a,⃗b)(⃗h)+ − − − − − − →d⃗y F(⃗a,⃗b)
+³− − →d g⃗a(⃗h)
+´
+=⃗0.
+Ainsi − − − − − − →d⃗y F(⃗a,⃗b)
+³− − →d g⃗a(⃗h)
+´
+= −− − − − − − →d⃗x F(⃗a,⃗b)(⃗h).
+Comme − − − − − − →d⃗y F(⃗a,⃗b) est inversible,
+− − →d g⃗a(⃗h)= −
+³− − − − − − →d⃗y F(⃗a,⃗b)
+´−1 ³− − − − − − →d⃗x F(⃗a,⃗b)(⃗h)
+´
+.
+Cette relation étant vérifiée pour tout ⃗h∈
+− →
+Rn, on obtient
+− − →d g⃗a = −
+³− − − − − − →d⃗y F(⃗a,⃗b)
+´−1
+◦ − − − − − − →d⃗x F(⃗a,⃗b).
+■
+III.1.3.4 Formulation matricielle et calcul de la jacobienne implicite
+Proposition III.1.3.5 — Jacobienne d’une fonction implicite.
+Sous les hypothèses de la Proposition III.1.3.4,
+Jg (⃗a)= −J ⃗y F( ⃗a,⃗b)−1 J⃗xF( ⃗a,⃗b).
+Démonstration.
+Soient U un ouvert de
+− →
+Rn ×
+− →
+Rm, F : U− →
+− →
+Rm une fonction de classe C 1 sur U et
+³
+⃗a,⃗b
+´
+∈U tels
+queF( ⃗a,⃗b)= ⃗0 et − − − − − − →d⃗y F(⃗a,⃗b) soit inversible.
+Soitg:V− →Wla fonction implicite de classeC 1 fournie par la Proposition III.1.3.4.
+La Proposition III.1.3.4 donne
+− − →d g⃗a = −
+³− − − − − − →d⃗y F(⃗a,⃗b)
+´−1
+◦ − − − − − − →d⃗x F(⃗a,⃗b).
+
+=== Cours original, page PDF 14 ===
+302Chapitre III.1. Théorèmes d’inversion locale et des fonctions implicites
+En représentant cette égalité dans les bases canoniques et en utilisant la règle matricielle de
+composition, on obtient
+Jg (⃗a)= −J ⃗y F( ⃗a,⃗b)−1 J⃗xF( ⃗a,⃗b).
+■
+La formule précédente ne doit pas être interprétée comme une obligation de calculer une
+matrice inverse.
+Proposition III.1.3.6 — Calcul deJ g par élimination de Gauss.
+Sous les hypothèses de la Proposition III.1.3.4, posons
+A=J ⃗xF( ⃗a,⃗b) etB=J ⃗y F( ⃗a,⃗b).
+Alors
+B Jg (⃗a)= −A.
+Si
+A=
+¡
+⃗a1 · · · ⃗an
+¢
+etJ g (⃗a)=
+¡
+⃗z1 · · · ⃗zn
+¢
+,
+alors, pour toutj∈ 1,n, la colonne ⃗z j est l’unique solution du système
+B⃗z j = −⃗a j .
+Démonstration.
+Soient U un ouvert de
+− →
+Rn ×
+− →
+Rm, F : U− →
+− →
+Rm une fonction de classe C 1 sur U et
+³
+⃗a,⃗b
+´
+∈U tels
+queF( ⃗a,⃗b)= ⃗0 et − − − − − − →d⃗y F(⃗a,⃗b) soit inversible.
+Soitgla fonction implicite de classeC 1 fournie par la Proposition III.1.3.4.
+PosonsA=J ⃗xF( ⃗a,⃗b) etB=J ⃗y F( ⃗a,⃗b).
+D’après la Proposition III.1.3.5,J g (⃗a)= −B −1 A, ce qui est équivalent à
+B Jg (⃗a)= −A.
+En comparant les colonnes des deux membres, on obtient, pour toutj∈ 1,n,
+B⃗z j = −⃗a j .
+Comme B est inversible, chaque système possède une unique solution, que l’on peut déterminer
+par la méthode de Gauss.■
+■ Remarque III.1.3.3 — Méthode recommandée en pratique.
+Pour calculer la jacobienne d’une fonction implicite, il est généralement préférable de ré-
+soudre directement
+B Jg (⃗a)= −A
+colonne par colonne, plutôt que de calculer explicitementB −1.■
+III.1.3.5 Cas d’une seule équation
+Considérons un ouvert U de
+− →
+Rn ×R et une fonction F : U− →R . Nous cherchons à résoudre
+localement l’équationF( ⃗x,y)=0 sous la formey=g( ⃗x).
+
+=== Cours original, page PDF 15 ===
+III.1.3 Théorème des fonctions implicites 303
+Proposition III.1.3.7 — Fonction implicite scalaire.
+Soient U un ouvert de
+− →
+Rn ×R , F : U− →R une fonction de classe C 1 sur U et (⃗a,b ) ∈U tel que
+F( ⃗a,b)=0.
+Si
+∂F
+∂y (⃗a,b)̸=0,
+alors il existe localement une unique fonction de classeC 1 gtelle queg( ⃗a)=bet
+F(⃗x,g( ⃗x))=0.
+De plus, pour toutj∈ 1,n,
+∂g
+∂x j
+(⃗a)= −
+∂F
+∂x j
+(⃗a,b)
+∂F
+∂y (⃗a,b)
+.
+Démonstration.
+Soient U un ouvert de
+− →
+Rn ×R , F : U− →R une fonction de classe C 1 sur U et (⃗a,b ) ∈U tels que
+F( ⃗a,b)=0 et ∂F
+∂y (⃗a,b)̸=0.
+La différentielle partielle − − − − − − →dy F(⃗a,b) :R− →Rest l’application linéaire définie par
+− − − − − − →dy F(⃗a,b) (k)= ∂F
+∂y (⃗a,b)k.
+Elle est donc inversible puisque ∂F
+∂y (⃗a,b ) ̸= 0. La Proposition III.1.3.4 s’applique et fournit
+localement une unique fonctiongde classeC 1 telle queF( ⃗x,g( ⃗x))=0.
+La formule générale donne
+− − →d g⃗a = −
+³− − − − − − →dy F(⃗a,b)
+´−1
+◦ − − − − − − →d⃗x F(⃗a,b) .
+En évaluant cette relation en ⃗e j , on obtient
+∂g
+∂x j
+(⃗a)= −
+∂F
+∂x j
+(⃗a,b)
+∂F
+∂y (⃗a,b)
+.
+■
+III.1.3.6 Interprétation géométrique
+L ’équationF (⃗x, ⃗y) =⃗0 décrit un ensemble de vecteurs satisfaisant un système de contraintes.
+Lorsque J⃗y F (⃗a,⃗b) est inversible, les variables ⃗y peuvent être localement déterminées de manière
+unique à partir des variables ⃗x. Ainsi, au voisinage de
+³
+⃗a,⃗b
+´
+, l’ensemble des solutions peut
+s’écrire sous la forme
+⃗y=g( ⃗x).
+
+=== Cours original, page PDF 16 ===
+304Chapitre III.1. Théorèmes d’inversion locale et des fonctions implicites
+■ Remarque III.1.3.4 — Préparation à l’optimisation sous contraintes.
+Cette interprétation sera fondamentale dans la partie consacrée à l’optimisation sous contraintes.
+Une contrainteF( ⃗x, ⃗y)= ⃗0 pourra localement permettre d’éliminer certaines variables.
+Le théorème des fonctions implicites fournira ainsi la justification mathématique permettant
+de réduire localement un problème contraint à un problème comportant moins de variables.
+■
+Méthodologie III.1.3.1 — Appliquer les théorèmes d’inversion locale et des fonctions
+implicites.
+Pour appliquer le théorème d’inversion locale à une fonction f : U− →
+− →
+Rn en un vecteur
+⃗a∈U:
+1. vérifier quefest de classeC 1 surU;
+2. calculerJ f (⃗a) ;
+3. vérifier que J f (⃗a) est inversible, par exemple en vérifiant detJ f (⃗a) ̸= 0 ou par élimina-
+tion de Gauss ;
+4. conclure quefpossède localement une application réciproque de classeC 1 ;
+5. pour calculer la différentielle de l’inverse, résoudre les systèmes linéaires associés à
+J f (⃗a) par la méthode de Gauss.
+Pour appliquer le théorème des fonctions implicites àF( ⃗x, ⃗y)= ⃗0 au voisinage de
+³
+⃗a,⃗b
+´
+:
+1. vérifier queFest de classeC 1 et queF( ⃗a,⃗b)= ⃗0 ;
+2. calculerA=J ⃗xF( ⃗a,⃗b) etB=J ⃗y F( ⃗a,⃗b) ;
+3. vérifier queBest inversible ;
+4. conclure qu’il existe localement une unique fonction ⃗y=g( ⃗x) ;
+5. calculerJ g (⃗a) en résolvant
+B Jg (⃗a)= −A
+par élimination de Gauss, colonne par colonne.
+■ Remarque III.1.3.5 — Le fil conducteur du chapitre.
+La méthode de Gauss intervient à chaque étape : elle résout les systèmes linéaires A⃗x= ⃗b,
+puis les systèmes issus de l’inversion locale et enfin ceux issus des fonctions implicites.
+Le calcul différentiel transforme localement un problème non linéaire en un problème linéaire,
+puis la méthode de Gauss fournit l’outil effectif de résolution de ce problème linéarisé.■
+
+=== Cours original, page PDF 35 ===
+III.2. Optimisation sans contrainte
+Dans ce chapitre nous nous placerons dans les espaces euclidiens
+³− →
+Rn,〈• | •〉
+´
+et
+³− →
+Rp,〈• | •〉
+´
+,
+munis de leurs produits scalaires canoniques.
+Nous noterons par∥•∥les normes euclidiennes associées.
+L ’optimisation consiste à rechercher les valeurs des variables pour lesquelles une fonction
+atteint une valeur aussi faible ou aussi élevée que possible. Le calcul différentiel fournit des
+conditions locales portant sur la différentielle, le gradient et la Hessienne. La convexité permet
+ensuite de transformer certaines de ces informations locales en résultats globaux. Nous allons
+donc réunir dans ce chapitre les principaux outils construits précédemment : différentielle,
+gradient, différentielle seconde, Hessienne, formules de Taylor et convexité.
+III.2.1 Optima et points critiques
+III.2.1.1 Problème d’optimisation et optima globaux
+Soient U un ouvert de
+− →
+Rn et f : U− →R une fonction. Un problème de minimisation sans
+contrainte consiste à rechercher
+min
+⃗x∈U
+f( ⃗x),
+tandis qu’un problème de maximisation consiste à rechercher
+max
+⃗x∈U
+f( ⃗x).
+■ Remarque III.2.1.1 — Valeur optimale et vecteur optimal.
+Il faut distinguer le vecteur ⃗x∗ où l’optimum est atteint de la valeur f (⃗x∗) prise par la fonction.
+Plusieurs vecteurs différents peuvent éventuellement donner la même valeur optimale.■
+Définition III.2.1.1 — Minimum global.
+Soient U une partie de
+− →
+Rn, f : U− →R une fonction et ⃗a∈U . On dit que ⃗a est unminimum
+global de f sur Ulorsque
+∀⃗x∈U,f( ⃗a)≤f( ⃗x).
+Définition III.2.1.2 — Maximum global.
+Soient U une partie de
+− →
+Rn, f : U− →R une fonction et ⃗a∈U . On dit que ⃗a est unmaximum
+global de f sur Ulorsque
+∀⃗x∈U,f( ⃗a)≥f( ⃗x).
+
+=== Cours original, page PDF 36 ===
+324Chapitre III.2. Optimisation sans contrainte
+■ Remarque III.2.1.2 — Maximum et minimum.
+Rechercher un maximum de f revient à rechercher un minimum de −f . Ainsi, beaucoup de
+résultats concernant les minima peuvent être transposés aux maxima en changeant le signe
+de la fonction. ■
+III.2.1.2 Optima locaux et points critiques
+En optimisation, il est souvent plus facile de commencer par étudier le comportement de la
+fonction au voisinage d’un vecteur.
+Définition III.2.1.3 — Minimum local.
+Soient U une partie de
+− →
+Rn, f : U− →R une fonction et ⃗a∈U . On dit que ⃗a est unminimum
+local de florsqu’il existe un voisinageVde ⃗atel que
+∀⃗x∈V∩U,f( ⃗a)≤f( ⃗x).
+Définition III.2.1.4 — Minimum local strict.
+Soient U une partie de
+− →
+Rn, f : U− →R une fonction et ⃗a∈U . On dit que ⃗a est unminimum
+local strict de florsqu’il existe un voisinageVde ⃗atel que
+∀⃗x∈(V∩U) \ { ⃗a},f( ⃗a)<f( ⃗x).
+On définit de manière analogue un maximum local et un maximum local strict.
+■ Remarque III.2.1.3 — Global implique local.
+Tout minimum global est un minimum local. La réciproque est fausse en général. L ’une des
+conséquences importantes de la convexité sera précisément de rétablir cette implication
+réciproque. ■
+Définition III.2.1.5 — Point critique.
+Soient U un ouvert de
+− →
+Rn, f : U− →R une fonction différentiable sur U et ⃗a∈U . On dit que
+⃗aest unpoint critique de florsque − − →d f ⃗a =0.
+D’après le théorème de représentation de Riesz, cette condition est équivalente à
+⃗∇f( ⃗a)= ⃗0.
+Dans la base canonique, déterminer les points critiques revient donc à résoudre le système
+
+
+
+∂f
+∂x1
+(⃗x)=0,
+...
+∂f
+∂xn
+(⃗x)=0.
+■ Remarque III.2.1.4 — Retour aux systèmes d’équations.
+La première étape d’un problème d’optimisation différentiable consiste donc souvent à
+résoudre un système d’équations. Lorsque le gradient dépend linéairement des variables, ce
+
+=== Cours original, page PDF 37 ===
+III.2.1 Optima et points critiques 325
+système est un système linéaire et peut être résolu par la méthode de Gauss.■
+III.2.1.3 Condition nécessaire du premier ordre
+Proposition III.2.1.1 — Théorème de Fermat.
+Soient U un ouvert de
+− →
+Rn, f : U− →R une fonction différentiable en ⃗a∈U . Si ⃗a est un
+minimum local ou un maximum local def, alors
+− − →d f ⃗a =0.
+Autrement dit,
+⃗∇f( ⃗a)= ⃗0.
+Démonstration.
+Soient U un ouvert de
+− →
+Rn, f : U− →R une fonction différentiable en ⃗a∈U et supposons que ⃗a
+est un minimum local de f . Montrons que − − →d f ⃗a = 0. Soit ⃗h∈
+− →
+Rn. Comme U est ouvert, il existe
+η>0 tel que ⃗a+t ⃗h∈Upour toutt∈]−η,η[. Considérons alors la fonction
+ϕ: ]−η,η[− →R
+t7− →f( ⃗a+t ⃗h).
+Comme ⃗a est un minimum local de f , le réel 0 est un minimum local de ϕ. Le théorème de
+Fermat à une variable donne doncϕ ′(0)=0. D’après la règle de la chaîne,
+ϕ′(0)= − − →d f ⃗a(⃗h).
+Ainsi − − →d f ⃗a(⃗h)=0 pour tout ⃗h∈
+− →
+Rn, donc
+− − →d f ⃗a =0.
+Le raisonnement est identique lorsque ⃗aest un maximum local.■
+■ Remarque III.2.1.5 — Condition nécessaire, mais non suffisante.
+La condition ⃗∇f (⃗a) = ⃗0 est nécessaire pour qu’un vecteur intérieur au domaine soit un
+extremum local, mais elle n’est pas suffisante. Un point critique peut être un minimum
+local, un maximum local ou un point qui n’est ni un minimum ni un maximum. Il faut donc
+poursuivre l’étude au second ordre. ■
+III.2.1.4 Points selles
+Définition III.2.1.6 — Point selle.
+Soient U un ouvert de
+− →
+Rn, f : U− →R une fonction différentiable sur U et ⃗a∈U un point
+critique de f . On dit que ⃗a est unpoint sellelorsque tout voisinage V de ⃗a contient un couple¡
+⃗x, ⃗y
+¢
+∈(V∩U) 2 tel que
+f( ⃗x)<f( ⃗a)<f( ⃗y).
+■ Remarque III.2.1.6 — Interprétation.
+Au voisinage d’un point selle, la fonction augmente dans certaines directions et diminue dans
+d’autres. Ce comportement ne peut pas être détecté par le gradient puisque celui-ci est nul au
+
+=== Cours original, page PDF 38 ===
+326Chapitre III.2. Optimisation sans contrainte
+point critique. Il faut étudier la différentielle seconde.■
+III.2.2 Conditions du second ordre
+III.2.2.1 Conditions nécessaires du second ordre
+Proposition III.2.2.1 — Condition nécessaire du second ordre pour un minimum.
+Soient U un ouvert de
+− →
+Rn, f : U− →R une fonction de classe C 2 sur U et ⃗a∈U . Si ⃗a est un
+minimum local def, alors − − →d f ⃗a =0
+et
+∀⃗h∈
+− →
+Rn,
+− − − →
+d 2 f⃗a(⃗h,⃗h)≥0.
+Démonstration.
+Soient U un ouvert de
+− →
+Rn, f : U− →R une fonction de classe C 2 sur U et ⃗a∈U un minimum
+local def. D’après le théorème de Fermat,
+− − →d f ⃗a =0.
+Soit ⃗h∈
+− →
+Rn. La formule de Taylor–Young appliquée en⃗aà l’accroissementt ⃗hdonne
+f( ⃗a+t ⃗h)−f( ⃗a)= t 2
+2
+− − − →
+d 2 f⃗a(⃗h,⃗h)+o(t 2). (III.2.1)
+Supposons que
+− − − →
+d 2 f⃗a(⃗h,⃗h)<0. Posonsc= − 1
+2
+− − − →
+d 2 f⃗a(⃗h,⃗h)>0. Par définition du petito,
+lim
+t→0
+o(t 2)
+t 2 =0.
+Il existe doncη>0 tel que, pour toutt∈]−η,η[\{0},
+¯¯¯¯
+o(t 2)
+t 2
+¯¯¯¯ < c
+2 .
+D’après (III.2.1), on obtient alors
+f( ⃗a+t ⃗h)−f( ⃗a)< −ct 2 + c
+2 t 2 <0,
+ce qui contredit le fait que ⃗asoit un minimum local. Ainsi
+− − − →
+d 2 f⃗a(⃗h,⃗h)≥0.
+Cette relation étant vraie pour tout ⃗h∈
+− →
+Rn, le résultat est démontré.■
+Proposition III.2.2.2 — Condition nécessaire du second ordre pour un maximum.
+Soient U un ouvert de
+− →
+Rn, f : U− →R une fonction de classe C 2 sur U et ⃗a∈U . Si ⃗a est un
+maximum local def, alors − − →d f ⃗a =0
+et
+∀⃗h∈
+− →
+Rn,
+− − − →
+d 2 f⃗a(⃗h,⃗h)≤0.
+
+=== Cours original, page PDF 39 ===
+III.2.2 Conditions du second ordre 327
+Démonstration.
+Soient U un ouvert de
+− →
+Rn, f : U− →R une fonction de classe C 2 sur U et ⃗a∈U un maximum
+local def. Alors ⃗aest un minimum local de−f. D’après la Proposition III.2.2.1, on a
+− − − − − →d(−f) ⃗a =0
+et, pour tout ⃗h∈
+− →
+Rn, − − − − − − →
+d 2(−f) ⃗a(⃗h,⃗h)≥0.
+Comme − − − − − →d(−f) ⃗a = −− − →d f ⃗a et
+− − − − − − →
+d 2(−f) ⃗a = −
+− − − →
+d 2 f⃗a, on obtient
+− − →d f ⃗a =0
+et − − − →
+d 2 f⃗a(⃗h,⃗h)≤0.
+■
+III.2.2.2 Formes quadratiques et matrice hessienne
+Nous introduisons maintenant l’outil algébrique permettant d’étudier systématiquement le
+signe de
+− − − →
+d 2 f⃗a(⃗h,⃗h).
+Définition III.2.2.1 — Forme quadratique associée à une matrice symétrique.
+SoitA∈M n(R) une matrice symétrique. L ’application
+q A :
+− →
+Rn − →R
+⃗h7− →[ ⃗h] T
+e A[⃗h]e
+est appeléeforme quadratique associée à A.
+Pour une fonction réelle f de classe C 2, la matrice hessienne H f (⃗a) est symétrique d’après
+le théorème de Clairaut. La forme quadratique qui lui est associée vérifie
+qH f (⃗a)(⃗h)=[ ⃗h] T
+e H f (⃗a)[⃗h]e =
+− − − →
+d 2 f⃗a(⃗h,⃗h).
+Définition III.2.2.2 — Forme quadratique définie positive.
+Une forme quadratiqueqsur
+− →
+Rn est ditedéfinie positivelorsque
+∀⃗h∈
+− →
+Rn \ {⃗0},q( ⃗h)>0.
+Définition III.2.2.3 — Forme quadratique semi-définie positive.
+Une forme quadratiqueqsur
+− →
+Rn est ditesemi-définie positivelorsque
+∀⃗h∈
+− →
+Rn,q( ⃗h)≥0.
+On définit de même une forme quadratique définie négative, semi-définie négative ou
+indéfinie. Une forme quadratique est indéfinie lorsqu’elle prend au moins une valeur strictement
+positive et au moins une valeur strictement négative.
+Par extension, on dit qu’une matrice symétrique A est définie positive, semi-définie positive,
+définie négative, semi-définie négative ou indéfinie lorsque la forme quadratique q A associée
+possède la propriété correspondante.
+
+=== Cours original, page PDF 40 ===
+328Chapitre III.2. Optimisation sans contrainte
+■ Remarque III.2.2.1 — Application à la Hessienne.
+Dire que la HessienneH f (⃗a) est définie positive signifie
+∀⃗h∈
+− →
+Rn \ {⃗0}, [ ⃗h] T
+e H f (⃗a)[⃗h]e >0.
+Il s’agit donc exactement d’une propriété de signe de la différentielle seconde.■
+III.2.2.3 Valeurs propres et signe de la Hessienne
+Les matrices hessiennes étant symétriques, les résultats de réduction des endomorphismes
+permettent d’étudier leur signe à partir de leurs valeurs propres.
+Proposition III.2.2.3 — Valeurs propres et signe d’une forme quadratique.
+SoitA∈M n(R) une matrice symétrique. Alors :
+—A est définie positive si et seulement si toutes ses valeurs propres sont strictement
+positives ;
+—A est semi-définie positive si et seulement si toutes ses valeurs propres sont positives
+ou nulles ;
+—A est définie négative si et seulement si toutes ses valeurs propres sont strictement
+négatives ;
+—A est semi-définie négative si et seulement si toutes ses valeurs propres sont négatives
+ou nulles ;
+—A est indéfinie si elle possède au moins une valeur propre strictement positive et une
+valeur propre strictement négative.
+Démonstration.
+Soit A∈M n(R) une matrice symétrique. D’après le théorème de diagonalisation des matrices
+symétriques, il existe une matrice orthogonalePet une matrice diagonale
+D=
+
+
+λ1 0
+...
+0λ n
+
+
+telles que A=P DP T , où λ1,. .. ,λn sont les valeurs propres de A. Pour tout ⃗h∈
+− →
+Rn, posons
+[⃗z]e =P T [⃗h]e. On a alors
+[⃗h] T
+e A[⃗h]e =
+nX
+i=1
+λi z2
+i . (III.2.2)
+Comme P est inversible, ⃗h̸= ⃗0 si et seulement si ⃗z̸= ⃗0. Les différents résultats découlent alors
+directement de (III.2.2) en étudiant les signes des valeurs propres.■
+■ Remarque III.2.2.2 — Retour à la réduction des endomorphismes.
+La diagonalisation des matrices symétriques étudiée en algèbre trouve ici une application
+directe. Elle permet de transformer [⃗h] T
+e H f (⃗a)[⃗h]e en une sommeλ 1z2
+1 + · · · +λn z2
+n. Le signe
+de la différentielle seconde devient alors immédiatement lisible.■
+Proposition III.2.2.4 — Critère de signe en dimension deux.
+SoitA=
+µa b
+b c
+¶
+une matrice réelle symétrique. Alors :
+
+=== Cours original, page PDF 41 ===
+III.2.2 Conditions du second ordre 329
+— sia>0 et detA>0, alorsAest définie positive ;
+— sia<0 et detA>0, alorsAest définie négative ;
+— si detA<0, alorsAest indéfinie.
+Démonstration.
+Soit A=
+µa b
+b c
+¶
+une matrice réelle symétrique. Supposons d’abord quea̸= 0. Pour tout ⃗h∈
+− →
+R2,
+on a
+[⃗h] T
+e A[⃗h]e =ah 2
+1 +2bh 1h2 +ch 2
+2
+=a
+µ
+h1 + b
+a h2
+¶2
++ detA
+a h2
+2.
+Si a> 0 et detA> 0, les deux coefficients sont strictement positifs et la forme est définie positive.
+Si a< 0 et detA> 0, les deux coefficients sont strictement négatifs et la forme est définie négative.
+Enfin, si detA< 0, les deux valeurs propres de A ont un produit négatif. Elles sont donc de signes
+opposés et la Proposition III.2.2.3 montre queAest indéfinie.■
+III.2.2.4 Conditions suffisantes et classification
+Nous pouvons maintenant utiliser la formule de Taylor–Young pour déterminer la nature
+d’un point critique.
+Proposition III.2.2.5 — Condition suffisante pour un minimum local strict.
+Soient U un ouvert de
+− →
+Rn, f : U− →R une fonction de classe C 2 sur U et ⃗a∈U . Supposons
+que − − →d f ⃗a = 0 et que la forme quadratique ⃗h7− →
+− − − →
+d 2 f⃗a(⃗h,⃗h) soit définie positive. Alors ⃗a est un
+minimum local strict def.
+Démonstration.
+Soient U un ouvert de
+− →
+Rn, f : U− →R une fonction de classe C 2 sur U et ⃗a∈U . Supposons que
+− − →d f ⃗a = 0 et que la forme quadratique⃗h7− →
+− − − →
+d 2 f⃗a(⃗h,⃗h) soit définie positive. Considérons la sphère
+unité
+S=
+n
+⃗u∈
+− →
+Rn ;∥ ⃗u∥ =1
+o
+.
+Elle est compacte. La fonction ⃗u7− →
+− − − →
+d 2 f⃗a(⃗u, ⃗u) est continue et strictement positive sur S. Elle
+atteint donc un minimumm>0 surS. Pour tout ⃗h∈
+− →
+Rn \ {⃗0}, posons ⃗u=
+⃗h
+∥⃗h∥
+. Par bilinéarité,
+− − − →
+d 2 f⃗a(⃗h,⃗h)≥m∥ ⃗h∥2. (III.2.3)
+Comme − − →d f ⃗a =0, la formule de Taylor–Young donne
+f( ⃗a+ ⃗h)−f( ⃗a)= 1
+2
+− − − →
+d 2 f⃗a(⃗h,⃗h)+o(∥ ⃗h∥2). (III.2.4)
+Par définition du petito,
+lim
+⃗h→⃗0
+o(∥⃗h∥2)
+∥⃗h∥2
+=0.
+Il existe doncη>0 tel que, pour tout ⃗h∈B( ⃗0,η) \ {⃗0},
+¯¯¯o(∥⃗h∥2)
+¯¯¯ ≤ m
+4 ∥⃗h∥2.
+En utilisant (III.2.3) dans (III.2.4), on obtient
+f( ⃗a+ ⃗h)−f( ⃗a)≥ m
+4 ∥⃗h∥2 >0.
+Ainsi ⃗aest un minimum local strict def.■
+
+=== Cours original, page PDF 42 ===
+330Chapitre III.2. Optimisation sans contrainte
+Proposition III.2.2.6 — Condition suffisante pour un maximum local strict.
+Soient U un ouvert de
+− →
+Rn, f : U− →R une fonction de classe C 2 sur U et ⃗a∈U . Si − − →d f ⃗a = 0 et
+si la forme quadratique ⃗h7− →
+− − − →
+d 2 f⃗a(⃗h,⃗h) est définie négative, alors ⃗a est un maximum local
+strict def.
+Démonstration.
+Soient U un ouvert de
+− →
+Rn, f : U− →R une fonction de classe C 2 sur U et ⃗a∈U tels que − − →d f ⃗a = 0
+et que ⃗h7− →
+− − − →
+d 2 f⃗a(⃗h,⃗h) soit définie négative. Alors − − − − − →d(−f) ⃗a = 0 et la forme ⃗h7− →
+− − − − − − →
+d 2(−f) ⃗a(⃗h,⃗h)
+est définie positive. La Proposition III.2.2.5 appliquée à −f montre que ⃗a est un minimum local
+strict de−f. Il s’agit donc d’un maximum local strict def.■
+Proposition III.2.2.7 — Critère de point selle.
+Soient U un ouvert de
+− →
+Rn, f : U− →R une fonction de classe C 2 sur U et ⃗a∈U un point
+critique de f . Si la forme quadratique ⃗h7− →
+− − − →
+d 2 f⃗a(⃗h,⃗h) est indéfinie, alors ⃗a est un point selle.
+Démonstration.
+Soient U un ouvert de
+− →
+Rn, f : U− →R une fonction de classe C 2 sur U et ⃗a∈U un point
+critique de f . Supposons que la forme quadratique associée à
+− − − →
+d 2 f⃗a soit indéfinie. Il existe alors
+(⃗u, ⃗v) ∈
+³− →
+Rn
+´2
+tels que
+− − − →
+d 2 f⃗a(⃗u, ⃗u)>0 et
+− − − →
+d 2 f⃗a(⃗v, ⃗v)<0.
+Comme ⃗aest un point critique, la formule de Taylor–Young donne
+f( ⃗a+t ⃗u)−f( ⃗a)= t 2
+2
+− − − →
+d 2 f⃗a(⃗u, ⃗u)+o(t 2), (III.2.5)
+et
+f( ⃗a+t ⃗v)−f( ⃗a)= t 2
+2
+− − − →
+d 2 f⃗a(⃗v, ⃗v)+o(t 2). (III.2.6)
+Comme
+lim
+t→0
+o(t 2)
+t 2 =0,
+la relation (III.2.5) est strictement positive et la relation (III.2.6) est strictement négative pour
+t̸= 0 suffisamment petit. Tout voisinage de⃗a contient donc des vecteurs où la fonction prend une
+valeur strictement supérieure à f (⃗a) et d’autres où elle prend une valeur strictement inférieure.
+Ainsi ⃗aest un point selle.■
+Proposition III.2.2.8 — Classification d’un point critique.
+Soient U un ouvert de
+− →
+Rn, f : U− →R une fonction de classe C 2 sur U et ⃗a∈U un point
+critique def. Alors :
+— siH f (⃗a) est définie positive, ⃗aest un minimum local strict ;
+— siH f (⃗a) est définie négative, ⃗aest un maximum local strict ;
+— siH f (⃗a) est indéfinie, ⃗aest un point selle ;
+— si H f (⃗a) est seulement semi-définie positive ou semi-définie négative, le critère du
+second ordre ne permet pas, en général, de conclure.
+Démonstration.
+Soient U un ouvert de
+− →
+Rn, f : U− →R une fonction de classe C 2 sur U et ⃗a∈U un point
+critique de f . Les trois premières conclusions sont exactement les Propositions III.2.2.5, III.2.2.6
+
+=== Cours original, page PDF 43 ===
+III.2.3 Convexité et optimisation 331
+et III.2.2.7. Lorsque H f (⃗a) est seulement semi-définie positive ou semi-définie négative, les
+conditions nécessaires du second ordre sont satisfaites sans que les conditions suffisantes
+précédentes le soient. Une étude complémentaire est donc nécessaire.■
+■ Remarque III.2.2.3 — Cas dégénéré.
+Si la Hessienne possède une valeur propre nulle sans avoir de valeurs propres de signes oppo-
+sés, il peut être nécessaire d’étudier directement la fonction ou des termes d’ordre supérieur.
+Une Hessienne nulle ne signifie donc pas que le point critique n’est pas un extremum.■
+III.2.3 Convexité et optimisation
+III.2.3.1 De l’optimalité locale à l’optimalité globale
+Le chapitre précédent permet d’obtenir des résultats beaucoup plus forts lorsque la fonction
+est convexe.
+Proposition III.2.3.1 — Un minimum local d’une fonction convexe est global.
+Soient C un ensemble convexe de
+− →
+Rn et f : C− →R une fonction convexe. Tout minimum
+local defest un minimum global.
+Démonstration.
+Soient C un ensemble convexe de
+− →
+Rn, f : C− →R une fonction convexe et ⃗a∈C un minimum
+local de f . Montrons que ⃗a est un minimum global. Supposons qu’il existe⃗y∈C tel que f (⃗y) <
+f (⃗a). Pour tout t∈ ]0,1[, posons ⃗xt = (1 −t )⃗a+t ⃗y. Comme C est convexe, ⃗xt ∈C . Par convexité
+def,
+f( ⃗xt )≤(1−t)f( ⃗a)+t f( ⃗y)<f( ⃗a).
+De plus,
+lim
+t→0
+⃗xt = ⃗a.
+On trouve donc des vecteurs arbitrairement proches de⃗a dont la valeur est strictement inférieure
+àf( ⃗a), ce qui contredit le caractère de minimum local. Ainsi ⃗aest un minimum global.■
+Proposition III.2.3.2 — Point critique d’une fonction convexe.
+Soient U un ouvert convexe de
+− →
+Rn et f : U− →R une fonction convexe et différentiable sur U .
+Si ⃗a∈Uvérifie ⃗∇f( ⃗a)= ⃗0, alors ⃗aest un minimum global def.
+Démonstration.
+Soient U un ouvert convexe de
+− →
+Rn, f : U− →R une fonction convexe et différentiable sur U et
+⃗a∈U tel que ⃗∇f (⃗a) =⃗0. D’après la caractérisation au premier ordre de la convexité, pour tout
+⃗y∈U,
+f( ⃗y)≥f( ⃗a)+
+­⃗∇f( ⃗a)| ⃗y− ⃗a
+®
+.
+Comme ⃗∇f (⃗a) =⃗0, on obtient f (⃗y) ≥f (⃗a) pour tout ⃗y∈U . Ainsi ⃗a est un minimum global de
+f. ■
+Corollaire III.2.3.1 — Caractérisation des minima d’une fonction convexe différentiable.
+Soient U un ouvert convexe de
+− →
+Rn, f : U− →R une fonction convexe et différentiable sur U et
+
+=== Cours original, page PDF 44 ===
+332Chapitre III.2. Optimisation sans contrainte
+⃗a∈U. Alors ⃗aest un minimum global defsi et seulement si
+⃗∇f( ⃗a)= ⃗0.
+Démonstration.
+Soient U un ouvert convexe de
+− →
+Rn, f : U− →R une fonction convexe et différentiable sur U et
+⃗a∈U . Si ⃗a est un minimum global, il est en particulier un minimum local et le théorème de
+Fermat donne ⃗∇f (⃗a) =⃗0. Réciproquement, si ⃗∇f (⃗a) =⃗0, la Proposition III.2.3.2 montre que ⃗a
+est un minimum global.■
+III.2.3.2 Convexité stricte et forte convexité
+Proposition III.2.3.3 — Unicité du minimum pour une fonction strictement convexe.
+Soient C un ensemble convexe de
+− →
+Rn et f : C− →R une fonction strictement convexe. Si f
+possède un minimum global, celui-ci est unique.
+Démonstration.
+Soient C un ensemble convexe de
+− →
+Rn et f : C− →R une fonction strictement convexe. Supposons
+que
+³
+⃗a,⃗b
+´
+∈C 2 soient deux minima globaux distincts et posons m=f (⃗a) =f (⃗b). Comme ⃗a̸= ⃗b,
+la stricte convexité appliquée avect= 1
+2 donne
+f
+Ã
+⃗a+ ⃗b
+2
+!
+< 1
+2 f( ⃗a)+ 1
+2 f( ⃗b)=m,
+ce qui contredit la définition de m comme valeur minimale. Le minimum global est donc
+unique. ■
+Corollaire III.2.3.2 — Point critique d’une fonction strictement convexe.
+Soient U un ouvert convexe de
+− →
+Rn et f : U− →R une fonction strictement convexe et diffé-
+rentiable surU. Si ⃗a∈Uvérifie ⃗∇f( ⃗a)= ⃗0, alors ⃗aest l’unique minimum global def.
+Démonstration.
+Soient U un ouvert convexe de
+− →
+Rn, f : U− →R une fonction strictement convexe et différentiable
+sur U et ⃗a∈U tel que ⃗∇f (⃗a) = ⃗0. Comme une fonction strictement convexe est convexe, la
+Proposition III.2.3.2 montre que⃗a est un minimum global. La Proposition III.2.3.3 assure ensuite
+son unicité. ■
+Proposition III.2.3.4 — Minimum d’une fonction fortement convexe.
+Soient U un ouvert convexe de
+− →
+Rn, f : U− →R une fonction différentiable et µ-fortement
+convexe sur U , avec µ∈R ∗
++. Si ⃗a∈U vérifie ⃗∇f (⃗a) =⃗0, alors ⃗a est l’unique minimum global
+defet
+∀⃗x∈U,f( ⃗x)≥f( ⃗a)+ µ
+2 ∥⃗x− ⃗a∥2.
+Démonstration.
+Soient U un ouvert convexe de
+− →
+Rn, f : U− →R une fonction différentiable et µ-fortement
+convexe sur U , avec µ∈R ∗
++, et ⃗a∈U tel que ⃗∇f (⃗a) =⃗0. La caractérisation au premier ordre de la
+forte convexité donne, pour tout ⃗x∈U,
+f( ⃗x)≥f( ⃗a)+ − − →d f ⃗a(⃗x− ⃗a)+ µ
+2 ∥⃗x− ⃗a∥2.
+
+=== Cours original, page PDF 45 ===
+III.2.4 Existence d’un optimum 333
+D’après le théorème de représentation de Riesz et l’hypothèse⃗∇f( ⃗a)= ⃗0, on a − − →d f ⃗a =0. Ainsi
+f( ⃗x)≥f( ⃗a)+ µ
+2 ∥⃗x− ⃗a∥2.
+Si ⃗x̸= ⃗a, le second terme est strictement positif. Le vecteur ⃗a est donc l’unique minimum global
+def. ■
+■ Remarque III.2.3.1 — Stabilité.
+La forte convexité fournit plus que l’unicité. Elle donne l’estimation quantitative
+f( ⃗x)−f( ⃗a)≥ µ
+2 ∥⃗x− ⃗a∥2.
+La fonction ne peut donc pas rester presque constante loin du minimiseur.■
+III.2.3.3 Fonctions concaves et maximisation
+Définition III.2.3.1 — Fonction concave.
+Soient C un ensemble convexe de
+− →
+Rn et f : C− →R une fonction. On dit que f estconcave
+lorsque−fest convexe.
+On dit de même quefeststrictement concavelorsque−fest strictement convexe.
+Ainsi,fest concave si et seulement si, pour tout
+¡
+⃗x, ⃗y,t
+¢
+∈C 2 ×[0, 1],
+f((1−t) ⃗x+t ⃗y)≥(1−t)f( ⃗x)+t f( ⃗y).
+Proposition III.2.3.5 — Maximum d’une fonction concave.
+Soient U un ouvert convexe de
+− →
+Rn et f : U− →R une fonction concave et différentiable sur U .
+Si ⃗a∈U vérifie ⃗∇f (⃗a) =⃗0, alors ⃗a est un maximum global de f . Si f est strictement concave,
+ce maximum est unique.
+Démonstration.
+Soient U un ouvert convexe de
+− →
+Rn, f : U− →R une fonction concave et différentiable sur U et
+⃗a∈Utel que ⃗∇f( ⃗a)= ⃗0. La fonction−fest convexe et
+⃗∇(−f)( ⃗a)= − ⃗∇f( ⃗a)= ⃗0.
+La Proposition III.2.3.2 montre donc que ⃗a est un minimum global de −f , donc un maximum
+global de f . Si f est strictement concave, −f est strictement convexe et son minimum est
+unique. ■
+III.2.4 Existence d’un optimum
+III.2.4.1 Existence sur un compact
+Les conditions différentielles permettent de caractériser un optimum lorsqu’il existe. Il faut
+également se demander si cet optimum est effectivement atteint.
+Proposition III.2.4.1 — Existence sur un compact.
+Soient K une partie compacte non vide de
+− →
+Rn et f : K− →R une fonction continue. Alors f
+atteint un minimum global et un maximum global surK.
+
+=== Cours original, page PDF 46 ===
+334Chapitre III.2. Optimisation sans contrainte
+Démonstration.
+Soient K une partie compacte non vide de
+− →
+Rn et f : K− →R une fonction continue. L ’image d’un
+compact par une fonction continue est compacte. Ainsi f (K ) est une partie compacte non vide
+de R. Une partie compacte de R est fermée et bornée et possède donc un plus petit et un plus
+grand élément. Il existe donc (⃗xmin,⃗xmax) ∈K 2 tels que
+f( ⃗xmin)=min
+⃗x∈K
+f( ⃗x)
+et
+f( ⃗xmax)=max
+⃗x∈K
+f( ⃗x).
+■
+III.2.4.2 Fonctions coercives
+Dans un problème sans contrainte, le domaine est souvent
+− →
+Rn, qui n’est pas compact. Une
+propriété de croissance à l’infini peut remplacer la compacité.
+Définition III.2.4.1 — Fonction coercive.
+Une fonctionf:
+− →
+Rn − →Rest ditecoercivelorsque
+lim
+∥⃗x∥→+∞
+f( ⃗x)= +∞.
+Proposition III.2.4.2 — Existence d’un minimum pour une fonction coercive.
+Toute fonction continue et coercivef:
+− →
+Rn − →Rpossède au moins un minimum global.
+Démonstration.
+Soit f :
+− →
+Rn − →Rune fonction continue et coercive. Montrons quef possède un minimum global.
+D’après la coercivité,
+lim
+∥⃗x∥→+∞
+f( ⃗x)= +∞.
+Il existe doncR>0 tel que
+∥⃗x∥ ≥R= ⇒f( ⃗x)>f( ⃗0).
+La boule fermée B(⃗0,R ) est compacte. Comme f est continue, la Proposition III.2.4.1 assure
+l’existence d’un vecteur⃗a∈ B(⃗0,R) tel que
+f( ⃗a)=min
+⃗x∈B(⃗0,R)
+f( ⃗x).
+En particulier,f( ⃗a)≤f( ⃗0). Pour tout ⃗x∈
+− →
+Rn \ B(⃗0,R), on a
+f( ⃗x)>f( ⃗0)≥f( ⃗a).
+Ainsif( ⃗a)≤f( ⃗x) pour tout ⃗x∈
+− →
+Rn et ⃗aest un minimum global def.■
+Corollaire III.2.4.1 — Existence et unicité.
+Toute fonction continue, coercive et strictement convexe sur
+− →
+Rn possède un unique minimum
+global.
+Démonstration.
+Soit f :
+− →
+Rn − →Rune fonction continue, coercive et strictement convexe. La Proposition III.2.4.2
+assure l’existence d’un minimum global et la Proposition III.2.3.3 assure son unicité.■
+
+=== Cours original, page PDF 47 ===
+III.2.4 Existence d’un optimum 335
+Méthodologie III.2.4.1 — Étudier un problème d’optimisation sans contrainte.
+Pour étudier un problème de minimisation sans contrainte
+min
+⃗x∈U
+f( ⃗x),
+on pourra suivre la démarche suivante :
+1. vérifier la régularité def;
+2. calculer ⃗∇f( ⃗x) ;
+3. résoudre le système ⃗∇f( ⃗x)= ⃗0 ;
+4. calculer la Hessienne en chaque point critique ;
+5. étudier le signe de [ ⃗h] T
+e H f (⃗a)[⃗h]e ;
+6. conclure à l’aide des conditions du second ordre.
+Si f est convexe, un point critique est directement un minimum global. Si f est strictement
+convexe, ce minimum global est unique. Lorsque le gradient est affine, par exemple
+⃗∇f( ⃗x)=A[ ⃗x]e −⃗b,
+la condition d’optimalité devient un système linéaire que l’on peut résoudre par la méthode
+de Gauss.
+■ Remarque III.2.4.1 — Lien entre les chapitres.
+Un problème d’optimisation sans contrainte peut donc mobiliser successivement :
+différentielle− →gradient− →système d’équations− →méthode de Gauss,
+puis
+différentielle seconde− →Hessienne− →valeurs propres,
+et enfin
+convexité− →optimalité globale et unicité.
+■
+
+=== Cours original, page PDF 59 ===
+III.3. Optimisation sous contraintes
+Dans ce chapitre nous nous placerons dans les espaces euclidiens
+³− →
+Rn,〈• | •〉
+´
+et
+³− →
+Rp,〈• | •〉
+´
+,
+munis de leurs produits scalaires canoniques.
+Nous noterons par∥•∥les normes euclidiennes associées.
+Dans de nombreux problèmes d’optimisation, les variables ne peuvent pas varier libre-
+ment : elles doivent satisfaire des contraintes d’égalité ou d’inégalité. Le théorème des fonctions
+implicites permet de comprendre localement la géométrie des contraintes d’égalité. Les multi-
+plicateurs de Lagrange traduisent ensuite les conditions d’optimalité en un système d’équations.
+Pour les contraintes d’inégalité, les conditions de Karush–Kuhn–Tucker complètent ce système
+par des conditions de signe et de complémentarité. Comme dans les chapitres précédents, la
+résolution effective fera largement intervenir le calcul matriciel, la méthode de Gauss et les
+propriétés de convexité étudiées dans la Partie II.
+III.3.1 Problèmes d’optimisation sous contraintes
+III.3.1.1 Ensemble admissible et optima sous contraintes
+Soient U un ouvert de
+− →
+Rn, f : U− →R une fonction et F : U− →
+− →
+Rm une fonction vectorielle.
+Nous considérons d’abord le problème
+minf( ⃗x)
+sous la contrainte
+F(⃗x)= ⃗0.
+Définition III.3.1.1 — Ensemble admissible.
+Sous les hypothèses précédentes, on appelleensemble admissiblel’ensemble
+A=
+©
+⃗x∈U;F( ⃗x)= ⃗0
+ª
+.
+Tout vecteur deAest appelévecteur admissible.
+Le problème consiste donc à rechercher
+min
+⃗x∈A
+f( ⃗x).
+Définition III.3.1.2 — Minimum local sous contraintes.
+SoientAl’ensemble admissible et ⃗a∈A.
+On dit que ⃗a est unminimum local de f sous les contrainteslorsqu’il existe un voisinage V de
+
+=== Cours original, page PDF 60 ===
+348Chapitre III.3. Optimisation sous contraintes
+⃗atel que
+∀⃗x∈V∩A,f( ⃗a)≤f( ⃗x).
+On définit de manière analogue un maximum local sous contraintes, ainsi que les notions
+de minimum et de maximum globaux sous contraintes.
+■ Remarque III.3.1.1 — La comparaison porte uniquement sur les vecteurs admissibles.
+Un minimum sous contraintes n’a aucune raison d’être un minimum def sur tout l’ouvertU .
+La comparaison porte uniquement sur les vecteurs qui satisfont les contraintes.■
+III.3.1.2 Existence d’un optimum sous contraintes
+Avant de rechercher des conditions différentielles, il convient de distinguer la question de
+l’existence de celle de la caractérisation d’un optimum.
+Proposition III.3.1.1 — Existence sur un ensemble admissible compact.
+SoientAune partie compacte non vide de
+− →
+Rn etf:A− →Rune fonction continue surA.
+Alorsfatteint un minimum global et un maximum global surA.
+Démonstration.
+SoientAune partie compacte non vide de
+− →
+Rn etf:A− →Rune fonction continue surA.
+Le résultat est une application directe du théorème d’existence des extrema d’une fonction
+continue sur un compact.■
+III.3.2 Contraintes d’égalité et multiplicateurs de Lagrange
+III.3.2.1 Une contrainte et espace tangent
+Commençons par une seule contrainte g : U− →R de classe C 1 sur U et par l’ensemble
+admissible
+A=
+©
+⃗x∈U;g( ⃗x)=0
+ª
+.
+Définition III.3.2.1 — Vecteur régulier pour une contrainte.
+Soit ⃗a∈A. On dit que ⃗aestrégulier pour la contraintelorsque
+− − →d g⃗a ̸=0.
+D’après le théorème de représentation de Riesz, cette condition est équivalente à
+⃗∇g( ⃗a)̸= ⃗0.
+Définition III.3.2.2 — Espace tangent pour une contrainte.
+SoientA={ ⃗x∈U;g( ⃗x)=0} et ⃗a∈Aun vecteur régulier.
+On appelleespace tangent àAen ⃗al’espace
+T⃗aA= − →ker
+³− − →d g⃗a
+´
+.
+Dans la base canonique,
+T⃗aA=
+n
+⃗h∈
+− →
+Rn ;
+D
+⃗∇g( ⃗a)| ⃗h
+E
+=0
+o
+.
+
+=== Cours original, page PDF 61 ===
+III.3.2 Contraintes d’égalité et multiplicateurs de Lagrange 349
+■ Remarque III.3.2.1 — Gradient normal à la contrainte.
+Le vecteur ⃗∇g( ⃗a) est orthogonal à toutes les directions tangentes à la contrainte. Il constitue
+donc un vecteur normal à l’ensemble admissible au voisinage de⃗a.■
+La définition précédente correspond bien aux directions réellement suivies par des courbes
+admissibles.
+Proposition III.3.2.1 — Réalisation d’une direction tangente.
+Soient U un ouvert de
+− →
+Rn, g : U− →R une fonction de classeC 1 sur U et ⃗a∈U tel que g (⃗a) = 0
+et ⃗∇g( ⃗a)̸= ⃗0.
+Pour tout ⃗h∈T ⃗aA, il existeε>0 et une courbe de classeC 1
+γ:]−ε,ε[− →A
+telle que
+γ(0)= ⃗aetγ ′(0)= ⃗h.
+Démonstration.
+SoientUun ouvert de
+− →
+Rn,g:U− →Rune fonction de classeC 1 surU, ⃗a∈Utel queg( ⃗a)=0 et
+⃗∇g( ⃗a)̸= ⃗0, et ⃗h∈T ⃗aA.
+Comme ⃗∇g (⃗a) ̸=⃗0, au moins une dérivée partielle de g est non nulle en ⃗a. Après une éventuelle
+permutation des coordonnées, écrivons ⃗x=( ⃗u,y) avec ⃗u∈
+− − − →
+Rn−1 ety∈R, de sorte que
+∂g
+∂y (⃗a)̸=0.
+Le théorème des fonctions implicites fournit localement une fonction de classe C 1, notée ϕ,
+telle que la contrainte s’écrivey=ϕ( ⃗u).
+Écrivons ⃗a= (⃗u0,y 0) et ⃗h= (⃗p,q ). Comme ⃗h∈ − →ker
+³− − →d g⃗a
+´
+, la formule de différentiation implicite
+donne
+q= − − − →dϕ ⃗u0(⃗p).
+Considérons alors, pourtsuffisamment proche de 0,
+γ(t)=
+¡
+⃗u0 +t ⃗p,ϕ( ⃗u0 +t ⃗p)
+¢
+.
+Par construction,g(γ(t))=0, doncγ(t)∈A. De plus,
+γ(0)= ⃗a
+et
+γ′(0)=
+³
+⃗p, − − − →dϕ ⃗u0(⃗p)
+´
+=( ⃗p,q)= ⃗h.
+■
+III.3.2.2 Condition tangentielle et théorème de Lagrange
+Proposition III.3.2.2 — Annulation de la différentielle sur l’espace tangent.
+Soient U un ouvert de
+− →
+Rn, f,g : U− →R deux fonctions de classe C 1 sur U et ⃗a∈U un
+minimum ou un maximum local defsous la contrainteg( ⃗x)=0.
+Si ⃗∇g( ⃗a)̸= ⃗0, alors
+∀⃗h∈T ⃗aA, − − →d f ⃗a(⃗h)=0.
+
+=== Cours original, page PDF 62 ===
+350Chapitre III.3. Optimisation sous contraintes
+Démonstration.
+Soient U un ouvert de
+− →
+Rn, f,g : U− →R deux fonctions de classe C 1 sur U et ⃗a∈U un minimum
+ou un maximum local defsous la contrainteg( ⃗x)=0, avec ⃗∇g( ⃗a)̸= ⃗0.
+Soit ⃗h∈T ⃗aA . D’après la Proposition III.3.2.1, il existe une courbe admissibleγ de classe C 1 telle
+queγ(0)= ⃗aetγ ′(0)= ⃗h.
+La fonction t7− →f (γ(t)) possède un extremum local en 0. Le théorème de Fermat à une variable
+donne donc
+(f◦γ) ′(0)=0.
+D’après la règle de la chaîne,
+(f◦γ) ′(0)= − − →d f ⃗a(⃗h).
+Ainsi − − →d f ⃗a(⃗h)=0. ■
+Corollaire III.3.2.1 — Théorème de Lagrange à une contrainte.
+Soient U un ouvert de
+− →
+Rn, f,g : U− →R deux fonctions de classe C 1 sur U et ⃗a∈U un
+minimum ou un maximum local defsous la contrainteg( ⃗x)=0.
+Si ⃗∇g( ⃗a)̸= ⃗0, alors il existeλ∈Rtel que
+⃗∇f( ⃗a)=λ ⃗∇g( ⃗a).
+Démonstration.
+Soient U un ouvert de
+− →
+Rn, f,g : U− →R deux fonctions de classe C 1 sur U et ⃗a∈U un minimum
+ou un maximum local defsous la contrainteg( ⃗x)=0, avec ⃗∇g( ⃗a)̸= ⃗0.
+D’après la Proposition III.3.2.2,− − →d f ⃗a s’annule sur− →ker
+³− − →d g⃗a
+´
+. Par le théorème de représentation
+de Riesz, ⃗∇f( ⃗a) est donc orthogonal à − →ker
+³− − →d g⃗a
+´
+. Or
+³− →ker
+³− − →d g⃗a
+´´⊥
+= − − →Vect
+¡⃗∇g( ⃗a)
+¢
+.
+Il existe doncλ∈Rtel que
+⃗∇f( ⃗a)=λ ⃗∇g( ⃗a).
+■
+■ Remarque III.3.2.2 — Interprétation géométrique.
+Au voisinage d’un optimum contraint, les variations admissibles sont tangentes à la contrainte
+et le gradient de la fonction objectif leur est orthogonal. Le gradient de f est donc normal à la
+contrainte, comme le gradient deg; les deux gradients sont colinéaires.■
+III.3.2.3 Plusieurs contraintes d’égalité
+Soient F : U− →
+− →
+Rm une fonction de classe C 1 sur U et F= (g1, ... ,g m) dans la base cano-
+nique. L ’ensemble admissible est
+A=F −1({⃗0}).
+Définition III.3.2.3 — Vecteur régulier pour plusieurs contraintes.
+Soit ⃗a∈A. On dit que ⃗aestrégulierlorsque
+r g JF (⃗a)=m.
+
+=== Cours original, page PDF 63 ===
+III.3.2 Contraintes d’égalité et multiplicateurs de Lagrange 351
+Proposition III.3.2.3 — Régularité et gradients des contraintes.
+SoientF=(g 1,. .. ,g m) et ⃗a∈A.
+Le vecteur ⃗aest régulier si et seulement si la famille
+¡⃗∇g 1(⃗a), .. .,⃗∇g m(⃗a)
+¢
+est libre.
+Démonstration.
+SoientF=(g 1, .. .,g m) et ⃗a∈A.
+Les transposés des gradients ⃗∇g i (⃗a) sont exactement les lignes de JF (⃗a). Ainsi r g JF (⃗a) =m si et
+seulement si ces m lignes sont linéairement indépendantes, ce qui équivaut à la liberté de la
+famille des gradients.■
+Définition III.3.2.4 — Espace tangent pour plusieurs contraintes.
+SoientA=F −1({⃗0}) et ⃗a∈Aun vecteur régulier.
+On appelleespace tangent àAen ⃗al’espace
+T⃗aA= − →ker
+³− − →d F⃗a
+´
+.
+Dans les bases canoniques,
+T⃗aA= − →kerJ F (⃗a).
+■ Remarque III.3.2.3 — Calcul de l’espace tangent par la méthode de Gauss.
+Déterminer l’espace tangent revient à résoudre le système linéaire homogène
+JF (⃗a)⃗h= ⃗0.
+La méthode de Gauss fournit donc directement une base deT ⃗aA.■
+Proposition III.3.2.4 — Réalisation d’une direction tangente.
+Soient U un ouvert de
+− →
+Rn, F : U− →
+− →
+Rm une fonction de classe C 1 sur U et ⃗a∈U tel que
+F( ⃗a)= ⃗0 etr g J F (⃗a)=m.
+Pour tout ⃗h∈T ⃗aA, il existeε>0 et une courbe de classeC 1
+γ:]−ε,ε[− →A
+telle queγ(0)= ⃗aetγ ′(0)= ⃗h.
+Démonstration.
+Soient U un ouvert de
+− →
+Rn, F : U− →
+− →
+Rm une fonction de classe C 1 sur U , ⃗a∈U tel que F (⃗a) =⃗0
+etr g J F (⃗a)=m, et ⃗h∈T ⃗aA.
+Comme r g JF (⃗a) =m , la méthode de Gauss montre qu’il existe m colonnes de JF (⃗a) formant
+une matrice carrée inversible. Après permutation éventuelle des variables, écrivons⃗x= (⃗u, ⃗v)
+avec ⃗u∈
+− − − − →
+Rn−m et ⃗v∈
+− →
+Rm, de sorte queJ ⃗v F( ⃗a) soit inversible.
+Le théorème des fonctions implicites fournit localement une fonction de classe C 1, notée ϕ,
+telle que ⃗v=ϕ( ⃗u) sur l’ensemble admissible.
+Écrivons ⃗a=( ⃗u0,⃗v0) et ⃗h=( ⃗p, ⃗q). CommeJ F (⃗a)⃗h= ⃗0, on a
+J⃗uF( ⃗a)⃗p+J ⃗v F( ⃗a)⃗q= ⃗0.
+
+=== Cours original, page PDF 64 ===
+352Chapitre III.3. Optimisation sous contraintes
+La formule de différentiation implicite donne
+Jϕ(⃗u0)= −J ⃗v F( ⃗a)−1 J⃗uF( ⃗a),
+d’où
+⃗q=J ϕ(⃗u0)⃗p.
+La courbe définie, pourtsuffisamment proche de 0, par
+γ(t)=
+¡
+⃗u0 +t ⃗p,ϕ( ⃗u0 +t ⃗p)
+¢
+est admissible et vérifieγ(0)= ⃗aetγ ′(0)= ⃗h.■
+Proposition III.3.2.5 — Condition tangentielle du premier ordre.
+Soient U un ouvert de
+− →
+Rn, f : U− →R et F : U− →
+− →
+Rm deux fonctions de classe C 1 sur U . Soit
+⃗aun minimum ou un maximum local defsous la contrainteF( ⃗x)= ⃗0.
+Sir g J F (⃗a)=m, alors
+∀⃗h∈T ⃗aA, − − →d f ⃗a(⃗h)=0.
+Démonstration.
+Soient U un ouvert de
+− →
+Rn, f : U− →R et F : U− →
+− →
+Rm deux fonctions de classe C 1 sur U , et ⃗a un
+minimum ou un maximum local defsous la contrainteF( ⃗x)= ⃗0, avecr g J F (⃗a)=m.
+Soit ⃗h∈T ⃗aA . D’après la Proposition III.3.2.4, il existe une courbe admissibleγ telle que γ(0) = ⃗a
+et γ′(0) = ⃗h. La fonction t7− →f (γ(t)) possède un extremum local en 0, donc sa dérivée en 0 est
+nulle. Par la règle de la chaîne, − − →d f ⃗a(⃗h)=0.
+■
+Proposition III.3.2.6 — Orthogonal du noyau d’une matrice.
+SoitA∈M m,n (R) de rangm.
+Alors
+(− →kerA) ⊥ = ℑ(A T ).
+Démonstration.
+SoitA∈M m,n (R) de rangm.
+Soit ⃗y∈ ℑ(A T ). Il existe ⃗λ∈
+− →
+Rm tel que ⃗y=A T⃗λ. Pour tout ⃗h∈ − →kerA,
+D
+⃗y| ⃗h
+E
+=
+D
+AT⃗λ| ⃗h
+E
+=
+D
+⃗λ|A ⃗h
+E
+=0.
+Ainsiℑ(A T )⊂( − →kerA) ⊥.
+D’autre part,
+dimℑ(A T )=r g(A T )=m
+et, d’après le théorème du rang,
+dim(− →kerA) ⊥ =n−dim − →kerA=m.
+Les deux sous-espaces ont donc même dimension, d’où l’égalité annoncée.■
+
+=== Cours original, page PDF 65 ===
+III.3.2 Contraintes d’égalité et multiplicateurs de Lagrange 353
+Proposition III.3.2.7 — Théorème des multiplicateurs de Lagrange.
+Soient U un ouvert de
+− →
+Rn, f : U− →R et F= (g1, .. .,g m) :U− →
+− →
+Rm deux fonctions de classe
+C 1 surU. Soit ⃗aun minimum ou un maximum local defsous les contraintesF( ⃗x)= ⃗0.
+Sir g J F (⃗a)=m, alors il existe un unique ⃗λ∈
+− →
+Rm tel que
+⃗∇f( ⃗a)=J F (⃗a)T⃗λ.
+Autrement dit,
+⃗∇f( ⃗a)=
+mX
+i=1
+λi⃗∇g i (⃗a).
+Démonstration.
+Soient U un ouvert de
+− →
+Rn, f : U− →R et F= (g1, .. .,g m) : U− →
+− →
+Rm deux fonctions de classe
+C 1 sur U , et ⃗a un minimum ou un maximum local de f sous les contraintes F (⃗x) =⃗0, avec
+r g JF (⃗a)=m.
+La Proposition III.3.2.5 donne − − →d f ⃗a(⃗h) = 0 pour tout ⃗h∈ − →kerJ F (⃗a). D’après le théorème de repré-
+sentation de Riesz,
+⃗∇f( ⃗a)∈
+³− →kerJ F (⃗a)
+´⊥
+.
+D’après la Proposition III.3.2.6,
+³− →kerJ F (⃗a)
+´⊥
+= ℑ
+¡
+JF (⃗a)T ¢
+.
+Il existe donc ⃗λ∈
+− →
+Rm tel que
+⃗∇f( ⃗a)=J F (⃗a)T⃗λ.
+Enfin, r g JF (⃗a) =m implique que l’application linéaire− →T :
+− →
+Rm − →
+− →
+Rn définie par − →T (⃗λ) =J F (⃗a)T⃗λ
+est injective. Le multiplicateur ⃗λest donc unique.■
+III.3.2.4 Fonction de Lagrange et système de Lagrange
+Définition III.3.2.5 — Lagrangien.
+Soientf:U− →RetF:U− →
+− →
+Rm.
+On appelleLagrangiendu problème sous la contrainteF( ⃗x)= ⃗0 la fonction
+L: U×
+− →
+Rm − →R
+(⃗x, ⃗λ)7− →f( ⃗x)−
+D
+⃗λ|F( ⃗x)
+E
+.
+Proposition III.3.2.8 — Système de Lagrange.
+Sous les hypothèses de la Proposition III.3.2.7, tout extremum régulier ⃗a satisfait, pour un
+unique ⃗λ∈
+− →
+Rm, ( ⃗∇⃗xL(⃗a,⃗λ)= ⃗0,
+F( ⃗a)= ⃗0.
+Dans les bases canoniques, ce système s’écrit
+( ⃗∇f( ⃗a)−J F (⃗a)T⃗λ= ⃗0,
+F( ⃗a)= ⃗0.
+Démonstration.
+Soient U un ouvert de
+− →
+Rn, f : U− →R et F= (g1, .. .,g m) : U− →
+− →
+Rm deux fonctions de classe
+
+=== Cours original, page PDF 66 ===
+354Chapitre III.3. Optimisation sous contraintes
+C 1 sur U . Soit ⃗a un minimum ou un maximum local de f sous les contraintes F (⃗x) =⃗0, avec
+r g JF (⃗a)=m.
+Soit ⃗λ∈
+− →
+Rm l’unique multiplicateur donné par la Proposition III.3.2.7.
+La première relation est exactement la conclusion du théorème des multiplicateurs de Lagrange
+réécrite à l’aide du Lagrangien. La seconde relation exprime l’admissibilité de⃗a.■
+■ Remarque III.3.2.4 — Les solutions du système sont seulement des candidats.
+Le système de Lagrange fournit des candidats aux extrema sous contraintes. La condition
+est nécessaire, mais elle n’est pas suffisante en général. Il faut ensuite comparer les valeurs,
+utiliser des conditions du second ordre ou exploiter la convexité du problème.■
+III.3.2.5 Contraintes affines, fonctions quadratiques et méthode de Gauss
+Considérons des contraintes affines de la forme A⃗x= ⃗b, avec A∈M m,n (R) et ⃗b∈
+− →
+Rm. Elles
+correspondent àF( ⃗x)=A ⃗x− ⃗b, doncJ F (⃗x)=A.
+Corollaire III.3.2.2 — Conditions de Lagrange pour des contraintes affines.
+SoientA∈M m,n (R) de rangmet ⃗b∈
+− →
+Rm.
+Tout extremum régulier d’une fonction différentiablefsous la contrainteA ⃗x= ⃗bsatisfait
+⃗∇f( ⃗x)=A T⃗λ
+et
+A⃗x= ⃗b.
+Démonstration.
+SoientA∈M m,n (R) de rangmet ⃗b∈
+− →
+Rm.
+Il suffit d’appliquer la Proposition III.3.2.7 àF(⃗x)=A ⃗x− ⃗b, pour laquelleJ F =A.■
+Considérons maintenant une fonction quadratique
+f( ⃗x)= 1
+2 [⃗x]T
+e Q[⃗x]e +[⃗c]T
+e [⃗x]e +d,
+oùQ∈M n(R) est symétrique.
+Proposition III.3.2.9 — Gradient d’une fonction quadratique.
+Sous les hypothèses précédentes,
+⃗∇f( ⃗x)=Q ⃗x+ ⃗c.
+Démonstration.
+SoientQ∈M n(R) une matrice symétrique, ⃗c∈
+− →
+Rn etd∈R.
+Écrivons, dans la base canonique,
+f( ⃗x)= 1
+2
+nX
+i=1
+nX
+j=1
+qi j xi x j +
+nX
+i=1
+ci xi +d.
+Pour toutk∈ 1,n,
+∂f
+∂xk
+(⃗x)= 1
+2
+nX
+j=1
+qk j x j + 1
+2
+nX
+i=1
+qi kxi +c k.
+
+=== Cours original, page PDF 67 ===
+III.3.3 Conditions du second ordre sous contraintes d’égalité 355
+CommeQest symétrique,q i k =q ki , d’où
+∂f
+∂xk
+(⃗x)=
+nX
+j=1
+qk j x j +c k.
+Ainsi ⃗∇f( ⃗x)=Q ⃗x+ ⃗c.■
+Proposition III.3.2.10 — Système matriciel de Lagrange.
+SoientQ∈M n(R) une matrice symétrique,A∈M m,n (R) et ⃗b∈
+− →
+Rm.
+Les conditions de Lagrange associées à la fonction quadratique précédente sous la contrainte
+A⃗x= ⃗bs’écrivent µQ−A T
+A0
+¶ µ[⃗x]e
+[⃗λ]e
+¶
+=
+µ−[⃗c]e
+[⃗b]e
+¶
+.
+Démonstration.
+SoientQ∈M n(R) une matrice symétrique,A∈M m,n (R), ⃗b∈
+− →
+Rm, ⃗c∈
+− →
+Rn etd∈R.
+Soitf:
+− →
+Rn − →Rla fonction quadratique définie parf( ⃗x)= 1
+2 [⃗x]T
+e Q[⃗x]e +[⃗c]T
+e [⃗x]e +d.
+La condition ⃗∇f( ⃗x)=A T⃗λdevient
+Q⃗x−A T⃗λ= −⃗c.
+En lui ajoutant la contrainteA ⃗x= ⃗b, on obtient le système matriciel annoncé.■
+■ Remarque III.3.2.5 — Retour direct à la méthode de Gauss.
+Dans le cas quadratique avec contraintes affines, le problème d’optimisation est transformée
+en un système linéaire portant simultanément sur ⃗x et ⃗λ. La méthode de Gauss permet donc
+de résoudre directement le système de Lagrange. ■
+III.3.3 Conditions du second ordre sous contraintes d’égalité
+III.3.3.1 Régularité au second ordre de la paramétrisation implicite
+Pour utiliser la différentielle seconde le long de l’ensemble admissible, nous aurons besoin
+de courbes admissibles de classeC 2.
+Proposition III.3.3.1 — RégularitéC 2 de la fonction implicite.
+Sous les hypothèses du théorème des fonctions implicites, si la fonction F est de classe C 2,
+alors la fonction implicite obtenue est de classeC 2.
+Démonstration.
+Soient U un ouvert de
+− →
+Rn ×
+− →
+Rm, F : U− →
+− →
+Rm une fonction de classe C 2 sur U et
+³
+⃗a,⃗b
+´
+∈U tels
+queF( ⃗a,⃗b)= ⃗0 et − − − − − − →d⃗y F(⃗a,⃗b) soit inversible.
+Le théorème fournit une fonction implicite ⃗v=ϕ( ⃗u) de classeC 1 et la relation
+Jϕ(⃗u)= −J ⃗v F( ⃗u,ϕ( ⃗u))−1 J⃗uF( ⃗u,ϕ( ⃗u)).
+Comme F est de classe C 2, les coefficients de J⃗v F et de J⃗uF sont de classe C 1. L ’application
+⃗u7− → (⃗u,ϕ (⃗u)) est de classe C 1. Enfin, sur l’ensemble des matrices inversibles, l’inversion
+matricielle est de classeC 1. AinsiJ ϕ est de classeC 1, doncϕest de classeC 2.■
+
+=== Cours original, page PDF 68 ===
+356Chapitre III.3. Optimisation sous contraintes
+Corollaire III.3.3.1 — Courbes tangentes de classeC 2.
+Sous les hypothèses de la Proposition III.3.2.4, si F est de classe C 2, alors la courbe réalisant
+une direction tangentielle peut être choisie de classeC 2.
+Démonstration.
+Soient U un ouvert de
+− →
+Rn, F : U− →
+− →
+Rm une fonction de classe C 2 sur U , ⃗a∈U tel que F (⃗a) =⃗0
+etr g J F (⃗a)=m, et ⃗h∈T ⃗aA.
+La construction de la courbe repose sur la fonction implicite ϕ. D’après la Proposition III.3.3.1,
+cette fonction est de classe C 2. La courbe obtenue par la même construction est donc de classe
+C 2. ■
+III.3.3.2 Condition nécessaire du second ordre
+Proposition III.3.3.2 — Condition nécessaire du second ordre sous contraintes.
+Soient U un ouvert de
+− →
+Rn, f : U− →R et F : U− →
+− →
+Rm deux fonctions de classe C 2 sur U . Soit
+⃗aun minimum local defsous la contrainteF( ⃗x)= ⃗0 et supposonsr g J F (⃗a)=m.
+Soit⃗λ l’unique multiplicateur donné par le théorème de Lagrange etL(⃗x, ⃗λ) =f (⃗x)−
+D
+⃗λ|F( ⃗x)
+E
+.
+Alors
+∀⃗h∈T ⃗aA,
+− − − − − − →
+d 2
+⃗x L(⃗a,⃗λ)(⃗h,⃗h)≥0.
+Démonstration.
+Soient U un ouvert de
+− →
+Rn, f : U− →R et F : U− →
+− →
+Rm deux fonctions de classe C 2 sur U . Soit ⃗a
+un minimum local defsous la contrainteF( ⃗x)= ⃗0, avecr g J F (⃗a)=m.
+Soit ⃗λ∈
+− →
+Rm l’unique multiplicateur donné par le théorème de Lagrange.
+Soit ⃗h∈T ⃗aA . D’après le Corollaire III.3.3.1, il existe une courbe admissibleγ de classe C 2 telle
+queγ(0)= ⃗aetγ ′(0)= ⃗h. Posons
+ϕ(t)=f(γ(t)).
+Comme ⃗aest un minimum local sous contraintes, 0 est un minimum local deϕ, donc
+ϕ′′(0)≥0.
+CommeF(γ(t))= ⃗0, on a, pour touttsuffisamment proche de 0,
+ϕ(t)=L(γ(t), ⃗λ).
+La dérivation à l’ordre deux donne
+ϕ′′(0)=
+− − − − − − →
+d 2
+⃗x L(⃗a,⃗λ)(⃗h,⃗h)+ − − − − − − →d⃗x L(⃗a,⃗λ)(γ′′(0)). (III.3.1)
+Les conditions de Lagrange donnent − − − − − − →d⃗x L(⃗a,⃗λ) =0. La relation (III.3.1) devient donc
+ϕ′′(0)=
+− − − − − − →
+d 2
+⃗x L(⃗a,⃗λ)(⃗h,⃗h).
+Commeϕ ′′(0)≥0, le résultat est établi.■
+III.3.3.3 Condition suffisante du second ordre
+Proposition III.3.3.3 — Condition suffisante du second ordre sous contraintes.
+Soient U un ouvert de
+− →
+Rn, f : U− →R et F : U− →
+− →
+Rm deux fonctions de classe C 2 sur U . Soit
+⃗a∈Utel queF( ⃗a)= ⃗0 etr g J F (⃗a)=m.
+
+=== Cours original, page PDF 69 ===
+III.3.4 Convexité et contraintes affines 357
+Supposons qu’il existe⃗λ∈
+− →
+Rm tel que
+⃗∇f( ⃗a)−J F (⃗a)T⃗λ= ⃗0
+et que
+∀⃗h∈T ⃗aA\ {⃗0},
+− − − − − − →
+d 2
+⃗x L(⃗a,⃗λ)(⃗h,⃗h)>0.
+Alors ⃗aest un minimum local strict defsous la contrainteF( ⃗x)= ⃗0.
+Démonstration.
+Soient U un ouvert de
+− →
+Rn, f : U− →R et F : U− →
+− →
+Rm deux fonctions de classe C 2 sur U . Soit
+⃗a∈Utel queF( ⃗a)= ⃗0 etr g J F (⃗a)=m.
+Soit ⃗λ∈
+− →
+Rm tel que ⃗∇f( ⃗a)−J F (⃗a)T⃗λ= ⃗0.
+Supposons que
+− − − − − − →
+d 2
+⃗x L(⃗a,⃗λ)(⃗h,⃗h)>0 pour tout ⃗h∈T ⃗aA\ {⃗0}.
+Comme r g JF (⃗a) =m , le théorème des fonctions implicites permet, après permutation éven-
+tuelle des variables, de paramétrer localement l’ensemble admissible sous la forme
+⃗x=Ψ( ⃗u)=
+¡
+⃗u,ϕ( ⃗u)
+¢
+,
+oùΨest de classeC 2 etΨ( ⃗u0)= ⃗a. Posons
+φ(⃗u)=f(Ψ( ⃗u)).
+La condition de Lagrange implique − − − →dφ ⃗u0 =0.
+Soit ⃗p̸= ⃗0. Le vecteur
+⃗h= − − − − →dΨ ⃗u0(⃗p)
+appartient à T⃗aA . De plus, la première composante de − − − − →dΨ ⃗u0(⃗p) étant ⃗p, on a ⃗h̸= ⃗0. En dérivant
+deux foisφ=f◦Ψet en utilisant la stationnarité du Lagrangien, on obtient
+− − − − →
+d 2φ⃗u0(⃗p, ⃗p)=
+− − − − − − →
+d 2
+⃗x L(⃗a,⃗λ)(⃗h,⃗h)>0.
+Ainsi la différentielle seconde de φ en ⃗u0 est définie positive. D’après la condition suffisante du
+second ordre pour l’optimisation sans contrainte,⃗u0 est un minimum local strict de φ. Par la
+paramétrisation locale de l’ensemble admissible,⃗a=Ψ (⃗u0) est donc un minimum local strict de
+fsous les contraintes.■
+III.3.4 Convexité et contraintes affines
+Les résultats de convexité permettent de transformer les conditions locales de Lagrange en
+conclusions globales lorsque l’ensemble admissible est défini par des contraintes affines.
+Proposition III.3.4.1 — Optimalité globale sous contraintes affines.
+Soientf:
+− →
+Rn − →Rune fonction convexe et différentiable,A∈M m,n (R) et ⃗b∈
+− →
+Rm.
+Supposons qu’un vecteur⃗asatisfasseA ⃗a= ⃗bet qu’il existe ⃗λ∈
+− →
+Rm tel que
+⃗∇f( ⃗a)=A T⃗λ.
+Alors ⃗aest un minimum global defsous la contrainteA ⃗x= ⃗b.
+Démonstration.
+Soientf:
+− →
+Rn − →Rune fonction convexe et différentiable,A∈M m,n (R) et ⃗b∈
+− →
+Rm.
+
+=== Cours original, page PDF 70 ===
+358Chapitre III.3. Optimisation sous contraintes
+Soient ⃗a∈
+− →
+Rn tel queA ⃗a= ⃗bet ⃗λ∈
+− →
+Rm tel que ⃗∇f( ⃗a)=A T⃗λ.
+Soit ⃗xun vecteur admissible. La caractérisation au premier ordre de la convexité donne
+f( ⃗x)≥f( ⃗a)+
+­⃗∇f( ⃗a)| ⃗x− ⃗a
+®
+.
+Or ­⃗∇f( ⃗a)| ⃗x− ⃗a
+®
+=
+D
+AT⃗λ| ⃗x− ⃗a
+E
+=
+D
+⃗λ|A ⃗x−A ⃗a
+E
+=0.
+Ainsi f (⃗x) ≥f (⃗a) pour tout vecteur admissible. Le vecteur ⃗a est donc un minimum global sous
+la contrainte. ■
+Corollaire III.3.4.1 — Convexité stricte et unicité.
+Sous les hypothèses de la Proposition III.3.4.1, si f est strictement convexe, alors ⃗a est
+l’unique minimum global sous la contrainteA⃗x= ⃗b.
+Démonstration.
+Soientf:
+− →
+Rn − →Rune fonction strictement convexe et différentiable,A∈M m,n (R) et ⃗b∈
+− →
+Rm.
+Soient ⃗a∈
+− →
+Rn tel queA ⃗a= ⃗bet ⃗λ∈
+− →
+Rm tel que ⃗∇f( ⃗a)=A T⃗λ.
+L ’ensemble défini parA⃗x= ⃗b est convexe. La restriction d’une fonction strictement convexe à
+un ensemble convexe possède au plus un minimum global. La Proposition III.3.4.1 assure que ⃗a
+est un minimum global ; il est donc unique.■
+Corollaire III.3.4.2 — Forte convexité et minoration quantitative.
+Sous les hypothèses de la Proposition III.3.4.1, supposons que f soit µ-fortement convexe
+avecµ>0.
+Alors, pour tout vecteur admissible ⃗x,
+f( ⃗x)≥f( ⃗a)+ µ
+2 ∥⃗x− ⃗a∥2.
+En particulier, le minimum global est unique.
+Démonstration.
+Soient f :
+− →
+Rn − →Rune fonction différentiable et µ-fortement convexe avec µ> 0, A∈M m,n (R)
+et ⃗b∈
+− →
+Rm.
+Soient ⃗a∈
+− →
+Rn tel queA ⃗a= ⃗bet ⃗λ∈
+− →
+Rm tel que ⃗∇f( ⃗a)=A T⃗λ.
+La caractérisation au premier ordre de la forte convexité donne, pour tout vecteur admissible⃗x,
+f( ⃗x)≥f( ⃗a)+
+­⃗∇f( ⃗a)| ⃗x− ⃗a
+®
++ µ
+2 ∥⃗x− ⃗a∥2.
+Comme dans la démonstration précédente, le terme scalaire contenant le gradient est nul. On
+obtient donc la minoration annoncée.■
+III.3.5 Contraintes d’inégalité et conditions de Karush–Kuhn–Tucker
+III.3.5.1 Contraintes actives et inactives
+Considérons maintenant, en plus des contraintes d’égalitéF (⃗x) =⃗0, des fonctions g1,. .. ,g q :
+U− →Ret les contraintes
+g j (⃗x)≤0,j∈ 1,q.
+L ’ensemble admissible devient
+A=
+©
+⃗x∈U;F( ⃗x)= ⃗0 et∀j∈ 1,q,g j (⃗x)≤0
+ª
+.
+
+=== Cours original, page PDF 71 ===
+III.3.5 Contraintes d’inégalité et conditions de Karush–Kuhn–Tucker 359
+Définition III.3.5.1 — Contrainte active.
+Soient ⃗a∈Aetj∈ 1,q.
+La contrainteg j (⃗x)≤0 est diteactive en ⃗alorsque
+g j (⃗a)=0.
+Elle est diteinactive en ⃗alorsque
+g j (⃗a)<0.
+Définition III.3.5.2 — Ensemble des contraintes actives.
+Pour tout ⃗a∈A, on note
+I( ⃗a)=
+©
+j∈ 1,q;g j (⃗a)=0
+ª
+l’ensemble des indices des contraintes d’inégalité actives en⃗a.
+■ Remarque III.3.5.1 — Pourquoi seules les contraintes actives interviennent au premier
+ordre.
+Si g j (⃗a) < 0, la continuité de g j garantit que cette contrainte reste satisfaite dans un voisinage
+suffisamment petit de ⃗a. Elle n’impose donc localement aucune frontière à l’ensemble ad-
+missible. Au contraire, une contrainte active vérifie g j (⃗a) = 0 et sa frontière peut limiter les
+variations admissibles. ■
+III.3.5.2 Qualification des contraintes
+Pour obtenir des multiplicateurs bien définis, il faut éviter que les gradients des contraintes
+actives soient redondants.
+Définition III.3.5.3 — Indépendance des gradients actifs.
+SoientF=(F 1, .. .,F m) etg 1, .. .,g q des fonctions de classeC 1, et ⃗a∈A.
+On dit que lacondition d’indépendance des gradients actifsest vérifiée en ⃗a lorsque la famille
+³
+⃗∇F1(⃗a), .. .,⃗∇Fm(⃗a),
+¡⃗∇g j (⃗a)
+¢
+j∈I( ⃗a)
+´
+est libre.
+■ Remarque III.3.5.2 — Qualification LICQ.
+Cette condition est souvent désignée par l’acronymeLICQ, pourLinear Independence Constraint
+Qualification. Dans ce cours, nous utiliserons cette qualification parce qu’elle prolonge direc-
+tement la notion de régularité déjà utilisée pour les contraintes d’égalité.■
+III.3.5.3 Conditions de Karush–Kuhn–Tucker
+Proposition III.3.5.1 — Conditions nécessaires de Karush–Kuhn–Tucker.
+Soient U un ouvert de
+− →
+Rn, f : U− →R , F : U− →
+− →
+Rm et g1, .. .,g q : U− →R des fonctions de
+classeC 1 surU. Soit ⃗aun minimum local defsous les contraintes
+F(⃗x)= ⃗0
+et
+g j (⃗x)≤0,j∈ 1,q.
+
+=== Cours original, page PDF 72 ===
+360Chapitre III.3. Optimisation sous contraintes
+Supposons que la condition d’indépendance des gradients actifs soit vérifiée en⃗a.
+Alors il existe un unique couple
+(⃗λ,⃗µ)∈
+− →
+Rm ×R q
++
+tel que
+(i)stationnarité :
+⃗∇f( ⃗a)−J F (⃗a)T⃗λ+
+qX
+j=1
+µj⃗∇g j (⃗a)= ⃗0;
+(ii)admissibilité primale :
+F( ⃗a)= ⃗0 et∀j∈ 1,q,g j (⃗a)≤0;
+(iii)admissibilité duale :
+∀j∈ 1,q,µ j ≥0;
+(iv)complémentarité :
+∀j∈ 1,q,µ j g j (⃗a)=0.
+Démonstration.
+Soient U un ouvert de
+− →
+Rn, f : U− →R , F : U− →
+− →
+Rm et g1, .. .,g q : U− →R des fonctions de classe
+C 1 sur U . Soit ⃗a un minimum local de f sous les contraintes F (⃗x) =⃗0 et g j (⃗x) ≤ 0 pour tout
+j∈ 1,q. Supposons que la condition d’indépendance des gradients actifs soit vérifiée en ⃗a.
+PosonsI=I( ⃗a).
+— Montrons d’abord l’existence de multiplicateurs associés aux contraintes actives.
+Considérons l’ensemble défini localement par les contraintes d’égalité
+F(⃗x)= ⃗0
+et
+g j (⃗x)=0,j∈I.
+Les contraintes d’inégalité inactives en⃗a restent strictement négatives dans un voisinage
+de ⃗a. Ainsi, au voisinage de ⃗a, tout vecteur satisfaisant les égalités précédentes est admis-
+sible pour le problème initial. Le vecteur ⃗a est donc également un minimum local de f
+sous ces seules contraintes d’égalité.
+La condition d’indépendance des gradients actifs permet d’appliquer le théorème des
+multiplicateurs de Lagrange. Il existe donc ⃗λ∈
+− →
+Rm et des réels (η j )j∈I tels que
+⃗∇f( ⃗a)=J F (⃗a)T⃗λ+
+X
+j∈I
+η j⃗∇g j (⃗a). (III.3.2)
+— Montrons queη j ≤0 pour toutj∈I.
+Soitj∈I. L ’indépendance linéaire des gradients implique que l’application linéaire
+− →Θ:
+− →
+Rn − →
+− →
+Rm ×R |I|
+⃗h7− →
+³− − →d F⃗a(⃗h),
+³− − − − →d gk,⃗a(⃗h)
+´
+k∈I
+´
+est surjective. Il existe donc un vecteur ⃗h j ∈
+− →
+Rn tel que
+− − →d F⃗a(⃗h j )= ⃗0,
+∀k∈I\ {j}, − − − − →d gk,⃗a(⃗h j )=0,
+
+=== Cours original, page PDF 73 ===
+III.3.5 Contraintes d’inégalité et conditions de Karush–Kuhn–Tucker 361
+et − − − − →d g j, ⃗a(⃗h j )= −1.
+Considérons les contraintes d’égalité constituées deF= ⃗0 et de gk = 0 pour k∈I\ {j} . La
+condition d’indépendance des gradients permet d’appliquer la Proposition III.3.2.4 : il
+existe une courbe γj de classe C 1 telle que γj (0) = ⃗a, γ′
+j (0) = ⃗h j et qui conserve toutes ces
+contraintes.
+Comme
+(g j ◦γ j )′(0)= − − − − →d g j, ⃗a(⃗h j )= −1,
+il existeε>0 tel que
+∀t∈]0,ε[,g j (γj (t))<0.
+Les contraintes inactives restent également strictement négatives pour t suffisamment
+petit. La courbe γj (t) est donc admissible pour t> 0 suffisamment petit. Comme ⃗a est un
+minimum local,
+d
+d t f(γ j (t))
+¯¯¯¯
+t=0 +
+≥0.
+En évaluant (III.3.2) sur ⃗h j , tous les termes s’annulent sauf celui d’indicej , et l’on obtient
+− − →d f ⃗a(⃗h j )= −η j .
+Ainsi−η j ≥0, doncη j ≤0.
+— Construisons les multiplicateurs de KKT .
+Pour tout j∈I , posons µj = −η j ≥ 0, et pour tout j∉I , posons µj = 0. La relation (III.3.2)
+devient
+⃗∇f( ⃗a)−J F (⃗a)T⃗λ+
+qX
+j=1
+µj⃗∇g j (⃗a)= ⃗0.
+L ’admissibilité primale est satisfaite puisque⃗a est admissible. L ’admissibilité duale dé-
+coule de la construction des µj . Enfin, si j∈I , alors g j (⃗a) = 0, tandis que si j∉I , alors
+µj =0. Dans les deux cas,
+µj g j (⃗a)=0.
+La complémentarité est donc vérifiée.
+L ’unicité des multiplicateurs découle de l’indépendance linéaire des gradients des contraintes
+d’égalité et des contraintes actives.
+■
+■ Remarque III.3.5.3 — Lecture de la complémentarité.
+La relation µj g j (⃗a) = 0 signifie qu’une contrainte inactive, pour laquelleg j (⃗a) < 0, possède
+nécessairement un multiplicateur nul. Un multiplicateur strictement positif ne peut donc
+être associé qu’à une contrainte active. ■
+III.3.5.4 Lagrangien et système KKT
+Définition III.3.5.4 — Lagrangien avec contraintes d’inégalité.
+Pour le problème de minimisation sous les contraintes F (⃗x) =⃗0 et g j (⃗x) ≤ 0, on définit le
+Lagrangien par
+L(⃗x, ⃗λ,⃗µ)=f( ⃗x)−
+D
+⃗λ|F( ⃗x)
+E
++
+qX
+j=1
+µj g j (⃗x).
+
+=== Cours original, page PDF 74 ===
+362Chapitre III.3. Optimisation sous contraintes
+Proposition III.3.5.2 — Système de Karush–Kuhn–Tucker.
+Sous les hypothèses de la Proposition III.3.5.1, tout minimum local régulier doit satisfaire le
+système 
+
+
+⃗∇⃗xL(⃗x, ⃗λ,⃗µ)= ⃗0,
+F(⃗x)= ⃗0,
+g j (⃗x)≤0,j∈ 1,q,
+µj ≥0,j∈ 1,q,
+µj g j (⃗x)=0,j∈ 1,q.
+Démonstration.
+Soient U un ouvert de
+− →
+Rn, f : U− →R , F : U− →
+− →
+Rm et g1, .. .,g q : U− →R des fonctions de classe
+C 1 surU.
+Soit ⃗aun minimum local defsous les contraintesF( ⃗x)= ⃗0 etg j (⃗x)≤0 pour toutj∈ 1,q.
+Supposons que la condition d’indépendance des gradients actifs soit vérifiée en⃗a.
+Soit (⃗λ,⃗µ)∈
+− →
+Rm ×R q
++ l’unique couple de multiplicateurs donné par la Proposition III.3.5.1.
+La première relation est la condition de stationnarité écrite à l’aide du Lagrangien. Les quatre
+autres lignes sont respectivement les contraintes d’égalité, les contraintes d’inégalité, l’admissi-
+bilité duale et la complémentarité établies dans la Proposition III.3.5.1.■
+■ Remarque III.3.5.4 — Lagrange comme cas particulier de KKT.
+En l’absence de contraintes d’inégalité, le système KKT se réduit exactement au système de
+Lagrange. Les conditions de Karush–Kuhn–Tucker constituent donc le prolongement naturel
+des multiplicateurs de Lagrange aux contraintes d’inégalité.■
+■ Remarque III.3.5.5 — Interprétation des multiplicateurs.
+Sous des hypothèses de régularité supplémentaires, les multiplicateurs peuvent également
+être interprétés comme des mesures de sensibilité de la valeur optimale par rapport à une
+petite perturbation des contraintes. Dans un problème d’ingénierie, un multiplicateur associé
+à une contrainte de capacité peut ainsi être lu comme une information marginale sur le coût
+de cette capacité. Cette interprétation sera particulièrement naturelle lors de l’étude de la
+dualité en optimisation. ■
+III.3.5.5 Problèmes convexes et suffisance des conditions KKT
+Proposition III.3.5.3 — Suffisance des conditions KKT pour un problème convexe.
+Soient U un ouvert convexe de
+− →
+Rn, f : U− →R une fonction convexe et différentiable, F (⃗x) =
+A⃗x− ⃗b une application affine et g1,. .. ,g q : U− →R des fonctions convexes et différentiables.
+Supposons qu’un vecteur admissible⃗a et un couple (⃗λ,⃗µ) ∈
+− →
+Rm×R q
++ satisfassent les conditions
+KKT .
+Alors ⃗aest un minimum global defsur l’ensemble admissible.
+Démonstration.
+Soient U un ouvert convexe de
+− →
+Rn, f : U− →R une fonction convexe et différentiable, F (⃗x) =
+A⃗x− ⃗b une application affine et g1, ... ,g q : U− →R des fonctions convexes et différentiables.
+Supposons qu’un vecteur admissible⃗a et un couple (⃗λ,⃗µ) ∈
+− →
+Rm ×R q
++ satisfassent les conditions
+KKT .
+
+=== Cours original, page PDF 75 ===
+III.3.5 Contraintes d’inégalité et conditions de Karush–Kuhn–Tucker 363
+Soit ⃗xun vecteur admissible. La convexité defdonne
+f( ⃗x)≥f( ⃗a)+
+­⃗∇f( ⃗a)| ⃗x− ⃗a
+®
+. (III.3.3)
+La stationnarité KKT donne
+⃗∇f( ⃗a)=A T⃗λ−
+qX
+j=1
+µj⃗∇g j (⃗a).
+CommeA ⃗x=A ⃗a= ⃗b, D
+AT⃗λ| ⃗x− ⃗a
+E
+=0.
+Pour toutj∈ 1,q, la convexité deg j donne
+g j (⃗x)≥g j (⃗a)+
+­⃗∇g j (⃗a)| ⃗x− ⃗a
+®
+,
+d’où
+−µj
+­⃗∇g j (⃗a)| ⃗x− ⃗a
+®
+≥µ j g j (⃗a)−µ j g j (⃗x).
+La complémentarité donne µj g j (⃗a) = 0, tandis que l’admissibilité primale et duale donne
+−µj g j (⃗x)≥0. Ainsi
+−µj
+­⃗∇g j (⃗a)| ⃗x− ⃗a
+®
+≥0.
+Par conséquent, ­⃗∇f( ⃗a)| ⃗x− ⃗a
+®
+≥0.
+La relation (III.3.3) donne donc
+f( ⃗x)≥f( ⃗a).
+Cette inégalité étant vraie pour tout vecteur admissible, ⃗aest un minimum global.■
+Corollaire III.3.5.1 — Unicité dans le cas strictement convexe.
+Sous les hypothèses de la Proposition III.3.5.3, si f est strictement convexe, alors le minimum
+global est unique.
+Démonstration.
+Soient U un ouvert convexe de
+− →
+Rn, f : U− →R une fonction strictement convexe et différentiable,
+F (⃗x) =A ⃗x− ⃗b une application affine et g1,. .. ,g q : U− →R des fonctions convexes et différen-
+tiables.
+Supposons qu’un vecteur admissible⃗a et un couple (⃗λ,⃗µ) ∈
+− →
+Rm ×R q
++ satisfassent les conditions
+KKT .
+Les contraintes d’égalité affines et les sous-niveauxg j ≤ 0 des fonctions convexes définissent un
+ensemble admissible convexe. Une fonction strictement convexe possède au plus un minimum
+sur un ensemble convexe. Le minimum donné par la Proposition III.3.5.3 est donc unique.■
+Corollaire III.3.5.2 — Forte convexité et KKT.
+Sous les hypothèses de la Proposition III.3.5.3, supposons que f soit µ-fortement convexe
+avecµ>0.
+Alors, pour tout vecteur admissible ⃗x,
+f( ⃗x)≥f( ⃗a)+ µ
+2 ∥⃗x− ⃗a∥2.
+
+=== Cours original, page PDF 76 ===
+364Chapitre III.3. Optimisation sous contraintes
+Démonstration.
+SoientU un ouvert convexe de
+− →
+Rn, f : U− →R une fonction différentiable etµ-fortement convexe
+avecµ>0,F( ⃗x)=A ⃗x− ⃗bune application affine etg 1, .. .,g q :U− →Rdes fonctions convexes et
+différentiables.
+Supposons qu’un vecteur admissible⃗a et un couple (⃗λ,⃗µ) ∈
+− →
+Rm ×R q
++ satisfassent les conditions
+KKT .
+La caractérisation au premier ordre de la forte convexité donne
+f( ⃗x)≥f( ⃗a)+
+­⃗∇f( ⃗a)| ⃗x− ⃗a
+®
++ µ
+2 ∥⃗x− ⃗a∥2.
+La démonstration de la Proposition III.3.5.3 montre que, pour tout vecteur admissible⃗x,
+­⃗∇f( ⃗a)| ⃗x− ⃗a
+®
+≥0.
+La minoration annoncée en découle.■
+Méthodologie III.3.5.1 — Résoudre un problème d’optimisation sous contraintes.
+Pour étudier un problème de minimisation sous contraintes, on pourra procéder de la
+manière suivante :
+1. déterminer l’ensemble admissible et vérifier, lorsque cela est possible, l’existence d’un
+optimum ;
+2. pour des contraintes d’égalitéF (⃗x) =⃗0, vérifier la régularité par le rang deJF et résoudre
+le système de Lagrange ;
+3. calculer, si nécessaire, l’espace tangent en résolvant JF (⃗a)⃗h= ⃗0 par la méthode de
+Gauss ;
+4. pour classifier un candidat régulier, étudier
+− − − − − − →
+d 2
+⃗x L(⃗a,⃗λ)(⃗h,⃗h) sur l’espace tangent ;
+5. pour des contraintes d’inégalité, déterminer les contraintes actives, vérifier la qualifi-
+cation des gradients actifs et écrire le système KKT ;
+6. utiliser la complémentarité µj g j (⃗a) = 0 pour distinguer les contraintes actives des
+contraintes inactives ;
+7. lorsque le problème est convexe, exploiter les conditions de Lagrange ou les conditions
+KKT pour conclure directement à l’optimalité globale ;
+8. dans le cas quadratique avec contraintes affines, écrire le système matriciel associé et
+le résoudre par la méthode de Gauss.
+■ Remarque III.3.5.6 — Fil conducteur.
+Les chapitres précédents se rejoignent ici : les fonctions implicites décrivent localement
+l’ensemble admissible, la méthode de Gauss calcule les espaces tangents et résout les systèmes
+linéaires, les multiplicateurs de Lagrange et les conditions KKT donnent les conditions du
+premier ordre, tandis que la différentielle seconde et la convexité permettent de classifier les
+candidats et de passer de l’optimalité locale à l’optimalité globale.■

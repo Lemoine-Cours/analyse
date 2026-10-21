@@ -1,0 +1,26 @@
+{
+  "title": "Optimisation dans Rn",
+  "status": "génération directe demandée, mêmes consignes",
+  "language": "français",
+  "format": "Beamer 16:9 et PDF",
+  "level": null,
+  "session_duration": null,
+  "td_driven": false,
+  "scope": "12 exercices de base comme périmètre, aucun corrigé projeté.",
+  "proofs_on_slides": false,
+  "max_frames": 54,
+  "core_slides": 50,
+  "complement_slides": 4,
+  "notation": "Différentielles fléchées, gradient colonne, J_f et H_f, composition circ ; L=f−lambda.F+sum(mu_j g_j), g_j<=0, mu_j>=0.",
+  "scientific_constraints": [
+    "Inversion locale : C1, Jacobienne carrée inversible ; inverse évaluée en f(a).",
+    "Fonctions implicites : point solution et bloc en variables dépendantes inversible.",
+    "Fermat pour un point intérieur, conditions seulement nécessaires.",
+    "Hessienne semi-définie : test généralement indécis.",
+    "Convexité et stationnarité globale ; stricte convexité ne garantit pas existence.",
+    "Lagrange exige régularité ; signe moins devant égalités.",
+    "KKT nécessaire sous indépendance des gradients des égalités et inégalités actives.",
+    "Activité ne signifie pas multiplicateur strictement positif.",
+    "KKT suffisant en problème convexe, sans qualification supplémentaire."
+  ]
+}

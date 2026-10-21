@@ -48,3 +48,8 @@ La compilation seule ne valide pas la mise en page. Inspecter les pages rendues,
 ## Analyse différentielle et convexité
 
 [Chapitre](analyse-differentielle-convexite/README.md) · [PDF](analyse-differentielle-convexite/exports/analyse-differentielle-convexite.pdf) · [Sources autonomes](analyse-differentielle-convexite/exports/analyse-differentielle-convexite-sources.zip). 50 slides principales et 4 compléments : accroissements finis, régularité, Taylor et convexité.
+
+
+## Optimisation dans les espaces réels de dimension finie
+
+[Chapitre](optimisation-dans-rn/README.md) · [PDF](optimisation-dans-rn/exports/optimisation-dans-rn.pdf) · [Sources autonomes](optimisation-dans-rn/exports/optimisation-dans-rn-sources.zip). 50 diapositives de socle, 4 compléments : inversion locale, fonctions implicites, optimisation libre, Lagrange et KKT.

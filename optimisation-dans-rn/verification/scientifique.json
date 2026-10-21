@@ -1,0 +1,53 @@
+{
+  "status": "passed",
+  "review": "Relecture primaire par le même assistant, sans revue indépendante ni preuve formelle.",
+  "sources": "Cours original et extraits théoriques ; TD utilisé seulement pour le périmètre.",
+  "checks": [
+    {
+      "topic": "Inversion locale",
+      "slides": "OP03–OP08",
+      "review": "C1 sur ouvert, dimensions égales, Jacobienne inversible, voisinages ; inverse dérivée au point f(a)."
+    },
+    {
+      "topic": "Fonctions implicites",
+      "slides": "OP09–OP13",
+      "review": "Point solution, bloc J_y carré inversible, unicité locale et dérivée -B^-1 A ; ellipse et tangente recalculées."
+    },
+    {
+      "topic": "Optima et Fermat",
+      "slides": "OP14–OP18",
+      "review": "Point admissible dans les définitions ; hypothèse intérieure explicite ; contre-exemple au bord."
+    },
+    {
+      "topic": "Second ordre",
+      "slides": "OP19–OP24",
+      "review": "C2, point critique, nécessité semi-définie et suffisance définie ; test dégénéré indécis, exemples quartiques."
+    },
+    {
+      "topic": "Convexité et existence",
+      "slides": "OP25–OP29",
+      "review": "Ouvert convexe pour gradient nul ; stricte convexité : au plus un ; compact non vide ou coercivité pour existence."
+    },
+    {
+      "topic": "Égalités",
+      "slides": "OP30–OP39",
+      "review": "Régularité, tangent ker J_F, signe moins du Lagrangien, candidats sans conclusion automatique ; affinité/convexité pour globalité."
+    },
+    {
+      "topic": "Inégalités et KKT",
+      "slides": "OP40–OP50",
+      "review": "g<=0, mu>=0, toutes égalités et seulement inégalités actives en LICQ ; nécessité sous LICQ, suffisance convexe sans LICQ ; activité compatible avec mu=0."
+    },
+    {
+      "topic": "Compléments",
+      "slides": "OP51–OP54",
+      "review": "Dérivée implicite par systèmes ; Hessienne de L avec signe moins sur tangent ; bloc quadratique et hypothèses ; forte convexité avec paramètre mu du support."
+    }
+  ],
+  "exact_checks": 26,
+  "blocking_issues": [],
+  "limits": [
+    "Niveau et durée de séance non précisés.",
+    "Validation pédagogique finale réservée à l’enseignant."
+  ]
+}

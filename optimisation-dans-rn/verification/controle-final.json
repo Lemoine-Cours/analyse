@@ -1,0 +1,15 @@
+{
+  "status": "prêt pour relecture enseignant",
+  "pdf_pages": 56,
+  "teaching_slides": 54,
+  "core": 50,
+  "complements": 4,
+  "exact_checks": 26,
+  "overfull": 0,
+  "missing_characters": 0,
+  "all_pages_rendered_and_inspected": true,
+  "pdf_sha256": "71d685e7802926d8b61fc88f0aabb5a45e02535f05331245b9a6d5841f869409",
+  "body_sha256_lf": "b10b4b806e9edcdcdc535ae2d3e1af75d5903a259a24b3dbf42ba922c6809054",
+  "scientific_blockers": [],
+  "publication_authorized": "Demande idem selon workflow déjà autorisé."
+}
