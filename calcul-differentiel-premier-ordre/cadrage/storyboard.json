@@ -1,0 +1,1168 @@
+[
+  {
+    "id": "CD01",
+    "title": "Comprendre une petite variation",
+    "part": "I — Se repérer",
+    "objectif": "Comprendre et utiliser : Comprendre une petite variation",
+    "idee_centrale": "Comprendre une petite variation",
+    "contenu_beamer": "\\begin{frame}[t]{Comprendre une petite variation}\n\\coursanalyse\nUne fonction de plusieurs variables reçoit plusieurs informations à la fois.\n\\begin{cours}{La question du chapitre}\nQuand l'entrée change un peu, comment prévoir la variation de la sortie ?\n\\end{cours}\n\\begin{center}\\begin{tikzpicture}\n\\node at(0,0){$\\vec a\\longmapsto f(\\vec a)$};\\node at(7,0){$\\vec a+\\vec h\\longmapsto f(\\vec a+\\vec h)$};\n\\draw[-{Stealth},thick,IMTCyan](2,0)--(4.6,0);\\node[above]at(3.3,.3){petit déplacement};\n\\end{tikzpicture}\\end{center}\n\\vfill\\textbf{Fil conducteur :} remplacer localement la variation par une application linéaire.\n\\note{Cours original, pages PDF 49–55. Résultats admis ; expliciter le sens des formules sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "49–55"
+    },
+    "prerequisites": [
+      "prérequis du cours"
+    ],
+    "exemple": "Exemple conceptuel ou figure, distinct du TD de base",
+    "activite": "Faire reformuler la notion et son hypothèse principale.",
+    "notes_orales": "Cours original, pages PDF 49–55. Résultats admis ; expliciter le sens des formules sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "CD02",
+    "title": "Entrée, sortie et composantes",
+    "part": "I — Se repérer",
+    "objectif": "Comprendre et utiliser : Entrée, sortie et composantes",
+    "idee_centrale": "Entrée, sortie et composantes",
+    "contenu_beamer": "\\begin{frame}[t]{Entrée, sortie et composantes}\n\\coursanalyse\n\\begin{notion}{Fonction vectorielle}\nPour $U\\subset\\Rn n$, une fonction $f:U\\to\\Rn p$ s'écrit\n\\[\\vec x=\\vcol{x_1\\\\\\vdots\\\\x_n},\\qquad f(\\vec x)=\\vcol{f_1(\\vec x)\\\\\\vdots\\\\f_p(\\vec x)}.\\]\nLes $f_i$ sont les \\textbf{fonctions composantes} de $f$.\n\\end{notion}\n\\begin{resultat}{Deux dimensions à distinguer}\n$n$ coordonnées à l'entrée ; $p$ coordonnées à la sortie. Si $p=1$, la fonction est à valeurs réelles.\n\\end{resultat}\n\\note{Cours original, pages PDF 12–14. Résultats admis ; expliciter le sens des formules sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [
+      "\\vec x=\\vcol{x_1\\\\\\vdots\\\\x_n},\\qquad f(\\vec x)=\\vcol{f_1(\\vec x)\\\\\\vdots\\\\f_p(\\vec x)}."
+    ],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "12–14"
+    },
+    "prerequisites": [
+      "prérequis du cours"
+    ],
+    "exemple": null,
+    "activite": "Faire reformuler la notion et son hypothèse principale.",
+    "notes_orales": "Cours original, pages PDF 12–14. Résultats admis ; expliciter le sens des formules sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "CD03",
+    "title": "Commencer par le domaine",
+    "part": "I — Se repérer",
+    "objectif": "Comprendre et utiliser : Commencer par le domaine",
+    "idee_centrale": "Commencer par le domaine",
+    "contenu_beamer": "\\begin{frame}[t]{Commencer par le domaine}\n\\coursanalyse\n\\begin{cours}{Avant de calculer}\nRepérer les valeurs pour lesquelles chaque expression est définie.\n\\end{cours}\n\\begin{exemple}{Deux contraintes usuelles}\n$f(x,y)=\\ln(3-x^2-y^2)$ : domaine $x^2+y^2<3$.\n\n\\medskip\n$g(x,y)=\\dfrac1{x-y}$ : domaine $x\\ne y$.\n\\end{exemple}\n\\vfill Un dénominateur doit rester non nul ; l'argument d'un logarithme doit être strictement positif.\n\\note{Cours original, pages PDF 12–14,115–117. Résultats admis ; expliciter le sens des formules sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "12–14,115–117"
+    },
+    "prerequisites": [
+      "CD02"
+    ],
+    "exemple": "Exemple conceptuel ou figure, distinct du TD de base",
+    "activite": "Faire reformuler la notion et son hypothèse principale.",
+    "notes_orales": "Cours original, pages PDF 12–14,115–117. Résultats admis ; expliciter le sens des formules sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "CD04",
+    "title": "Mesurer la taille d’un déplacement",
+    "part": "I — Se repérer",
+    "objectif": "Comprendre et utiliser : Mesurer la taille d’un déplacement",
+    "idee_centrale": "Mesurer la taille d’un déplacement",
+    "contenu_beamer": "\\begin{frame}[t]{Mesurer la taille d’un déplacement}\n\\coursanalyse\n\\begin{notion}{Norme et distance euclidiennes}\nPour $\\vec h\\in\\Rn n$,\n\\[\\norm{\\vec h}=\\sqrt{h_1^2+\\cdots+h_n^2}.\\]\nLa distance est $D(\\vec x,\\vec a)=\\norm{\\vec x-\\vec a}$.\n\\end{notion}\n\\begin{resultat}{Le sens de « petit »}\n$\\vec h\\to\\zero$ signifie que \\textbf{toutes} ses coordonnées tendent vers zéro.\n\\end{resultat}\n\\vfill La norme est un réel ; le déplacement est un vecteur.\n\\note{Cours original, pages PDF 3–11. Résultats admis ; expliciter le sens des formules sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [
+      "\\norm{\\vec h}=\\sqrt{h_1^2+\\cdots+h_n^2}."
+    ],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "3–11"
+    },
+    "prerequisites": [
+      "prérequis du cours"
+    ],
+    "exemple": null,
+    "activite": "Faire reformuler la notion et son hypothèse principale.",
+    "notes_orales": "Cours original, pages PDF 3–11. Résultats admis ; expliciter le sens des formules sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "CD05",
+    "title": "Une boule décrit la proximité",
+    "part": "I — Se repérer",
+    "objectif": "Comprendre et utiliser : Une boule décrit la proximité",
+    "idee_centrale": "Une boule décrit la proximité",
+    "contenu_beamer": "\\begin{frame}[t]{Une boule décrit la proximité}\n\\coursanalyse\n\\begin{notion}{Centre $\\vec a$ et rayon $r>0$}\n\\textbf{Boule ouverte :} $B(\\vec a,r)=\\{\\vec x:\\norm{\\vec x-\\vec a}<r\\}$.\n\n\\medskip\n\\textbf{Boule fermée :} $\\overline B(\\vec a,r)=\\{\\vec x:\\norm{\\vec x-\\vec a}\\le r\\}$.\n\\end{notion}\n\\begin{center}\\begin{tikzpicture}[scale=.65]\n\\fill[IMTCyan!10](0,0)circle(1.5);\\draw[dashed,IMTCyan,thick](0,0)circle(1.5);\\fill(0,0)circle(2pt)node[below]{$\\vec a$};\\draw(0,0)--(1.5,0)node[midway,above]{$r$};\\node at(0,-2){bord exclu};\n\\fill[IMTGreen!18](7,0)circle(1.5);\\draw[IMTNavy,thick](7,0)circle(1.5);\\fill(7,0)circle(2pt)node[below]{$\\vec a$};\\draw(7,0)--(8.5,0)node[midway,above]{$r$};\\node at(7,-2){bord inclus};\n\\end{tikzpicture}\\end{center}\n\\note{Cours original, pages PDF 3–5. Résultats admis ; expliciter le sens des formules sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "3–5"
+    },
+    "prerequisites": [
+      "CD04"
+    ],
+    "exemple": "Exemple conceptuel ou figure, distinct du TD de base",
+    "activite": "Faire reformuler la notion et son hypothèse principale.",
+    "notes_orales": "Cours original, pages PDF 3–5. Résultats admis ; expliciter le sens des formules sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "CD06",
+    "title": "Un ouvert laisse de la place autour de chaque point",
+    "part": "I — Se repérer",
+    "objectif": "Comprendre et utiliser : Un ouvert laisse de la place autour de chaque point",
+    "idee_centrale": "Un ouvert laisse de la place autour de chaque point",
+    "contenu_beamer": "\\begin{frame}[t]{Un ouvert laisse de la place autour de chaque point}\n\\coursanalyse\n\\begin{notion}{Partie ouverte}\n$U\\subset\\Rn n$ est ouvert si\n\\[\\forall\\vec a\\in U,\\quad\\exists r>0,\\quad B(\\vec a,r)\\subset U.\\]\n\\end{notion}\n\\begin{center}\\begin{tikzpicture}[scale=.7]\n\\fill[IMTCyan!10](-2,-1.5)rectangle(2,1.5);\\draw[dashed,IMTCyan,thick](-2,-1.5)rectangle(2,1.5);\\draw[IMTOrange,thick](.8,.2)circle(.8);\\fill(.8,.2)circle(2pt)node[below]{$\\vec a$};\\node at(-1.3,1){$U$};\n\\node[anchor=west,align=left]at(4,.2){Un petit déplacement\\\\dans toute direction\\\\reste dans $U$.};\n\\end{tikzpicture}\\end{center}\n\\vfill Le rayon peut dépendre du point choisi.\n\\note{Cours original, pages PDF 6–7. Résultats admis ; expliciter le sens des formules sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [
+      "\\forall\\vec a\\in U,\\quad\\exists r>0,\\quad B(\\vec a,r)\\subset U."
+    ],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "6–7"
+    },
+    "prerequisites": [
+      "CD05"
+    ],
+    "exemple": "Exemple conceptuel ou figure, distinct du TD de base",
+    "activite": "Faire reformuler la notion et son hypothèse principale.",
+    "notes_orales": "Cours original, pages PDF 6–7. Résultats admis ; expliciter le sens des formules sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "CD07",
+    "title": "Voisinage et point intérieur",
+    "part": "I — Se repérer",
+    "objectif": "Comprendre et utiliser : Voisinage et point intérieur",
+    "idee_centrale": "Voisinage et point intérieur",
+    "contenu_beamer": "\\begin{frame}[t]{Voisinage et point intérieur}\n\\coursanalyse\n\\begin{notion}{Voisinage de $\\vec a$}\n$V$ est un voisinage de $\\vec a$ s'il contient une boule ouverte centrée en $\\vec a$.\n\\[\\exists r>0,\\qquad B(\\vec a,r)\\subset V.\\]\n\\end{notion}\n\\begin{resultat}{Deux formulations utiles}\n$\\vec a$ est \\textbf{intérieur} à $U$ si $U$ est un voisinage de $\\vec a$.\n\n\\medskip\n$U$ est \\textbf{ouvert} si chacun de ses points est intérieur.\n\\end{resultat}\n\\vfill Un voisinage n'est pas nécessairement un ouvert.\n\\note{Cours original, pages PDF 8–9. Résultats admis ; expliciter le sens des formules sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [
+      "\\exists r>0,\\qquad B(\\vec a,r)\\subset V."
+    ],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "8–9"
+    },
+    "prerequisites": [
+      "CD05",
+      "CD06"
+    ],
+    "exemple": null,
+    "activite": "Faire reformuler la notion et son hypothèse principale.",
+    "notes_orales": "Cours original, pages PDF 8–9. Résultats admis ; expliciter le sens des formules sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "CD08",
+    "title": "Une limite doit convenir à toutes les approches",
+    "part": "I — Se repérer",
+    "objectif": "Comprendre et utiliser : Une limite doit convenir à toutes les approches",
+    "idee_centrale": "Une limite doit convenir à toutes les approches",
+    "contenu_beamer": "\\begin{frame}[t]{Une limite doit convenir à toutes les approches}\n\\coursanalyse\nSoit $\\vec a$ un point d'accumulation de $U$ : on peut l'approcher par des points de $U$ distincts de lui.\n\\begin{notion}{Limite $\\vec\\ell$ en $\\vec a$}\nPour tout $\\varepsilon>0$, il existe $\\eta>0$ tel que, pour tout $\\vec x\\in U$,\n\\[0<\\norm{\\vec x-\\vec a}<\\eta\\Longrightarrow\\norm{f(\\vec x)-\\vec\\ell}<\\varepsilon.\\]\nOn note $\\displaystyle\\lim_{\\vec x\\to\\vec a}f(\\vec x)=\\vec\\ell$.\n\\end{notion}\n\\begin{theoreme}{Composante par composante}\nUne fonction vectorielle converge si et seulement si toutes ses composantes convergent ; leurs limites forment la colonne limite.\n\\end{theoreme}\n\\note{Cours original, pages PDF 15–16,30–31. Résultats admis ; expliciter le sens des formules sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [
+      "0<\\norm{\\vec x-\\vec a}<\\eta\\Longrightarrow\\norm{f(\\vec x)-\\vec\\ell}<\\varepsilon."
+    ],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "15–16,30–31"
+    },
+    "prerequisites": [
+      "CD02",
+      "CD04",
+      "CD07"
+    ],
+    "exemple": null,
+    "activite": "Faire reformuler la notion et son hypothèse principale.",
+    "notes_orales": "Cours original, pages PDF 15–16,30–31. Résultats admis ; expliciter le sens des formules sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "CD09",
+    "title": "Deux chemins peuvent exclure une limite",
+    "part": "I — Se repérer",
+    "objectif": "Comprendre et utiliser : Deux chemins peuvent exclure une limite",
+    "idee_centrale": "Deux chemins peuvent exclure une limite",
+    "contenu_beamer": "\\begin{frame}[t]{Deux chemins peuvent exclure une limite}\n\\coursanalyse\n\\begin{exemple}{Une fonction définie hors de l'origine}\n\\[q(x,y)=\\frac{xy}{x^2+y^2}.\\]\n\\textbf{Sur l'axe horizontal :} $q(t,0)=0$ pour $t\\ne0$.\n\n\\medskip\n\\textbf{Sur la diagonale :} $q(t,t)=\\dfrac12$ pour $t\\ne0$.\n\\end{exemple}\n\\begin{resultat}{Conclusion}\nLes deux valeurs limites diffèrent : $q$ n'a pas de limite à l'origine.\n\\end{resultat}\n\\vfill Plusieurs chemins de même limite ne suffisent pas, à eux seuls, à prouver une limite.\n\\note{Cours original, pages PDF 35–37. Résultats admis ; expliciter le sens des formules sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [
+      "q(x,y)=\\frac{xy}{x^2+y^2}."
+    ],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "35–37"
+    },
+    "prerequisites": [
+      "CD08"
+    ],
+    "exemple": "Exemple conceptuel ou figure, distinct du TD de base",
+    "activite": "Faire reformuler la notion et son hypothèse principale.",
+    "notes_orales": "Cours original, pages PDF 35–37. Résultats admis ; expliciter le sens des formules sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "CD10",
+    "title": "La continuité : la limite rejoint la valeur",
+    "part": "I — Se repérer",
+    "objectif": "Comprendre et utiliser : La continuité : la limite rejoint la valeur",
+    "idee_centrale": "La continuité : la limite rejoint la valeur",
+    "contenu_beamer": "\\begin{frame}[t]{La continuité : la limite rejoint la valeur}\n\\coursanalyse\n\\begin{notion}{Continuité en $\\vec a\\in U$}\nPour tout $\\varepsilon>0$, il existe $\\eta>0$ tel que, pour tout $\\vec x\\in U$,\n\\[\\norm{\\vec x-\\vec a}<\\eta\\Longrightarrow\\norm{f(\\vec x)-f(\\vec a)}<\\varepsilon.\\]\n\\end{notion}\nSi $\\vec a$ est un point d'accumulation, cela signifie\n\\[\\lim_{\\vec x\\to\\vec a}f(\\vec x)=f(\\vec a).\\]\n\\begin{resultat}{Pour une fonction vectorielle}\n$f$ est continue si et seulement si chacune de ses composantes est continue.\n\\end{resultat}\n\\note{Cours original, pages PDF 32–33,37–38. Résultats admis ; expliciter le sens des formules sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [
+      "\\norm{\\vec x-\\vec a}<\\eta\\Longrightarrow\\norm{f(\\vec x)-f(\\vec a)}<\\varepsilon.",
+      "\\lim_{\\vec x\\to\\vec a}f(\\vec x)=f(\\vec a)."
+    ],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "32–33,37–38"
+    },
+    "prerequisites": [
+      "CD08"
+    ],
+    "exemple": null,
+    "activite": "Faire reformuler la notion et son hypothèse principale.",
+    "notes_orales": "Cours original, pages PDF 32–33,37–38. Résultats admis ; expliciter le sens des formules sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "CD11",
+    "title": "Reconnaître les fonctions continues usuelles",
+    "part": "I — Se repérer",
+    "objectif": "Comprendre et utiliser : Reconnaître les fonctions continues usuelles",
+    "idee_centrale": "Reconnaître les fonctions continues usuelles",
+    "contenu_beamer": "\\begin{frame}[t]{Reconnaître les fonctions continues usuelles}\n\\coursanalyse\n\\begin{theoreme}{Règles de continuité}\n\\textbf{Somme et produit :} des fonctions réelles continues restent continues.\n\n\\medskip\n\\textbf{Quotient :} il reste continu là où le dénominateur ne s'annule pas.\n\n\\medskip\n\\textbf{Composition :} $g\\circ f$ est continue en $\\vec a$ si $f$ l'est en $\\vec a$ et $g$ en $f(\\vec a)$.\n\\end{theoreme}\n\\vfill Les polynômes sont continus ; les fonctions usuelles se composent sur leur domaine de définition.\n\\note{Cours original, pages PDF 34–44. Résultats admis ; expliciter le sens des formules sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "34–44"
+    },
+    "prerequisites": [
+      "CD10"
+    ],
+    "exemple": null,
+    "activite": "Faire reformuler la notion et son hypothèse principale.",
+    "notes_orales": "Cours original, pages PDF 34–44. Résultats admis ; expliciter le sens des formules sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "CD12",
+    "title": "Un reste négligeable au premier ordre",
+    "part": "I — Se repérer",
+    "objectif": "Comprendre et utiliser : Un reste négligeable au premier ordre",
+    "idee_centrale": "Un reste négligeable au premier ordre",
+    "contenu_beamer": "\\begin{frame}[t]{Un reste négligeable au premier ordre}\n\\coursanalyse\n\\begin{notion}{Petit $o$ de la norme}\n\\[r(\\vec h)=o(\\norm{\\vec h})\\Longleftrightarrow\n\\lim_{\\vec h\\to\\zero,\\,\\vec h\\ne\\zero}\\frac{\\norm{r(\\vec h)}}{\\norm{\\vec h}}=0.\\]\nLe reste devient petit \\textbf{par rapport à la taille du déplacement}.\n\\end{notion}\n\\begin{exemple}{Un reste quadratique}\n$r(\\vec h)=\\norm{\\vec h}^2$ est négligeable devant $\\norm{\\vec h}$.\n\\end{exemple}\n\\vfill Le dénominateur est une norme, donc un scalaire : on ne divise jamais par un vecteur.\n\\note{Cours original, pages PDF 44. Résultats admis ; expliciter le sens des formules sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [
+      "r(\\vec h)=o(\\norm{\\vec h})\\Longleftrightarrow\n\\lim_{\\vec h\\to\\zero,\\,\\vec h\\ne\\zero}\\frac{\\norm{r(\\vec h)}}{\\norm{\\vec h}}=0."
+    ],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "44"
+    },
+    "prerequisites": [
+      "CD04",
+      "CD08"
+    ],
+    "exemple": "Exemple conceptuel ou figure, distinct du TD de base",
+    "activite": "Faire reformuler la notion et son hypothèse principale.",
+    "notes_orales": "Cours original, pages PDF 44. Résultats admis ; expliciter le sens des formules sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "CD13",
+    "title": "En une variable : la tangente approche la courbe",
+    "part": "II — Approximer",
+    "objectif": "Comprendre et utiliser : En une variable : la tangente approche la courbe",
+    "idee_centrale": "En une variable : la tangente approche la courbe",
+    "contenu_beamer": "\\begin{frame}[t]{En une variable : la tangente approche la courbe}\n\\coursanalyse\nPour une fonction dérivable, $f(a+h)\\simeq f(a)+f'(a)h$.\n\\begin{center}\\begin{tikzpicture}[x=1.1cm,y=.48cm]\n\\draw[axes](-.4,0)--(3.6,0)node[right]{$x$};\\draw[axes](0,-.3)--(0,6.5)node[above]{$f(x)$};\n\\draw[courb,domain=0:2.5,samples=60]plot(\\x,{\\x*\\x});\\draw[IMTOrange,thick,domain=.5:3]plot(\\x,{2*\\x-1});\n\\fill(1,1)circle(2pt)node[above left]{$A$};\\draw[pointille](1,0)node[below]{$a$}--(1,1);\n\\node[anchor=west,text=IMTNavy]at(4,5.8){courbe $y=x^2$};\\node[anchor=west,text=IMTOrange]at(4,3.8){tangente en $a=1$};\n\\end{tikzpicture}\\end{center}\n\\vfill En plusieurs variables, la partie linéaire remplace la multiplication par $f'(a)$.\n\\note{Cours original, pages PDF 47–49,59–60. Résultats admis ; expliciter le sens des formules sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "47–49,59–60"
+    },
+    "prerequisites": [
+      "prérequis du cours"
+    ],
+    "exemple": "Exemple conceptuel ou figure, distinct du TD de base",
+    "activite": "Faire reformuler la notion et son hypothèse principale.",
+    "notes_orales": "Cours original, pages PDF 47–49,59–60. Résultats admis ; expliciter le sens des formules sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "CD14",
+    "title": "La différentiabilité : une approximation linéaire",
+    "part": "II — Approximer",
+    "objectif": "Comprendre et utiliser : La différentiabilité : une approximation linéaire",
+    "idee_centrale": "La différentiabilité : une approximation linéaire",
+    "contenu_beamer": "\\begin{frame}[t]{La différentiabilité : une approximation linéaire}\n\\coursanalyse\nDans la suite, $U$ est un ouvert de $\\Rn n$, $\\vec a\\in U$ et $f:U\\to\\Rn p$.\n\\begin{notion}{Différentiabilité en $\\vec a$}\nIl existe une application \\textbf{linéaire} $\\Lin L:\\Rn n\\to\\Rn p$ telle que\n\\[f(\\vec a+\\vec h)=f(\\vec a)+\\Lin L(\\vec h)+o(\\norm{\\vec h})\\]\nlorsque $\\vec h\\to\\zero$.\n\\end{notion}\n\\begin{resultat}{Lire les trois termes}\nValeur de départ \\quad + \\quad variation linéaire \\quad + \\quad reste négligeable.\n\\end{resultat}\n\\vfill Pour $\\vec h$ assez petit, $\\vec a+\\vec h$ reste dans $U$.\n\\note{Cours original, pages PDF 49–50. Résultats admis ; expliciter le sens des formules sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [
+      "f(\\vec a+\\vec h)=f(\\vec a)+\\Lin L(\\vec h)+o(\\norm{\\vec h})"
+    ],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "49–50"
+    },
+    "prerequisites": [
+      "CD06",
+      "CD12"
+    ],
+    "exemple": null,
+    "activite": "Faire reformuler la notion et son hypothèse principale.",
+    "notes_orales": "Cours original, pages PDF 49–50. Résultats admis ; expliciter le sens des formules sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "CD15",
+    "title": "La différentielle est une application",
+    "part": "II — Approximer",
+    "objectif": "Comprendre et utiliser : La différentielle est une application",
+    "idee_centrale": "La différentielle est une application",
+    "contenu_beamer": "\\begin{frame}[t]{La différentielle est une application}\n\\coursanalyse\n\\begin{theoreme}{Unicité de la partie linéaire}\nSi $f$ est différentiable en $\\vec a$, l'application linéaire précédente est unique.\n\\end{theoreme}\n\\begin{notion}{Notation du cours}\nCette application est la \\textbf{différentielle} $\\df f{\\vec a}$.\n\\[\\df f{\\vec a}:\\Rn n\\to\\Rn p,\\qquad\\vec h\\longmapsto\\df f{\\vec a}(\\vec h).\\]\n\\end{notion}\n\\vfill $\\vec a$ est le point où l'on se place ; $\\vec h$ est le déplacement auquel on applique la différentielle.\n\\note{Cours original, pages PDF 49–53. Résultats admis ; expliciter le sens des formules sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [
+      "\\df f{\\vec a}:\\Rn n\\to\\Rn p,\\qquad\\vec h\\longmapsto\\df f{\\vec a}(\\vec h)."
+    ],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "49–53"
+    },
+    "prerequisites": [
+      "CD14"
+    ],
+    "exemple": null,
+    "activite": "Faire reformuler la notion et son hypothèse principale.",
+    "notes_orales": "Cours original, pages PDF 49–53. Résultats admis ; expliciter le sens des formules sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "CD16",
+    "title": "Le modèle affine local",
+    "part": "II — Approximer",
+    "objectif": "Comprendre et utiliser : Le modèle affine local",
+    "idee_centrale": "Le modèle affine local",
+    "contenu_beamer": "\\begin{frame}[t]{Le modèle affine local}\n\\coursanalyse\n\\begin{resultat}{Prévoir la valeur voisine}\n\\[f(\\vec a+\\vec h)\\simeq f(\\vec a)+\\df f{\\vec a}(\\vec h).\\]\n\\end{resultat}\n\\begin{cours}{Deux objets à distinguer}\n\\textbf{Différentielle :} $\\vec h\\mapsto\\df f{\\vec a}(\\vec h)$ est linéaire.\n\n\\medskip\n\\textbf{Approximation de $f$ :} $\\vec x\\mapsto f(\\vec a)+\\df f{\\vec a}(\\vec x-\\vec a)$ est affine.\n\\end{cours}\n\\vfill Le signe $\\simeq$ indique une approximation ; l'égalité exacte contient un reste.\n\\note{Cours original, pages PDF 49–54. Résultats admis ; expliciter le sens des formules sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [
+      "f(\\vec a+\\vec h)\\simeq f(\\vec a)+\\df f{\\vec a}(\\vec h)."
+    ],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "49–54"
+    },
+    "prerequisites": [
+      "CD15"
+    ],
+    "exemple": null,
+    "activite": "Faire reformuler la notion et son hypothèse principale.",
+    "notes_orales": "Cours original, pages PDF 49–54. Résultats admis ; expliciter le sens des formules sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "CD17",
+    "title": "Un exemple d’approximation au premier ordre",
+    "part": "II — Approximer",
+    "objectif": "Comprendre et utiliser : Un exemple d’approximation au premier ordre",
+    "idee_centrale": "Un exemple d’approximation au premier ordre",
+    "contenu_beamer": "\\begin{frame}[t]{Un exemple d’approximation au premier ordre}\n\\coursanalyse\n\\begin{exemple}{$f(x,y)=x^2+3y^2$, au point $\\vec a=\\vcol{1\\\\1}$}\nPour un déplacement $\\vec h=\\vcol{h\\\\k}$,\n\\[f(1+h,1+k)=4+2h+6k+\\underbrace{h^2+3k^2}_{\\text{reste quadratique}}.\\]\n\\end{exemple}\n\\begin{resultat}{Le modèle à conserver}\n\\[\\df f{\\vec a}\\!\\left(\\vcol{h\\\\k}\\right)=2h+6k,\\qquad f(1+h,1+k)\\simeq4+2h+6k.\\]\n\\end{resultat}\n\\note{Cours original, pages PDF 49–55. Résultats admis ; expliciter le sens des formules sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [
+      "f(1+h,1+k)=4+2h+6k+\\underbrace{h^2+3k^2}_{\\text{reste quadratique}}.",
+      "\\df f{\\vec a}\\!\\left(\\vcol{h\\\\k}\\right)=2h+6k,\\qquad f(1+h,1+k)\\simeq4+2h+6k."
+    ],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "49–55"
+    },
+    "prerequisites": [
+      "CD16"
+    ],
+    "exemple": "Exemple conceptuel ou figure, distinct du TD de base",
+    "activite": "Faire reformuler la notion et son hypothèse principale.",
+    "notes_orales": "Cours original, pages PDF 49–55. Résultats admis ; expliciter le sens des formules sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "CD18",
+    "title": "Constante, linéaire, affine : les cas immédiats",
+    "part": "II — Approximer",
+    "objectif": "Comprendre et utiliser : Constante, linéaire, affine : les cas immédiats",
+    "idee_centrale": "Constante, linéaire, affine : les cas immédiats",
+    "contenu_beamer": "\\begin{frame}[t]{Constante, linéaire, affine : les cas immédiats}\n\\coursanalyse\n\\begin{theoreme}{Différentielles de référence}\n\\textbf{Constante :} si $f(\\vec x)=\\vec b$, alors $\\df f{\\vec a}=\\Lin 0$.\n\n\\medskip\n\\textbf{Linéaire :} si $f=\\Lin L$, alors $\\df f{\\vec a}=\\Lin L$.\n\n\\medskip\n\\textbf{Affine :} si $f(\\vec x)=\\Lin L(\\vec x)+\\vec b$, alors $\\df f{\\vec a}=\\Lin L$.\n\\end{theoreme}\n\\vfill Pour une fonction affine, le modèle au premier ordre est exact : le reste est nul.\n\\note{Cours original, pages PDF 54–57. Résultats admis ; expliciter le sens des formules sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "54–57"
+    },
+    "prerequisites": [
+      "CD15"
+    ],
+    "exemple": null,
+    "activite": "Faire reformuler la notion et son hypothèse principale.",
+    "notes_orales": "Cours original, pages PDF 54–57. Résultats admis ; expliciter le sens des formules sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "CD19",
+    "title": "Différentiable implique continue",
+    "part": "II — Approximer",
+    "objectif": "Comprendre et utiliser : Différentiable implique continue",
+    "idee_centrale": "Différentiable implique continue",
+    "contenu_beamer": "\\begin{frame}[t]{Différentiable implique continue}\n\\coursanalyse\n\\begin{theoreme}{Une implication à retenir}\n$f$ différentiable en $\\vec a$ \\quad$\\Longrightarrow$\\quad $f$ continue en $\\vec a$.\n\\end{theoreme}\n\\begin{exemple}{La réciproque est fausse}\n$f(\\vec x)=\\norm{\\vec x}$ est continue à l'origine, mais n'y est pas différentiable.\n\n\\medskip\nSur la droite $t\\mapsto t\\vec e_1$, elle devient $t\\mapsto|t|$ : il y a un angle à l'origine.\n\\end{exemple}\n\\vfill Être proche de la valeur de départ ne suffit pas à avoir un modèle linéaire.\n\\note{Cours original, pages PDF 57–60. Résultats admis ; expliciter le sens des formules sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "57–60"
+    },
+    "prerequisites": [
+      "CD10",
+      "CD14"
+    ],
+    "exemple": "Exemple conceptuel ou figure, distinct du TD de base",
+    "activite": "Faire reformuler la notion et son hypothèse principale.",
+    "notes_orales": "Cours original, pages PDF 57–60. Résultats admis ; expliciter le sens des formules sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "CD20",
+    "title": "Une dérivée partielle : une seule variable change",
+    "part": "III — Représenter",
+    "objectif": "Comprendre et utiliser : Une dérivée partielle : une seule variable change",
+    "idee_centrale": "Une dérivée partielle : une seule variable change",
+    "contenu_beamer": "\\begin{frame}[t]{Une dérivée partielle : une seule variable change}\n\\coursanalyse\n\\begin{notion}{Dérivée partielle selon $x_j$}\n\\[\\frac{\\partial f}{\\partial x_j}(\\vec a)=\\lim_{t\\to0}\\frac{f(\\vec a+t\\vec e_j)-f(\\vec a)}{t},\\]\nsi cette limite existe. Les autres coordonnées restent fixes.\n\\end{notion}\n\\begin{exemple}{$f(x,y)=x^2+3y^2$}\n\\[\\frac{\\partial f}{\\partial x}(x,y)=2x,\\qquad\\frac{\\partial f}{\\partial y}(x,y)=6y.\\]\n\\end{exemple}\n\\vfill On dérive par rapport à une variable ; les autres jouent le rôle de constantes.\n\\note{Cours original, pages PDF 76–78. Résultats admis ; expliciter le sens des formules sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [
+      "\\frac{\\partial f}{\\partial x_j}(\\vec a)=\\lim_{t\\to0}\\frac{f(\\vec a+t\\vec e_j)-f(\\vec a)}{t},",
+      "\\frac{\\partial f}{\\partial x}(x,y)=2x,\\qquad\\frac{\\partial f}{\\partial y}(x,y)=6y."
+    ],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "76–78"
+    },
+    "prerequisites": [
+      "CD02",
+      "CD06",
+      "CD08"
+    ],
+    "exemple": "Exemple conceptuel ou figure, distinct du TD de base",
+    "activite": "Faire reformuler la notion et son hypothèse principale.",
+    "notes_orales": "Cours original, pages PDF 76–78. Résultats admis ; expliciter le sens des formules sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "CD21",
+    "title": "Dériver une fonction vectorielle",
+    "part": "III — Représenter",
+    "objectif": "Comprendre et utiliser : Dériver une fonction vectorielle",
+    "idee_centrale": "Dériver une fonction vectorielle",
+    "contenu_beamer": "\\begin{frame}[t]{Dériver une fonction vectorielle}\n\\coursanalyse\n\\begin{theoreme}{Composante par composante}\nSi $f=\\vcol{f_1\\\\\\vdots\\\\f_p}$, alors, lorsque les dérivées existent,\n\\[\\frac{\\partial f}{\\partial x_j}=\\vcol{\\partial f_1/\\partial x_j\\\\\\vdots\\\\\\partial f_p/\\partial x_j}.\\]\n\\end{theoreme}\n\\begin{resultat}{La taille ne change pas à la sortie}\nUne dérivée partielle d'une fonction à $p$ composantes est un vecteur colonne à $p$ composantes.\n\\end{resultat}\n\\note{Cours original, pages PDF 77–79,83–85. Résultats admis ; expliciter le sens des formules sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [
+      "\\frac{\\partial f}{\\partial x_j}=\\vcol{\\partial f_1/\\partial x_j\\\\\\vdots\\\\\\partial f_p/\\partial x_j}."
+    ],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "77–79,83–85"
+    },
+    "prerequisites": [
+      "CD20"
+    ],
+    "exemple": null,
+    "activite": "Faire reformuler la notion et son hypothèse principale.",
+    "notes_orales": "Cours original, pages PDF 77–79,83–85. Résultats admis ; expliciter le sens des formules sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "CD22",
+    "title": "Dériver suivant un vecteur donné",
+    "part": "III — Représenter",
+    "objectif": "Comprendre et utiliser : Dériver suivant un vecteur donné",
+    "idee_centrale": "Dériver suivant un vecteur donné",
+    "contenu_beamer": "\\begin{frame}[t]{Dériver suivant un vecteur donné}\n\\coursanalyse\n\\begin{notion}{Dérivée suivant $\\vec u$}\n\\[D_{\\vec u}f(\\vec a)=\\lim_{t\\to0}\\frac{f(\\vec a+t\\vec u)-f(\\vec a)}{t},\\]\nsi cette limite existe.\n\\end{notion}\n\\begin{cours}{Le rôle du vecteur $\\vec u$}\nIl fixe une \\textbf{direction} et une \\textbf{échelle de déplacement}.\n\n\\medskip\nIl n'est pas nécessairement unitaire.\n\\end{cours}\n\\vfill Pour comparer des directions à vitesse égale, on choisit des vecteurs unitaires.\n\\note{Cours original, pages PDF 75–77. Résultats admis ; expliciter le sens des formules sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [
+      "D_{\\vec u}f(\\vec a)=\\lim_{t\\to0}\\frac{f(\\vec a+t\\vec u)-f(\\vec a)}{t},"
+    ],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "75–77"
+    },
+    "prerequisites": [
+      "CD06",
+      "CD08"
+    ],
+    "exemple": null,
+    "activite": "Faire reformuler la notion et son hypothèse principale.",
+    "notes_orales": "Cours original, pages PDF 75–77. Résultats admis ; expliciter le sens des formules sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "CD23",
+    "title": "Une différentielle, toutes les directions",
+    "part": "III — Représenter",
+    "objectif": "Comprendre et utiliser : Une différentielle, toutes les directions",
+    "idee_centrale": "Une différentielle, toutes les directions",
+    "contenu_beamer": "\\begin{frame}[t]{Une différentielle, toutes les directions}\n\\coursanalyse\n\\begin{theoreme}{Si $f$ est différentiable en $\\vec a$}\nPour tout vecteur $\\vec u$,\n\\[D_{\\vec u}f(\\vec a)=\\df f{\\vec a}(\\vec u).\\]\nEn particulier,\n\\[\\frac{\\partial f}{\\partial x_j}(\\vec a)=\\df f{\\vec a}(\\vec e_j).\\]\n\\end{theoreme}\n\\vfill Une seule application linéaire rassemble les variations suivant toutes les directions.\n\\note{Cours original, pages PDF 79–82. Résultats admis ; expliciter le sens des formules sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [
+      "D_{\\vec u}f(\\vec a)=\\df f{\\vec a}(\\vec u).",
+      "\\frac{\\partial f}{\\partial x_j}(\\vec a)=\\df f{\\vec a}(\\vec e_j)."
+    ],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "79–82"
+    },
+    "prerequisites": [
+      "CD15",
+      "CD20",
+      "CD22"
+    ],
+    "exemple": null,
+    "activite": "Faire reformuler la notion et son hypothèse principale.",
+    "notes_orales": "Cours original, pages PDF 79–82. Résultats admis ; expliciter le sens des formules sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "CD24",
+    "title": "Des dérivées partielles ne suffisent pas",
+    "part": "III — Représenter",
+    "objectif": "Comprendre et utiliser : Des dérivées partielles ne suffisent pas",
+    "idee_centrale": "Des dérivées partielles ne suffisent pas",
+    "contenu_beamer": "\\begin{frame}[t]{Des dérivées partielles ne suffisent pas}\n\\coursanalyse\n\\begin{exemple}{Compléter la fonction de l'exemple des deux chemins}\nPosons $q(0,0)=0$ et $q(x,y)=xy/(x^2+y^2)$ ailleurs.\n\n\\medskip\nSur chaque axe, $q$ est nulle : ses deux dérivées partielles à l'origine valent $0$.\n\n\\medskip\nSur la diagonale, $q(t,t)=1/2$ pour $t\\ne0$ : $q$ n'est pas continue à l'origine.\n\\end{exemple}\n\\begin{resultat}{Conclusion}\n$q$ n'est pas différentiable à l'origine, malgré l'existence de ses deux dérivées partielles.\n\\end{resultat}\n\\note{Cours original, pages PDF 79–81. Résultats admis ; expliciter le sens des formules sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "79–81"
+    },
+    "prerequisites": [
+      "CD09",
+      "CD19",
+      "CD20"
+    ],
+    "exemple": "Exemple conceptuel ou figure, distinct du TD de base",
+    "activite": "Faire reformuler la notion et son hypothèse principale.",
+    "notes_orales": "Cours original, pages PDF 79–81. Résultats admis ; expliciter le sens des formules sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "CD25",
+    "title": "La jacobienne représente la différentielle",
+    "part": "III — Représenter",
+    "objectif": "Comprendre et utiliser : La jacobienne représente la différentielle",
+    "idee_centrale": "La jacobienne représente la différentielle",
+    "contenu_beamer": "\\begin{frame}[t]{La jacobienne représente la différentielle}\n\\coursanalyse\n\\begin{notion}{Dans les bases canoniques}\nPour $f:U\\subset\\Rn n\\to\\Rn p$ différentiable en $\\vec a$,\n\\[J_f(\\vec a)=\\begin{pmatrix}\n\\dfrac{\\partial f_1}{\\partial x_1}(\\vec a)&\\cdots&\\dfrac{\\partial f_1}{\\partial x_n}(\\vec a)\\\\\n\\vdots&&\\vdots\\\\\n\\dfrac{\\partial f_p}{\\partial x_1}(\\vec a)&\\cdots&\\dfrac{\\partial f_p}{\\partial x_n}(\\vec a)\n\\end{pmatrix}.\\]\n\\end{notion}\n\\vfill\\textbf{$p$ lignes :} les composantes de sortie.\n\n\\medskip\n\\textbf{$n$ colonnes :} les variables d'entrée.\n\\note{Cours original, pages PDF 85–86. Résultats admis ; expliciter le sens des formules sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [
+      "J_f(\\vec a)=\\begin{pmatrix}\n\\dfrac{\\partial f_1}{\\partial x_1}(\\vec a)&\\cdots&\\dfrac{\\partial f_1}{\\partial x_n}(\\vec a)\\\\\n\\vdots&&\\vdots\\\\\n\\dfrac{\\partial f_p}{\\partial x_1}(\\vec a)&\\cdots&\\dfrac{\\partial f_p}{\\partial x_n}(\\vec a)\n\\end{pmatrix}."
+    ],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "85–86"
+    },
+    "prerequisites": [
+      "CD15",
+      "CD20",
+      "CD21"
+    ],
+    "exemple": null,
+    "activite": "Faire reformuler la notion et son hypothèse principale.",
+    "notes_orales": "Cours original, pages PDF 85–86. Résultats admis ; expliciter le sens des formules sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "CD26",
+    "title": "Lire les lignes et les colonnes",
+    "part": "III — Représenter",
+    "objectif": "Comprendre et utiliser : Lire les lignes et les colonnes",
+    "idee_centrale": "Lire les lignes et les colonnes",
+    "contenu_beamer": "\\begin{frame}[t]{Lire les lignes et les colonnes}\n\\coursanalyse\n\\begin{exemple}{$F(x,y)=\\vcol{x^2+y\\\\xy-y^2}$}\n\\[J_F(x,y)=\\begin{pmatrix}2x&1\\\\y&x-2y\\end{pmatrix}.\\]\n\\end{exemple}\n\\begin{cours}{Deux lectures}\n\\textbf{Ligne 1 :} les dérivées de la première composante $x^2+y$.\n\n\\medskip\n\\textbf{Colonne 2 :} la dérivée vectorielle selon $y$, soit $\\vcol{1\\\\x-2y}$.\n\\end{cours}\n\\note{Cours original, pages PDF 83–86. Résultats admis ; expliciter le sens des formules sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [
+      "J_F(x,y)=\\begin{pmatrix}2x&1\\\\y&x-2y\\end{pmatrix}."
+    ],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "83–86"
+    },
+    "prerequisites": [
+      "CD25"
+    ],
+    "exemple": "Exemple conceptuel ou figure, distinct du TD de base",
+    "activite": "Faire reformuler la notion et son hypothèse principale.",
+    "notes_orales": "Cours original, pages PDF 83–86. Résultats admis ; expliciter le sens des formules sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "CD27",
+    "title": "Appliquer la différentielle à un déplacement",
+    "part": "III — Représenter",
+    "objectif": "Comprendre et utiliser : Appliquer la différentielle à un déplacement",
+    "idee_centrale": "Appliquer la différentielle à un déplacement",
+    "contenu_beamer": "\\begin{frame}[t]{Appliquer la différentielle à un déplacement}\n\\coursanalyse\n\\begin{theoreme}{Dans les bases canoniques}\n\\[\\coord{\\df f{\\vec a}(\\vec h)}{\\mathbf e'}=J_f(\\vec a)\\coord{\\vec h}{\\mathbf e}.\\]\n\\end{theoreme}\n\\begin{exemple}{Pour $F(x,y)=\\vcol{x^2+y\\\\xy-y^2}$ en $\\vec a=\\vcol{1\\\\1}$}\n\\[\\df F{\\vec a}\\!\\left(\\vcol{h\\\\k}\\right)\n=\\begin{pmatrix}2&1\\\\1&-1\\end{pmatrix}\\vcol{h\\\\k}=\\vcol{2h+k\\\\h-k}.\\]\n\\end{exemple}\n\\note{Cours original, pages PDF 85–86. Résultats admis ; expliciter le sens des formules sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [
+      "\\coord{\\df f{\\vec a}(\\vec h)}{\\mathbf e'}=J_f(\\vec a)\\coord{\\vec h}{\\mathbf e}.",
+      "\\df F{\\vec a}\\!\\left(\\vcol{h\\\\k}\\right)\n=\\begin{pmatrix}2&1\\\\1&-1\\end{pmatrix}\\vcol{h\\\\k}=\\vcol{2h+k\\\\h-k}."
+    ],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "85–86"
+    },
+    "prerequisites": [
+      "CD25",
+      "CD26"
+    ],
+    "exemple": "Exemple conceptuel ou figure, distinct du TD de base",
+    "activite": "Faire reformuler la notion et son hypothèse principale.",
+    "notes_orales": "Cours original, pages PDF 85–86. Résultats admis ; expliciter le sens des formules sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "CD28",
+    "title": "Ne pas confondre les objets",
+    "part": "III — Représenter",
+    "objectif": "Comprendre et utiliser : Ne pas confondre les objets",
+    "idee_centrale": "Ne pas confondre les objets",
+    "contenu_beamer": "\\begin{frame}[t]{Ne pas confondre les objets}\n\\coursanalyse\n\\begin{cours}{La fonction}\n$f$ associe une sortie à chaque point de son domaine ; elle peut être non linéaire.\n\\end{cours}\n\\begin{cours}{La différentielle en un point}\n$\\df f{\\vec a}$ est une application \\textbf{linéaire} qui agit sur les déplacements.\n\\end{cours}\n\\begin{cours}{La jacobienne en ce point}\n$J_f(\\vec a)$ est la \\textbf{matrice} de cette application dans les bases canoniques.\n\\end{cours}\n\\vfill Fixer le point $\\vec a$ avant de faire agir la différentielle.\n\\note{Cours original, pages PDF 85–86. Résultats admis ; expliciter le sens des formules sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "85–86"
+    },
+    "prerequisites": [
+      "CD15",
+      "CD25"
+    ],
+    "exemple": null,
+    "activite": "Faire reformuler la notion et son hypothèse principale.",
+    "notes_orales": "Cours original, pages PDF 85–86. Résultats admis ; expliciter le sens des formules sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "CD29",
+    "title": "Justifier la différentiabilité",
+    "part": "III — Représenter",
+    "objectif": "Comprendre et utiliser : Justifier la différentiabilité",
+    "idee_centrale": "Justifier la différentiabilité",
+    "contenu_beamer": "\\begin{frame}[t]{Justifier la différentiabilité}\n\\coursanalyse\n\\begin{cours}{Pour une expression usuelle}\n\\textbf{1.} Vérifier le domaine et se placer sur un ouvert.\n\n\\medskip\n\\textbf{2.} Repérer les briques différentiables : constantes, applications affines et fonctions usuelles d'une variable.\n\n\\medskip\n\\textbf{3.} Appliquer les règles de somme, produit, quotient et composition, présentées dans la dernière partie.\n\\end{cours}\n\\begin{resultat}{L'ordre à conserver}\nJustifier la différentiabilité, puis utiliser la jacobienne pour calculer l'action de la différentielle.\n\\end{resultat}\n\\note{Cours original, pages PDF 54–57,105–117. Résultats admis ; expliciter le sens des formules sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "54–57,105–117"
+    },
+    "prerequisites": [
+      "CD18",
+      "CD25"
+    ],
+    "exemple": null,
+    "activite": "Faire reformuler la notion et son hypothèse principale.",
+    "notes_orales": "Cours original, pages PDF 54–57,105–117. Résultats admis ; expliciter le sens des formules sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "CD30",
+    "title": "À valeurs réelles : une forme linéaire",
+    "part": "IV — Interpréter",
+    "objectif": "Comprendre et utiliser : À valeurs réelles : une forme linéaire",
+    "idee_centrale": "À valeurs réelles : une forme linéaire",
+    "contenu_beamer": "\\begin{frame}[t]{À valeurs réelles : une forme linéaire}\n\\coursanalyse\nSi $f:U\\subset\\Rn n\\to\\R$ est différentiable en $\\vec a$,\n\\begin{theoreme}{Expression de la différentielle}\n\\[\\df f{\\vec a}(\\vec h)=\\sum_{j=1}^n\\frac{\\partial f}{\\partial x_j}(\\vec a)h_j.\\]\n\\end{theoreme}\n\\begin{exemple}{$f(x,y)=x^2+3y^2$, en $\\vec a=\\vcol{1\\\\1}$}\n\\[\\df f{\\vec a}\\!\\left(\\vcol{h\\\\k}\\right)=2h+6k.\\]\n\\end{exemple}\n\n\\note{Cours original, pages PDF 87–88. Résultats admis ; expliciter le sens des formules sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [
+      "\\df f{\\vec a}(\\vec h)=\\sum_{j=1}^n\\frac{\\partial f}{\\partial x_j}(\\vec a)h_j.",
+      "\\df f{\\vec a}\\!\\left(\\vcol{h\\\\k}\\right)=2h+6k."
+    ],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "87–88"
+    },
+    "prerequisites": [
+      "CD23"
+    ],
+    "exemple": "Exemple conceptuel ou figure, distinct du TD de base",
+    "activite": "Faire reformuler la notion et son hypothèse principale.",
+    "notes_orales": "Cours original, pages PDF 87–88. Résultats admis ; expliciter le sens des formules sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "CD31",
+    "title": "Le gradient : représenter par un vecteur",
+    "part": "IV — Interpréter",
+    "objectif": "Comprendre et utiliser : Le gradient : représenter par un vecteur",
+    "idee_centrale": "Le gradient : représenter par un vecteur",
+    "contenu_beamer": "\\begin{frame}[t]{Le gradient : représenter par un vecteur}\n\\coursanalyse\n\\begin{notion}{Gradient}\nPour $f:U\\to\\R$ différentiable en $\\vec a$, le gradient $\\grad f(\\vec a)$ est l'unique vecteur tel que\n\\[\\forall\\vec h\\in\\Rn n,\\qquad\\df f{\\vec a}(\\vec h)=\\ps{\\grad f(\\vec a)}{\\vec h}.\\]\n\\end{notion}\n\\begin{resultat}{Deux objets liés, mais distincts}\nLa différentielle est une \\textbf{application linéaire}.\n\n\\medskip\nLe gradient est un \\textbf{vecteur} qui la représente grâce au produit scalaire.\n\\end{resultat}\n\\note{Cours original, pages PDF 88–90. Résultats admis ; expliciter le sens des formules sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [
+      "\\forall\\vec h\\in\\Rn n,\\qquad\\df f{\\vec a}(\\vec h)=\\ps{\\grad f(\\vec a)}{\\vec h}."
+    ],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "88–90"
+    },
+    "prerequisites": [
+      "CD30"
+    ],
+    "exemple": null,
+    "activite": "Faire reformuler la notion et son hypothèse principale.",
+    "notes_orales": "Cours original, pages PDF 88–90. Résultats admis ; expliciter le sens des formules sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "CD32",
+    "title": "Gradient colonne et jacobienne ligne",
+    "part": "IV — Interpréter",
+    "objectif": "Comprendre et utiliser : Gradient colonne et jacobienne ligne",
+    "idee_centrale": "Gradient colonne et jacobienne ligne",
+    "contenu_beamer": "\\begin{frame}[t]{Gradient colonne et jacobienne ligne}\n\\coursanalyse\n\\begin{notion}{Dans la base canonique}\n\\[\\grad f(\\vec a)=\\vcol{\\dfrac{\\partial f}{\\partial x_1}(\\vec a)\\\\\\vdots\\\\\\dfrac{\\partial f}{\\partial x_n}(\\vec a)}.\\]\n\\end{notion}\n\\begin{resultat}{La jacobienne est une matrice, pas un vecteur}\nPour une fonction scalaire, $J_f(\\vec a)$ a une ligne et $n$ colonnes :\n\\[J_f(\\vec a)=\\bigl(\\grad f(\\vec a)\\bigr)^\\top.\\]\n\\end{resultat}\n\\note{Cours original, pages PDF 88–90. Résultats admis ; expliciter le sens des formules sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [
+      "\\grad f(\\vec a)=\\vcol{\\dfrac{\\partial f}{\\partial x_1}(\\vec a)\\\\\\vdots\\\\\\dfrac{\\partial f}{\\partial x_n}(\\vec a)}.",
+      "J_f(\\vec a)=\\bigl(\\grad f(\\vec a)\\bigr)^\\top."
+    ],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "88–90"
+    },
+    "prerequisites": [
+      "CD25",
+      "CD31"
+    ],
+    "exemple": null,
+    "activite": "Faire reformuler la notion et son hypothèse principale.",
+    "notes_orales": "Cours original, pages PDF 88–90. Résultats admis ; expliciter le sens des formules sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "CD33",
+    "title": "Voir le gradient sur des courbes de niveau",
+    "part": "IV — Interpréter",
+    "objectif": "Comprendre et utiliser : Voir le gradient sur des courbes de niveau",
+    "idee_centrale": "Voir le gradient sur des courbes de niveau",
+    "contenu_beamer": "\\begin{frame}[t]{Voir le gradient sur des courbes de niveau}\n\\coursanalyse\nUne courbe de niveau rassemble les points où $f$ prend la même valeur.\n\\begin{center}\\begin{tikzpicture}[x=.75cm,y=.75cm]\n\\draw[axes](-2.5,0)--(3,0)node[right]{$x$};\\draw[axes](0,-1.7)--(0,2.4)node[above]{$y$};\n\\draw[IMTCyan,thick](0,0)ellipse[x radius=2,y radius=1.1547];\\draw[IMTCyan!45](0,0)ellipse[x radius=1.4142,y radius=.8165];\n\\fill(1,1)circle(2pt)node[below right]{$\\vec a$};\\draw[-{Stealth},IMTOrange,very thick](1,1)--(1.4,2.2)node[above right]{$\\grad f(\\vec a)$};\\draw[IMTNavy,thick](-.2,1.4)--(2.2,.6);\n\\node[anchor=west,align=left]at(4,1){$f(x,y)=x^2+3y^2$\\\\[2mm]$\\vec a=\\vcol{1\\\\1}$, $\\grad f(\\vec a)=\\vcol{2\\\\6}$};\n\\end{tikzpicture}\\end{center}\n\\vfill Le gradient est normal à la tangente au niveau en ce point. La flèche est à échelle réduite.\n\\note{Cours original, pages PDF 89–90. Résultats admis ; expliciter le sens des formules sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "89–90"
+    },
+    "prerequisites": [
+      "CD31",
+      "CD32"
+    ],
+    "exemple": "Exemple conceptuel ou figure, distinct du TD de base",
+    "activite": "Faire reformuler la notion et son hypothèse principale.",
+    "notes_orales": "Cours original, pages PDF 89–90. Résultats admis ; expliciter le sens des formules sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "CD34",
+    "title": "La direction de croissance maximale",
+    "part": "IV — Interpréter",
+    "objectif": "Comprendre et utiliser : La direction de croissance maximale",
+    "idee_centrale": "La direction de croissance maximale",
+    "contenu_beamer": "\\begin{frame}[t]{La direction de croissance maximale}\n\\coursanalyse\n\\begin{theoreme}{Parmi les vecteurs unitaires}\nSi $f:U\\to\\R$ est différentiable en $\\vec a$,\n\\[D_{\\vec u}f(\\vec a)=\\ps{\\grad f(\\vec a)}{\\vec u},\\qquad\\norm{\\vec u}=1.\\]\nSi $\\grad f(\\vec a)\\ne\\zero$, le maximum vaut $\\norm{\\grad f(\\vec a)}$, atteint pour\n\\[\\vec u=\\frac{\\grad f(\\vec a)}{\\norm{\\grad f(\\vec a)}}.\\]\n\\end{theoreme}\n\\begin{resultat}{Si le gradient est nul}\nToutes les dérivées directionnelles sont nulles. Cela ne signifie pas que la fonction est constante.\n\\end{resultat}\n\\note{Cours original, pages PDF 89–90. Résultats admis ; expliciter le sens des formules sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [
+      "D_{\\vec u}f(\\vec a)=\\ps{\\grad f(\\vec a)}{\\vec u},\\qquad\\norm{\\vec u}=1.",
+      "\\vec u=\\frac{\\grad f(\\vec a)}{\\norm{\\grad f(\\vec a)}}."
+    ],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "89–90"
+    },
+    "prerequisites": [
+      "CD23",
+      "CD31"
+    ],
+    "exemple": null,
+    "activite": "Faire reformuler la notion et son hypothèse principale.",
+    "notes_orales": "Cours original, pages PDF 89–90. Résultats admis ; expliciter le sens des formules sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "CD35",
+    "title": "Vecteur donné ou direction unitaire ?",
+    "part": "IV — Interpréter",
+    "objectif": "Comprendre et utiliser : Vecteur donné ou direction unitaire ?",
+    "idee_centrale": "Vecteur donné ou direction unitaire ?",
+    "contenu_beamer": "\\begin{frame}[t]{Vecteur donné ou direction unitaire ?}\n\\coursanalyse\n\\begin{exemple}{$f(x,y)=x^2+3y^2$, en $\\vec a=\\vcol{1\\\\1}$}\nIci $\\grad f(\\vec a)=\\vcol{2\\\\6}$ et $\\vec v=\\vcol{3\\\\4}$ a pour norme $5$.\n\\end{exemple}\n\\begin{resultat}{Conserver la convention de la question}\n\\textbf{Suivant $\\vec v$ :} $D_{\\vec v}f(\\vec a)=2\\times3+6\\times4=30$.\n\n\\medskip\n\\textbf{Suivant le vecteur unitaire $\\vec v/5$ :} $D_{\\vec v/5}f(\\vec a)=6$.\n\\end{resultat}\n\\vfill Normaliser change la valeur : annoncer le vecteur effectivement utilisé.\n\\note{Cours original, pages PDF 76,89–90. Résultats admis ; expliciter le sens des formules sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "76,89–90"
+    },
+    "prerequisites": [
+      "CD34"
+    ],
+    "exemple": "Exemple conceptuel ou figure, distinct du TD de base",
+    "activite": "Faire reformuler la notion et son hypothèse principale.",
+    "notes_orales": "Cours original, pages PDF 76,89–90. Résultats admis ; expliciter le sens des formules sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "CD36",
+    "title": "Un résultat de référence : la norme au carré",
+    "part": "IV — Interpréter",
+    "objectif": "Comprendre et utiliser : Un résultat de référence : la norme au carré",
+    "idee_centrale": "Un résultat de référence : la norme au carré",
+    "contenu_beamer": "\\begin{frame}[t]{Un résultat de référence : la norme au carré}\n\\coursanalyse\n\\begin{theoreme}{Pour $s(\\vec x)=\\norm{\\vec x}^2$}\n$s$ est différentiable sur $\\Rn n$ et\n\\[\\df s{\\vec a}(\\vec h)=2\\ps{\\vec a}{\\vec h}.\\]\nSon gradient est $\\grad s(\\vec a)=2\\vec a$.\n\\end{theoreme}\n\\begin{resultat}{Distinguer norme et norme au carré}\nLa norme au carré est différentiable même à l'origine.\n\n\\medskip\nLa norme, elle, n'y est pas différentiable.\n\\end{resultat}\n\\note{Cours original, pages PDF 108–109. Résultats admis ; expliciter le sens des formules sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [
+      "\\df s{\\vec a}(\\vec h)=2\\ps{\\vec a}{\\vec h}."
+    ],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "108–109"
+    },
+    "prerequisites": [
+      "CD30",
+      "CD31"
+    ],
+    "exemple": null,
+    "activite": "Faire reformuler la notion et son hypothèse principale.",
+    "notes_orales": "Cours original, pages PDF 108–109. Résultats admis ; expliciter le sens des formules sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "CD37",
+    "title": "Sommes et multiples",
+    "part": "V — Calculer",
+    "objectif": "Comprendre et utiliser : Sommes et multiples",
+    "idee_centrale": "Sommes et multiples",
+    "contenu_beamer": "\\begin{frame}[t]{Sommes et multiples}\n\\coursanalyse\n\\begin{theoreme}{Combinaison linéaire}\nSi $f,g:U\\to\\Rn p$ sont différentiables en $\\vec a$ et $\\lambda,\\mu\\in\\R$, alors\n\\[\\df{(\\lambda f+\\mu g)}{\\vec a}=\\lambda\\df f{\\vec a}+\\mu\\df g{\\vec a}.\\]\n\\end{theoreme}\n\\begin{cours}{Même règle sur les matrices}\n\\[J_{\\lambda f+\\mu g}(\\vec a)=\\lambda J_f(\\vec a)+\\mu J_g(\\vec a).\\]\n\\end{cours}\n\\vfill On additionne des fonctions ayant le même espace d'arrivée.\n\\note{Cours original, pages PDF 105–106. Résultats admis ; expliciter le sens des formules sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [
+      "\\df{(\\lambda f+\\mu g)}{\\vec a}=\\lambda\\df f{\\vec a}+\\mu\\df g{\\vec a}.",
+      "J_{\\lambda f+\\mu g}(\\vec a)=\\lambda J_f(\\vec a)+\\mu J_g(\\vec a)."
+    ],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "105–106"
+    },
+    "prerequisites": [
+      "CD15"
+    ],
+    "exemple": null,
+    "activite": "Faire reformuler la notion et son hypothèse principale.",
+    "notes_orales": "Cours original, pages PDF 105–106. Résultats admis ; expliciter le sens des formules sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "CD38",
+    "title": "Produit de fonctions réelles",
+    "part": "V — Calculer",
+    "objectif": "Comprendre et utiliser : Produit de fonctions réelles",
+    "idee_centrale": "Produit de fonctions réelles",
+    "contenu_beamer": "\\begin{frame}[t]{Produit de fonctions réelles}\n\\coursanalyse\n\\begin{theoreme}{Règle du produit}\nSi $u,v:U\\to\\R$ sont différentiables en $\\vec a$,\n\\[\\df{(uv)}{\\vec a}=v(\\vec a)\\df u{\\vec a}+u(\\vec a)\\df v{\\vec a}.\\]\n\\end{theoreme}\n\\begin{exemple}{La fonction $w(x,y)=x\\,y^2$}\n\\[\\df w{\\vec a}\\!\\left(\\vcol{h\\\\k}\\right)=a_2^2h+2a_1a_2k.\\]\n\\end{exemple}\n\\vfill Les valeurs $u(\\vec a)$ et $v(\\vec a)$ sont des scalaires ; les différentielles restent des applications.\n\\note{Cours original, pages PDF 107–108. Résultats admis ; expliciter le sens des formules sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [
+      "\\df{(uv)}{\\vec a}=v(\\vec a)\\df u{\\vec a}+u(\\vec a)\\df v{\\vec a}.",
+      "\\df w{\\vec a}\\!\\left(\\vcol{h\\\\k}\\right)=a_2^2h+2a_1a_2k."
+    ],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "107–108"
+    },
+    "prerequisites": [
+      "CD15"
+    ],
+    "exemple": "Exemple conceptuel ou figure, distinct du TD de base",
+    "activite": "Faire reformuler la notion et son hypothèse principale.",
+    "notes_orales": "Cours original, pages PDF 107–108. Résultats admis ; expliciter le sens des formules sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "CD39",
+    "title": "La règle de la chaîne",
+    "part": "V — Calculer",
+    "objectif": "Comprendre et utiliser : La règle de la chaîne",
+    "idee_centrale": "La règle de la chaîne",
+    "contenu_beamer": "\\begin{frame}[t]{La règle de la chaîne}\n\\coursanalyse\nSoient $U\\subset\\Rn n$ et $V\\subset\\Rn p$ ouverts, $f:U\\to V$ et $g:V\\to\\Rn q$.\n\\begin{theoreme}{Différencier une composition}\nSi $f$ est différentiable en $\\vec a$ et $g$ en $f(\\vec a)$, la composée est différentiable en $\\vec a$ et\n\\[\\df{(g\\circ f)}{\\vec a}=\\df g{f(\\vec a)}\\circ\\df f{\\vec a}.\\]\n\\end{theoreme}\n\\begin{resultat}{L'ordre et le point d'évaluation}\nD'abord la différentielle de $f$ en $\\vec a$.\n\n\\medskip\nEnsuite celle de $g$ en \\textbf{$f(\\vec a)$}, et non en $\\vec a$.\n\\end{resultat}\n\\note{Cours original, pages PDF 110–112. Résultats admis ; expliciter le sens des formules sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [
+      "\\df{(g\\circ f)}{\\vec a}=\\df g{f(\\vec a)}\\circ\\df f{\\vec a}."
+    ],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "110–112"
+    },
+    "prerequisites": [
+      "CD15"
+    ],
+    "exemple": null,
+    "activite": "Faire reformuler la notion et son hypothèse principale.",
+    "notes_orales": "Cours original, pages PDF 110–112. Résultats admis ; expliciter le sens des formules sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "CD40",
+    "title": "Voir les deux transformations successives",
+    "part": "V — Calculer",
+    "objectif": "Comprendre et utiliser : Voir les deux transformations successives",
+    "idee_centrale": "Voir les deux transformations successives",
+    "contenu_beamer": "\\begin{frame}[t]{Voir les deux transformations successives}\n\\coursanalyse\n\\begin{center}\\begin{tikzpicture}\n\\node at(0,0){$\\vec h\\in\\Rn n$};\\node at(5,0){$\\vec k\\in\\Rn p$};\\node at(10,0){$\\vec\\ell\\in\\Rn q$};\n\\draw[-{Stealth},IMTCyan,thick](1.3,0)--(3.7,0)node[midway,above]{$\\df f{\\vec a}$};\n\\draw[-{Stealth},IMTOrange,thick](6.3,0)--(8.7,0)node[midway,above]{$\\df g{f(\\vec a)}$};\n\\end{tikzpicture}\\end{center}\n\\begin{theoreme}{Version matricielle}\n\\[J_{g\\circ f}(\\vec a)=J_g(f(\\vec a))\\,J_f(\\vec a).\\]\n\\end{theoreme}\n\\begin{resultat}{Contrôler les dimensions}\n$(q\\times p)\\,(p\\times n)=q\\times n$.\n\n\\medskip\nLes matrices se multiplient ; les applications se composent avec $\\circ$.\n\\end{resultat}\n\\note{Cours original, pages PDF 112–114. Résultats admis ; expliciter le sens des formules sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [
+      "J_{g\\circ f}(\\vec a)=J_g(f(\\vec a))\\,J_f(\\vec a)."
+    ],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "112–114"
+    },
+    "prerequisites": [
+      "CD25",
+      "CD39"
+    ],
+    "exemple": "Exemple conceptuel ou figure, distinct du TD de base",
+    "activite": "Faire reformuler la notion et son hypothèse principale.",
+    "notes_orales": "Cours original, pages PDF 112–114. Résultats admis ; expliciter le sens des formules sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "CD41",
+    "title": "Une composition, deux jacobiennes",
+    "part": "V — Calculer",
+    "objectif": "Comprendre et utiliser : Une composition, deux jacobiennes",
+    "idee_centrale": "Une composition, deux jacobiennes",
+    "contenu_beamer": "\\begin{frame}[t]{Une composition, deux jacobiennes}\n\\coursanalyse\n\\begin{exemple}{$f(x,y)=\\vcol{x+2y\\\\x-y}$ et $g(u,v)=u^2+2v$}\n\\[J_f=\\begin{pmatrix}1&2\\\\1&-1\\end{pmatrix},\\qquad J_g(u,v)=\\begin{pmatrix}2u&2\\end{pmatrix}.\\]\nPour $\\vec a=\\vcol{1\\\\0}$, on a $f(\\vec a)=\\vcol{1\\\\1}$.\n\\end{exemple}\n\\begin{resultat}{Appliquer la chaîne au bon point}\n\\[J_{g\\circ f}(\\vec a)=\\begin{pmatrix}2&2\\end{pmatrix}\\begin{pmatrix}1&2\\\\1&-1\\end{pmatrix}=\\begin{pmatrix}4&2\\end{pmatrix}.\\]\n\\end{resultat}\n\\note{Cours original, pages PDF 110–114. Résultats admis ; expliciter le sens des formules sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [
+      "J_f=\\begin{pmatrix}1&2\\\\1&-1\\end{pmatrix},\\qquad J_g(u,v)=\\begin{pmatrix}2u&2\\end{pmatrix}.",
+      "J_{g\\circ f}(\\vec a)=\\begin{pmatrix}2&2\\end{pmatrix}\\begin{pmatrix}1&2\\\\1&-1\\end{pmatrix}=\\begin{pmatrix}4&2\\end{pmatrix}."
+    ],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "110–114"
+    },
+    "prerequisites": [
+      "CD40"
+    ],
+    "exemple": "Exemple conceptuel ou figure, distinct du TD de base",
+    "activite": "Faire reformuler la notion et son hypothèse principale.",
+    "notes_orales": "Cours original, pages PDF 110–114. Résultats admis ; expliciter le sens des formules sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "CD42",
+    "title": "Le long d’une trajectoire",
+    "part": "V — Calculer",
+    "objectif": "Comprendre et utiliser : Le long d’une trajectoire",
+    "idee_centrale": "Le long d’une trajectoire",
+    "contenu_beamer": "\\begin{frame}[t]{Le long d’une trajectoire}\n\\coursanalyse\n\\begin{theoreme}{Dériver une fonction observée sur un chemin}\nSi $\\vec\\gamma$ est dérivable en $t$ et $f$ différentiable en $\\vec\\gamma(t)$,\n\\[\\frac{d}{dt}(f\\circ\\vec\\gamma)(t)=\\df f{\\vec\\gamma(t)}\\bigl(\\vec\\gamma'(t)\\bigr).\\]\nSi $f$ est réelle, cela vaut $\\ps{\\grad f(\\vec\\gamma(t))}{\\vec\\gamma'(t)}$.\n\\end{theoreme}\n\\begin{exemple}{$f(x,y)=x^2+3y^2$, $\\vec\\gamma(t)=\\vcol{t\\\\1-t}$}\nLa vitesse vaut $\\vec\\gamma'(t)=\\vcol{1\\\\-1}$ ; la dérivée de $f\\circ\\vec\\gamma$ vaut $8t-6$.\n\\end{exemple}\n\\note{Cours original, pages PDF 112–114. Résultats admis ; expliciter le sens des formules sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [
+      "\\frac{d}{dt}(f\\circ\\vec\\gamma)(t)=\\df f{\\vec\\gamma(t)}\\bigl(\\vec\\gamma'(t)\\bigr)."
+    ],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "112–114"
+    },
+    "prerequisites": [
+      "CD23",
+      "CD31",
+      "CD39"
+    ],
+    "exemple": "Exemple conceptuel ou figure, distinct du TD de base",
+    "activite": "Faire reformuler la notion et son hypothèse principale.",
+    "notes_orales": "Cours original, pages PDF 112–114. Résultats admis ; expliciter le sens des formules sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "CD43",
+    "title": "Inverse et quotient : le dénominateur compte",
+    "part": "V — Calculer",
+    "objectif": "Comprendre et utiliser : Inverse et quotient : le dénominateur compte",
+    "idee_centrale": "Inverse et quotient : le dénominateur compte",
+    "contenu_beamer": "\\begin{frame}[t]{Inverse et quotient : le dénominateur compte}\n\\coursanalyse\n\\begin{theoreme}{Fonctions réelles différentiables en $\\vec a$}\n\\textbf{Inverse, si $v(\\vec a)\\ne0$ :}\n\\[\\df{(1/v)}{\\vec a}=-\\frac{1}{v(\\vec a)^2}\\df v{\\vec a}.\\]\n\\textbf{Quotient, si $v(\\vec a)\\ne0$ :}\n\\[\\df{(u/v)}{\\vec a}=\\frac{v(\\vec a)\\df u{\\vec a}-u(\\vec a)\\df v{\\vec a}}{v(\\vec a)^2}.\\]\n\\end{theoreme}\n\\vfill Le dénominateur non nul en $\\vec a$ reste non nul dans un voisinage assez petit.\n\\note{Cours original, pages PDF 115–117. Résultats admis ; expliciter le sens des formules sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [
+      "\\df{(1/v)}{\\vec a}=-\\frac{1}{v(\\vec a)^2}\\df v{\\vec a}.",
+      "\\df{(u/v)}{\\vec a}=\\frac{v(\\vec a)\\df u{\\vec a}-u(\\vec a)\\df v{\\vec a}}{v(\\vec a)^2}."
+    ],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "115–117"
+    },
+    "prerequisites": [
+      "CD38",
+      "CD39"
+    ],
+    "exemple": null,
+    "activite": "Faire reformuler la notion et son hypothèse principale.",
+    "notes_orales": "Cours original, pages PDF 115–117. Résultats admis ; expliciter le sens des formules sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "CD44",
+    "title": "Composer avec une fonction usuelle",
+    "part": "V — Calculer",
+    "objectif": "Comprendre et utiliser : Composer avec une fonction usuelle",
+    "idee_centrale": "Composer avec une fonction usuelle",
+    "contenu_beamer": "\\begin{frame}[t]{Composer avec une fonction usuelle}\n\\coursanalyse\nPour $u:U\\to\\R$ différentiable en $\\vec a$, la chaîne donne :\n\\begin{cours}{Une règle par ligne}\n\\textbf{Exponentielle :}\\quad $\\df{(\\exp\\circ u)}{\\vec a}=e^{u(\\vec a)}\\df u{\\vec a}$.\n\n\\bigskip\n\\textbf{Logarithme, $u(\\vec a)>0$ :}\\quad $\\df{(\\ln\\circ u)}{\\vec a}=\\dfrac{\\df u{\\vec a}}{u(\\vec a)}$.\n\n\\bigskip\n\\textbf{Racine, $u(\\vec a)>0$ :}\\quad $\\df{(\\sqrt{\\,\\cdot\\,}\\circ u)}{\\vec a}=\\dfrac{\\df u{\\vec a}}{2\\sqrt{u(\\vec a)}}$.\n\\end{cours}\n\\vfill Les conditions assurent une formule valable dans un voisinage du point.\n\n\\note{Cours original, pages PDF 110–117. Résultats admis ; expliciter le sens des formules sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "110–117"
+    },
+    "prerequisites": [
+      "CD39"
+    ],
+    "exemple": null,
+    "activite": "Faire reformuler la notion et son hypothèse principale.",
+    "notes_orales": "Cours original, pages PDF 110–117. Résultats admis ; expliciter le sens des formules sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "CD45",
+    "title": "Une démarche de calcul en quatre étapes",
+    "part": "V — Calculer",
+    "objectif": "Comprendre et utiliser : Une démarche de calcul en quatre étapes",
+    "idee_centrale": "Une démarche de calcul en quatre étapes",
+    "contenu_beamer": "\\begin{frame}[t]{Une démarche de calcul en quatre étapes}\n\\coursanalyse\n\\begin{cours}{Du domaine au modèle local}\n\\textbf{1. Domaine :} où la fonction est-elle définie ? Le point est-il intérieur ?\n\n\\medskip\n\\textbf{2. Différentiabilité :} quelles règles s'appliquent et sous quelles conditions ?\n\n\\medskip\n\\textbf{3. Calcul :} dérivées partielles, puis jacobienne ; gradient si la sortie est réelle.\n\n\\medskip\n\\textbf{4. Action :} fixer $\\vec a$, appliquer à $\\vec h$, puis écrire l'approximation affine.\n\\end{cours}\n\\vfill Contrôler les dimensions et garder les coordonnées en colonnes.\n\\note{Cours original, pages PDF 49–117. Résultats admis ; expliciter le sens des formules sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "49–117"
+    },
+    "prerequisites": [
+      "CD29",
+      "CD37",
+      "CD38",
+      "CD39",
+      "CD43",
+      "CD44"
+    ],
+    "exemple": null,
+    "activite": "Faire reformuler la notion et son hypothèse principale.",
+    "notes_orales": "Cours original, pages PDF 49–117. Résultats admis ; expliciter le sens des formules sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "CD46",
+    "title": "Estimer une variation sans tout recalculer",
+    "part": "V — Calculer",
+    "objectif": "Comprendre et utiliser : Estimer une variation sans tout recalculer",
+    "idee_centrale": "Estimer une variation sans tout recalculer",
+    "contenu_beamer": "\\begin{frame}[t]{Estimer une variation sans tout recalculer}\n\\coursanalyse\n\\begin{exemple}{$f(x,y)=x^2+3y^2$, près de $\\vec a=\\vcol{1\\\\1}$}\nPrenons $\\vec h=\\vcol{0{,}02\\\\-0{,}01}$.\n\\[\\Delta f\\simeq\\df f{\\vec a}(\\vec h)=2(0{,}02)+6(-0{,}01)=-0{,}02.\\]\nDonc $f(1{,}02;0{,}99)\\simeq3{,}98$.\n\\end{exemple}\n\\begin{resultat}{Interprétation}\nLe modèle prévoit une petite baisse. La valeur exacte est $3{,}9807$ ; l'écart $0{,}0007$ vient des termes quadratiques.\n\\end{resultat}\n\\note{Cours original, pages PDF 49–55. Résultats admis ; expliciter le sens des formules sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [
+      "\\Delta f\\simeq\\df f{\\vec a}(\\vec h)=2(0{,}02)+6(-0{,}01)=-0{,}02."
+    ],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "49–55"
+    },
+    "prerequisites": [
+      "CD17",
+      "CD45"
+    ],
+    "exemple": "Exemple conceptuel ou figure, distinct du TD de base",
+    "activite": "Faire reformuler la notion et son hypothèse principale.",
+    "notes_orales": "Cours original, pages PDF 49–55. Résultats admis ; expliciter le sens des formules sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "CD47",
+    "title": "Relier les trois représentations",
+    "part": "V — Calculer",
+    "objectif": "Comprendre et utiliser : Relier les trois représentations",
+    "idee_centrale": "Relier les trois représentations",
+    "contenu_beamer": "\\begin{frame}[t]{Relier les trois représentations}\n\\coursanalyse\nPour une fonction \\textbf{différentiable}, au même point $\\vec a$ :\n\\begin{cours}{Application intrinsèque}\n$\\df f{\\vec a}$ agit linéairement sur les déplacements.\n\\end{cours}\n\\begin{cours}{Matrice dans les bases canoniques}\n$J_f(\\vec a)$ calcule cette action sur les colonnes de coordonnées.\n\\end{cours}\n\\begin{resultat}{Vecteur si la sortie est réelle}\n$\\grad f(\\vec a)$ représente la différentielle par le produit scalaire.\n\n\\medskip\n$D_{\\vec u}f(\\vec a)=\\df f{\\vec a}(\\vec u)=\\ps{\\grad f(\\vec a)}{\\vec u}$.\n\\end{resultat}\n\\note{Cours original, pages PDF 85–90. Résultats admis ; expliciter le sens des formules sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "85–90"
+    },
+    "prerequisites": [
+      "CD15",
+      "CD25",
+      "CD31"
+    ],
+    "exemple": null,
+    "activite": "Faire reformuler la notion et son hypothèse principale.",
+    "notes_orales": "Cours original, pages PDF 85–90. Résultats admis ; expliciter le sens des formules sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "CD48",
+    "title": "Les points de vigilance",
+    "part": "V — Calculer",
+    "objectif": "Comprendre et utiliser : Les points de vigilance",
+    "idee_centrale": "Les points de vigilance",
+    "contenu_beamer": "\\begin{frame}[t]{Les points de vigilance}\n\\coursanalyse\n\\begin{cours}{Avant de conclure}\n\\textbf{Des partielles existent :} cela ne garantit pas la différentiabilité.\n\n\\medskip\n\\textbf{Une direction est donnée :} ne pas la normaliser sans l'annoncer.\n\n\\medskip\n\\textbf{Une composition apparaît :} respecter l'ordre et évaluer en $f(\\vec a)$.\n\n\\medskip\n\\textbf{Un quotient apparaît :} vérifier que le dénominateur reste non nul.\n\\end{cours}\n\\vfill Le cours fournit les notions et les outils ; leur mise en œuvre reste le travail du TD.\n\\note{Cours original, pages PDF 49–117. Résultats admis ; expliciter le sens des formules sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "49–117"
+    },
+    "prerequisites": [
+      "CD24",
+      "CD35",
+      "CD39",
+      "CD43"
+    ],
+    "exemple": null,
+    "activite": "Faire reformuler la notion et son hypothèse principale.",
+    "notes_orales": "Cours original, pages PDF 49–117. Résultats admis ; expliciter le sens des formules sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "CD49",
+    "title": "Complément — Fermé, borné, compact",
+    "part": "Compléments séparés",
+    "objectif": "Comprendre et utiliser : Complément — Fermé, borné, compact",
+    "idee_centrale": "Complément — Fermé, borné, compact",
+    "contenu_beamer": "\\begin{frame}[t]{Complément — Fermé, borné, compact}\n\\coursanalyse\n\\begin{notion}{Trois notions distinctes}\n\\textbf{Fermé :} le complémentaire dans $\\Rn n$ est ouvert.\n\n\\medskip\n\\textbf{Borné :} la partie est contenue dans une boule de rayon fini.\n\n\\medskip\n\\textbf{Compact dans $\\Rn n$ :} la partie est fermée et bornée.\n\\end{notion}\n\\begin{exemple}{Deux boules de rayon $r>0$}\n$B(\\vec a,r)$ est bornée, mais n'est pas fermée.\n\n$\\overline B(\\vec a,r)$ est fermée et bornée, donc compacte.\n\\end{exemple}\n\\note{Cours original, pages PDF 7,10–11. Résultats admis ; expliciter le sens des formules sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "7,10–11"
+    },
+    "prerequisites": [
+      "CD05",
+      "CD06"
+    ],
+    "exemple": "Exemple conceptuel ou figure, distinct du TD de base",
+    "activite": "Faire reformuler la notion et son hypothèse principale.",
+    "notes_orales": "Cours original, pages PDF 7,10–11. Résultats admis ; expliciter le sens des formules sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "CD50",
+    "title": "Complément — Dériver dans une autre base",
+    "part": "Compléments séparés",
+    "objectif": "Comprendre et utiliser : Complément — Dériver dans une autre base",
+    "idee_centrale": "Complément — Dériver dans une autre base",
+    "contenu_beamer": "\\begin{frame}[t]{Complément — Dériver dans une autre base}\n\\coursanalyse\n\\begin{notion}{Base $\\mathbf b=(\\vec b_1,\\ldots,\\vec b_n)$}\nLa dérivée partielle relativement à cette base est\n\\[\\partial_{\\mathbf b,j}f(\\vec a)=D_{\\vec b_j}f(\\vec a).\\]\n\\end{notion}\n\\begin{theoreme}{Si $f$ est différentiable en $\\vec a$}\nPour $\\vec h=\\sum_j h_j\\vec b_j$,\n\\[\\df f{\\vec a}(\\vec h)=\\sum_j h_j\\partial_{\\mathbf b,j}f(\\vec a).\\]\n\\end{theoreme}\n\\vfill Les dérivées partielles usuelles correspondent à la base canonique.\n\\note{Cours original, pages PDF 77–83. Résultats admis ; expliciter le sens des formules sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [
+      "\\partial_{\\mathbf b,j}f(\\vec a)=D_{\\vec b_j}f(\\vec a).",
+      "\\df f{\\vec a}(\\vec h)=\\sum_j h_j\\partial_{\\mathbf b,j}f(\\vec a)."
+    ],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "77–83"
+    },
+    "prerequisites": [
+      "CD20",
+      "CD22",
+      "CD23"
+    ],
+    "exemple": null,
+    "activite": "Faire reformuler la notion et son hypothèse principale.",
+    "notes_orales": "Cours original, pages PDF 77–83. Résultats admis ; expliciter le sens des formules sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "CD51",
+    "title": "Complément — La matrice dépend des bases",
+    "part": "Compléments séparés",
+    "objectif": "Comprendre et utiliser : Complément — La matrice dépend des bases",
+    "idee_centrale": "Complément — La matrice dépend des bases",
+    "contenu_beamer": "\\begin{frame}[t]{Complément — La matrice dépend des bases}\n\\coursanalyse\n\\begin{notion}{Matrice de la différentielle}\nPour une base $\\mathbf b$ au départ et $\\mathbf c$ à l'arrivée, on note\n\\[M=\\Lin{\\mathfrak M}\\bigl(\\df f{\\vec a};\\mathbf b,\\mathbf c\\bigr).\\]\n\\end{notion}\n\\begin{theoreme}{Action sur les coordonnées}\n\\[\\coord{\\df f{\\vec a}(\\vec h)}{\\mathbf c}=M\\coord{\\vec h}{\\mathbf b}.\\]\n\\end{theoreme}\n\\vfill La différentielle ne change pas avec les bases ; sa représentation matricielle change. La jacobienne correspond aux bases canoniques.\n\\note{Cours original, pages PDF 83–86. Résultats admis ; expliciter le sens des formules sans démonstration.}\n\\end{frame}\n\n",
+    "equations": [
+      "M=\\Lin{\\mathfrak M}\\bigl(\\df f{\\vec a};\\mathbf b,\\mathbf c\\bigr).",
+      "\\coord{\\df f{\\vec a}(\\vec h)}{\\mathbf c}=M\\coord{\\vec h}{\\mathbf b}."
+    ],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "83–86"
+    },
+    "prerequisites": [
+      "CD25",
+      "CD50"
+    ],
+    "exemple": null,
+    "activite": "Faire reformuler la notion et son hypothèse principale.",
+    "notes_orales": "Cours original, pages PDF 83–86. Résultats admis ; expliciter le sens des formules sans démonstration.",
+    "duree_estimee": null
+  },
+  {
+    "id": "CD52",
+    "title": "Complément — Applications bilinéaires",
+    "part": "Compléments séparés",
+    "objectif": "Comprendre et utiliser : Complément — Applications bilinéaires",
+    "idee_centrale": "Complément — Applications bilinéaires",
+    "contenu_beamer": "\\begin{frame}[t]{Complément — Applications bilinéaires}\n\\coursanalyse\n\\begin{theoreme}{Différentielle d'une application bilinéaire}\nUne application bilinéaire $\\Lin B:\\Rn n\\times\\Rn m\\to\\Rn p$ est différentiable et\n\\[\\df{\\Lin B}{(\\vec a,\\vec b)}(\\vec h,\\vec k)=\\Lin B(\\vec h,\\vec b)+\\Lin B(\\vec a,\\vec k).\\]\n\\end{theoreme}\n\\begin{resultat}{Le principe}\nFaire varier un argument à la fois, puis additionner les variations linéaires.\n\\end{resultat}\n\\vfill Le produit scalaire est un exemple d'application bilinéaire réelle.\n\\note{Cours original, pages PDF 106–108. Résultats admis ; expliciter le sens des formules sans démonstration.}\n\\end{frame}\n",
+    "equations": [
+      "\\df{\\Lin B}{(\\vec a,\\vec b)}(\\vec h,\\vec k)=\\Lin B(\\vec h,\\vec b)+\\Lin B(\\vec a,\\vec k)."
+    ],
+    "source": {
+      "file": "references/cours-original.pdf",
+      "pages_pdf": "106–108"
+    },
+    "prerequisites": [
+      "CD18",
+      "CD38"
+    ],
+    "exemple": null,
+    "activite": "Faire reformuler la notion et son hypothèse principale.",
+    "notes_orales": "Cours original, pages PDF 106–108. Résultats admis ; expliciter le sens des formules sans démonstration.",
+    "duree_estimee": null
+  }
+]

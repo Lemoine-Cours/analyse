@@ -1,0 +1,25 @@
+{
+  "title": "Calcul différentiel du premier ordre",
+  "status": "génération directe demandée par l’enseignant",
+  "level": null,
+  "session_duration": null,
+  "language": "français",
+  "format": "Beamer 16:9 et PDF",
+  "scope": "12 exercices de base comme périmètre ; cours autonome, sans corrigés.",
+  "td_driven": false,
+  "proofs_on_slides": false,
+  "max_frames": 52,
+  "core_slides": 48,
+  "complement_slides": 4,
+  "notation": "Espaces fléchés ; vecteurs colonnes ; différentielle df_a fléchée ; D_u f ; J_f ; gradient fléché ; distance D ; composition circ.",
+  "scientific_constraints": [
+    "U ouvert et a dans U avant différentiabilité.",
+    "Petit o devant une norme scalaire ; aucune division par un vecteur.",
+    "D_u avec le vecteur donné, pas nécessairement unitaire.",
+    "Les partielles ne garantissent pas la différentiabilité.",
+    "Jacobienne p×n ; gradient colonne, jacobienne scalaire ligne matricielle.",
+    "Composition circ ; matrices par produit dans le même ordre.",
+    "Dénominateurs non nuls ; domaines pour log et racine.",
+    "Direction maximale sur sphère unité ; gradient nul traité."
+  ]
+}

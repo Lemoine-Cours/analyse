@@ -1,0 +1,12 @@
+[
+  {
+    "file": "cours-original.pdf",
+    "sha256": "dad9ba13480588f769357423f9e36c5ebdc8fca86075b26016867aa3f25b79b5",
+    "source_name": "Analyse_I_Calcul_differentiel_du_premier_ordre.pdf"
+  },
+  {
+    "file": "td-original.pdf",
+    "sha256": "a5ae4b996c60e769a8b489e10223072ea6976fbb3af90a5f43d86fb08039e89f",
+    "source_name": "Analyse_TD_I_sans_correction.pdf"
+  }
+]

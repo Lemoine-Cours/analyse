@@ -1,0 +1,27 @@
+{
+  "status": "passed_for_teacher_review",
+  "review": "Relecture primaire du même assistant, sans revue indépendante.",
+  "domain": "Espaces euclidiens canoniques réels, dimensions strictement positives. U ouvert et a dans U à partir de la différentiabilité.",
+  "admitted": "Résultats généraux admis sans preuves à la demande de l’enseignant.",
+  "checked": [
+    "Point d’accumulation pour la limite ; continuité définie aussi aux points isolés.",
+    "Petit o devant la norme scalaire ; reste vectoriel admis.",
+    "Différentielle linéaire et approximation affine distinguées.",
+    "Différentiabilité implique continuité ; partielles seules insuffisantes.",
+    "Jacobienne p×n, gradient colonne, matrice jacobienne scalaire ligne.",
+    "D_u conserve l’échelle du vecteur ; croissance maximale seulement parmi les vecteurs unitaires, cas du gradient nul inclus.",
+    "Composition circ, ordre des matrices et évaluation en f(a).",
+    "Quotient à dénominateur non nul ; log et racine sous condition stricte.",
+    "La figure de niveau est une ellipse exacte à tolérance de dessin ; normale (2;6), tangente de direction (3;−1)."
+  ],
+  "adaptations": [
+    "Exemples distincts des 12 TD de base.",
+    "Pas de base duale ni de théorème de Riesz comme prérequis supplémentaire.",
+    "Les règles de construction justifient la différentiabilité ; pas de critère C1 ajouté à un chapitre qui ne l’énonce pas.",
+    "Convention de direction du cours explicitée face à la formulation du TD I.8."
+  ],
+  "limits": [
+    "Les calculs exacts ne prouvent pas les théorèmes généraux.",
+    "Durée et niveau précis non fournis ; aucune garantie de tenue en une seule séance."
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "role": "Le TD de base sélectionne les notions utiles ; il ne fournit ni le plan ni les exemples projetés.",
+  "source_pages_pdf": "TD original, pages 3–6",
+  "exercices": [
+    {
+      "exercice": 1,
+      "notions": "Boules, ouverts, voisinages",
+      "slides": [
+        "CD05",
+        "CD06",
+        "CD07"
+      ]
+    },
+    {
+      "exercice": 2,
+      "notions": "Limites et continuité",
+      "slides": [
+        "CD08",
+        "CD09",
+        "CD10",
+        "CD11"
+      ]
+    },
+    {
+      "exercice": 3,
+      "notions": "Applications affines",
+      "slides": [
+        "CD14",
+        "CD15",
+        "CD18",
+        "CD25",
+        "CD27"
+      ]
+    },
+    {
+      "exercice": 4,
+      "notions": "Partielles et jacobienne",
+      "slides": [
+        "CD20",
+        "CD21",
+        "CD25",
+        "CD26",
+        "CD27"
+      ]
+    },
+    {
+      "exercice": 5,
+      "notions": "Gradient et directions",
+      "slides": [
+        "CD22",
+        "CD23",
+        "CD30",
+        "CD31",
+        "CD32",
+        "CD34",
+        "CD35"
+      ]
+    },
+    {
+      "exercice": 6,
+      "notions": "Chaîne et quotient",
+      "slides": [
+        "CD39",
+        "CD40",
+        "CD41",
+        "CD43"
+      ]
+    },
+    {
+      "exercice": 7,
+      "notions": "Domaine et constructions usuelles",
+      "slides": [
+        "CD03",
+        "CD29",
+        "CD38",
+        "CD39",
+        "CD43",
+        "CD44"
+      ]
+    },
+    {
+      "exercice": 8,
+      "notions": "Plus forte variation",
+      "slides": [
+        "CD22",
+        "CD23",
+        "CD34",
+        "CD35"
+      ]
+    },
+    {
+      "exercice": 9,
+      "notions": "Linéarisation",
+      "slides": [
+        "CD16",
+        "CD17",
+        "CD45",
+        "CD46"
+      ]
+    },
+    {
+      "exercice": 10,
+      "notions": "Fonction vectorielle",
+      "slides": [
+        "CD21",
+        "CD25",
+        "CD26",
+        "CD27",
+        "CD45"
+      ]
+    },
+    {
+      "exercice": 11,
+      "notions": "Trajectoire",
+      "slides": [
+        "CD39",
+        "CD40",
+        "CD42"
+      ]
+    },
+    {
+      "exercice": 12,
+      "notions": "Quotient et approximation",
+      "slides": [
+        "CD16",
+        "CD17",
+        "CD30",
+        "CD43",
+        "CD45"
+      ]
+    }
+  ],
+  "exclus": "Exercices intermédiaires et avancés ; compléments du cours séparés."
+}

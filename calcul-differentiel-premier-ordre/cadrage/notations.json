@@ -1,0 +1,16 @@
+{
+  "source_pages_pdf": "49–53,76,85–90",
+  "espace": "Rn fléché, produit scalaire et norme canoniques réels.",
+  "differentielle": "\\overrightarrow{df_{\\vec a}}, application linéaire sur les déplacements.",
+  "jacobienne": "J_f(a), p lignes et n colonnes ; pour une sortie scalaire : matrice ligne, pas vecteur de coordonnées.",
+  "gradient": "\\vec\\nabla f(a), vecteur colonne.",
+  "direction": "D_u conserve le vecteur donné, pas nécessairement unitaire ; normalisation annoncée.",
+  "composition": "\\circ entre applications ; juxtaposition pour matrices.",
+  "coordonnees": "Tous les vecteurs explicites en colonnes. Arguments de fonctions et couples dans un espace produit autorisés.",
+  "adaptations": [
+    "Le TD I.8 est ambigu sur la normalisation : la convention du cours est explicitée.",
+    "Les coordonnées en ligne des énoncés sont recomposées en colonnes.",
+    "La base duale et Riesz ne deviennent pas des prérequis supplémentaires.",
+    "Différentiabilité justifiée par constructions usuelles ; aucun critère C1 absent du chapitre n’est ajouté."
+  ]
+}

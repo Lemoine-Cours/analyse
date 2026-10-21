@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "slides": 52,
+  "core_slides": 48,
+  "complement_slides": 4,
+  "vectors": "Colonnes vcol ; pas d’affectation de vecteur à un tuple en ligne. Les matrices jacobiennes scalaires ont une ligne, conformément au cours.",
+  "composition": "circ entre différentielles ; produit de jacobiennes distinct.",
+  "prerequisites": "Graphe ordonné ; définitions avant emploi. La slide 29 annonce explicitement les règles détaillées dans la dernière partie.",
+  "limit": "Contrôles lexicaux et graphe déclaré, complétés par relecture primaire ; pas de vérification formelle."
+}

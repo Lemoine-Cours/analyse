@@ -1,0 +1,5790 @@
+=== Cours original, page PDF 3 ===
+I.1. Fonctions vectorielles deR n
+Dans ce chapitre nous nous placerons dans l’espace euclidien
+³− →
+Rn,〈• | •〉
+´
+où〈• | •〉représente le produit scalaire canonique de
+− →
+Rn.
+Nous noterons par∥•∥la norme euclidienne sur
+− →
+Rn etDla distance euclidienne associée.
+I.1.1 Structure métrique de − →Rn
+Le but de cette section est de donner un sens mathématique à l’expression
+“ ⃗xest proche de ⃗y”
+dans le cas où
+¡
+⃗x, ⃗y
+¢
+∈
+− →
+Rn ×
+− →
+Rn.
+I.1.1.1 Boules ouvertes et boules fermées de
+− →
+Rn
+Définition I.1.1.1 — Boule ouverte de
+− →
+Rn.
+Soit ⃗a∈
+− →
+Rn etr>0 un réel strictement positif.
+On appelleboule ouverte de centre ⃗a et de rayon rl’ensemble
+n
+⃗x∈
+− →
+Rn | ∥ ⃗x− ⃗a∥ <r
+o
+■ Notation I.1.1.1 — Boule ouverte de
+− →
+Rn.
+Soit ⃗a∈
+− →
+Rn etr>0 un réel strictement positif.
+La boule ouverte de centre ⃗aet de rayonrest notée
+B (⃗a,r )
+■ Remarque I.1.1.1 — Traduction métrique d’une boule ouverte.
+Soit ⃗a∈
+− →
+Rn etr>0 un réel strictement positif.
+En remarquant que
+B (⃗a,r ) =
+n
+⃗x∈
+− →
+Rn |D (⃗x, ⃗a) <r
+o
+on voit que tous les vecteurs de cette boule ouverte sont à une distance strictement plus petite
+querdu vecteur ⃗a. ■
+
+=== Cours original, page PDF 4 ===
+12Chapitre I.1. Fonctions vectorielles deR n
+■ Exemple I.1.1.1 — Exemples de boules ouvertes.
+Les illustrations suivantes représentent des boules ouvertes respectivement dans − →R ,
+− →
+R2 et
+− →
+R3
+1. Boule ouverte dans − →R
+− →Ra−r a a+r
+r r
+B(a,r)={x∈R| |x−a| <r}
+2. Boule ouverte dans
+− →
+R2
+x1
+x2
+⃗a
+a1
+a2
+r
+B(⃗a,r)={ ⃗x∈R 2 | ∥⃗x− ⃗a∥ <r}
+3. Boule ouverte dans
+− →
+R3
+x2
+x3
+x1
+a1
+a2
+a3
+ ⃗a
+r
+B(⃗a,r)={ ⃗x∈R 3 | ∥⃗x− ⃗a∥ <r}
+■
+Définition I.1.1.2 — Boule fermée de
+− →
+Rn.
+Soit ⃗a∈
+− →
+Rn etr>0 un réel strictement positif.
+On appelleboule fermée de centre ⃗a et de rayon rl’ensemble
+n
+⃗x∈
+− →
+Rn | ∥ ⃗x− ⃗a∥ ≤r
+o
+■ Notation I.1.1.2 — Boule fermée de
+− →
+Rn.
+Soit ⃗a∈
+− →
+Rn etr>0 un réel strictement positif.
+La boule fermée de centre ⃗aet de rayonrest notée
+B (⃗a,r )
+
+=== Cours original, page PDF 5 ===
+I.1.1 Structure métrique de
+− →
+Rn 13
+■ Remarque I.1.1.2 — Traduction métrique d’une boule fermée.
+Soit ⃗a∈
+− →
+Rn etr>0 un réel strictement positif.
+En remarquant que
+B (⃗a,r ) =
+n
+⃗x∈
+− →
+Rn |D (⃗x, ⃗a) ≤r
+o
+on voit que tous les vecteurs de cette boule fermée sont à une distance plus petite ou égale à r
+du vecteur ⃗a. ■
+■ Exemple I.1.1.2 — Exemples de boules fermées.
+Les illustrations suivantes représentent des boules fermées respectivement dans − →R ,
+− →
+R2 et
+− →
+R3.
+1. Boule fermée dans − →R
+− →Ra−r a a+r
+r r
+B(a,r)={x∈R| |x−a| ≤r}
+2. Boule fermée dans
+− →
+R2
+x1
+x2
+⃗a
+a1
+a2
+r
+B(⃗a,r)={ ⃗x∈R 2 | ∥⃗x− ⃗a∥ ≤r}
+3. Boule fermée dans
+− →
+R3
+x2
+x3
+x1
+a1
+a2
+a3
+ ⃗a
+r
+B(⃗a,r)={ ⃗x∈R 3 | ∥⃗x− ⃗a∥ ≤r}
+■
+I.1.1.2 Ouverts et fermés de
+− →
+Rn
+Définition I.1.1.3 — Ouvert de
+− →
+Rn.
+SoitU⊂
+− →
+Rn. On dit queUest unouvertde
+− →
+Rn lorsque
+∀⃗a∈U,∃r>0,B( ⃗a,r)⊂U.
+
+=== Cours original, page PDF 6 ===
+14Chapitre I.1. Fonctions vectorielles deR n
+■ Remarque I.1.1.3 — Ouvert de
+− →
+Rn.
+Autrement dit, si U est un ouvert de
+− →
+Rn tout vecteur de U est le centre d’une boule ouverte
+entièrement contenue dansU.
+Intuitivement, un ensemble est ouvert lorsque l’on peut effectuer une perturbation suffisam-
+ment petite de n’importe lequel de ses vecteurs sans sortir de l’ensemble.■
+Proposition I.1.1.1 — Toute boule ouverte est un ouvert.
+Soient ⃗a∈
+− →
+Rn etr>0.
+La boule ouverteB( ⃗a,r)=
+n
+⃗x∈
+− →
+Rn | ∥⃗x− ⃗a∥ <r
+o
+est un ouvert de
+− →
+Rn.
+Démonstration.
+Soient ⃗a∈
+− →
+Rn etr>0.
+Soit ⃗x∈B( ⃗a,r).
+On a alors
+∥⃗x− ⃗a∥ <r.
+On pose
+ρ=r− ∥ ⃗x− ⃗a∥.
+Alorsρ>0. Montrons que
+B(⃗x,ρ)⊂B( ⃗a,r).
+Soit ⃗y∈B( ⃗x,ρ). On a
+∥⃗y− ⃗x∥ <ρ.
+B(⃗a,r)
+B(⃗x,ρ)
+⃗a
+⃗x
+⃗y
+r
+∥⃗x−⃗a∥
+∥⃗y−⃗x∥
+ρ
+D’après l’inégalité triangulaire,
+∥⃗y− ⃗a∥ ≤ ∥⃗y− ⃗x∥ + ∥⃗x− ⃗a∥.
+Donc
+∥⃗y− ⃗a∥ <ρ+ ∥ ⃗x− ⃗a∥ =r.
+Ainsi
+⃗y∈B( ⃗a,r).
+On a donc montré que
+B(⃗x,ρ)⊂B( ⃗a,r).
+Ainsi, tout vecteur deB(⃗a,r ) est le centre d’une boule ouverte entièrement contenue dansB(⃗a,r ).
+Par conséquent, d’après la définition I.1.1.3,B(⃗a,r) est un ouvert de
+− →
+Rn.■
+Définition I.1.1.4 — Fermé de
+− →
+Rn.
+SoitF⊂
+− →
+Rn.
+On dit queFest unferméde
+− →
+Rn lorsque son complémentaire
+− →
+Rn \Fest un ouvert de
+− →
+Rn.
+
+=== Cours original, page PDF 7 ===
+I.1.1 Structure métrique de
+− →
+Rn 15
+■ Remarque I.1.1.4 — Fermé de
+− →
+Rn.
+Intuitivement, un fermé est un ensemble qui contient son bord.
+Autrement dit, si un vecteur n’appartient pas à un ferméF , alors on peut trouver une boule
+ouverte centrée en ce vecteur qui ne rencontre pasF.■
+Proposition I.1.1.2 — Toute boule fermée est un fermé.
+Soient ⃗a∈
+− →
+Rn etr>0.
+La boule fermée B(⃗a,r)=
+n
+⃗x∈
+− →
+Rn | ∥⃗x− ⃗a∥ ≤r
+o
+est un fermé de
+− →
+Rn.
+Démonstration.
+Soient ⃗a∈
+− →
+Rn etr>0. Montrons que le complémentaire de B(⃗a,r) est un ouvert.
+Soit
+⃗x∈
+− →
+Rn \ B(⃗a,r).
+On a alors
+∥⃗x− ⃗a∥ >r.
+On pose
+ρ= ∥ ⃗x− ⃗a∥ −r.
+Alorsρ>0. Montrons que
+B(⃗x,ρ)⊂
+− →
+Rn \ B(⃗a,r).
+Soit ⃗y∈B( ⃗x,ρ). On a
+∥⃗y− ⃗x∥ <ρ.
+B(⃗a,r)
+B(⃗x,ρ)
+⃗a
+⃗x
+r
+∥⃗x−⃗a∥
+ρ
+B(⃗x,ρ)⊂− →Rn\B(⃗a,r)
+D’après l’inégalité triangulaire,
+∥⃗x− ⃗a∥ ≤ ∥⃗x− ⃗y∥ + ∥⃗y− ⃗a∥.
+Donc
+∥⃗y− ⃗a∥ ≥ ∥⃗x− ⃗a∥ − ∥⃗x− ⃗y∥.
+Ainsi
+∥⃗y− ⃗a∥ > ∥⃗x− ⃗a∥ −ρ=r.
+Donc
+⃗y∉ B(⃗a,r).
+On a donc montré que
+B(⃗x,ρ)⊂
+− →
+Rn \ B(⃗a,r).
+Ainsi, tout vecteur de
+− →
+Rn \ B(⃗a,r ) est le centre d’une boule ouverte entièrement contenue dans− →
+Rn \ B(⃗a,r). Par conséquent, d’après la définition I.1.1.3,
+− →
+Rn \ B(⃗a,r) est un ouvert de
+− →
+Rn.
+Donc, d’après la définition I.1.1.4,B(⃗a,r) est un fermé de
+− →
+Rn.■
+I.1.1.3 Voisinages dans
+− →
+Rn
+
+=== Cours original, page PDF 8 ===
+16Chapitre I.1. Fonctions vectorielles deR n
+Définition I.1.1.5 — Voisinage d’un vecteur.
+SoientV⊂
+− →
+Rn et ⃗a∈
+− →
+Rn. On dit queVest unvoisinagede ⃗as’il existe un réelr>0 tel que
+B(⃗a,r)⊂V.
+■ Remarque I.1.1.5 — Voisinage d’un vecteur.
+Un voisinage de ⃗a n’est pas nécessairement une boule ouverte. Il suffit qu’il contienne une
+boule ouverte centrée en ⃗a. ■
+■ Exemple I.1.1.3 — Exemple de voisinage.
+Nous nous plaçons dans
+− →
+R2, la figure I.1.1 illustre la notion de voisinage. V est un voisinage de ⃗a.
+x1
+x2
+V
+⃗a
+B(⃗a,ρ)
+ρ
+FIGUREI.1.1 – Exemple de voisinage
+■
+Proposition I.1.1.3 — Caractérisation des ouverts par les voisinages.
+SoitU⊂
+− →
+Rn. On a l’équivalence entre
+(i)Uest un ouvert deR n
+(ii)∀ ⃗a∈U,Uest un voisinage de ⃗a.
+Démonstration.
+SoitU⊂
+− →
+Rn.
+— Montrons que (i)⇒(ii) :
+Supposons queUest un ouvert de
+− →
+Rn.
+Soit ⃗a∈U.
+CommeUest un ouvert, d’après la définition I.1.1.3, il exister>0 tel que
+B(⃗a,r)⊂U.
+Donc, d’après la définition I.1.1.5,Uest un voisinage de ⃗a.
+Comme cela est vrai pour tout ⃗a∈U, on a
+∀⃗a∈U,Uest un voisinage de ⃗a.
+
+=== Cours original, page PDF 9 ===
+I.1.1 Structure métrique de
+− →
+Rn 17
+— Montrons que (ii)⇒(i) :
+Réciproquement, supposons que
+∀⃗a∈U,Uest un voisinage de ⃗a.
+Soit ⃗a∈U.
+Par hypothèse,Uest un voisinage de ⃗a.
+Donc, d’après la définition I.1.1.5, il exister>0 tel que
+B(⃗a,r)⊂U.
+On a donc montré que
+∀⃗a∈U,∃r>0,B( ⃗a,r)⊂U.
+Par conséquent, d’après la définition I.1.1.3,Uest un ouvert de
+− →
+Rn.
+■
+Définition I.1.1.6 — Point intérieur à une partie.
+SoientU⊂
+− →
+Rn et ⃗a∈U.
+On dit que ⃗aest unpoint intérieur à Ulorsqu’il exister>0 tel que
+B(⃗a,r)⊂U.
+■ Notation I.1.1.3 — Intérieur d’une partie.
+SoitU⊂
+− →
+Rn.
+L ’ensemble des points intérieurs àUest appeléintérieur de Uet est noté
+˚U.
+Ainsi
+˚U=
+©
+⃗a∈U| ∃r>0,B( ⃗a,r)⊂U
+ª
+.
+■ Remarque I.1.1.6 — Interprétation géométrique d’un point intérieur.
+SoientU⊂
+− →
+Rn et ⃗a∈U.
+Le vecteur ⃗a est intérieur à U lorsqu’il est possible de perturber suffisamment peu ⃗a dans
+toutes les directions sans sortir deU. ■
+Proposition I.1.1.4 — Caractérisation des ouverts par leur intérieur.
+SoitU⊂
+− →
+Rn.
+On a l’équivalence entre
+(i)Uest un ouvert de
+− →
+Rn ;
+(ii) ˚U=U.
+Démonstration.
+SoitU⊂
+− →
+Rn.
+— Montrons que (i)= ⇒(ii).
+Supposons queUest un ouvert de
+− →
+Rn.
+Soit ⃗a∈U.
+D’après la Définition I.1.1.3, il exister>0 tel que
+B(⃗a,r)⊂U.
+
+=== Cours original, page PDF 10 ===
+18Chapitre I.1. Fonctions vectorielles deR n
+Donc ⃗aest un point intérieur àU.
+Ainsi
+U⊂ ˚U.
+Par définition de l’intérieur,
+˚U⊂U.
+Par conséquent,
+˚U=U.
+— Montrons que (ii)= ⇒(i).
+Supposons que
+˚U=U.
+Soit ⃗a∈U.
+Alors ⃗a∈ ˚U.
+Par définition d’un point intérieur, il exister>0 tel que
+B(⃗a,r)⊂U.
+D’après la Définition I.1.1.3,Uest un ouvert de
+− →
+Rn.
+■
+I.1.1.4 Parties bornées de
+− →
+Rn, ensembles compacts
+Définition I.1.1.7 — Partie bornée de
+− →
+Rn.
+SoitA⊂
+− →
+Rn.
+On dit queAest unepartie bornéede
+− →
+Rn lorsqu’il existe un réelR>0 tel que
+∀⃗x∈A,∥ ⃗x∥ ≤R.
+■ Remarque I.1.1.7 — Interprétation géométrique.
+Une partie de
+− →
+Rn est bornée lorsqu’elle est entièrement contenue dans une boule fermée de
+rayon suffisamment grand centrée en⃗0. ■
+■ Exemple I.1.1.4 — Partie bornée de
+− →
+R2.
+La figure I.1.2 représente une partie bornée A de
+− →
+R2. Elle est entièrement contenue dans une
+boule fermée centrée en⃗0.
+■
+Proposition I.1.1.5 — Caractérisation des parties bornées.
+SoitA⊂
+− →
+Rn. On a l’équivalence entre :
+(i)Aest bornée ;
+(ii) il existe ⃗a∈
+− →
+Rn etR>0 tels que
+A⊂B( ⃗a,R);
+(iii) il existe ⃗a∈
+− →
+Rn etR>0 tels que
+A⊂ B(⃗a,R).
+Démonstration.
+SoitA⊂
+− →
+Rn.
+
+=== Cours original, page PDF 11 ===
+I.1.1 Structure métrique de
+− →
+Rn 19
+B(⃗0,R)
+R
+⃗0
+A
+x1
+x2
+A⊂ B(⃗0,R)
+FIGUREI.1.2 – Exemple d’ensemble borné
+— Montrons que (i)= ⇒(ii).
+Supposons queAest bornée.
+Par définition, il existeM>0 tel que
+∀⃗x∈A,∥ ⃗x∥ ≤M.
+Alors, pour tout ⃗x∈A, on a
+∥⃗x− ⃗0∥ = ∥⃗x∥ ≤M<M+1.
+Donc
+A⊂B( ⃗0,M+1).
+Ainsi, il existe bien ⃗a∈
+− →
+Rn etR>0 tels que
+A⊂B( ⃗a,R).
+— Montrons que (ii)= ⇒(iii).
+Supposons qu’il existe⃗a∈
+− →
+Rn etR>0 tels que
+A⊂B( ⃗a,R).
+Or
+B(⃗a,R)⊂ B(⃗a,R).
+Donc
+A⊂ B(⃗a,R).
+— Montrons que (iii)= ⇒(i).
+Supposons qu’il existe⃗a∈
+− →
+Rn etR>0 tels que
+A⊂ B(⃗a,R).
+
+=== Cours original, page PDF 12 ===
+20Chapitre I.1. Fonctions vectorielles deR n
+Soit ⃗x∈A.
+Alors
+∥⃗x− ⃗a∥ ≤R.
+D’après l’inégalité triangulaire,
+∥⃗x∥ = ∥⃗x− ⃗a+ ⃗a∥ ≤ ∥⃗x− ⃗a∥ + ∥⃗a∥.
+Donc
+∥⃗x∥ ≤R+ ∥ ⃗a∥.
+Ainsi
+∀⃗x∈A,∥ ⃗x∥ ≤R+ ∥ ⃗a∥.
+Par conséquent,Aest bornée.
+■
+Définition I.1.1.8 — Compact de
+− →
+Rn.
+On appellecompact de
+− →
+Rn toute partie fermée et bornée de
+− →
+Rn.
+■ Remarque I.1.1.8 — Importance de la notion de compact de
+− →
+Rn.
+La notion de compact joue un rôle fondamental en analyse et notamment en optimisation. ■
+■ Remarque I.1.1.9 — Remarque sur la compacité.
+Dans un cadre plus général, la notion de compact est définie de manière beaucoup plus
+abstraite. Le fait que les compacts de
+− →
+Rn soient exactement les parties fermées et bornées est
+généralement appelé lethéorème de Heine–Borel.
+Dans ce cours, cette propriété sera prise comme définition.■
+I.1.2 Fonctions vectorielles
+I.1.2.1 Généralités
+Définition I.1.2.1 — Fonction vectorielle.
+Soient
+¡
+n,p
+¢
+∈N ∗ ×N ∗ etU⊂
+− →
+Rn.
+On appellefonction vectorielletoute applicationf:U− →
+− →
+Rp.
+■ Remarque I.1.2.1 — Fonction vectorielle.
+Une fonction vectorielle associe à chaque vecteur ⃗x=
+
+
+x1
+...
+xn
+
+ ∈Uun vecteurf( ⃗x)∈
+− →
+Rp.
+Les réelsx 1, .. .,x n sont également appelés lesvariablesde la fonctionf.■
+
+=== Cours original, page PDF 13 ===
+I.1.2 Fonctions vectorielles 21
+Proposition I.1.2.1 — Écriture d’une fonction vectorielle dans une base.
+Soient
+¡
+n,p
+¢
+∈N ∗ ×N ∗,U⊂
+− →
+Rn etf:U− →
+− →
+Rp une fonction vectorielle.
+Soit
+¡
+⃗e1, .. .,⃗ep
+¢
+une base de
+− →
+Rp et
+³
+e∗
+1 ,. .. ,e ∗
+p
+´
+la base duale associée.
+Pour touti∈
+©
+1, .. .,p
+ª
+, on pose
+fi : U− →R
+⃗x7− →
+¡
+e∗
+i ◦f
+¢
+(⃗x)
+Alors
+∀⃗x∈U,f (⃗x) =
+pX
+i=1
+fi (⃗x)⃗ei .
+Démonstration.
+Soient
+¡
+n,p
+¢
+∈N ∗ ×N ∗,U⊂
+− →
+Rn etf:U− →
+− →
+Rp une fonction vectorielle.
+Soit
+¡
+⃗e1,. .. ,⃗ep
+¢
+une base de
+− →
+Rp et
+³
+e∗
+1 , .. .,e ∗
+p
+´
+la base duale associée.
+Soit ⃗x∈U.
+Commef( ⃗x)∈
+− →
+Rp il existe une unique famille de scalaires
+¡
+λ1, .. .,λ p
+¢
+∈R p telle que
+f( ⃗x)=
+pX
+j=1
+λj⃗e j . (I.1.1)
+Soiti∈
+©
+1, .. .,p
+ª
+. En appliquant la forme linéairee ∗
+i à la relation (I.1.1), on obtient
+e∗
+i
+¡
+f( ⃗x)
+¢
+=e ∗
+i
+Ã pX
+j=1
+λj⃗e j
+!
+.
+Par linéarité dee ∗
+i , nous avons donc
+e∗
+i
+¡
+f( ⃗x)
+¢
+=
+pX
+j=1
+λj e∗
+i (⃗e j ).
+Or, comme par définition de la base dualee ∗
+i (⃗e j )=δ i j =
+(
+0 sii̸=j
+1 sinon.
+on obtient que
+e∗
+i
+¡
+f( ⃗x)
+¢
+=
+pX
+j=1
+λj δi j =λ i .
+Ainsi
+λi =e ∗
+i
+¡
+f( ⃗x)
+¢
+.
+Or, par définition def i ,
+fi (⃗x)=
+¡
+e∗
+i ◦f
+¢
+(⃗x)=e ∗
+i
+¡
+f( ⃗x)
+¢
+.
+On en déduit que
+λi =f i (⃗x).
+Finalement,
+f( ⃗x)=
+pX
+i=1
+λi⃗ei =
+pX
+i=1
+fi (⃗x)⃗ei .
+Cela étant vrai pour tout ⃗x∈U, on obtient bien que
+∀⃗x∈U,f( ⃗x)=
+pX
+i=1
+fi (⃗x)⃗ei .
+■
+
+=== Cours original, page PDF 14 ===
+22Chapitre I.1. Fonctions vectorielles deR n
+Définition I.1.2.2 — Fonctions composantes.
+Soient
+¡
+n,p
+¢
+∈N ∗ ×N ∗,U⊂
+− →
+Rn etf:U− →
+− →
+Rp une fonction vectorielle.
+Soit
+¡
+⃗e1, .. .,⃗ep
+¢
+une base de
+− →
+Rp et
+³
+e∗
+1 ,. .. ,e ∗
+p
+´
+la base duale associée.
+Les fonctionsf 1,. .. ,f p définies par∀i∈
+©
+1, .. .,p
+ª
+,
+fi : U− →R
+⃗x7− →
+¡
+e∗
+i ◦f
+¢
+(⃗x)
+sont appelées lesfonctions composantesdef.
+■ Remarque I.1.2.2 — Importance des fonctions composantes.
+L ’étude d’une fonction vectoriellef : U− →
+− →
+Rp se ramène souvent à l’étude de ses fonc-
+tions composantes. De nombreuses propriétés de f pourront être caractérisées à l’aide des
+propriétés de ses fonctions composantes. ■
+■ Exemple I.1.2.1 — Fonction vectorielle.
+L ’application
+f:
+− →
+R2 − →
+− →
+R3
+µx
+y
+¶
+7− →
+
+
+x+y
+x2
+x y
+
+
+est une fonction vectorielle.
+Ses fonctions composantes sont
+f1(x,y)=x+y,f 2(x,y)=x 2,f 3(x,y)=x y.
+■
+■ Vocabulaire I.1.2.1 — Fonctions réelles de plusieurs variables.
+Soit n∈N ∗. Les fonctions f : U⊂
+− →
+Rn − →Rs’appellent traditionnellement lesfonctions réelles de
+plusieurs variables réelles.
+■ Exemple I.1.2.2 — Fonction réelle de deux variables et graphe associé.
+La fonction définie par
+f:
+− →
+R2 − →Rµx
+y
+¶
+7− →1− x2 +y 2
+4 .
+est une fonction réelle de plusieurs variables.
+Le graphe defest la surface de
+− →
+R3 définie par
+
+
+
+
+
+x
+y
+z
+
+ ∈
+− →
+R3 |z=f
+¡
+x,y
+¢
+
+
+.
+
+=== Cours original, page PDF 15 ===
+I.1.2 Fonctions vectorielles 23
+■
+Avant d’étudier la différentiabilité, il est nécessaire de disposer d’une notion de limite adap-
+tée aux fonctions vectorielles. Les résultats qui suivent fourniront également les règles de calcul
+des limites utilisées pour établir la continuité des fonctions construites à partir de fonctions
+plus simples.
+I.1.2.2 Limite d’une fonction vectorielle en un point
+Définition I.1.2.3 — Point d’adhérence.
+SoientU⊂
+− →
+Rn et ⃗a∈
+− →
+Rn.
+On dit que ⃗aest unpoint d’adhérence de Ulorsque
+∀r>0,B( ⃗a,r)∩U̸=∅.
+Définition I.1.2.4 — Point d’accumulation.
+SoientU⊂
+− →
+Rn et ⃗a∈
+− →
+Rn.
+On dit que ⃗aest unpoint d’accumulation de Ulorsque
+∀r>0,B( ⃗a,r)∩ (U\ { ⃗a}) ̸=∅.
+■ Remarque I.1.2.3 — Point d’accumulation et point d’adhérence.
+Tout point d’accumulation de U est un point d’adhérence de U . La réciproque n’est pas
+nécessairement vraie : un point isolé de U est un point d’adhérence deU , mais n’est pas un
+point d’accumulation deU. ■
+Définition I.1.2.5 — Limite d’une fonction vectorielle.
+Soient U⊂
+− →
+Rn, ⃗a un point d’accumulation deU et f : U− →
+− →
+Rp une fonction vectorielle de U
+dans
+− →
+Rp. On dit quef admet pour limite le vecteur ⃗ℓ∈
+− →
+Rp en ⃗alorsque
+∀ε>0,∃η>0 tel que∀ ⃗x∈U,
+³
+0< ∥ ⃗x− ⃗a∥ <η= ⇒ ∥f( ⃗x)− ⃗ℓ∥ <ε
+´
+
+=== Cours original, page PDF 16 ===
+24Chapitre I.1. Fonctions vectorielles deR n
+■ Notation I.1.2.1 — Limite fonction vectorielle.
+Soient U⊂
+− →
+Rn, ⃗a un point d’accumulation deU et f : U− →
+− →
+Rp une fonction vectorielle de U
+dans
+− →
+Rp. Sifadmet pour limite le vecteur ⃗ℓ∈
+− →
+Rp en ⃗a, on note
+lim
+⃗x→⃗a
+⃗x∈U
+f( ⃗x)= ⃗ℓ.
+Proposition I.1.2.2 — Unicité de la limite.
+Une fonction vectorielle admet au plus une limite en un point d’accumulation.
+Démonstration.
+Soient U⊂
+− →
+Rn, ⃗a un point d’accumulation deU et f : U− →
+− →
+Rp une fonction vectorielle de U
+dans
+− →
+Rp et supposons que
+lim
+⃗x→⃗a
+⃗x∈U
+f( ⃗x)= ⃗ℓ1 et lim
+⃗x→⃗a
+⃗x∈U
+f( ⃗x)= ⃗ℓ2 avec ⃗ℓ1 ̸= ⃗ℓ2.
+Posons alorsε= 1
+2 ∥⃗ℓ1 − ⃗ℓ2∥ >0.
+— comme lim
+⃗x→⃗a
+⃗x∈U
+f( ⃗x)= ⃗ℓ1, il existeη 1 >0 tel que∀x∈U
+0< ∥ ⃗x− ⃗a∥ <η 1 = ⇒ ∥f(⃗x)− ⃗ℓ1∥ <ε. (I.1.2)
+— comme lim
+⃗x→⃗a
+⃗x∈U
+f( ⃗x)= ⃗ℓ2, il existeη 2 >0 tel que∀x∈U
+0< ∥ ⃗x− ⃗a∥ <η 2 = ⇒ ∥f(⃗x)− ⃗ℓ2∥ <ε. (I.1.3)
+Posons alors
+η=min(η 1,η 2).
+Comme ⃗aest un point d’accumulation deU, il existe ⃗x∈Utel que
+0< ∥ ⃗x− ⃗a∥ <η.
+D’après l’inégalité triangulaire,
+∥⃗ℓ1 − ⃗ℓ2∥ ≤∥⃗ℓ1 −f( ⃗x)∥ + ∥f( ⃗x)− ⃗ℓ2∥
+<2εd’après (I.1.2)∪(I.1.3)
+=∥⃗ℓ1 − ⃗ℓ2∥.
+On a donc
+∥⃗ℓ1 − ⃗ℓ2∥ < ∥⃗ℓ1 − ⃗ℓ2∥
+Ce qui est absurde. Par conséquent
+⃗ℓ1 = ⃗ℓ2.
+■
+
+=== Cours original, page PDF 17 ===
+I.1.2 Fonctions vectorielles 25
+Lemme I.1.2.1 — Majoration d’une application linéaire.
+Soient
+¡
+n,p
+¢
+∈N ∗ ×N ∗ et − →u∈ − →L
+³− →
+Rn,
+− →
+Rp
+´
+une application linéaire de
+− →
+Rn dans
+− →
+Rp.
+Alors il existe une constanteC≥0 telle que
+∀⃗h∈
+− →
+Rn,∥ − →u( ⃗h)∥ ≤C∥ ⃗h∥.
+Démonstration.
+Soient
+¡
+n,p
+¢
+∈N ∗ ×N ∗ et − →u∈ − →L
+³− →
+Rn,
+− →
+Rp
+´
+une application linéaire de
+− →
+Rn dans
+− →
+Rp.
+Munissons
+− →
+Rn de sa base canonique (⃗e1, .. .,⃗en).
+Soit ⃗h∈
+− →
+Rn, on a donc
+⃗h=
+nX
+i=1
+hi⃗ei .
+Par linéarité,
+− →u( ⃗h)=
+nX
+i=1
+hi
+− →u( ⃗ei ).
+D’après l’inégalité triangulaire,
+∥− →u( ⃗h)∥ = ∥
+nX
+i=1
+hi
+− →u( ⃗ei )∥ ≤
+nX
+i=1
+∥hi
+− →u( ⃗ei )∥ ≤
+nX
+i=1
+|hi |∥− →u( ⃗ei )∥.
+Or, pour touti∈{1,. .. ,n},
+∥⃗h∥2 =
+nX
+j=1
+h2
+j =h 2
+i +
+nX
+j=1
+j̸=i
+h2
+j ≥h 2
+i .
+Les deux membres étant positifs ou nuls, on en déduit
+|hi | =
+q
+h2
+i ≤
+vuut
+nX
+j=1
+h2
+j = ∥⃗h∥.
+Par conséquent
+∥− →u( ⃗h)∥ ≤
+Ã
+nX
+i=1
+∥− →u( ⃗ei )∥
+!
+∥⃗h∥.
+En posantC=
+nX
+i=1
+∥− →u( ⃗ei )∥, on obtient bien que
+∀⃗h∈
+− →
+Rn,∥ − →u( ⃗h)∥ ≤C∥ ⃗h∥.
+■
+Proposition I.1.2.3 — Passage à la limite par une application linéaire.
+Soient (m,n,p ) ∈ (N∗)3, U⊂
+− →
+Rm, ⃗a un point d’accumulation deU , f : U− →
+− →
+Rn une fonction
+vectorielle deUdans
+− →
+Rn et − →u∈ − →L
+³− →
+Rn,
+− →
+Rp
+´
+.
+Si lim
+⃗x→⃗a
+⃗x∈U
+f( ⃗x)= ⃗ℓ∈
+− →
+Rn, alors
+lim
+⃗x→⃗a
+⃗x∈U
+¡− →u◦f
+¢
+(⃗x)= − →u
+³
+⃗ℓ
+´
+.
+
+=== Cours original, page PDF 18 ===
+26Chapitre I.1. Fonctions vectorielles deR n
+Démonstration.
+Soient (m,n,p ) ∈ (N∗)3, U⊂
+− →
+Rm, ⃗a un point d’accumulation de U , f : U− →
+− →
+Rn une fonction
+vectorielle deUdans
+− →
+Rn et − →u∈ − →L
+³− →
+Rn,
+− →
+Rp
+´
+.
+Supposons que
+lim
+⃗x→⃗a
+⃗x∈U
+f( ⃗x)= ⃗ℓ∈
+− →
+Rn
+D’après le Lemme I.1.2.1, il existe une constanteC≥0 telle que
+∀⃗h∈
+− →
+Rn,
+°°°− →u( ⃗h)
+°°° ≤C
+°°°⃗h
+°°°.
+Soitε>0. Comme
+lim
+⃗x→⃗a
+⃗x∈U
+f( ⃗x)= ⃗ℓ,
+et commeC+1>0, il existeη>0 tel que, pour tout ⃗x∈U,
+0< ∥⃗x− ⃗a∥ <η= ⇒
+°°°f( ⃗x)− ⃗ℓ
+°°° < ε
+C+1 . (I.1.4)
+Soit ⃗x∈Uvérifiant 0< ∥⃗x− ⃗a∥ <η.
+Par linéarité de − →u, nous avons
+− →u
+¡
+f( ⃗x)
+¢
+− − →u( ⃗ℓ)= − →u
+¡
+f( ⃗x)− ⃗ℓ
+¢
+.
+Par conséquent,
+°°°− →u
+¡
+f( ⃗x)
+¢
+− − →u( ⃗ℓ)
+°°° =
+°°°− →u
+¡
+f( ⃗x)− ⃗ℓ
+¢°°°
+≤C
+°°°f( ⃗x)− ⃗ℓ
+°°°
+<C ε
+C+1 d’après (I.1.4)
+= C
+C+1 ε
+<ε
+Ainsi,
+lim
+⃗x→⃗a
+⃗x∈U
+¡− →u◦f
+¢
+(⃗x)= − →u( ⃗ℓ).
+■
+Proposition I.1.2.4 — Combinaisons linéaires et limites.
+Soient U⊂
+− →
+Rn, ⃗a un point d’accumulation deU et f : U− →
+− →
+Rp et g : U− →
+− →
+Rp deux fonctions
+vectorielles deUdans
+− →
+Rp.
+Si lim
+⃗x→⃗a
+⃗x∈U
+f( ⃗x)= ⃗ℓ1 et lim
+⃗x→⃗a
+⃗x∈U
+g(⃗x)= ⃗ℓ2, alors on a
+∀
+¡
+λ,µ
+¢
+∈R 2, lim
+⃗x→⃗a
+⃗x∈U
+¡
+λf+µg
+¢
+(⃗x)=λ ⃗ℓ1 +µ ⃗ℓ2.
+Démonstration.
+Soient U⊂
+− →
+Rn, ⃗a un point d’accumulation de U , f : U− →
+− →
+Rp et g : U− →
+− →
+Rp deux fonctions
+vectorielles telles que
+lim
+⃗x→⃗a
+⃗x∈U
+f( ⃗x)= ⃗ℓ1 et lim
+⃗x→⃗a
+⃗x∈U
+g(⃗x)= ⃗ℓ2.
+
+=== Cours original, page PDF 19 ===
+I.1.2 Fonctions vectorielles 27
+Soit (λ,µ)∈R 2. Montrons que lim
+⃗x→⃗a
+⃗x∈U
+¡
+λf+µg
+¢
+(⃗x)=λ ⃗ℓ1 +µ ⃗ℓ2.
+Soitε>0 et posons
+M= |λ| + |µ|.
+Comme
+lim
+⃗x→⃗a
+⃗x∈U
+f( ⃗x)= ⃗ℓ1,
+il existeη 1 >0 tel que, pour tout ⃗x∈U,
+0< ∥ ⃗x− ⃗a∥ <η 1 = ⇒ ∥f(⃗x)− ⃗ℓ1∥ < ε
+M+1 . (I.1.5)
+De même, comme
+lim
+⃗x→⃗a
+⃗x∈U
+g(⃗x)= ⃗ℓ2,
+il existeη 2 >0 tel que, pour tout ⃗x∈U,
+0< ∥ ⃗x− ⃗a∥ <η 2 = ⇒ ∥g(⃗x)− ⃗ℓ2∥ < ε
+M+1 . (I.1.6)
+Posons alorsη=min{η 1,η 2}.
+Soit ⃗x∈Utel que 0< ∥ ⃗x− ⃗a∥ <η. On a alors via (I.1.5)∪(I.1.6)
+∥f( ⃗x)− ⃗ℓ1∥ < ε
+M+1 et∥g( ⃗x)− ⃗ℓ2∥ < ε
+M+1 .
+Par conséquent,
+°°°
+¡
+λf+µg
+¢
+(⃗x)−
+³
+λ⃗ℓ1 +µ ⃗ℓ2
+´°°° =
+°°°λ
+³
+f( ⃗x)− ⃗ℓ1
+´
++µ
+³
+g(⃗x)− ⃗ℓ2
+´°°°
+≤|λ|∥f( ⃗x)− ⃗ℓ1∥ + |µ|∥g(⃗x)− ⃗ℓ2∥
+<|λ| ε
+M+1 + |µ| ε
+M+1
+= M
+M+1 ε
+<ε.
+Ainsi, pour toutε>0, il existeη>0 tel que, pour tout ⃗x∈U,
+0< ∥ ⃗x− ⃗a∥ <η= ⇒
+°°°
+¡
+λf+µg
+¢
+(⃗x)−
+³
+λ⃗ℓ1 +µ ⃗ℓ2
+´°°° <ε.
+Par la définition de la limite nous obtenons donc que
+lim
+⃗x→⃗a
+⃗x∈U
+¡
+λf+µg
+¢
+(⃗x)=λ ⃗ℓ1 +µ ⃗ℓ2.
+■
+■ Remarque I.1.2.4 — Norme sur un produit d’espaces euclidiens.
+Soientk∈N ∗ et (n1, .. .,n k)∈(N ∗)k.
+On identifie naturellement − − →
+Rn1 × · · · ×
+− − →
+Rnk
+à − − − − − − − →
+Rn1+···+nk .
+
+=== Cours original, page PDF 20 ===
+28Chapitre I.1. Fonctions vectorielles deR n
+Cet espace est muni de la norme euclidienne définie par
+∥(⃗x1,. .. ,⃗xk)∥ =
+vuut
+kX
+ℓ=1
+∥⃗xℓ∥2.
+■
+Lemme I.1.2.2 — Majoration d’une application multilinéaire.
+Soientk∈N ∗,
+¡
+n1,. .. ,n k,p
+¢
+∈
+¡
+N∗¢k+1 et
+Φ:
+− − →
+Rn1 × · · · ×
+− − →
+Rnk − →
+− →
+Rp
+une application multilinéaire.
+Alors il existe une constanteC>0 telle que
+∀(⃗h1,. .. ,⃗hk)∈
+− − →
+Rn1 × · · · ×
+− − →
+Rnk ,
+°°°Φ(⃗h1, .. .,⃗hk)
+°°° ≤C
+kY
+ℓ=1
+∥⃗hℓ∥.
+Démonstration.
+Soientk∈N ∗,
+¡
+n1, .. .,n k,p
+¢
+∈
+¡
+N∗¢k+1 et
+Φ:
+− − →
+Rn1 × · · · ×
+− − →
+Rnk − →
+− →
+Rp
+une application multilinéaire.
+Pour toutℓ∈ {1, .. .,k }, notons ³
+⃗e ℓ
+1 ,. .. ,⃗e ℓ
+nℓ
+´
+la base canonique de
+− − →
+Rnℓ.
+Soit
+(⃗h1,. .. ,⃗hk)∈
+− − →
+Rn1 × · · · ×
+− − →
+Rnk .
+Pour toutℓ∈ {1, .. .,k }, on écrit
+⃗hℓ =
+nℓX
+iℓ=1
+hℓ,iℓ⃗e ℓ
+iℓ
+.
+Par multilinéarité,
+Φ(⃗h1,. .. ,⃗hk)=
+n1X
+i1=1
+· · ·
+nkX
+ik =1
+h1,i1 · · ·hk,i k Φ
+³
+⃗e 1
+i1
+, .. .,⃗e k
+ik
+´
+.
+Par conséquent,
+°°°Φ(⃗h1,. .. ,⃗hk)
+°°° ≤
+n1X
+i1=1
+· · ·
+nkX
+ik =1
+¯¯h1,i1
+¯¯ · · ·
+¯¯hk,i k
+¯¯
+°°°Φ
+³
+⃗e 1
+i1
+,. .. ,⃗e k
+ik
+´°°°
+≤
+Ã n1X
+i1=1
+· · ·
+nkX
+ik =1
+°°°Φ
+³
+⃗e 1
+i1
+,. .. ,⃗e k
+ik
+´°°°
+!
+kY
+ℓ=1
+∥⃗hℓ∥.
+En effet, pour toutℓ∈ {1, .. .,k } et touti ℓ ∈ {1, .. .,n ℓ}, on a
+¯¯hℓ,iℓ
+¯¯ ≤ ∥⃗hℓ∥.
+Posons
+C=1+
+n1X
+i1=1
+· · ·
+nkX
+ik =1
+°°°Φ
+³
+⃗e 1
+i1
+, .. .,⃗e k
+ik
+´°°°.
+
+=== Cours original, page PDF 21 ===
+I.1.2 Fonctions vectorielles 29
+AlorsC>0 et °°°Φ(⃗h1, ... ,⃗hk)
+°°° ≤C
+kY
+ℓ=1
+∥⃗hℓ∥.
+■
+Proposition I.1.2.5 — Passage à la limite par une application multilinéaire.
+SoientU⊂
+− →
+Rn, ⃗aun point d’accumulation deU,k∈N ∗,
+¡
+n1,. .. ,n k,p
+¢
+∈
+¡
+N∗¢k+1,
+fℓ :U− →
+− − →
+Rnℓ,ℓ∈ {1, .. .,k },
+et
+Φ:
+− − →
+Rn1 × · · · ×
+− − →
+Rnk − →
+− →
+Rp
+une application multilinéaire.
+Si
+∀ℓ∈ {1, .. .,k }, lim
+⃗x→⃗a
+⃗x∈U
+fℓ(⃗x)= ⃗ℓℓ,
+alors
+lim
+⃗x→⃗a
+⃗x∈U
+Φ
+¡
+f1(⃗x),. .. ,f k(⃗x)
+¢
+=Φ
+³
+⃗ℓ1, .. .,⃗ℓk
+´
+.
+Démonstration.
+SoientU⊂
+− →
+Rn, ⃗aun point d’accumulation deU,k∈N ∗,
+¡
+n1,. .. ,n k,p
+¢
+∈
+¡
+N∗¢k+1,
+fℓ :U− →
+− − →
+Rnℓ,ℓ∈ {1, .. .,k },
+et
+Φ:
+− − →
+Rn1 × · · · ×
+− − →
+Rnk − →
+− →
+Rp
+une application multilinéaire tels que
+∀ℓ∈ {1, .. .,k }, lim
+⃗x→⃗a
+⃗x∈U
+fℓ(⃗x)= ⃗ℓℓ.
+Montrons que
+lim
+⃗x→⃗a
+⃗x∈U
+Φ
+¡
+f1(⃗x),. .. ,f k(⃗x)
+¢
+=Φ
+³
+⃗ℓ1,. .. ,⃗ℓk
+´
+.
+Soitε>0.
+D’après le Lemme I.1.2.2, il existeC>0 tel que
+∀(⃗h1, .. .,⃗hk),
+°°°Φ(⃗h1, .. .,⃗hk)
+°°° ≤C
+kY
+ℓ=1
+∥⃗hℓ∥.
+Pour toutℓ∈ {1, .. .,k }, comme
+lim
+⃗x→⃗a
+⃗x∈U
+fℓ(⃗x)= ⃗ℓℓ,
+il existeη 0
+ℓ >0 tel que, pour tout ⃗x∈U,
+0< ∥ ⃗x− ⃗a∥ <η 0
+ℓ = ⇒ ∥fℓ(⃗x)− ⃗ℓℓ∥ <1.
+Ainsi, pour
+0< ∥ ⃗x− ⃗a∥ <min
+ℓ∈{1,...,k}
+η0
+ℓ,
+
+=== Cours original, page PDF 22 ===
+30Chapitre I.1. Fonctions vectorielles deR n
+on a
+∥f ℓ(⃗x)∥ ≤ ∥⃗ℓℓ∥ +1.
+Posons
+M=C
+kX
+j=1
+kY
+ℓ=1
+ℓ̸=j
+³
+∥⃗ℓℓ∥ +1
+´
+.
+CommeM≥0, posons
+M1 =M+1.
+Pour toutj∈ {1, .. .,k }, comme
+lim
+⃗x→⃗a
+⃗x∈U
+f j (⃗x)= ⃗ℓj ,
+il existeη 1
+j >0 tel que, pour tout ⃗x∈U,
+0< ∥ ⃗x− ⃗a∥ <η 1
+j = ⇒ ∥fj (⃗x)− ⃗ℓj ∥ < ε
+M1
+.
+Posons
+η=min
+¡
+η0
+1, .. .,η 0
+k,η 1
+1, .. .,η 1
+k
+¢
+.
+Soit ⃗x∈Utel que
+0< ∥ ⃗x− ⃗a∥ <η.
+Par multilinéarité, on a l’identité télescopique
+Φ
+¡
+f1(⃗x),. .. ,f k(⃗x)
+¢
+−Φ
+³
+⃗ℓ1,. .. ,⃗ℓk
+´
+=
+kX
+j=1
+Φ
+³
+⃗ℓ1,. .. ,⃗ℓj−1 ,f j (⃗x)− ⃗ℓj ,f j+1 (⃗x),. .. ,f k(⃗x)
+´
+.
+Par conséquent,
+°°°Φ
+¡
+f1(⃗x),. .. ,f k(⃗x)
+¢
+−Φ
+³
+⃗ℓ1,. .. ,⃗ℓk
+´°°° ≤C
+kX
+j=1
+Ã j−1Y
+ℓ=1
+∥⃗ℓℓ∥
+!
+∥f j (⃗x)− ⃗ℓj ∥
+Ã
+kY
+ℓ=j+1
+∥f ℓ(⃗x)∥
+!
+≤C
+kX
+j=1
+
+
+kY
+ℓ=1
+ℓ̸=j
+³
+∥⃗ℓℓ∥ +1
+´
+
+ ∥f j (⃗x)− ⃗ℓj ∥
+<M ε
+M1
+<ε.
+Ainsi, pour toutε>0, il existeη>0 tel que, pour tout ⃗x∈U,
+0< ∥ ⃗x− ⃗a∥ <η= ⇒
+°°°Φ
+¡
+f1(⃗x),. .. ,f k(⃗x)
+¢
+−Φ
+³
+⃗ℓ1, .. .,⃗ℓk
+´°°° <ε.
+Par la définition de la limite, on obtient donc
+lim
+⃗x→⃗a
+⃗x∈U
+Φ
+¡
+f1(⃗x),. .. ,f k(⃗x)
+¢
+=Φ
+³
+⃗ℓ1,. .. ,⃗ℓk
+´
+.
+■
+
+=== Cours original, page PDF 23 ===
+I.1.2 Fonctions vectorielles 31
+Corollaire I.1.2.1 — Limite d’un produit.
+Soient U⊂
+− →
+Rn, ⃗a un point d’accumulation deU et f : U− →R et g : U− →R deux fonctions
+réelles.
+Si lim
+⃗x→⃗a
+⃗x∈U
+f( ⃗x)=ℓ 1 et lim
+⃗x→⃗a
+⃗x∈U
+g(⃗x)=ℓ 2, alors
+lim
+⃗x→⃗a
+⃗x∈U
+¡
+f g
+¢
+(⃗x)=ℓ 1ℓ2.
+Démonstration.
+Soient U⊂
+− →
+Rn, ⃗a un point d’accumulation de U et f : U− →R et g : U− →R deux fonctions
+réelles telles que
+lim
+⃗x→⃗a
+⃗x∈U
+f( ⃗x)=ℓ 1 et lim
+⃗x→⃗a
+⃗x∈U
+g(⃗x)=ℓ 2.
+Soitε>0 et posons
+α=min
+½
+1, ε
+1+ |ℓ1| + |ℓ2|
+¾
+.
+Comme
+lim
+⃗x→⃗a
+⃗x∈U
+f( ⃗x)=ℓ 1,
+il existeη 1 >0 tel que, pour tout ⃗x∈U,
+0< ∥ ⃗x− ⃗a∥ <η 1 = ⇒ |f(⃗x)−ℓ 1| <α. (I.1.7)
+De même, comme
+lim
+⃗x→⃗a
+⃗x∈U
+g(⃗x)=ℓ 2,
+il existeη 2 >0 tel que, pour tout ⃗x∈U,
+0< ∥ ⃗x− ⃗a∥ <η 2 = ⇒ |g(⃗x)−ℓ 2| <α. (I.1.8)
+Posons
+η=min{η 1,η 2}.
+Soit ⃗x∈Utel que 0< ∥ ⃗x− ⃗a∥ <η.
+D’après (I.1.7) et (I.1.8), on a
+|f( ⃗x)−ℓ 1| <αet|g( ⃗x)−ℓ 2| <α.
+Or,
+f( ⃗x)g( ⃗x)−ℓ 1ℓ2 =
+¡
+f( ⃗x)−ℓ 1
+¢ ¡
+g(⃗x)−ℓ 2
+¢
++ℓ 1
+¡
+g(⃗x)−ℓ 2
+¢
++ℓ 2
+¡
+f( ⃗x)−ℓ 1
+¢
+.
+Par conséquent,
+|f( ⃗x)g( ⃗x)−ℓ 1ℓ2| ≤|f( ⃗x)−ℓ 1||g(⃗x)−ℓ 2| + |ℓ1||g(⃗x)−ℓ 2| + |ℓ2||f( ⃗x)−ℓ 1|
+<α2 + |ℓ1|α+ |ℓ2|α.
+Commeα≤1, on aα 2 ≤α. Ainsi,
+|f( ⃗x)g( ⃗x)−ℓ 1ℓ2| <(1+ |ℓ1| + |ℓ2|) α
+≤ε.
+
+=== Cours original, page PDF 24 ===
+32Chapitre I.1. Fonctions vectorielles deR n
+Ainsi, pour toutε>0, il existeη>0 tel que, pour tout ⃗x∈U,
+0< ∥ ⃗x− ⃗a∥ <η= ⇒ |f( ⃗x)g( ⃗x)−ℓ 1ℓ2| <ε.
+Par la définition de la limite, nous obtenons donc
+lim
+⃗x→⃗a
+⃗x∈U
+¡
+f g
+¢
+(⃗x)=ℓ 1ℓ2.
+■
+Proposition I.1.2.6 — Limite de l’inverse d’une fonction réelle.
+SoientU⊂
+− →
+Rn, ⃗aun point d’accumulation deUetf:U− →Rune fonction réelle.
+On suppose de plus que lim
+⃗x→⃗a
+⃗x∈U
+f( ⃗x)=ℓavecℓ̸=0.
+PosonsV=
+©
+⃗x∈U|f( ⃗x)̸=0
+ª
+.
+Alors il existeη 0 >0 tel que
+0< ∥ ⃗x− ⃗a∥ <η 0 = ⇒f( ⃗x)̸=0,
+et
+lim
+⃗x→⃗a
+⃗x∈V
+1
+f( ⃗x) = 1
+ℓ .
+Démonstration.
+SoientU⊂
+− →
+Rn, ⃗aun point d’accumulation deUetf:U− →Rune fonction réelle telle que
+lim
+⃗x→⃗a
+⃗x∈U
+f( ⃗x)=ℓavecℓ̸=0.
+PosonsV=
+©
+⃗x∈U|f( ⃗x)̸=0
+ª
+. Commeℓ̸=0, on a |ℓ|
+2 >0.
+D’après la définition de la limite, il existeη0 >0 tel que, pour tout ⃗x∈U,
+0< ∥ ⃗x− ⃗a∥ <η 0 = ⇒ |f(⃗x)−ℓ| < |ℓ|
+2 . (I.1.9)
+Soit ⃗x∈Utel que 0< ∥ ⃗x− ⃗a∥ <η 0. D’après l’inégalité triangulaire, on obtient
+|ℓ| = |ℓ−f( ⃗x)+f( ⃗x)| ≤ |ℓ−f( ⃗x)| + |f( ⃗x)|.
+De (I.1.9) on déduit alors que
+|f( ⃗x)| ≥ |ℓ| − |f( ⃗x)−ℓ| > |ℓ| − |ℓ|
+2 = |ℓ|
+2 >0. (I.1.10)
+Par conséquent
+0< ∥ ⃗x− ⃗a∥ <η 0 = ⇒f( ⃗x)̸=0.
+Montrons maintenant que lim
+⃗x→⃗a
+⃗x∈V
+1
+f( ⃗x) = 1
+ℓ .
+Soitε>0.
+Comme ε|ℓ|2
+2 >0, il existeη 1 >0 tel que, pour tout ⃗x∈U,
+0< ∥ ⃗x− ⃗a∥ <η 1 = ⇒ |f(⃗x)−ℓ| < ε|ℓ|2
+2 . (I.1.11)
+
+=== Cours original, page PDF 25 ===
+I.1.2 Fonctions vectorielles 33
+Posons alors
+η=min{η 0,η 1}.
+Soit ⃗x∈Utel que 0< ∥ ⃗x− ⃗a∥ <η.
+Commeη≤η 0, (I.1.10) nous dit que
+|f( ⃗x)| > |ℓ|
+2 ,
+et commeη≤η 1, on a également par (I.1.11)
+|f( ⃗x)−ℓ| < ε|ℓ|2
+2 .
+Par conséquent, nous avons
+¯¯¯¯
+1
+f( ⃗x) − 1
+ℓ
+¯¯¯¯ =
+¯¯¯¯
+ℓ−f( ⃗x)
+ℓf( ⃗x)
+¯¯¯¯
+= |f( ⃗x)−ℓ|
+|ℓ| |f( ⃗x)|
+<
+ε|ℓ|2
+2
+|ℓ| |ℓ|
+2
+=ε.
+Ainsi, pour toutε>0, il existeη>0 tel que, pour tout ⃗x∈U,
+0< ∥ ⃗x− ⃗a∥ <η= ⇒
+¯¯¯¯
+1
+f( ⃗x) − 1
+ℓ
+¯¯¯¯ <ε.
+Par la définition de la limite nous obtenons donc que
+lim
+⃗x→⃗a
+⃗x∈V
+1
+f( ⃗x) = 1
+ℓ .
+■
+Corollaire I.1.2.2 — Limite d’un quotient.
+Soient U⊂
+− →
+Rn, ⃗a un point d’accumulation deU et f : U− →R et g : U− →R deux fonctions
+réelles.
+Si
+lim
+⃗x→⃗a
+⃗x∈U
+f( ⃗x)=ℓ 1 et lim
+⃗x→⃗a
+⃗x∈U
+g(⃗x)=ℓ 2 avecℓ 2 ̸=0,
+alors il existeη 0 >0 tel que, pour tout ⃗x∈U,
+0< ∥ ⃗x− ⃗a∥ <η 0 = ⇒g(⃗x)̸=0.
+PosonsV=
+©
+⃗x∈U|g( ⃗x)̸=0
+ª
+. La fonction f
+g :V− →Rest donc bien définie et
+lim
+⃗x→⃗a
+⃗x∈V
+f( ⃗x)
+g(⃗x) = ℓ1
+ℓ2
+.
+
+=== Cours original, page PDF 26 ===
+34Chapitre I.1. Fonctions vectorielles deR n
+Démonstration.
+Soient U⊂
+− →
+Rn, ⃗a un point d’accumulation deU , f : U− →R et g : U− →R deux fonctions réelles
+telles que
+lim
+⃗x→⃗a
+⃗x∈U
+f( ⃗x)=ℓ 1 et lim
+⃗x→⃗a
+⃗x∈U
+g(⃗x)=ℓ 2 avecℓ 2 ̸=0.
+Posons
+V=
+©
+⃗x∈U|g( ⃗x)̸=0
+ª
+.
+D’après la Proposition I.1.2.6, il existeη0 >0 tel que, pour tout ⃗x∈U,
+0< ∥ ⃗x− ⃗a∥ <η 0 = ⇒g(⃗x)̸=0,
+et
+lim
+⃗x→⃗a
+⃗x∈V
+1
+g(⃗x) = 1
+ℓ2
+.
+La fonction f
+g :V− →Rest donc bien définie. De plus, pour tout ⃗x∈V,
+f( ⃗x)
+g(⃗x) =f( ⃗x) 1
+g(⃗x) .
+CommeV⊂U, on a également
+lim
+⃗x→⃗a
+⃗x∈V
+f( ⃗x)=ℓ 1.
+D’après le Corollaire I.1.2.1,
+lim
+⃗x→⃗a
+⃗x∈V
+f( ⃗x) 1
+g(⃗x) =ℓ 1
+1
+ℓ2
+.
+Par conséquent,
+lim
+⃗x→⃗a
+⃗x∈V
+f( ⃗x)
+g(⃗x) = ℓ1
+ℓ2
+.
+■
+Théorème I.1.2.1 — Caractérisation des limites par les fonctions composantes.
+SoientU⊂
+− →
+Rn, ⃗aun point d’accumulation deUetf:U− →
+− →
+Rp une fonction vectorielle.
+Soient
+¡
+⃗e1, .. .,⃗ep
+¢
+une base de
+− →
+Rp et f1,. .. ,f p : U− →R les fonctions composantes de f dans
+cette base, de sorte que
+∀⃗x∈U,f( ⃗x)=
+pX
+i=1
+fi (⃗x)⃗ei .
+Soit ⃗ℓ=
+pX
+i=1
+ℓi⃗ei ∈
+− →
+Rp.. On a l’équivalence entre :
+(i) lim
+⃗x→⃗a
+⃗x∈U
+f( ⃗x)= ⃗ℓ;
+(ii)∀i∈{1, ... ,p}, lim
+⃗x→⃗a
+⃗x∈U
+fi (⃗x)=ℓ i .
+Démonstration.
+Soient U⊂
+− →
+Rn, ⃗a un point d’accumulation deU , f : U− →
+− →
+Rp une fonction vectorielle,
+¡
+⃗e1,. .. ,⃗ep
+¢
+une base de
+− →
+Rp etf 1, .. .,f p :U− →Rles fonctions composantes defdans cette base. Soit
+⃗ℓ=
+pX
+i=1
+ℓi⃗ei ∈
+− →
+Rp.
+
+=== Cours original, page PDF 27 ===
+I.1.2 Fonctions vectorielles 35
+— Montrons que (i)= ⇒(ii).
+Supposons que
+lim
+⃗x→⃗a
+⃗x∈U
+f( ⃗x)= ⃗ℓ.
+Soiti∈{1, .. .,p}. Notons
+³
+e∗
+1 , .. .,e ∗
+p
+´
+la base duale de
+¡
+⃗e1,. .. ,⃗ep
+¢
+.
+Par définition des fonctions composantes,
+fi =e ∗
+i ◦f.
+Commee ∗
+i est une forme linéaire, la Proposition I.1.2.3 donne
+lim
+⃗x→⃗a
+⃗x∈U
+fi (⃗x)=e ∗
+i (⃗ℓ).
+Or,
+e∗
+i (⃗ℓ)=e ∗
+i
+Ã pX
+j=1
+ℓj⃗e j
+!
+=
+pX
+j=1
+ℓj e∗
+i (⃗e j )=
+pX
+j=1
+ℓj δi j =ℓ i .
+Ainsi,
+∀i∈{1,. .. ,p}, lim
+⃗x→⃗a
+⃗x∈U
+fi (⃗x)=ℓ i .
+— Montrons que (ii)= ⇒(i).
+Supposons que
+∀i∈{1,. .. ,p}, lim
+⃗x→⃗a
+⃗x∈U
+fi (⃗x)=ℓ i .
+Pour touti∈{1, .. .,p}, considérons l’application linéaire
+− →ui : R− →
+− →
+Rp
+λ7− →λ ⃗ei .
+D’après la Proposition I.1.2.3,
+lim
+⃗x→⃗a
+⃗x∈U
+¡− →ui ◦f i
+¢
+(⃗x)= − →ui (ℓi )=ℓ i⃗ei .
+Autrement dit,
+lim
+⃗x→⃗a
+⃗x∈U
+fi (⃗x)⃗ei =ℓ i⃗ei .
+En appliquant successivement la Proposition I.1.2.4, on obtient
+lim
+⃗x→⃗a
+⃗x∈U
+pX
+i=1
+fi (⃗x)⃗ei =
+pX
+i=1
+ℓi⃗ei .
+Or,
+f( ⃗x)=
+pX
+i=1
+fi (⃗x)⃗ei et ⃗ℓ=
+pX
+i=1
+ℓi⃗ei .
+Par conséquent,
+lim
+⃗x→⃗a
+⃗x∈U
+f( ⃗x)= ⃗ℓ.
+■
+La notion de limite permet maintenant de formaliser la stabilité de la valeur d’une fonction
+sous une petite perturbation de son argument. Cette propriété conduit naturellement à la conti-
+nuité, qui constituera ensuite une conséquence nécessaire de la différentiabilité.
+
+=== Cours original, page PDF 28 ===
+36Chapitre I.1. Fonctions vectorielles deR n
+I.1.2.3 Continuité d’une fonction vectorielle
+Définition I.1.2.6 — Continuité en un vecteur.
+SoientU⊂
+− →
+Rn, ⃗a∈Uetf:U− →
+− →
+Rp une fonction vectorielle.
+On dit quefestcontinue en ⃗asi et seulement si
+∀ε>0,∃η>0,∀ ⃗x∈U,
+¡
+∥⃗x− ⃗a∥ <η= ⇒ ∥f( ⃗x)−f( ⃗a)∥ <ε
+¢
+.
+Proposition I.1.2.7 — Continuité et limite.
+SoientU⊂
+− →
+Rn, ⃗a∈Uun point d’accumulation deUetf:U− →
+− →
+Rp une fonction vectorielle.
+La fonctionfest continue en ⃗asi et seulement si
+lim
+⃗x→⃗a
+⃗x∈U
+f( ⃗x)=f( ⃗a).
+Démonstration.
+SoientU⊂
+− →
+Rn, ⃗a∈Uun point d’accumulation deUetf:U− →
+− →
+Rp une fonction vectorielle.
+D’après la Définition I.1.2.6,fest continue en ⃗asi et seulement si
+∀ε>0,∃η>0,∀ ⃗x∈U,
+¡
+∥⃗x− ⃗a∥ <η= ⇒ ∥f( ⃗x)−f( ⃗a)∥ <ε
+¢
+.
+Pour ⃗x= ⃗a, on a
+∥f( ⃗x)−f( ⃗a)∥ =0<ε.
+La condition précédente équivaut donc à
+∀ε>0,∃η>0,∀ ⃗x∈U,
+¡
+0< ∥ ⃗x− ⃗a∥ <η= ⇒ ∥f( ⃗x)−f( ⃗a)∥ <ε
+¢
+.
+D’après la Définition I.1.2.5, cela équivaut à
+lim
+⃗x→⃗a
+⃗x∈U
+f( ⃗x)=f( ⃗a).
+■
+Proposition I.1.2.8 — Continuité en un point isolé.
+Soient U⊂
+− →
+Rn, ⃗a∈U un vecteur qui n’est pas un point d’accumulation deU et f : U− →
+− →
+Rp
+une fonction vectorielle.
+Alorsfest continue en ⃗a.
+Démonstration.
+Soient U⊂
+− →
+Rn, ⃗a∈U un vecteur qui n’est pas un point d’accumulation deU et f : U− →
+− →
+Rp une
+fonction vectorielle.
+Montrons quefest continue en ⃗a.
+Comme ⃗an’est pas un point d’accumulation deU, il existeη>0 tel que
+B(⃗a,η)∩ (U\ { ⃗a}) =∅.
+Comme ⃗a∈U, on en déduit que
+B(⃗a,η)∩U={ ⃗a}.
+Soitε>0.
+Soit ⃗x∈Utel que
+∥⃗x− ⃗a∥ <η.
+
+=== Cours original, page PDF 29 ===
+I.1.2 Fonctions vectorielles 37
+Alors
+⃗x∈B( ⃗a,η)∩U.
+Par conséquent,
+⃗x= ⃗a.
+Ainsi
+∥f( ⃗x)−f( ⃗a)∥ = ∥f( ⃗a)−f( ⃗a)∥ =0<ε.
+On a donc montré que
+∀ε>0,∃η>0,∀ ⃗x∈U,
+¡
+∥⃗x− ⃗a∥ <η= ⇒ ∥f( ⃗x)−f( ⃗a)∥ <ε
+¢
+.
+D’après la Définition I.1.2.6,fest continue en ⃗a.■
+Définition I.1.2.7 — Fonction continue.
+Soient
+¡
+n,p
+¢
+∈N ∗ ×N ∗,U⊂
+− →
+Rn etf:U− →
+− →
+Rp une fonction vectorielle.
+On dit quefestcontinue sur Ulorsqu’elle est continue en tout vecteur deU.
+■ Notation I.1.2.2 — Ensemble des fonctions vectorielles continues surU.
+Soient
+¡
+n,p
+¢
+∈N ∗ ×N ∗ etU⊂
+− →
+Rn.
+L ’ensemble des fonctions vectorielles continues deUdans
+− →
+Rp est noté
+C 0
+³
+U,
+− →
+Rp
+´
+.
+Proposition I.1.2.9 — Stabilité par combinaison linéaire.
+SoientU⊂
+− →
+Rn,f:U− →
+− →
+Rp etg:U− →
+− →
+Rp deux fonctions vectorielles continues surU.
+Alors∀(λ,µ)∈R 2
+λf+µgest continue surU.
+Démonstration.
+Soient U⊂
+− →
+Rn, f : U− →
+− →
+Rp et g : U− →
+− →
+Rp deux fonctions vectorielles continues sur U et
+(λ,µ)∈R 2. Montrons queλf+µgest continue surU.
+Soit ⃗a∈Uun élément quelconque deU. De deux choses l’une :
+— Si ⃗an’est pas un point d’accumulation deU.
+La Proposition I.1.2.8 montre queλf+µgest continue en ⃗a.
+— Si ⃗aest un point d’accumulation deU.
+Commefetgsont continues en ⃗a, la Proposition I.1.2.7 donne
+lim
+⃗x→⃗a
+⃗x∈U
+f( ⃗x)=f( ⃗a) et lim
+⃗x→⃗a
+⃗x∈U
+g(⃗x)=g( ⃗a).
+D’après la Proposition I.1.2.4, on obtient
+lim
+⃗x→⃗a
+⃗x∈U
+¡
+λf+µg
+¢
+(⃗x)=λf( ⃗a)+µg( ⃗a).
+Or
+λf( ⃗a)+µg( ⃗a)=
+¡
+λf+µg
+¢
+(⃗a).
+Ainsi
+lim
+⃗x→⃗a
+⃗x∈U
+¡
+λf+µg
+¢
+(⃗x)=
+¡
+λf+µg
+¢
+(⃗a).
+D’après la Proposition I.1.2.7,λf+µgest continue en ⃗a.
+■
+
+=== Cours original, page PDF 30 ===
+38Chapitre I.1. Fonctions vectorielles deR n
+Proposition I.1.2.10 — Espace vectoriel des fonctions vectorielles continues.
+Soient
+¡
+n,p
+¢
+∈N ∗ ×N ∗ etU⊂
+− →
+Rn.
+L ’ensembleC0
+³
+U,
+− →
+Rp
+´
+muni des opérations usuelles définies par
+(f+g)( ⃗x)=f( ⃗x)+g( ⃗x) et (λf)( ⃗x)=λf( ⃗x)
+est un espace vectoriel surR.
+Démonstration.
+Soient
+¡
+n,p
+¢
+∈N ∗ ×N ∗ etU⊂
+− →
+Rn.
+Montrons queC 0
+³
+U,
+− →
+Rp
+´
+est un sous-espace vectoriel deF
+³
+U,
+− →
+Rp
+´
+.
+— Considérons la fonction nulle
+0 : U− →
+− →
+Rp
+⃗x7− → ⃗0.
+Soit ⃗a∈Uet soitε>0.
+Posonsη=1. Pour tout ⃗x∈Utel que∥ ⃗x− ⃗a∥ <η, on a∥0( ⃗x)−0( ⃗a)∥ =0<ε..
+D’après la Définition I.1.2.6, la fonction nulle est continue en⃗a.
+Comme ⃗aest quelconque dansU, la fonction nulle est continue surU.
+Par conséquent,
+0∈C 0
+³
+U,
+− →
+Rp
+´
+.
+Ainsi
+C 0
+³
+U,
+− →
+Rp
+´
+̸= ;.
+— Soient (f,g)∈C 0
+³
+U,
+− →
+Rp
+´
+×C 0
+³
+U,
+− →
+Rp
+´
+et (λ,µ)∈R 2..
+D’après la Proposition I.1.2.9,
+λf+µg∈C 0
+³
+U,
+− →
+Rp
+´
+.
+AinsiC 0
+³
+U,
+− →
+Rp
+´
+est un sous-espace vectoriel deF
+³
+U,
+− →
+Rp
+´
+..
+C’est donc un espace vectoriel surR.■
+Proposition I.1.2.11 — Stabilité par composition.
+Soient
+¡
+n,p,q
+¢
+∈
+¡
+N∗¢3, U⊂
+− →
+Rn, V⊂
+− →
+Rp, f : U− →V et g : V− →
+− →
+Rq deux fonctions vectorielles.
+Sifest continue surUet sigest continue surV, alors
+g◦f:U− →
+− →
+Rq
+est continue surU.
+Démonstration.
+Soient
+¡
+n,p,q
+¢
+∈
+¡
+N∗¢3, U⊂
+− →
+Rn, V⊂
+− →
+Rp, f : U− →V et g : V− →
+− →
+Rq deux fonctions vectorielles
+telles quefest continue surUetgest continue surV.
+Montrons queg◦fest continue surU.
+Soit ⃗a∈Uet soitε>0.
+Comme g est continue en f (⃗a), d’après la Définition I.1.2.6, il existeηg > 0 tel que, pour tout
+⃗y∈V,
+∥⃗y−f( ⃗a)∥ <η g = ⇒ ∥g(⃗y)−g(f( ⃗a))∥ <ε. (I.1.12)
+
+=== Cours original, page PDF 31 ===
+I.1.2 Fonctions vectorielles 39
+Comme f est continue en ⃗a, d’après la Définition I.1.2.6, il existeη f > 0 tel que, pour tout ⃗x∈U ,
+∥⃗x− ⃗a∥ <η f = ⇒ ∥f(⃗x)−f( ⃗a)∥ <η g . (I.1.13)
+Soit ⃗x∈Utel que
+∥⃗x− ⃗a∥ <η f .
+D’après (I.1.13), on a
+∥f( ⃗x)−f( ⃗a)∥ <η g .
+Commef( ⃗x)∈V, on obtient via (I.1.12)
+∥g(f( ⃗x))−g(f( ⃗a))∥ <ε.
+C’est-à-dire
+∥(g◦f)( ⃗x)−(g◦f)( ⃗a)∥ <ε.
+Ainsi, pour toutε>0, il existeη f >0 tel que, pour tout ⃗x∈U,
+∥⃗x− ⃗a∥ <η f = ⇒ ∥(g◦f)( ⃗x)−(g◦f)( ⃗a)∥ <ε.
+D’après la Définition I.1.2.6,g◦fest continue en ⃗a.
+Comme ⃗aest quelconque dansU,g◦fest continue surU.■
+Proposition I.1.2.12 — Continuité des applications linéaires.
+Soient
+¡
+n,p
+¢
+∈N ∗ ×N ∗ et
+− →u∈ − →L
+³− →
+Rn,
+− →
+Rp
+´
+.
+Alors − →uest continue sur
+− →
+Rn.
+Démonstration.
+Soient
+¡
+n,p
+¢
+∈N ∗ ×N ∗ et
+− →u∈ − →L
+³− →
+Rn,
+− →
+Rp
+´
+.
+Montrons que − →uest continue sur
+− →
+Rn.
+Soit ⃗a∈
+− →
+Rn.
+Considérons l’application identité
+Id− →Rn :
+− →
+Rn − →
+− →
+Rn
+⃗x7− → ⃗x.
+On a
+lim
+⃗x→⃗a
+Id− →Rn (⃗x)= ⃗a.
+D’après la Proposition I.1.2.3, on obtient
+lim
+⃗x→⃗a
+− →u
+³
+Id− →Rn (⃗x)
+´
+= − →u( ⃗a).
+Or
+− →u◦Id − →Rn = − →u.
+Par conséquent,
+lim
+⃗x→⃗a
+− →u( ⃗x)= − →u( ⃗a).
+Comme tout vecteur de
+− →
+Rn est un point d’accumulation de
+− →
+Rn, la Proposition I.1.2.7 montre que
+− →uest continue en ⃗a.
+Comme ⃗aest quelconque dans
+− →
+Rn, − →uest continue sur
+− →
+Rn.■
+
+=== Cours original, page PDF 32 ===
+40Chapitre I.1. Fonctions vectorielles deR n
+Corollaire I.1.2.3 — Continuité et fonctions composantes.
+Soient
+¡
+n,p
+¢
+∈N ∗ ×N ∗,U⊂
+− →
+Rn etf:U− →
+− →
+Rp une fonction vectorielle.
+Soit
+¡
+⃗e1, .. .,⃗ep
+¢
+une base de
+− →
+Rp et
+³
+e∗
+1 ,. .. ,e ∗
+p
+´
+la base duale associée.
+Pour touti∈
+©
+1, .. .,p
+ª
+, on pose
+fi =e ∗
+i ◦f.
+Alors
+fest continue surU⇐ ⇒f 1,. .. ,f p sont continues surU.
+Démonstration.
+Soient
+¡
+n,p
+¢
+∈N ∗ ×N ∗, U⊂
+− →
+Rn, f : U− →
+− →
+Rp une fonction vectorielle,
+¡
+⃗e1, .. .,⃗ep
+¢
+une base de
+− →
+Rp
+et
+³
+e∗
+1 ,. .. ,e ∗
+p
+´
+la base duale associée.
+Montrons les deux implications.
+— Supposons quefest continue surU.
+Soiti∈
+©
+1, .. .,p
+ª
+.
+L ’application
+e∗
+i :
+− →
+Rp − →R
+est une forme linéaire. Elle est donc continue d’après la Proposition I.1.2.12.
+Comme
+fi =e ∗
+i ◦f,
+la Proposition I.1.2.11 montre quef i est continue surU.
+Ainsi toutes les fonctions composantesf 1,. .. ,f p sont continues surU.
+— Réciproquement, supposons quef 1,. .. ,f p sont continues surU.
+D’après la Proposition I.1.2.1, on a
+∀⃗x∈U,f( ⃗x)=
+pX
+i=1
+fi (⃗x)⃗ei .
+Pour touti∈
+©
+1, .. .,p
+ª
+, considérons l’application
+− →mi : R− →
+− →
+Rp
+t7− →t ⃗ei .
+L ’application− →mi est linéaire. Elle est donc continue d’après la Proposition I.1.2.12.
+Commef i est continue surU, la Proposition I.1.2.11 montre que
+− →mi ◦f i : ⃗x7− →f i (⃗x)⃗ei
+est continue surU.
+D’après la Proposition I.1.2.9, la somme finie
+pX
+i=1
+− →mi ◦f i
+est continue surU.
+Or
+f=
+pX
+i=1
+− →mi ◦f i .
+Doncfest continue surU.
+■
+
+=== Cours original, page PDF 33 ===
+I.1.2 Fonctions vectorielles 41
+Proposition I.1.2.13 — Continuité des applications multilinéaires.
+Soientk∈N ∗,
+¡
+n1,. .. ,n k,p
+¢
+∈
+¡
+N∗¢k+1 et
+Φ:
+− − →
+Rn1 × · · · ×
+− − →
+Rnk − →
+− →
+Rp
+une application multilinéaire.
+AlorsΦest continue sur
+− − →
+Rn1 × · · · ×
+− − →
+Rnk .
+Démonstration.
+Soientk∈N ∗,
+¡
+n1, .. .,n k,p
+¢
+∈
+¡
+N∗¢k+1 et
+Φ:
+− − →
+Rn1 × · · · ×
+− − →
+Rnk − →
+− →
+Rp
+une application multilinéaire.
+Montrons queΦest continue sur
+− − →
+Rn1 × · · · ×
+− − →
+Rnk .
+Soit
+(⃗a1,. .. ,⃗ak)∈
+− − →
+Rn1 × · · · ×
+− − →
+Rnk .
+Pour toutℓ∈ {1, .. .,k }, considérons la projection canonique
+− →πℓ :
+− − →
+Rn1 × · · · ×
+− − →
+Rnk − →
+− − →
+Rnℓ
+(⃗x1, ... ,⃗xk)7− → ⃗xℓ.
+L ’application− →πℓ est linéaire. Elle est donc continue d’après la Proposition I.1.2.12.
+Par conséquent,
+lim
+(⃗x1,...,⃗xk )→(⃗a1,...,⃗ak )
+− →πℓ(⃗x1,. .. ,⃗xk)= − →πℓ(⃗a1,. .. ,⃗ak)= ⃗aℓ.
+D’après la Proposition I.1.2.5, on obtient
+lim
+(⃗x1,...,⃗xk )→(⃗a1,...,⃗ak )
+Φ
+¡− →π1(⃗x1,. .. ,⃗xk), .. .,− →πk (⃗x1,. .. ,⃗xk)
+¢
+=Φ( ⃗a1,. .. ,⃗ak).
+Or
+Φ
+¡− →π1(⃗x1,. .. ,⃗xk),. .. ,− →πk (⃗x1,. .. ,⃗xk)
+¢
+=Φ( ⃗x1, ... ,⃗xk).
+Par conséquent,
+lim
+(⃗x1,...,⃗xk )→(⃗a1,...,⃗ak )
+Φ(⃗x1, .. .,⃗xk)=Φ( ⃗a1,. .. ,⃗ak).
+DoncΦest continue en ( ⃗a1,. .. ,⃗ak).
+Comme (⃗a1, .. .,⃗ak) est quelconque dans
+− − →
+Rn1 × · · · ×
+− − →
+Rnk ,,Φest continue sur cet espace.■
+Corollaire I.1.2.4 — Continuité d’un produit.
+SoientU⊂
+− →
+Rn etf:U− →Retg:U− →Rdeux fonctions réelles continues surU.
+Alors la fonctionf g:U− →Rest continue surU.
+Démonstration.
+SoientU⊂
+− →
+Rn etf:U− →Retg:U− →Rdeux fonctions réelles continues surU.
+Montrons quef gest continue surU.
+Soit ⃗a∈Uun vecteur quelconque deU. De deux choses l’une :
+
+=== Cours original, page PDF 34 ===
+42Chapitre I.1. Fonctions vectorielles deR n
+— Si ⃗aest un point d’accumulation deU, alors
+lim
+⃗x→⃗a
+⃗x∈U
+f( ⃗x)=f( ⃗a) et lim
+⃗x→⃗a
+⃗x∈U
+g(⃗x)=g( ⃗a).
+D’après le Corollaire I.1.2.1, on obtient
+lim
+⃗x→⃗a
+⃗x∈U
+f( ⃗x)g( ⃗x)=f( ⃗a)g( ⃗a).
+D’après la Proposition I.1.2.7,f gest continue en ⃗a.
+— Si ⃗a n’est pas un point d’accumulation deU , alors ⃗a est isolé dans U . Il existe donc η> 0
+tel que
+B(⃗a,η)∩U={ ⃗a}.
+La condition de la Définition I.1.2.6 est alors immédiatement vérifiée.
+Ainsif gest continue en tout vecteur deU, doncf gest continue surU.■
+Corollaire I.1.2.5 — Continuité des fonctions polynomiales.
+Toute fonction polynomiale de
+− →
+Rn dansRest continue sur
+− →
+Rn.
+Démonstration.
+SoitP:
+− →
+Rn − →Rune fonction polynomiale.
+Pour touti∈ {1, .. .,n }, considérons la projection canonique
+− →πi :
+− →
+Rn − →R
+
+x1
+...
+xn
+
+ 7− →x i .
+L ’application− →πi est linéaire. Elle est donc continue d’après la Proposition I.1.2.12.
+Les fonctions constantes sont continues.
+Une fonction polynomiale s’obtient à partir des applications coordonnées et des fonctions
+constantes par un nombre fini de sommes, de multiplications et de multiplications par un
+scalaire.
+D’après la Proposition I.1.2.9 et le Corollaire I.1.2.4, la fonctionPest continue sur
+− →
+Rn.■
+Proposition I.1.2.14 — Continuité de l’inverse d’une fonction réelle continue.
+Soientn∈N ∗,U⊂
+− →
+Rn etg:U− →Rune fonction réelle continue surU.
+Si
+∀⃗x∈U,g( ⃗x)̸=0,
+alors la fonction 1
+g :U− →Rdéfinie par
+∀⃗x∈U,
+µ 1
+g
+¶
+(⃗x)= 1
+g(⃗x)
+est continue surU.
+
+=== Cours original, page PDF 35 ===
+I.1.2 Fonctions vectorielles 43
+Démonstration.
+Soientn∈N ∗,U⊂
+− →
+Rn etg:U− →Rune fonction réelle continue surUtelle que
+∀⃗x∈U,g( ⃗x)̸=0.
+Montrons que 1
+g est continue surU.
+Soit ⃗a∈Uun vecteur quelconque deU. De deux choses l’une :
+— Si ⃗an’est pas un point d’accumulation deU.
+La Proposition I.1.2.8 montre que 1
+g est continue en ⃗a.
+— Si ⃗aest un point d’accumulation deU.
+Commegest continue en ⃗a, la Proposition I.1.2.7 donne
+lim
+⃗x→⃗a
+⃗x∈U
+g(⃗x)=g( ⃗a).
+De plus,
+g( ⃗a)̸=0.
+D’après la Proposition I.1.2.6, on obtient
+lim
+⃗x→⃗a
+⃗x∈U
+1
+g(⃗x) = 1
+g( ⃗a) .
+C’est-à-dire
+lim
+⃗x→⃗a
+⃗x∈U
+µ 1
+g
+¶
+(⃗x)=
+µ 1
+g
+¶
+(⃗a).
+D’après la Proposition I.1.2.7, 1
+g est continue en ⃗a.
+Comme ⃗aest quelconque dansU, 1
+g est continue surU.■
+Corollaire I.1.2.6 — Continuité d’un quotient.
+Soientn∈N ∗,U⊂
+− →
+Rn,f:U− →Retg:U− →Rdeux fonctions réelles continues surU.
+Si
+∀⃗x∈U,g( ⃗x)̸=0,
+alors la fonction f
+g :U− →Rdéfinie par
+∀⃗x∈U,
+µ f
+g
+¶
+(⃗x)= f( ⃗x)
+g(⃗x)
+est continue surU.
+Démonstration.
+Soient n∈N ∗, U⊂
+− →
+Rn, f : U− →R et g : U− →R deux fonctions réelles continues sur U telles que
+∀⃗x∈U,g( ⃗x)̸=0.
+D’après la Proposition I.1.2.14, la fonction 1
+g est continue surU.
+Or
+f
+g =f 1
+g .
+
+=== Cours original, page PDF 36 ===
+44Chapitre I.1. Fonctions vectorielles deR n
+Comme f et 1
+g sont deux fonctions réelles continues sur U , le Corollaire I.1.2.4 montre que f
+g
+est continue surU. ■
+La continuité exprime qu’une variation de l’argument suffisamment petite entraîne une
+variation de la fonction suffisamment petite. Pour définir la différentiabilité, nous aurons besoin
+d’une information plus précise : comparer directement la taille d’un reste à celle du déplacement
+⃗h. C’est le rôle de la notion suivante.
+I.1.2.4 Fonctions négligeables devant la norme
+Définition I.1.2.8 — Fonction négligeable devant la norme.
+SoientVun voisinage de ⃗0 dans
+− →
+Rn etr:V− →
+− →
+Rp une fonction vectorielle.
+On dit querestnégligeable devant∥ ⃗h∥lorsque ⃗h tend vers ⃗0 si
+lim
+⃗h→⃗0
+∥r(⃗h)∥
+∥⃗h∥
+=0.
+■ Notation I.1.2.3 — Petitode la norme.
+Sous les hypothèses de la Définition I.1.2.8, on note
+r(⃗h)=o
+³
+∥⃗h∥
+´
+lorsque ⃗h→ ⃗0.
+■ Remarque I.1.2.5 — Interprétation du petito.
+L ’écriture
+r(⃗h)=o
+³
+∥⃗h∥
+´
+lorsque ⃗h→ ⃗0
+signifie que la norme der( ⃗h) devient négligeable devant∥ ⃗h∥lorsque ⃗hse rapproche de ⃗0.
+Cette notation sera utilisée dans le calcul différentiel pour exprimer qu’un reste est négligeable
+devant la variation∥ ⃗h∥. ■
+
+=== Cours original, page PDF 47 ===
+I.2. Différentiabilité des fonctions de
+plusieurs variables
+Dans ce chapitre nous nous placerons dans l’espace euclidien
+³− →
+Rn,〈• | •〉
+´
+où〈• | •〉représente le produit scalaire canonique de
+− →
+Rn.
+Nous noterons par∥•∥la norme euclidienne sur
+− →
+Rn etDla distance euclidienne associée.
+Dans le cas d’une fonction réelle d’une variable réelle, la dérivabilité permet de décrire
+localement le comportement d’une fonction à l’aide d’une approximation affine.
+SoientI⊂R,a∈Ietf:I− →Rune fonction dérivable ena.
+Pourhsuffisamment proche de 0, on peut écrire
+f(a+h)=f(a)+f ′(a)h+o (|h|).
+En écrivant,
+f(a+h)−f(a)=f ′(a)h+o (|h|).
+On voit alors que la variationf(a+h)−f(a) est constituée :
+— d’un terme principalf ′(a)hqui dépend linéairement deh. Autrement dit, l’application
+− →L: R− →R
+h7− →f ′(a)h est une application linéaire.
+— d’un reste négligeable devant|h|lorsquehtend vers 0.
+La dérivabilité d’une fonction réelle d’une variable réelle peut donc être interprétée comme
+l’existence d’une approximation locale de la fonction dont la partie variable est linéaire par
+rapport à la variation.
+La Figure I.2.1 donne l’interprétation géométrique de cette écriture. Au voisinage dea, la
+courbe représentative de f est approchée par sa tangente en A= (a,f (a)). Pour une petite
+variation h, le terme f ′(a)h décrit la variation prédite par la tangente, tandis que l’écart vertical
+entre la courbe et cette tangente correspond au resteo(|h|).
+Considérons maintenant
+¡
+n,p
+¢
+∈N ∗ ×N ∗, U un ouvert de
+− →
+Rn, ⃗a∈U et f : U− →
+− →
+Rp une
+fonction vectorielle. Comme U est un ouvert et ⃗a∈U , le vecteur ⃗a est un point intérieur à U . Il
+existe doncr>0 tel que
+B(⃗a,r)⊂U.
+Par conséquent, pour tout ⃗h∈
+− →
+Rn tel que
+∥⃗h∥ <r,
+on a
+⃗a+ ⃗h∈U.
+
+=== Cours original, page PDF 48 ===
+56Chapitre I.2. Différentiabilité des fonctions de plusieurs variables
+h
+o(|h|)
+A
+M
+T
+x
+y
+FIGUREI.2.1– Interprétation géométrique de la dérivabilité d’une fonction de R dans R : la
+tangente fournit l’approximation affine locale.
+On peut ainsi étudier la variationf( ⃗a+ ⃗h)−f( ⃗a) lorsque ⃗htend vers ⃗0.
+Dans le cas d’une variable réelle, la partie principale de la variation est donnée parf ′(a)h, qui est
+une fonction linéaire de h. Il est donc naturel, dans le cas de plusieurs variables, de rechercher
+une application linéaire
+− →L∈ − →L
+³− →
+Rn,
+− →
+Rp
+´
+capable de décrire la partie principale de la variation def.
+On cherche ainsi à écrire
+f( ⃗a+ ⃗h)=f( ⃗a)+ − →L( ⃗h)+r( ⃗h),
+oùr( ⃗h) représente l’erreur commise lorsquef( ⃗a+ ⃗h) est approché par
+f( ⃗a)+ − →L( ⃗h).
+Pour que − →L (⃗h) constitue effectivement la partie principale de la variation, il ne suffit pas que le
+reste r (⃗h) tende vers⃗0 lorsque ⃗h tend vers⃗0. Il faut que ce reste devienne négligeable devant la
+taille de la variation ⃗h. D’après la Définition I.1.2.8, cette propriété s’écrit
+r(⃗h)=o
+³
+∥⃗h∥
+´
+lorsque ⃗h→ ⃗0,
+c’est-à-dire
+lim
+⃗h→⃗0
+∥r(⃗h)∥
+∥⃗h∥
+=0.
+On cherche donc à savoir s’il existe une application linéaire
+− →L:
+− →
+Rn − →
+− →
+Rp
+telle que
+f( ⃗a+ ⃗h)=f( ⃗a)+ − →L( ⃗h)+o
+³
+∥⃗h∥
+´
+lorsque ⃗htend vers ⃗0.
+Ainsi, le passage d’une variable réelle à plusieurs variables conduit à remplacer le nombre dérivé
+f ′(a) par une application linéaire décrivant le comportement de la fonction au premier ordre.
+Cette propriété constitue la notion dedifférentiabilité d’une fonction vectorielle en un vecteur.
+
+=== Cours original, page PDF 49 ===
+I.2.1 Différentiabilité d’une fonction vectorielle 57
+I.2.1 Différentiabilité d’une fonction vectorielle
+La notion de différentiabilité repose sur une idée géométrique simple : au voisinage d’un vec-
+teur ⃗a, une fonction vectorielle différentiable est décrite, au premier ordre, par une application
+affine. La partie variable de cette approximation est une application linéaire : la différentielle.
+I.2.1.1 Différentiabilité en un vecteur
+Définition I.2.1.1 — Différentiabilité en un vecteur.
+Soient
+¡
+n,p
+¢
+∈N ∗ ×N ∗,Uun ouvert de
+− →
+Rn, ⃗a∈Uetf:U− →
+− →
+Rp une fonction vectorielle.
+On dit quefestdifférentiable en ⃗as’il existe :
+—ρ>0 tel queB( ⃗a,ρ)⊂U,
+— une application linéaire − →L∈ − →L
+³− →
+Rn,
+− →
+Rp
+´
+— une fonction vectorieller:B( ⃗0,ρ)− →
+− →
+Rp avecr( ⃗h)=o
+³
+∥⃗h∥
+´
+lorsque ⃗htend vers ⃗0.
+telles que
+∀⃗h∈B( ⃗0,ρ),f( ⃗a+ ⃗h)=f( ⃗a)+ − →L( ⃗h)+r( ⃗h),
+■ Remarque I.2.1.1 — Formulation de la différentiabilité à l’aide d’une limite.
+Sous les hypothèses de la Définition I.2.1.1, on a
+r(⃗h)=f( ⃗a+ ⃗h)−f( ⃗a)− − →L( ⃗h).
+La condition
+r(⃗h)=o
+³
+∥⃗h∥
+´
+est donc équivalente à
+lim
+⃗h→⃗0
+°°°f( ⃗a+ ⃗h)−f( ⃗a)− − →L( ⃗h)
+°°°
+∥⃗h∥
+=0.
+Il est fondamental de remarquer que l’on divise ici par∥⃗h∥et non par le vecteur ⃗h.
+En effet, dans un espace vectoriel, l’opération de division de deux vecteurs n’est pas définie :
+une expression telle que
+f( ⃗a+ ⃗h)−f( ⃗a)− − →L( ⃗h)
+⃗h
+n’a donc aucun sens en général.
+En revanche,
+∥⃗h∥ ∈R +,
+et, pour ⃗h̸= ⃗0,
+∥⃗h∥ >0.
+La norme de⃗h est donc un scalaire appartenant au corpsR, dans lequel l’opération de division
+est définie.La division intervient donc dans le corps des scalaires R, et jamais entre les
+vecteurs de
+− →
+Rn ou de
+− →
+Rp . ■
+Proposition I.2.1.1 — Unicité de l’application linéaire associée à la différentiabilité.
+Soient
+¡
+n,p
+¢
+∈N ∗ ×N ∗, U un ouvert de
+− →
+Rn, ⃗a∈U et f : U− →
+− →
+Rp une fonction vectorielle
+différentiable en ⃗a. Alors il existe une unique application linéaire − →L∈ − →L
+³− →
+Rn,
+− →
+Rp
+´
+telle que
+f( ⃗a+ ⃗h)=f( ⃗a)+ − →L( ⃗h)+o
+³
+∥⃗h∥
+´
+lorsque ⃗htend vers ⃗0.
+
+=== Cours original, page PDF 50 ===
+58Chapitre I.2. Différentiabilité des fonctions de plusieurs variables
+Démonstration.
+Soient
+¡
+n,p
+¢
+∈N ∗ ×N ∗, U un ouvert de
+− →
+Rn, ⃗a∈U et f : U− →
+− →
+Rp une fonction vectorielle
+différentiable en ⃗a.
+D’après la Définition I.2.1.1, il existe une telle application linéaire. Montrons son unicité.
+CommeUest un ouvert de
+− →
+Rn et ⃗a∈U, il existeρ>0 tel que
+B(⃗a,ρ)⊂U.
+Par conséquent,
+∀⃗h∈B( ⃗0,ρ), ⃗a+ ⃗h∈U.
+Supposons qu’il existe deux écritures de la forme précédente. Quitte à diminuer ρ, on peut
+supposer qu’elles sont toutes les deux valables surB(⃗0,ρ).
+Supposons donc qu’il existe
+— deux applications linéaires
+³− →L 1, − →L 2
+´
+∈ − →L
+³− →
+Rn,
+− →
+Rp
+´2
+— deux fonctions vectoriellesr 1 :B( ⃗0,ρ)− →
+− →
+Rp etr 2 :B( ⃗0,ρ)− →
+− →
+Rp
+telles que, pour tout ⃗h∈B( ⃗0,ρ),
+f( ⃗a+ ⃗h)=f( ⃗a)+ − →L 1(⃗h)+r 1(⃗h),r 1(⃗h)=o
+³
+∥⃗h∥
+´
+lorsque ⃗htend vers ⃗0, (I.2.1)
+et
+f( ⃗a+ ⃗h)=f( ⃗a)+ − →L 2(⃗h)+r 2(⃗h),r 2(⃗h)=o
+³
+∥⃗h∥
+´
+lorsque ⃗htend vers ⃗0. (I.2.2)
+Par soustraction de (I.2.2) à (I.2.1), on obtient, pour tout ⃗h∈B( ⃗0,ρ),
+³− →L 1 − − →L 2
+´
+(⃗h)=r 2(⃗h)−r 1(⃗h).
+Définissons alors l’application linéaire
+− →L∈ − →L
+³− →
+Rn,
+− →
+Rp
+´
+par − →L= − →L 1 − − →L 2.
+Montrons alors que − →Lest l’application linéaire nulle.
+Soit
+⃗u∈
+− →
+Rn \ {⃗0}.
+Commeρ>0 et∥ ⃗u∥ >0, on a
+ρ
+∥⃗u∥ >0.
+Considérons alors
+t∈R ∗ tel que|t| < ρ
+∥⃗u∥ .
+On a alors
+∥t ⃗u∥ = |t|∥ ⃗u∥ <ρ.
+Ainsi
+t ⃗u∈B( ⃗0,ρ).
+On peut donc appliquer les égalités (I.2.1) et (I.2.2) au vecteur
+⃗h=t ⃗u.
+On obtient − →L(t ⃗u)=r 2(t ⃗u)−r 1(t ⃗u).
+
+=== Cours original, page PDF 51 ===
+I.2.1 Différentiabilité d’une fonction vectorielle 59
+Comme − →Lest linéaire,
+t − →L( ⃗u)=r 2(t ⃗u)−r 1(t ⃗u).
+Par conséquent,
+|t|∥ − →L( ⃗u)∥ = ∥r2(t ⃗u)−r 1(t ⃗u)∥
+≤∥r2(t ⃗u)∥ + ∥r1(t ⃗u)∥d’après l’inégalité triangulaire.
+Commet̸=0, on obtient
+∥− →L( ⃗u)∥ ≤ ∥r2(t ⃗u)∥
+|t| + ∥r1(t ⃗u)∥
+|t|
+= ∥⃗u∥∥r 2(t ⃗u)∥
+∥⃗u∥|t| + ∥⃗u∥∥r 1(t ⃗u)∥
+∥⃗u∥|t|
+=∥⃗u∥ ∥r2(t ⃗u)∥
+∥t ⃗u∥ + ∥⃗u∥ ∥r1(t ⃗u)∥
+∥t ⃗u∥ .
+Or, pouri∈{1, 2},
+ri (⃗h)=o
+³
+∥⃗h∥
+´
+lorsque ⃗htend vers ⃗0.
+Par définition,
+lim
+⃗h→⃗0
+⃗h̸=⃗0
+∥ri (⃗h)∥
+∥⃗h∥
+=0.
+Comme
+lim
+t→0
+t ⃗u= ⃗0,
+on obtient
+lim
+t→0
+∥ri (t ⃗u)∥
+∥t ⃗u∥ =0.
+En faisant tendretvers 0 dans l’inégalité précédente, il vient
+0≤ ∥ − →L( ⃗u)∥ ≤0.
+Ainsi
+∥− →L( ⃗u)∥ =0,
+donc, comme∥•∥est une norme, on obtient que
+− →L( ⃗u)= ⃗0.
+Ce résultat étant vrai pour tout ⃗u∈
+− →
+Rn \ {⃗0} et, par la linéarité de − →L, − →L(⃗0)= ⃗0, on obtient
+∀⃗u∈
+− →
+Rn, − →L( ⃗u)= ⃗0.
+Ainsi − →L= ⃗0− →L
+³− →Rn,− →Rp
+´.
+Par conséquent, − →L 1 − − →L 2 =⃗0− →L
+³− →Rn,− →Rp
+´,
+et donc − →L 1 = − →L 2.
+L ’application linéaire associée à la différentiabilité defen ⃗aest donc unique.■
+
+=== Cours original, page PDF 52 ===
+60Chapitre I.2. Différentiabilité des fonctions de plusieurs variables
+Définition I.2.1.2 — Différentielle en un vecteur.
+Soient
+¡
+n,p
+¢
+∈N ∗ ×N ∗, U un ouvert de
+− →
+Rn, ⃗a∈U et f : U− →
+− →
+Rp une fonction vectorielle
+différentiable en ⃗a. L ’unique application linéaire− →L∈ − →L
+³− →
+Rn,
+− →
+Rp
+´
+telle que
+f( ⃗a+ ⃗h)=f( ⃗a)+ − →L( ⃗h)+o
+³
+∥⃗h∥
+´
+lorsque ⃗htend vers ⃗0
+est appeléedifférentielle de f en ⃗a.
+■ Notation I.2.1.1 — Différentielle en un vecteur et notations usuelles.
+Soient
+¡
+n,p
+¢
+∈N ∗ ×N ∗, U un ouvert de
+− →
+Rn, ⃗a∈U et f : U− →
+− →
+Rp une fonction vectorielle
+différentiable en ⃗a. Ladifférentielle de f en ⃗asera notée dans ce cours
+− − →d f ⃗a.
+Ainsi − − →d f ⃗a ∈ − →L
+³− →
+Rn,
+− →
+Rp
+´
+et
+f( ⃗a+ ⃗h)=f( ⃗a)+ − − →d f ⃗a(⃗h)+o
+³
+∥⃗h∥
+´
+lorsque ⃗htend vers ⃗0
+Dans la littérature, la différentielle defen ⃗aest généralement notée
+d f⃗a
+ou parfois
+D f( ⃗a).
+Dans ce cours, afin de rappeler explicitement que la différentielle est une application linéaire,
+nous privilégierons la notation − − →d f ⃗a.
+■ Notation I.2.1.2 — Notation de l’action de la différentielle.
+Soient
+¡
+n,p
+¢
+∈N ∗ ×N ∗, U un ouvert de
+− →
+Rn, ⃗a∈U et f : U− →
+− →
+Rp une fonction vectorielle
+différentiable en ⃗a.
+La différentielle defen ⃗aétant une application linéaire,
+− − →d f ⃗a ∈ − →L
+³− →
+Rn,
+− →
+Rp
+´
+,
+pour tout ⃗h∈
+− →
+Rn, son image par − − →d f ⃗a est notée dans ce cours
+− − →d f ⃗a(⃗h).
+On peut également rencontrer dans la littérature l’écriture
+− − →d f ⃗a •⃗h
+pour désigner l’action de la différentielle sur le vecteur⃗h.
+Les deux écritures désignent donc le même vecteur de
+− →
+Rp :
+− − →d f ⃗a(⃗h)= − − →d f ⃗a •⃗h.
+Dans ce cours, nous privilégierons l’écriture
+− − →d f ⃗a(⃗h),
+qui rappelle explicitement que − − →d f ⃗a est une application linéaire évaluée au vecteur ⃗h.
+
+=== Cours original, page PDF 53 ===
+I.2.1 Différentiabilité d’une fonction vectorielle 61
+■ Remarque I.2.1.2 — Interprétation de la différentielle.
+Soient
+¡
+n,p
+¢
+∈N ∗ ×N ∗, U un ouvert de
+− →
+Rn, ⃗a∈U et f : U− →
+− →
+Rp une fonction vectorielle
+différentiable en ⃗a.
+On a
+f( ⃗a+ ⃗h)−f( ⃗a)= − − →d f ⃗a(⃗h)+o
+³
+∥⃗h∥
+´
+.
+Ainsi, lorsque ⃗htend vers ⃗0, la variation
+f( ⃗a+ ⃗h)−f( ⃗a)
+de l’image est décrite au premier ordre par
+− − →d f ⃗a(⃗h).
+La différentielle − − →d f ⃗a constitue donc l’approximation linéaire de la variation de f au voisinage
+de ⃗a.
+De manière équivalente, l’application affine
+A⃗a :
+− →
+Rn − →
+− →
+Rp
+⃗x7− →f( ⃗a)+ − − →d f ⃗a(⃗x− ⃗a)
+constitue l’approximation affine defau voisinage de ⃗a.■
+La Figure I.2.2 traduit géométriquement la définition précédente dans le cas d’une fonction
+de R2 dans R. Le plan tangent représente l’approximation affine de la surface au voisinage deA.
+Lorsque l’on passe de⃗a à ⃗a+ ⃗h, le vecteur − − →d f ⃗a(⃗h) fournit la variation prédite au premier ordre ;
+la différence entre le point réellement atteint sur la surface et le point prédit sur le plan tangent
+est le rester( ⃗h), négligeable devant∥ ⃗h∥.
+A
+M
+T
+r(⃗h)
+x
+y
+z
+FIGUREI.2.2– Différentiabilité en un vecteur : approximation affine locale d’une surface par
+son plan tangent.
+I.2.1.2 Différentiabilité sur un ouvert
+Définition I.2.1.3 — Différentiabilité sur un ouvert.
+Soient
+¡
+n,p
+¢
+∈N ∗ ×N ∗,Uun ouvert de
+− →
+Rn etf:U− →
+− →
+Rp une fonction vectorielle.
+On dit quefestdifférentiable sur Usi et seulement si
+∀⃗a∈U,fest différentiable en ⃗a.
+
+=== Cours original, page PDF 54 ===
+62Chapitre I.2. Différentiabilité des fonctions de plusieurs variables
+La Figure I.2.3 met en évidence la différence entre la différentiabilité en un vecteur et
+la différentiabilité sur un ouvert. Être différentiable sur U signifie que le phénomène local
+représenté à la Figure I.2.2 se reproduit en chaque vecteur de U : chaque point de la surface
+situé au-dessus deUpossède sa propre approximation affine locale.
+U
+A1
+A2
+A3
+x
+y
+FIGUREI.2.3– Différentiabilité sur un ouvert : une approximation affine locale existe en chaque
+vecteur deU.
+I.2.1.3 Premiers exemples
+Proposition I.2.1.2 — Différentiabilité d’une fonction constante.
+Soient
+¡
+n,p
+¢
+∈N ∗ ×N ∗,Uun ouvert de
+− →
+Rn, ⃗c∈
+− →
+Rp et
+f: U− →
+− →
+Rp
+⃗x7− → ⃗c.
+Alorsfest différentiable surUet, pour tout ⃗a∈U,
+− − →d f ⃗a =⃗0− →L
+³− →Rn,− →Rp
+´.
+Démonstration.
+Soient
+¡
+n,p
+¢
+∈N ∗ ×N ∗,Uun ouvert de
+− →
+Rn, ⃗c∈
+− →
+Rp et
+f: U− →
+− →
+Rp
+⃗x7− → ⃗c.
+Soit ⃗a∈U.
+Montrons quefest différentiable en ⃗a.
+Considérons l’application linéaire nulle
+− →L:
+− →
+Rn − →
+− →
+Rp
+⃗h7− → ⃗0.
+CommeUest ouvert et ⃗a∈U, il existeρ>0 tel queB( ⃗a,ρ)⊂U. Pour tout ⃗h∈B( ⃗0,ρ), on a
+f( ⃗a+ ⃗h)= ⃗c
+=f( ⃗a)+ − →L( ⃗h)+ ⃗0.
+
+=== Cours original, page PDF 55 ===
+I.2.1 Différentiabilité d’une fonction vectorielle 63
+La fonction nulle vérifie
+⃗0=o
+³
+∥⃗h∥
+´
+lorsque ⃗htend vers ⃗0.
+D’après la Définition I.2.1.1,fest différentiable en ⃗aet
+− − →d f ⃗a = − →L.
+Par conséquent, − − →d f ⃗a =⃗0− →L
+³− →Rn,− →Rp
+´.
+Comme ⃗aest quelconque dansU,fest différentiable surU.■
+Proposition I.2.1.3 — Différentiabilité d’une application linéaire.
+Soient
+¡
+n,p
+¢
+∈N ∗ ×N ∗,
+− →u∈ − →L
+³− →
+Rn,
+− →
+Rp
+´
+et
+f:
+− →
+Rn − →
+− →
+Rp
+⃗x7− → − →u( ⃗x).
+Alorsfest différentiable sur
+− →
+Rn et
+∀⃗a∈
+− →
+Rn, − − →d f ⃗a = − →u.
+Démonstration.
+Soient
+¡
+n,p
+¢
+∈N ∗ ×N ∗,
+− →u∈ − →L
+³− →
+Rn,
+− →
+Rp
+´
+et
+f:
+− →
+Rn − →
+− →
+Rp
+⃗x7− → − →u( ⃗x).
+Soit ⃗a∈
+− →
+Rn.
+Montrons quefest différentiable en ⃗a.
+Pour tout ⃗h∈
+− →
+Rn, comme − →uest linéaire, on a
+f( ⃗a+ ⃗h)= − →u( ⃗a+ ⃗h)
+=− →u( ⃗a)+ − →u( ⃗h)
+=f( ⃗a)+ − →u( ⃗h)+ ⃗0.
+Comme
+⃗0=o
+³
+∥⃗h∥
+´
+lorsque ⃗htend vers ⃗0, la Définition I.2.1.1 montre quefest différentiable en ⃗aet
+− − →d f ⃗a = − →u.
+Comme ⃗aest quelconque dans
+− →
+Rn,fest différentiable sur
+− →
+Rn.■
+
+=== Cours original, page PDF 56 ===
+64Chapitre I.2. Différentiabilité des fonctions de plusieurs variables
+Corollaire I.2.1.1 — Différentiabilité d’une application affine.
+Soient
+¡
+n,p
+¢
+∈N ∗ ×N ∗, − →u∈ − →L
+³− →
+Rn,
+− →
+Rp
+´
+, ⃗b∈
+− →
+Rp et
+f:
+− →
+Rn − →
+− →
+Rp
+⃗x7− → − →u( ⃗x)+ ⃗b.
+Alorsfest différentiable sur
+− →
+Rn et
+∀⃗a∈
+− →
+Rn, − − →d f ⃗a = − →u.
+Démonstration.
+Soient
+¡
+n,p
+¢
+∈N ∗ ×N ∗, − →u∈ − →L
+³− →
+Rn,
+− →
+Rp
+´
+, ⃗b∈
+− →
+Rp et
+f:
+− →
+Rn − →
+− →
+Rp
+⃗x7− → − →u( ⃗x)+ ⃗b.
+Soit ⃗a∈
+− →
+Rn.
+Montrons quefest différentiable en ⃗a.
+Pour tout ⃗h∈
+− →
+Rn, on a
+f( ⃗a+ ⃗h)= − →u( ⃗a+ ⃗h)+ ⃗b
+=− →u( ⃗a)+ ⃗b+ − →u( ⃗h)
+=f( ⃗a)+ − →u( ⃗h)+ ⃗0.
+Comme
+⃗0=o
+³
+∥⃗h∥
+´
+lorsque ⃗htend vers ⃗0, la Définition I.2.1.1 montre quefest différentiable en ⃗aet
+− − →d f ⃗a = − →u.
+Comme ⃗aest quelconque dans
+− →
+Rn,fest différentiable sur
+− →
+Rn.■
+■ Exemple I.2.1.1 — Premier exemple non linéaire.
+Considérons la fonction
+f:
+− →
+R2 − →Rµx
+y
+¶
+7− →x 2 +x y+y 2.
+Soient ⃗a=
+µa1
+a2
+¶
+et ⃗h=
+µh1
+h2
+¶
+deux vecteurs de
+− →
+R2. On a
+f( ⃗a+ ⃗h)−f( ⃗a)=(2a 1 +a 2)h1 +(a 1 +2a 2)h2
++h 2
+1 +h 1h2 +h 2
+2.
+Considérons l’application
+− →L:
+− →
+R2 − →Rµh1
+h2
+¶
+7− →(2a 1 +a 2)h1 +(a 1 +2a 2)h2.
+
+=== Cours original, page PDF 57 ===
+I.2.2 Différentiabilité et continuité 65
+L ’application− →L est linéaire. Posons r (⃗h) =h 2
+1 +h 1h2 +h 2
+2. Comme |h1| ≤ ∥⃗h∥ et |h2| ≤ ∥⃗h∥, on
+obtient
+|r(⃗h)| ≤3∥ ⃗h∥2.
+Ainsi, pour ⃗h̸= ⃗0,
+0≤ |r(⃗h)|
+∥⃗h∥
+≤3∥ ⃗h∥,
+et par conséquentr( ⃗h)=o
+³
+∥⃗h∥
+´
+lorsque ⃗htend vers ⃗0. On peut donc écrire
+f( ⃗a+ ⃗h)=f( ⃗a)+ − →L( ⃗h)+o
+³
+∥⃗h∥
+´
+.
+D’après la Définition I.2.1.1,fest différentiable en ⃗aet
+− − →d f ⃗a(⃗h)=(2a 1 +a 2)h1 +(a 1 +2a 2)h2.
+Cet exemple est le premier pour lequel le reste n’est pas identiquement nul : la différentielle
+fournit bien la partie linéaire de la variation, tandis que les termes quadratiques deviennent
+négligeables devant∥ ⃗h∥. ■
+I.2.2 Différentiabilité et continuité
+Proposition I.2.2.1 — Différentiabilité et continuité.
+Soient
+¡
+n,p
+¢
+∈N ∗ ×N ∗,Uun ouvert de
+− →
+Rn, ⃗a∈Uetf:U− →
+− →
+Rp une fonction vectorielle.
+Sifest différentiable en ⃗a, alorsfest continue en ⃗a.
+Démonstration.
+Soient
+¡
+n,p
+¢
+∈N ∗ ×N ∗, U un ouvert de
+− →
+Rn, ⃗a∈U et f : U− →
+− →
+Rp une fonction vectorielle
+différentiable en ⃗a.
+Montrons quefest continue en ⃗a.
+Comme f est différentiable en ⃗a, il existe ρ> 0 et une fonction vectorielle r : B(⃗0,ρ ) − →
+− →
+Rp telles
+que
+∀⃗h∈B( ⃗0,ρ),f( ⃗a+ ⃗h)=f( ⃗a)+ − − →d f ⃗a(⃗h)+r( ⃗h), avecr( ⃗h)=o
+³
+∥⃗h∥
+´
+lorsque ⃗htend vers ⃗0.
+D’après le Lemme I.1.2.1, il existe une constanteC≥0 telle que
+∀⃗h∈
+− →
+Rn,∥ − − →d f ⃗a(⃗h)∥ ≤C∥ ⃗h∥.
+Soitε>0.
+Commer( ⃗h)=o
+³
+∥⃗h∥
+´
+, on a lim
+⃗h→⃗0
+∥r(⃗h)∥
+∥⃗h∥
+=0.
+Par conséquent, il existeη 1 >0 tel que :
+∀⃗h∈B( ⃗0,ρ) \ {⃗0},
+Ã
+∥⃗h∥ <η 1 = ⇒∥r(⃗h)∥
+∥⃗h∥
+<1
+!
+Autrement dit,
+∀⃗h∈B( ⃗0,ρ) \ {⃗0},
+³
+∥⃗h∥ <η 1 = ⇒ ∥r(⃗h)∥ < ∥⃗h∥
+´
+Posons
+η=min
+n
+ρ,η 1, ε
+C+1
+o
+.
+Soit ⃗h∈
+− →
+Rn tel que
+∥⃗h∥ <η.
+De deux choses l’une :
+
+=== Cours original, page PDF 58 ===
+66Chapitre I.2. Différentiabilité des fonctions de plusieurs variables
+— si ⃗h= ⃗0, alors
+∥f( ⃗a+ ⃗h)−f( ⃗a)∥ =0<ε.
+— Si ⃗h̸= ⃗0, alors
+∥f( ⃗a+ ⃗h)−f( ⃗a)∥ =
+°°°− − →d f ⃗a(⃗h)+r( ⃗h)
+°°°
+≤∥− − →d f ⃗a(⃗h)∥ + ∥r(⃗h)∥d’après l’inégalité triangulaire
+<C∥⃗h∥ + ∥⃗h∥d’après le Lemme I.1.2.1
+=(C+1)∥ ⃗h∥
+<ε.
+Ainsi, pour toutε>0, il existeη>0 tel que, pour tout ⃗h∈
+− →
+Rn,
+∥⃗h∥ <η= ⇒ ∥f( ⃗a+ ⃗h)−f( ⃗a)∥ <ε.
+En posant
+⃗x= ⃗a+ ⃗h,
+on obtient
+∥⃗x− ⃗a∥ <η= ⇒ ∥f( ⃗x)−f( ⃗a)∥ <ε.
+D’après la Définition I.1.2.6,fest continue en ⃗a.■
+Corollaire I.2.2.1 — Continuité d’une fonction différentiable.
+Soient
+¡
+n,p
+¢
+∈N ∗ ×N ∗,Uun ouvert de
+− →
+Rn etf:U− →
+− →
+Rp une fonction vectorielle.
+Sifest différentiable surU, alorsfest continue surU.
+Démonstration.
+Soient
+¡
+n,p
+¢
+∈N ∗ ×N ∗, U un ouvert de
+− →
+Rn et f : U− →
+− →
+Rp une fonction vectorielle différentiable
+surU.
+Montrons quefest continue surU.
+Soit ⃗a∈U.
+Commefest différentiable surU,fest différentiable en ⃗a.
+D’après la Proposition I.2.2.1,fest continue en ⃗a.
+Comme ⃗aest quelconque dansU,fest continue surU.■
+La Figure I.2.4 permet de lire géométriquement la conséquence fondamentale démontrée
+ci-dessus. Autour de ⃗a, la différentiabilité contrôle la variation de f par une partie linéaire et un
+reste négligeable. On peut donc choisir un voisinage suffisamment petit de ⃗a pour que toute
+l’image correspondante reste dans une bande verticale de hauteur 2ε centrée sur f (⃗a) : c’est
+précisément le mécanisme de la continuité.
+■ Remarque I.2.2.1 — La réciproque est fausse.
+La Proposition I.2.2.1 montre que
+fdifférentiable en ⃗a= ⇒fcontinue en ⃗a.
+La réciproque est fausse en général.
+Une fonction peut être continue en un vecteur sans être différentiable en ce vecteur.■
+
+=== Cours original, page PDF 59 ===
+I.2.2 Différentiabilité et continuité 67
+B(⃗a,η)
+f( ⃗a)
+x
+y
+FIGUREI.2.4 – Lecture géométrique de la continuité obtenue à partir de la différentiabilité.
+■ Exemple I.2.2.1 — Fonction continue mais non différentiable.
+Considérons la fonction
+f: R− →R
+x7− → |x|.
+La fonctionfest continue en 0.
+Montrons qu’elle n’est pas différentiable en 0.
+Supposons par l’absurde quefsoit différentiable en 0.
+Il existe alors une application linéaire − →L:R− →R
+telle que
+|h| = − →L(h)+o(|h|)
+lorsquehtend vers 0.
+Comme toute application linéaire deRdansRest de la forme
+− →L(h)=λh
+avecλ∈R, on obtient
+|h| =λh+o(|h|).
+Pourh>0, on a
+h=λh+o(h).
+En divisant parh, puis en faisant tendrehvers 0 par valeurs positives, on obtient
+1=λ.
+Pourh<0, on a
+|h| = −h.
+Ainsi
+−h=λh+o(|h|).
+En divisant par|h| = −h, puis en faisant tendrehvers 0 par valeurs négatives, on obtient
+1= −λ.
+Donc
+λ= −1.
+Ceci est contradictoire avec
+λ=1.
+Par conséquent,fn’est pas différentiable en 0. ■
+
+=== Cours original, page PDF 60 ===
+68Chapitre I.2. Différentiabilité des fonctions de plusieurs variables
+Le phénomène précédent n’est pas propre aux fonctions d’une variable. La Figure I.2.5
+montre son analogue pour une fonction de R2 dans R. Le cône est continu à l’origine, mais sa
+pointe ne peut être approchée au premier ordre par un unique plan. Cette absence de plan
+tangent unique est la traduction géométrique de la non-différentiabilité en⃗0.
+⃗0 x
+y
+FIGUREI.2.5– Une fonction de R2 dans R continue mais non différentiable à l’origine : le cône
+z=
+q
+x2 +y 2.
+
+=== Cours original, page PDF 75 ===
+I.3. Dérivées directionnelles, jacobienne et
+gradient
+Dans ce chapitre nous nous placerons dans les espaces euclidiens
+³− →
+Rn,〈• | •〉
+´
+et
+³− →
+Rp,〈• | •〉
+´
+,
+munis de leurs produits scalaires canoniques.
+Nous noterons par∥•∥les normes euclidiennes associées.
+Dans le chapitre précédent, nous avons défini la différentiabilité d’une fonction vectorielle
+f : U− →
+− →
+Rp en un vecteur ⃗a∈U par l’existence d’une application linéaire− − →d f ⃗a ∈ − →L
+³− →
+Rn,
+− →
+Rp
+´
+qui
+décrit simultanément la variation defau premier ordre dans toutes les directions.
+Dans ce chapitre, nous allons partir d’une question plus élémentaire : que se passe-t-il lorsque
+l’on ne se déplace qu’en suivant une seule direction ? Cette étude conduit naturellement aux
+dérivées directionnelles, puis aux dérivées partielles lorsque les directions retenues sont les
+vecteurs d’une base. Nous reviendrons ensuite à la différentielle, déjà connue, pour comprendre
+comment ces informations directionnelles permettent de la représenter dans des bases, puis
+par une matrice. Enfin, lorsque la fonction est à valeurs réelles, la différentielle étant une forme
+linéaire, nous introduirons sa représentation par le gradient.
+I.3.1 Dérivées directionnelles
+I.3.1.1 Variation selon une direction et motivation géométrique
+Soient U un ouvert de
+− →
+Rn, ⃗a∈U et f : U− →
+− →
+Rp une fonction vectorielle. Pour étudier la
+variation de f à partir de ⃗a suivant une direction ⃗u∈
+− →
+Rn, on considère les vecteurs de la forme
+⃗a+t ⃗u avec t∈R . Lorsque t varie, ces vecteurs décrivent la droite passant par ⃗a et dirigée par ⃗u.
+CommeU est un ouvert et⃗a∈U , il existeρ> 0 tel queB(⃗a,ρ ) ⊂U . Si ⃗u̸= ⃗0, alors pour|t| <ρ /∥⃗u∥,
+on a ⃗a+t ⃗u∈U. Il est donc possible d’étudier localement la fonction d’une variable réelle
+ϕ⃗a,⃗u : I− →
+− →
+Rp
+t7− →f( ⃗a+t ⃗u),
+oùIest un intervalle ouvert contenant 0 suffisamment petit pour que ⃗a+t ⃗u∈U.
+Ainsi, étudier f suivant la direction ⃗u revient à étudier la fonction d’une variable réelleϕ⃗a,⃗u au
+voisinage de 0. Le quotient
+f( ⃗a+t ⃗u)−f( ⃗a)
+t
+mesure alors la variation de l’image rapportée à la variation du paramètre t le long de cette
+droite. Cette observation motive la définition suivante.
+
+=== Cours original, page PDF 76 ===
+84Chapitre I.3. Dérivées directionnelles, jacobienne et gradient
+I.3.1.2 Dérivée suivant une direction
+Définition I.3.1.1 — Dérivée suivant une direction.
+Soient
+¡
+n,p
+¢
+∈N ∗ ×N ∗, U un ouvert de
+− →
+Rn, ⃗a∈U , f : U− →
+− →
+Rp une fonction vectorielle et
+⃗u∈
+− →
+Rn. On dit quefadmet unedérivée en ⃗a suivant la direction ⃗ulorsque la limite
+lim
+t→0
+f( ⃗a+t ⃗u)−f( ⃗a)
+t
+existe dans
+− →
+Rp.
+Lorsqu’elle existe, cette limite est appelée ladérivée de f en ⃗a suivant la direction ⃗u et est
+notée
+D⃗u f( ⃗a)=lim
+t→0
+f( ⃗a+t ⃗u)−f( ⃗a)
+t .
+■ Remarque I.3.1.1 — La division est effectuée par un scalaire.
+Le quotient
+f( ⃗a+t ⃗u)−f( ⃗a)
+t
+est bien défini pourt̸=0, cartest un scalaire appartenant àR. Il signifie
+1
+t
+¡
+f( ⃗a+t ⃗u)−f( ⃗a)
+¢
+.
+Il ne s’agit donc jamais de diviser par le vecteur⃗u. ■
+■ Remarque I.3.1.2 — La direction n’est pas nécessairement unitaire.
+Dans la Définition I.3.1.1, le vecteur ⃗u n’est pas supposé de norme 1. Il détermine simultané-
+ment une direction et une échelle de déplacement. Lorsque l’on souhaite ne conserver que
+l’information liée à la direction géométrique, on peut choisir⃗uunitaire.■
+I.3.1.3 Dérivées partielles relativement à une base
+Une dérivée suivant une direction peut être calculée suivant n’importe quel vecteur de
+− →
+Rn.
+Lorsque l’on retient comme directions les vecteurs d’une baseb= (⃗b1,. .. ,⃗bn), on obtient les
+dérivées partielles relativement à cette base.
+Définition I.3.1.2 — Dérivée partielle relativement à une base.
+Soient U un ouvert de
+− →
+Rn, ⃗a∈U , f : U− →
+− →
+Rp une fonction vectorielle et b= (⃗b1, .. .,⃗bn) une
+base de
+− →
+Rn.
+Pour j∈  1,n , lorsqu’elle existe, on appelle j -ième dérivée partielle de f en ⃗a relativement à
+la basebla dérivée defsuivant le vecteur ⃗b j . On la note
+∂b,j f( ⃗a)=D ⃗b j
+f( ⃗a)=lim
+t→0
+f( ⃗a+t ⃗b j )−f( ⃗a)
+t .
+■ Remarque I.3.1.3 — Dépendance par rapport à la base.
+Les dérivées partielles relativement à b sont obtenues en considérant les directions ⃗b1, .. .,⃗bn.
+Si l’on change de base, ces directions changent et les dérivées partielles correspondantes
+
+=== Cours original, page PDF 77 ===
+I.3.1 Dérivées directionnelles 85
+changent en général également.
+La différentielle − − →d f ⃗a, lorsqu’elle existe, est au contraire une application linéaire définie indé-
+pendamment de tout choix de base. Cette distinction deviendra fondamentale lorsque nous
+construirons sa représentation matricielle. ■
+I.3.1.4 Dérivées partielles usuelles
+Dans
+− →
+Rn, la base canonique e= (⃗e1,. .. ,⃗en) joue un rôle privilégié. Les dérivées partielles
+calculées suivant ses vecteurs sont celles que l’on utilise habituellement en coordonnées carté-
+siennes.
+Définition I.3.1.3 — Dérivées partielles usuelles.
+SoientUun ouvert de
+− →
+Rn, ⃗a∈Uetf:U− →
+− →
+Rp une fonction vectorielle.
+Les dérivées partielles relativement à la base canonique sont appelées lesdérivées partielles
+usuelles. Pourj∈ 1,n, on note
+∂f
+∂x j
+(⃗a)=∂ e,j f( ⃗a)=D ⃗e j f( ⃗a)=lim
+t→0
+f( ⃗a+t ⃗e j )−f( ⃗a)
+t .
+■ Remarque I.3.1.4 — Sens de la notation∂/∂x j .
+La notation ∂
+∂x j
+fait implicitement référence aux coordonnées dans la base canonique. Ainsi,
+les dérivées
+∂f
+∂x1
+(⃗a), .. ., ∂f
+∂xn
+(⃗a)
+sont les dérivées suivant les directions ⃗e1,. .. ,⃗en. Si l’on choisit une autre baseb, on utilise la
+notation∂ b,j f( ⃗a) afin de rendre explicite le changement de directions.■
+I.3.1.5 Premiers exemples
+■ Exemple I.3.1.1 — Dérivée directionnelle d’une fonction à valeurs réelles.
+Considérons la fonction f :
+− →
+R2 − →Rdéfinie par f (x,y ) =x 2 +x y+y 2, le vecteur ⃗a=
+µ 1
+−1
+¶
+et la
+direction ⃗u=
+µ2
+1
+¶
+. Pourt∈R, on a
+f( ⃗a+t ⃗u)=f(1+2t,−1+t)
+=(1+2t) 2 +(1+2t)(−1+t)+(−1+t) 2
+=1+t+7t 2.
+Commef( ⃗a)=1, il vient, pourt̸=0,
+f( ⃗a+t ⃗u)−f( ⃗a)
+t =1+7t.
+Par conséquent,
+D⃗u f( ⃗a)=1.
+Cet exemple montre qu’une dérivée directionnelle s’obtient en restreignant la fonction à une
+droite puis en effectuant un calcul de dérivée à une variable.■
+
+=== Cours original, page PDF 78 ===
+86Chapitre I.3. Dérivées directionnelles, jacobienne et gradient
+■ Exemple I.3.1.2 — Dérivée directionnelle d’une fonction vectorielle.
+Considérons la fonctionf:
+− →
+R2 − →
+− →
+R2 définie par
+f
+µµx
+y
+¶¶
+=
+µx2 +y
+x y
+¶
+,
+le vecteur ⃗a=
+µ1
+2
+¶
+et la direction ⃗u=
+µ 1
+−1
+¶
+. On obtient
+f( ⃗a+t ⃗u)=
+µ(1+t) 2 +2−t
+(1+t)(2−t)
+¶
+=
+µ3+t+t 2
+2+t−t 2
+¶
+.
+Commef( ⃗a)=
+µ3
+2
+¶
+, on a, pourt̸=0,
+f( ⃗a+t ⃗u)−f( ⃗a)
+t =
+µ1+t
+1−t
+¶
+.
+Ainsi,
+D⃗u f( ⃗a)=
+µ1
+1
+¶
+.
+La dérivée directionnelle d’une fonction vectorielle est donc elle-même un vecteur de l’espace
+d’arrivée. ■
+■ Exemple I.3.1.3 — Dérivées partielles et changement de base.
+Considérons une fonction f :
+− →
+R2 − →R différentiable en ⃗a telle que ∂f
+∂x1
+(⃗a) = 3 et ∂f
+∂x2
+(⃗a) = 1.
+Dans la base canonique, la linéarité de la différentielle donne
+− − →d f ⃗a
+µµh1
+h2
+¶¶
+=3h 1 +h 2.
+Considérons maintenant la baseb=( ⃗b1,⃗b2) avec ⃗b1 =
+µ1
+1
+¶
+et ⃗b2 =
+µ 1
+−1
+¶
+. On obtient
+∂b,1 f( ⃗a)=4 et∂ b,2 f( ⃗a)=2.
+Les valeurs 4 et 2 sont différentes des dérivées partielles usuelles 3 et 1 : ce sont les mêmes
+variations locales observées suivant des directions différentes.■
+I.3.1.6 Dérivées directionnelles et différentiabilité
+Les dérivées directionnelles fournissent des informations sur le comportement de f le long
+de droites passant par ⃗a. La différentiabilité est plus exigeante : elle demande qu’une seule
+application linéaire décrive simultanément toutes les variations au premier ordre. Le résultat
+suivant précise le lien entre ces deux notions.
+Proposition I.3.1.1 — Différentiabilité et dérivée suivant une direction.
+Soient U un ouvert de
+− →
+Rn, ⃗a∈U et f : U− →
+− →
+Rp une fonction vectorielle différentiable en ⃗a.
+Alors, pour tout ⃗u∈
+− →
+Rn,fadmet une dérivée en ⃗asuivant la direction ⃗uet
+D⃗u f( ⃗a)= − − →d f ⃗a(⃗u).
+
+=== Cours original, page PDF 79 ===
+I.3.1 Dérivées directionnelles 87
+Démonstration.
+Soient U un ouvert de
+− →
+Rn, ⃗a∈U , f : U− →
+− →
+Rp une fonction vectorielle différentiable en ⃗a et
+⃗u∈
+− →
+Rn.
+Si ⃗u= ⃗0, alors f (⃗a+t ⃗u) =f (⃗a) pour tout t, donc D⃗0 f (⃗a) =⃗0= − − →d f ⃗a(⃗0). Supposons désormais
+⃗u̸= ⃗0.
+D’après la Définition I.2.1.1, il existeρ>0 et une fonctionr:B( ⃗0,ρ)− →
+− →
+Rp telles que
+f( ⃗a+ ⃗h)=f( ⃗a)+ − − →d f ⃗a(⃗h)+r( ⃗h), lim
+⃗h→⃗0
+∥r(⃗h)∥
+∥⃗h∥
+=0.
+En prenant ⃗h=t ⃗uavec 0< |t| < ρ
+∥⃗u∥ , on obtient
+f( ⃗a+t ⃗u)−f( ⃗a)
+t = − − →d f ⃗a(⃗u)+ r(t ⃗u)
+t .
+Or
+∥r(t ⃗u)∥
+|t| = ∥⃗u∥ ∥r(t ⃗u)∥
+∥t ⃗u∥ ,
+et, comme lim
+t→0
+t ⃗u= ⃗0, on a
+lim
+t→0
+∥r(t ⃗u)∥
+|t| =0.
+Ainsi
+D⃗u f( ⃗a)= − − →d f ⃗a(⃗u).
+■
+Corollaire I.3.1.1 — Linéarité des dérivées directionnelles d’une fonction différentiable.
+Sous les hypothèses de la Proposition I.3.1.1, l’application qui à tout⃗u∈
+− →
+Rn associe D⃗u f (⃗a)
+est linéaire. En effet,
+D⃗u f( ⃗a)= − − →d f ⃗a(⃗u),
+et − − →d f ⃗a est une application linéaire.
+■ Remarque I.3.1.5 — Existence des dérivées suivant toutes les directions.
+La Proposition I.3.1.1 montre que la différentiabilité de f en ⃗a entraîne l’existence deD⃗u f (⃗a)
+pour tout ⃗u∈
+− →
+Rn. La réciproque est fausse en général : l’existence de toutes les dérivées
+suivant une direction ne garantit pas l’existence d’une unique application linéaire donnant
+simultanément l’approximation au premier ordre defdans toutes les directions.■
+■ Exemple I.3.1.4 — Toutes les dérivées directionnelles existent sans différentiabilité.
+Considérons la fonctionf:
+− →
+R2 − →Rdéfinie, pour tout (x,y)∈R 2, par
+f
+µµx
+y
+¶¶
+=
+
+
+
+x3
+x2 +y 2 , si (x,y)̸=(0, 0),
+0, si (x,y)=(0,0).
+et un vecteur ⃗u=
+µu1
+u2
+¶
+∈
+− →
+R2. Pour ⃗u̸= ⃗0 ett̸=0, on a
+f(t ⃗u)=t
+u3
+1
+u2
+1 +u 2
+2
+.
+
+=== Cours original, page PDF 80 ===
+88Chapitre I.3. Dérivées directionnelles, jacobienne et gradient
+Ainsi
+D⃗u f(⃗0)=
+u3
+1
+u2
+1 +u 2
+2
+pour tout ⃗u̸= ⃗0, tandis queD ⃗0 f(⃗0)=0. Toutes les dérivées directionnelles existent donc en ⃗0.
+Cependant,
+D⃗e1 f(⃗0)=1,D ⃗e2 f(⃗0)=0,D ⃗e1+⃗e2 f(⃗0)= 1
+2 .
+On a donc
+D⃗e1+⃗e2 f(⃗0)̸=D ⃗e1 f(⃗0)+D ⃗e2 f(⃗0).
+L ’application⃗u7− →D ⃗u f (⃗0) n’est pas linéaire. D’après le Corollaire I.3.1.1,f ne peut donc pas
+être différentiable en⃗0. ■
+■ Remarque I.3.1.6 — Les dérivées partielles ne suffisent pas non plus.
+Les dérivées partielles usuelles ne constituent que n dérivées directionnelles particulières.
+Leur existence en ⃗a ne suffit donc pas davantage à assurer la différentiabilité de f en ⃗a. Un
+contre-exemple complémentaire est proposé dans les exercices intégrés.■
+I.3.2 Représentation de la différentielle
+La différentielle a été introduite et étudiée dans le chapitre précédent. Nous ne la redéfi-
+nissons donc pas ici. Notre objectif est désormais de comprendre comment les informations
+directionnelles obtenues dans la section précédente permettent de décrire puis de représenter
+l’application linéaire− − →d f ⃗a une fois des bases choisies.
+I.3.2.1 Dérivées directionnelles et différentielle
+La Proposition I.3.1.1 donne, pour toute fonction f différentiable en ⃗a et tout vecteur ⃗u∈
+− →
+Rn,
+D⃗u f( ⃗a)= − − →d f ⃗a(⃗u).
+Ainsi, les dérivées directionnelles ne constituent pas un nouvel objet concurrent de la différen-
+tielle : lorsque celle-ci existe, elles sont simplement ses valeurs sur les directions considérées. En
+particulier, dans une base b= (⃗b1, ... ,⃗bn), les dérivées partielles donnent les images des vecteurs
+de base.
+Proposition I.3.2.1 — Différentiabilité et dérivées partielles.
+Soient U un ouvert de
+− →
+Rn, ⃗a∈U , f : U− →
+− →
+Rp une fonction vectorielle différentiable en ⃗a et
+b= (⃗b1, .. .,⃗bn) une base de
+− →
+Rn. Alors f admet toutes ses dérivées partielles relativement à b
+et
+∀j∈ 1,n,∂ b,j f( ⃗a)= − − →d f ⃗a(⃗b j ).
+En particulier, dans la base canonique,
+∀j∈ 1,n, ∂f
+∂x j
+(⃗a)= − − →d f ⃗a(⃗e j ).
+Démonstration.
+Soient U un ouvert de
+− →
+Rn, ⃗a∈U , f : U− →
+− →
+Rp une fonction vectorielle différentiable en ⃗a et
+b=( ⃗b1, .. .,⃗bn) une base de
+− →
+Rn. Soitj∈ 1,n.
+
+=== Cours original, page PDF 81 ===
+I.3.2 Représentation de la différentielle 89
+D’après la Proposition I.3.1.1, on a D⃗b j
+f (⃗a) = − − →d f ⃗a(⃗b j ). Or, par définition, ∂b,j f (⃗a) =D ⃗b j
+f (⃗a).
+Par conséquent,
+∂b,j f( ⃗a)= − − →d f ⃗a(⃗b j ).
+■
+
+=== Cours original, page PDF 82 ===
+90Chapitre I.3. Dérivées directionnelles, jacobienne et gradient
+Proposition I.3.2.2 — Expression de la différentielle à l’aide des dérivées partielles.
+Sous les hypothèses de la Proposition I.3.2.1, si ⃗h=
+nX
+j=1
+h j⃗b j , alors
+− − →d f ⃗a(⃗h)=
+nX
+j=1
+h j ∂b,j f( ⃗a).
+Démonstration.
+Soient U un ouvert de
+− →
+Rn, ⃗a∈U , f : U− →
+− →
+Rp une fonction vectorielle différentiable en ⃗a,
+b=( ⃗b1, .. .,⃗bn) une base de
+− →
+Rn et ⃗h=
+nX
+j=1
+h j⃗b j .
+Comme − − →d f ⃗a est linéaire,
+− − →d f ⃗a(⃗h)=
+nX
+j=1
+h j
+− − →d f ⃗a(⃗b j ).
+D’après la Proposition I.3.2.1,− − →d f ⃗a(⃗b j )=∂ b,j f( ⃗a). On obtient donc
+− − →d f ⃗a(⃗h)=
+nX
+j=1
+h j ∂b,j f( ⃗a).
+■
+■ Remarque I.3.2.1 — Cas de la base canonique.
+Si ⃗h=
+nX
+j=1
+h j⃗e j , alors
+− − →d f ⃗a(⃗h)=
+nX
+j=1
+h j
+∂f
+∂x j
+(⃗a).
+■
+I.3.2.2 Matrice de la différentielle dans deux bases
+La différentielle − − →d f ⃗a :
+− →
+Rn − →
+− →
+Rp est une application linéaire. Les résultats d’algèbre linéaire
+permettent donc de lui associer une matrice dès que l’on choisit une base dans l’espace de
+départ et une base dans l’espace d’arrivée.
+Soient b= (⃗b1, .. .,⃗bn) une base de
+− →
+Rn et c= (⃗c1,. .. ,⃗cp) une base de
+− →
+Rp. Nous noterons simple-
+mentf 1, .. .,f p les fonctions composantes defrelativement à la basec.
+Définition I.3.2.1 — Matrice de la différentielle.
+SoientUun ouvert de
+− →
+Rn, ⃗a∈Uetf:U− →
+− →
+Rp une fonction vectorielle différentiable en ⃗a.
+Soientb=( ⃗b1,. .. ,⃗bn) une base de
+− →
+Rn etc=( ⃗c1, ... ,⃗cp) une base de
+− →
+Rp.
+On appellematrice de la différentielle de f en ⃗a relativement aux basesbetcla matrice
+− →M
+³− − →d f ⃗a;b,c
+´
+.
+Proposition I.3.2.3 — Coefficients de la matrice de la différentielle.
+
+=== Cours original, page PDF 83 ===
+I.3.2 Représentation de la différentielle 91
+Sous les hypothèses de la Définition I.3.2.1, on a
+− →M
+³− − →d f ⃗a;b,c
+´
+=
+
+
+∂b,1 f1(⃗a)· · ·∂ b,n f1(⃗a)
+... ... ...
+∂b,1 fp(⃗a)· · ·∂ b,n fp(⃗a)
+
+.
+Démonstration.
+Soient U un ouvert de
+− →
+Rn, ⃗a∈U , f : U− →
+− →
+Rp une fonction vectorielle différentiable en ⃗a,
+b= (⃗b1,. .. ,⃗bn) une base de
+− →
+Rn et c= (⃗c1, .. .,⃗cp) une base de
+− →
+Rp ; notons f1,. .. ,f p les fonctions
+composantes defdansc.
+Pourj∈ 1,n, laj-ième colonne de − →M
+³− − →d f ⃗a;b,c
+´
+est constituée des composantes du vecteur − − →d f ⃗a(⃗b j ) dans la basec.
+Or, d’après la Proposition I.3.1.1, − − →d f ⃗a(⃗b j )=D ⃗b j
+f( ⃗a).
+Comme f1, ... ,f p sont les fonctions composantes de f dans la base c, le passage à la limite se
+fait composante par composante. Les composantes deD ⃗b j
+f( ⃗a) dans la basecsont donc
+∂b,j f1(⃗a), .. .,∂ b,j fp(⃗a).
+On obtient ainsi la matrice annoncée.■
+■ Remarque I.3.2.2 — Rôle des deux bases.
+La base b de l’espace de départ détermine les directions ⃗b1, .. .,⃗bn suivant lesquelles sont
+calculées les dérivées partielles. La base c de l’espace d’arrivée détermine les fonctions com-
+posantesf 1, .. .,f p utilisées pour écrire les colonnes de la matrice.
+Ainsi, la matrice représentant − − →d f ⃗a dépend des deux bases choisies, alors que la différentielle− − →d f ⃗a elle-même reste inchangée. ■
+Proposition I.3.2.4 — Action matricielle de la différentielle dans deux bases.
+Sous les hypothèses de la Définition I.3.2.1, pour tout ⃗h∈
+− →
+Rn, on a
+h− − →d f ⃗a(⃗h)
+i
+c
+= − →M
+³− − →d f ⃗a;b,c
+´
+[⃗h]b.
+Démonstration.
+Soient U un ouvert de
+− →
+Rn, ⃗a∈U , f : U− →
+− →
+Rp une fonction vectorielle différentiable en ⃗a, b une
+base de
+− →
+Rn,cune base de
+− →
+Rp et ⃗h∈
+− →
+Rn.
+Il s’agit de la relation matricielle associée à l’application linéaire− − →d f ⃗a relativement à la base b de
+l’espace de départ et à la basecde l’espace d’arrivée.■
+■ Remarque I.3.2.3 — La différentielle et sa matrice sont deux objets différents.
+La différentielle − − →d f ⃗a est une application linéaire indépendante de tout choix de base, tandis
+que − →M
+³− − →d f ⃗a;b,c
+´
+en est une représentation matricielle. Un changement de bases modifie cette matrice, mais ne
+
+=== Cours original, page PDF 84 ===
+92Chapitre I.3. Dérivées directionnelles, jacobienne et gradient
+modifie pas la différentielle. Il s’agit exactement de la distinction déjà rencontrée en algèbre
+linéaire entre une application linéaire et l’une de ses matrices représentatives.■
+I.3.2.3 Matrice jacobienne
+Considérons les bases canoniques e= (⃗e1, .. .,⃗en) de
+− →
+Rn et e′ = (⃗e′
+1, .. .,⃗e′
+p) de
+− →
+Rp. Dans cette
+sous-section, nous noterons simplement f1,. .. ,f p les fonctions composantes de f relativement
+à la base canonique de l’espace d’arrivée.
+
+=== Cours original, page PDF 85 ===
+I.3.2 Représentation de la différentielle 93
+Définition I.3.2.2 — Matrice jacobienne.
+Soient U un ouvert de
+− →
+Rn, ⃗a∈U et f : U− →
+− →
+Rp une fonction vectorielle différentiable en ⃗a.
+On appellematrice jacobienne de f en ⃗ala matrice de − − →d f ⃗a dans les bases canoniques :
+J f (⃗a)= − →M
+³− − →d f ⃗a;e,e ′
+´
+.
+Ainsi
+J f (⃗a)=
+
+
+∂f 1
+∂x1
+(⃗a)· · · ∂f 1
+∂xn
+(⃗a)
+... ... ...
+∂f p
+∂x1
+(⃗a)· · ·
+∂f p
+∂xn
+(⃗a)
+
+
+.
+■ Remarque I.3.2.4 — Les colonnes de la matrice jacobienne.
+La j -ième colonne de J f (⃗a) est constituée des coordonnées dans la base canonique de l’espace
+d’arrivée du vecteur
+− − →d f ⃗a(⃗e j )= ∂f
+∂x j
+(⃗a).
+Ainsi
+∂f
+∂x j
+(⃗a)=
+
+
+∂f 1
+∂x j
+(⃗a)
+...
+∂f p
+∂x j
+(⃗a)
+
+
+.
+■
+I.3.2.4 Action matricielle de la différentielle
+Une fois les bases choisies, appliquer la différentielle à un vecteur revient à effectuer le
+produit matriciel associé. Dans les bases canoniques, cette relation prend une forme particuliè-
+rement simple.
+Proposition I.3.2.5 — Représentation matricielle de la différentielle.
+SoientUun ouvert de
+− →
+Rn, ⃗a∈Uetf:U− →
+− →
+Rp une fonction vectorielle différentiable en ⃗a.
+Pour tout ⃗h∈
+− →
+Rn, on a h− − →d f ⃗a(⃗h)
+i
+e′ =J f (⃗a)[⃗h]e
+Démonstration.
+Soient U un ouvert de
+− →
+Rn, ⃗a∈U , f : U− →
+− →
+Rp une fonction vectorielle différentiable en ⃗a et
+⃗h∈
+− →
+Rn.
+Il s’agit de la relation matricielle associée à l’application linéaire− − →d f ⃗a, dont la matrice dans les
+bases canoniques est, par définition,J f (⃗a).■
+■ Remarque I.3.2.5 — Interprétation de la matrice jacobienne.
+La matrice jacobienne n’est pas la différentielle. La différentielle − − →d f ⃗a est une application
+linéaire indépendante de tout choix de base, tandis que J f (⃗a) est sa représentation dans
+les bases canoniques. Un changement de bases modifie donc la matrice représentant la
+
+=== Cours original, page PDF 86 ===
+94Chapitre I.3. Dérivées directionnelles, jacobienne et gradient
+différentielle, mais ne modifie pas la différentielle elle-même.■
+I.3.3 Cas scalaire : fonctions à valeurs réelles
+Nous considérons maintenant le cas particulier où l’espace d’arrivée estR. Soient donc U un
+ouvert de
+− →
+Rn, ⃗a∈U et f : U− →R une fonction différentiable en ⃗a. Dans ce cas, la différentielle
+− − →d f ⃗a ∈ − →L
+³− →
+Rn,R
+´
+est une forme linéaire. Elle peut donc être décrite naturellement dans une base
+duale puis, grâce au produit scalaire euclidien, par un vecteur : le gradient.
+I.3.3.1 La différentielle comme forme linéaire
+La différence essentielle avec le cas vectoriel général ne concerne pas la définition de la
+différentielle, qui reste inchangée, mais la nature de son espace d’arrivée. Lorsquef est à valeurs
+réelles, − − →d f ⃗a associe un scalaire à chaque vecteur ⃗h∈
+− →
+Rn. C’est donc une forme linéaire.
+Si b= (⃗b1,. .. ,⃗bn) est une base de
+− →
+Rn, les nombres ∂b,1 f (⃗a), ... ,∂ b,n f (⃗a) sont précisément les
+valeurs de cette forme linéaire sur les vecteurs de la base. Pour interpréter ces nombres comme
+des coordonnées de la différentielle elle-même, il faut introduire la base duale.
+I.3.3.2 Base duale et représentation de la différentielle
+Soit b= (⃗b1,. .. ,⃗bn) une base de
+− →
+Rn et notons b∗ = (b∗
+1 ,. .. ,b ∗
+n) sa base duale, déjà introduite
+en algèbre linéaire. Nous allons utiliser directement cette base pour représenter la forme linéaire− − →d f ⃗a.
+Proposition I.3.3.1 — Coordonnées de la différentielle dans la base duale.
+Soient U un ouvert de
+− →
+Rn, ⃗a∈U , f : U− →R une fonction différentiable en ⃗a, b= (⃗b1,. .. ,⃗bn)
+une base de
+− →
+Rn etb ∗ =(b ∗
+1 ,. .. ,b ∗
+n) sa base duale. Alors
+− − →d f ⃗a =
+nX
+j=1
+∂b,j f( ⃗a)b ∗
+j .
+Démonstration.
+Soient U un ouvert de
+− →
+Rn, ⃗a∈U , f : U− →R une fonction différentiable en ⃗a, b= (⃗b1,. .. ,⃗bn) une
+base de
+− →
+Rn etb ∗ =(b ∗
+1 ,. .. ,b ∗
+n) sa base duale.
+Soit ⃗h=
+nX
+j=1
+h j⃗b j . D’après la Proposition I.3.2.2,
+− − →d f ⃗a(⃗h)=
+nX
+j=1
+h j ∂b,j f( ⃗a).
+Commeh j =b ∗
+j (⃗h), on obtient
+− − →d f ⃗a(⃗h)=
+Ã
+nX
+j=1
+∂b,j f( ⃗a)b ∗
+j
+!
+(⃗h).
+Cette égalité étant vraie pour tout ⃗h∈
+− →
+Rn, il vient
+− − →d f ⃗a =
+nX
+j=1
+∂b,j f( ⃗a)b ∗
+j .
+■
+
+=== Cours original, page PDF 87 ===
+I.3.3 Cas scalaire : fonctions à valeurs réelles 95
+■ Remarque I.3.3.1 — Interprétation des dérivées partielles dans le cas scalaire.
+Les nombres ∂b,1 f (⃗a), .. .,∂ b,n f (⃗a) sont précisément les coordonnées de la forme linéaire − − →d f ⃗a
+dans la base duale b∗. La différentielle est l’objet intrinsèque ; les nombres utilisés pour la
+représenter dépendent de la base choisie. ■
+I.3.3.3 Cas de la base canonique
+Dans la base canonique e= (⃗e1, .. .,⃗en) et sa base duale e∗ = (e∗
+1 , .. .,e ∗
+n), la Proposition I.3.3.1
+devient
+− − →d f ⃗a =
+nX
+j=1
+∂f
+∂x j
+(⃗a)e ∗
+j .
+Cette écriture est la forme canonique de la représentation de la différentielle dans la base duale.
+Une notation très répandue dans la littérature permet de rendre ce lien encore plus explicite.
+■ Notation I.3.3.1 — Formes coordonnéesd x 1, .. .,d xn.
+Pour tout i∈  1,n , notons xi :
+− →
+Rn − →R l’application coordonnée qui associe à ⃗x sa i -ième
+coordonnée dans la base canonique. Cette application est linéaire ; sa différentielle est donc la
+même en tout vecteur ⃗aet coïncide avec lai-ième forme de la base duale :
+− − − − →d(x i )⃗a =e ∗
+i .
+La forme linéairee ∗
+i est traditionnellement notéed x i . Ainsi,
+d xi =e ∗
+i ,d x i (⃗h)=h i
+pour tout ⃗h=
+nX
+j=1
+h j⃗e j .
+Avec cette notation, la différentielle d’une fonction à valeurs réelles s’écrit
+− − →d f ⃗a =
+nX
+i=1
+∂f
+∂xi
+(⃗a)d x i .
+Cette formule ne constitue pas une nouvelle définition de la différentielle : elle est exactement
+l’écriture de la forme linéaire− − →d f ⃗a dans la base duale canonique (d x1,. .. ,d xn).
+■ Remarque I.3.3.2 — Sens de la notationd x i.
+Le symbole d xi ne désigne pas ici un « petit accroissement » de la variable xi et ne doit pas
+être considéré comme un nombre infinitésimal. Il désigne une forme linéaire, c’est-à-dire
+un élément du dual de
+− →
+Rn. Plus précisément, d xi extrait la i -ième coordonnée d’un vecteur :
+d xi (⃗h)=h i .
+Cette notation est donc directement reliée aux bases duales vues en algèbre. Pour une
+base quelconqueb=( ⃗b1,. .. ,⃗bn), l’écriture correspondante reste
+− − →d f ⃗a =
+nX
+i=1
+∂b,i f( ⃗a)b ∗
+i .
+Les symboles d xi sont simplement les notations usuelles des formes de la base duale lorsque
+l’on choisit les coordonnées canoniquesx1, ... ,x n. ■
+
+=== Cours original, page PDF 88 ===
+96Chapitre I.3. Dérivées directionnelles, jacobienne et gradient
+■ Remarque I.3.3.3 — Écriture abrégée rencontrée dans la littérature.
+Lorsquefest différentiable sur un ouvertU, on rencontre fréquemment l’écriture
+d f=
+nX
+i=1
+∂f
+∂xi
+d xi .
+Elle doit être comprise point par point : en ⃗a∈U, elle signifie précisément
+− − →d f ⃗a =
+nX
+i=1
+∂f
+∂xi
+(⃗a)d x i .
+Dans ce cours, nous conserverons la notation − − →d f ⃗a dès que le vecteur auquel la différentielle
+est considérée doit être explicite. ■
+La matrice jacobienne d’une fonction à valeurs réelles est une matrice ligne :
+J f (⃗a)=
+µ ∂f
+∂x1
+(⃗a)· · · ∂f
+∂xn
+(⃗a)
+¶
+.
+Il faut distinguer soigneusement les trois objets : − − →d f ⃗a est la forme linéaire intrinsèque, son
+écriture
+X
+i
+∂f
+∂xi
+(⃗a)d xi est sa décomposition dans la base duale canonique, et J f (⃗a) est sa repré-
+sentation matricielle dans les bases canoniques.
+I.3.3.4 Gradient
+Comme
+− →
+Rn est un espace euclidien, le théorème de représentation de Riesz, vu en algèbre,
+affirme que toute forme linéaire sur
+− →
+Rn est représentée de manière unique par un vecteur à
+l’aide du produit scalaire. Appliqué à la forme linéaire− − →d f ⃗a, ce théorème conduit naturellement
+à la notion de gradient.
+Définition I.3.3.1 — Gradient.
+Soient U un ouvert de
+− →
+Rn, ⃗a∈U et f : U− →R une fonction différentiable en ⃗a. On appelle
+gradient de f en ⃗al’unique vecteur ⃗∇f( ⃗a)∈
+− →
+Rn tel que
+∀⃗h∈
+− →
+Rn, − − →d f ⃗a(⃗h)=
+D
+⃗∇f( ⃗a)| ⃗h
+E
+.
+■ Remarque I.3.3.4 — Différentielle et gradient.
+La différentielle − − →d f ⃗a est une forme linéaire, tandis que le gradient ⃗∇f (⃗a) est le vecteur qui
+la représente au sens du théorème de représentation de Riesz. Ces deux objets sont donc
+canoniquement associés par le produit scalaire, mais ils ne doivent pas être confondus.
+Dans la base canonique, le théorème de représentation de Riesz associe à la forme d xi =e ∗
+i le
+vecteur ⃗ei . Ainsi, les mêmes coefficients ∂f
+∂xi
+(⃗a) apparaissent dans
+− − →d f ⃗a =
+nX
+i=1
+∂f
+∂xi
+(⃗a)d x i
+
+=== Cours original, page PDF 89 ===
+I.3.3 Cas scalaire : fonctions à valeurs réelles 97
+et dans
+⃗∇f( ⃗a)=
+nX
+i=1
+∂f
+∂xi
+(⃗a)⃗ei .
+Cette ressemblance des écritures vient de l’identification, par le produit scalaire euclidien, de
+l’espace avec son dual ; elle ne signifie pas que la différentielle et le gradient sont le même
+objet. ■
+I.3.3.5 Coordonnées du gradient dans une base orthonormée
+Proposition I.3.3.2 — Coordonnées du gradient dans une base orthonormée.
+Sous les hypothèses de la Définition I.3.3.1, soit b= (⃗b1, .. .,⃗bn) une base orthonormée de
+− →
+Rn.
+Alors
+£⃗∇f( ⃗a)
+¤
+b =
+
+
+∂b,1 f( ⃗a)
+...
+∂b,n f( ⃗a)
+
+.
+Démonstration.
+Soient U un ouvert de
+− →
+Rn, ⃗a∈U , f : U− →R une fonction différentiable en ⃗a et b= (⃗b1,. .. ,⃗bn)
+une base orthonormée de
+− →
+Rn.
+Pour toutj∈ 1,n, on a
+∂b,j f( ⃗a)= − − →d f ⃗a(⃗b j )=
+D
+⃗∇f( ⃗a)| ⃗b j
+E
+.
+Comme b est orthonormée, le scalaire
+D
+⃗∇f( ⃗a)| ⃗b j
+E
+est la j -ième coordonnée de ⃗∇f (⃗a) dans
+b. ■
+Proposition I.3.3.3 — Coordonnées du gradient dans la base canonique.
+La base canonique étant orthonormée, on a
+£⃗∇f( ⃗a)
+¤
+e =
+
+
+∂f
+∂x1
+(⃗a)
+...
+∂f
+∂xn
+(⃗a)
+
+
+.
+■ Remarque I.3.3.5 — Attention au cas d’une base non orthonormée.
+Pour une base quelconque b, les nombres ∂b,1 f (⃗a),. .. ,∂ b,n f (⃗a) sont toujours les coordonnées
+de la différentielle − − →d f ⃗a dans la base duale b∗. En revanche, ils ne sont les coordonnées du
+gradient dansbque lorsque cette base est orthonormée.
+La différentielle est une forme linéaire ; le gradient est le vecteur qui lui est associé par le
+produit scalaire. ■
+I.3.3.6 Gradient et dérivée directionnelle
+Lorsque f est à valeurs réelles et différentiable en ⃗a, la Proposition I.3.1.1 et la Définition
+I.3.3.1 donnent, pour tout ⃗u∈
+− →
+Rn,
+D⃗u f( ⃗a)= − − →d f ⃗a(⃗u)=
+­⃗∇f( ⃗a)| ⃗u
+®
+.
+
+=== Cours original, page PDF 90 ===
+98Chapitre I.3. Dérivées directionnelles, jacobienne et gradient
+Si ⃗uest unitaire, l’inégalité de Cauchy–Schwarz donne
+¯¯D⃗u f( ⃗a)
+¯¯ ≤ ∥⃗∇f( ⃗a)∥.
+Lorsque ⃗∇f (⃗a) ̸=⃗0, la variation directionnelle est maximale dans la direction du gradient et
+minimale dans la direction opposée. Cette propriété fournit une première interprétation géo-
+métrique fondamentale du gradient, qui sera particulièrement utile dans la partie consacrée à
+l’optimisation.
+
+=== Cours original, page PDF 105 ===
+I.4. Règles de calcul des différentielles
+Dans ce chapitre nous nous placerons dans les espaces euclidiens
+³− →
+Rn,〈• | •〉
+´
+,
+³− →
+Rp,〈• | •〉
+´
+et
+³− →
+Rq ,〈• | •〉
+´
+, munis de leurs produits scalaires canoniques.
+Nous noterons par∥•∥les normes euclidiennes associées.
+Dans les chapitres précédents, nous avons défini la différentielle d’une fonction vectorielle
+f : U− →
+− →
+Rp différentiable en un vecteur ⃗a∈U comme l’application linéaire− − →d f ⃗a ∈ − →L
+³− →
+Rn,
+− →
+Rp
+´
+telle que
+f( ⃗a+ ⃗h)=f( ⃗a)+ − − →d f ⃗a(⃗h)+o
+³
+∥⃗h∥
+´
+lorsque ⃗h tend vers ⃗0. Nous avons également montré que, dans les bases canoniques, cette
+application linéaire est représentée par la matrice jacobienneJ f (⃗a).
+L ’objectif est maintenant de disposer de règles permettant de calculer la différentielle d’une
+fonction construite à partir de fonctions plus simples. Nous conserverons systématiquement
+le point de vue intrinsèque : les règles seront d’abord formulées pour les applications linéaires− − →d f ⃗a, puis traduites en termes de matrices jacobiennes ou de dérivées partielles lorsque cela
+apporte une information supplémentaire.
+I.4.1 Règles algébriques de calcul
+Les premières règles proviennent directement des structures algébriques déjà rencontrées.
+La linéarité permet de traiter les combinaisons linéaires, tandis que la multilinéarité fournit
+naturellement les règles de produit.
+I.4.1.1 Combinaisons linéaires
+Proposition I.4.1.1 — Différentielle d’une combinaison linéaire.
+Soient
+¡
+n,p
+¢
+∈N ∗ ×N ∗, U un ouvert de
+− →
+Rn, ⃗a∈U , f,g : U− →
+− →
+Rp deux fonctions vectorielles
+différentiables en ⃗aet (λ,µ)∈R 2.
+Alorsλf+µgest différentiable en ⃗aet
+− − − − − − − − − − →d(λf+µg) ⃗a =λ − − →d f ⃗a +µ − − →d g⃗a.
+Démonstration.
+Soient
+¡
+n,p
+¢
+∈N ∗ ×N ∗, U un ouvert de
+− →
+Rn, ⃗a∈U , f,g : U− →
+− →
+Rp deux fonctions vectorielles
+différentiables en ⃗aet
+¡
+λ,µ
+¢
+∈R 2.
+Commefetgsont différentiables en ⃗a, il existe deux fonctions vectoriellesr f etr g telles que
+f( ⃗a+ ⃗h)=f( ⃗a)+ − − →d f ⃗a(⃗h)+r f (⃗h),r f (⃗h)=o
+³
+∥⃗h∥
+´
+,
+
+=== Cours original, page PDF 106 ===
+114Chapitre I.4. Règles de calcul des différentielles
+et
+g( ⃗a+ ⃗h)=g( ⃗a)+ − − →d g⃗a(⃗h)+r g (⃗h),r g (⃗h)=o
+³
+∥⃗h∥
+´
+,
+lorsque ⃗htend vers ⃗0. On obtient alors
+(λf+µg)( ⃗a+ ⃗h)=(λf+µg)( ⃗a)+
+³
+λ− − →d f ⃗a +µ − − →d g⃗a
+´
+(⃗h)
++λr f (⃗h)+µr g (⃗h).
+Comme λr f (⃗h)+µr g (⃗h) =o
+³
+∥⃗h∥
+´
+, la partie linéaire de cette expression est bienλ− − →d f ⃗a +µ− − →d g⃗a. ■
+Corollaire I.4.1.1 — Représentation matricielle d’une combinaison linéaire.
+Sous les hypothèses de la Proposition I.4.1.1, soient b une base de
+− →
+Rn et c une base de
+− →
+Rp.
+Alors − →M
+³− − − − − − − − − − →d(λf+µg) ⃗a;b,c
+´
+=λ − →M
+³− − →d f ⃗a;b,c
+´
++µ − →M
+³− − →d g⃗a;b,c
+´
+.
+I.4.1.2 Applications multilinéaires
+Nous avons déjà étudié les applications multilinéaires en algèbre. Nous utilisons ici directe-
+ment leur propriété fondamentale : chaque variable intervient linéairement lorsque les autres
+sont fixées.
+Proposition I.4.1.2 — Différentielle d’une application multilinéaire.
+Soientk∈N ∗,
+¡
+n1,. .. ,n k,p
+¢
+∈
+¡
+N∗¢k+1 et − →Φ∈ − →Lk
+³− − →
+Rn1,. .. ,
+− − →
+Rnk ;
+− →
+Rp
+´
+.
+Alors − →Φ est différentiable sur
+− − →
+Rn1 × · · · ×
+− − →
+Rnk et, pour tout (⃗a1,. .. ,⃗ak) et tout (⃗h1,. .. ,⃗hk) appar-
+tenant à cet espace produit,
+− − − − − − − − − →
+d − →Φ(⃗a1,...,⃗ak )(⃗h1,. .. ,⃗hk)=
+kX
+j=1
+− →Φ
+³
+⃗a1, .. .,⃗a j−1 ,⃗h j ,⃗a j+1 , .. .,⃗ak
+´
+.
+Démonstration.
+Soientk∈N ∗,
+¡
+n1, .. .,n k,p
+¢
+∈
+¡
+N∗¢k+1 et − →Φ∈ − →Lk
+³− − →
+Rn1, .. .,
+− − →
+Rnk ;
+− →
+Rp
+´
+.
+Fixons (⃗a1,. .. ,⃗ak) et considérons un accroissement (⃗h1,. .. ,⃗hk). Par multilinéarité, l’expression− →Φ(⃗a1 +⃗h1,. .. ,⃗ak +⃗hk) se développe en une somme de 2k termes. Le terme ne contenant aucun
+⃗h j est − →Φ(⃗a1,. .. ,⃗ak), tandis que les termes contenant exactement un accroissement sont ceux de
+la somme
+− →L( ⃗h1,. .. ,⃗hk)=
+kX
+j=1
+− →Φ
+³
+⃗a1, .. .,⃗a j−1 ,⃗h j ,⃗a j+1 , .. .,⃗ak
+´
+.
+L ’application− →L est linéaire sur l’espace produit. Tous les autres termes contiennent au moins
+deux accroissements.
+Munissons l’espace produit de sa norme euclidienne canonique et posons
+H=
+°°°(⃗h1,. .. ,⃗hk)
+°°°.
+Pour tout j∈  1,k , on a ∥⃗h j ∥ ≤H . D’après le Lemme I.1.2.2, tout terme du reste contenantr≥ 2
+accroissements est donc majoré en norme par une constante multipliée par H r . Comme il n’y a
+
+=== Cours original, page PDF 107 ===
+I.4.1 Règles algébriques de calcul 115
+qu’un nombre fini de termes et queH r ≤H 2 pour 0 ≤H< 1 et r≥ 2, il existe C ′ > 0 tel que, pour
+0≤H<1, °°°R(⃗h1,. .. ,⃗hk)
+°°° ≤C ′H 2.
+Par conséquent,
+R(⃗h1,. .. ,⃗hk)=o
+³°°°(⃗h1,. .. ,⃗hk)
+°°°
+´
+,
+ce qui montre que − →Lest la différentielle de − →Φau vecteur ( ⃗a1,. .. ,⃗ak).■
+Corollaire I.4.1.2 — Différentielle d’une application bilinéaire.
+Soient
+¡
+n,m,p
+¢
+∈
+¡
+N∗¢3 et − →Φ∈ − →L2
+³− →
+Rn,
+− →
+Rm;
+− →
+Rp
+´
+. Alors, pour tout (⃗a,⃗b) et tout (⃗h,⃗k) apparte-
+nant à
+− →
+Rn ×
+− →
+Rm, − − − − − − →
+d − →Φ(⃗a,⃗b)(⃗h,⃗k)= − →Φ(⃗h,⃗b)+ − →Φ(⃗a,⃗k).
+Démonstration.
+Soient
+¡
+n,m,p
+¢
+∈
+¡
+N∗¢3, − →Φ∈ − →L2
+³− →
+Rn,
+− →
+Rm;
+− →
+Rp
+´
+, (⃗a,⃗b)∈
+− →
+Rn ×
+− →
+Rm et (⃗h,⃗k)∈
+− →
+Rn ×
+− →
+Rm.
+Il suffit d’appliquer la Proposition I.4.1.2 aveck=2.■
+I.4.1.3 Règles de produit
+Le cas bilinéaire précédent contient plusieurs règles usuelles. La première concerne les
+formes bilinéaires. Si − →Φ∈ − →L2
+³− →
+Rn,
+− →
+Rm
+´
+est une forme bilinéaire, le Corollaire I.4.1.2 donne immé-
+diatement le résultat suivant.
+Corollaire I.4.1.3 — Différentielle d’une forme bilinéaire.
+Pour tout (⃗a,⃗b)∈
+− →
+Rn ×
+− →
+Rm et tout (⃗h,⃗k)∈
+− →
+Rn ×
+− →
+Rm,
+− − − − − − →
+d − →Φ(⃗a,⃗b)(⃗h,⃗k)= − →Φ(⃗h,⃗b)+ − →Φ(⃗a,⃗k).
+En particulier, pour la forme bilinéaire ( ⃗x, ⃗y) 7− → 〈⃗x| ⃗y〉, on obtient une formule qui sera
+utilisée à plusieurs reprises.
+Corollaire I.4.1.4 — Différentielle du produit scalaire.
+Soitn∈N ∗. La fonction − →Φ:
+− →
+Rn ×
+− →
+Rn − →R
+(⃗x, ⃗y)7− → 〈 ⃗x| ⃗y〉
+est différentiable et, pour tout (⃗a,⃗b) et tout (⃗h,⃗k),
+− − − − − − →
+d − →Φ(⃗a,⃗b)(⃗h,⃗k)= 〈 ⃗h| ⃗b〉 + 〈⃗a| ⃗k〉.
+Nous pouvons enfin retrouver la règle du produit pour deux fonctions à valeurs réelles. Il est
+important de conserver en mémoire que le produit utilisé est alors le produit du corpsR.
+■ Remarque I.4.1.1 — Le produit considéré est un produit de scalaires.
+Soient f,g : U− →R . Leur produit f g : U− →R est défini par ( f g )(⃗x) =f (⃗x)g (⃗x) pour tout
+⃗x∈U.
+Cette opération utilise le produit du corps R. Un produit de deux vecteurs n’est pas
+
+=== Cours original, page PDF 108 ===
+116Chapitre I.4. Règles de calcul des différentielles
+défini en général dans un espace vectoriel. ■
+Proposition I.4.1.3 — Différentielle d’un produit de fonctions à valeurs réelles.
+Soient n∈N ∗, U un ouvert de
+− →
+Rn, ⃗a∈U et f,g : U− →R deux fonctions différentiables en ⃗a.
+Alorsf gest différentiable en ⃗aet
+− − − − − →d(f g) ⃗a =g( ⃗a)− − →d f ⃗a +f( ⃗a)− − →d g⃗a.
+
+=== Cours original, page PDF 109 ===
+I.4.1 Règles algébriques de calcul 117
+Démonstration.
+Soientn∈N ∗,Uun ouvert de
+− →
+Rn, ⃗a∈Uetf,g:U− →Rdeux fonctions différentiables en ⃗a.
+Commefetgsont différentiables en ⃗a, il existe deux fonctionsr f etr g telles que
+f( ⃗a+ ⃗h)=f( ⃗a)+ − − →d f ⃗a(⃗h)+r f (⃗h),r f (⃗h)=o
+³
+∥⃗h∥
+´
+,
+et
+g( ⃗a+ ⃗h)=g( ⃗a)+ − − →d g⃗a(⃗h)+r g (⃗h),r g (⃗h)=o
+³
+∥⃗h∥
+´
+.
+En multipliant ces deux expressions, on obtient
+(f g)( ⃗a+ ⃗h)=f( ⃗a)g( ⃗a)+g( ⃗a)− − →d f ⃗a(⃗h)+f( ⃗a)− − →d g⃗a(⃗h)
++g( ⃗a)r f (⃗h)+f( ⃗a)r g (⃗h)
++ − − →d f ⃗a(⃗h)− − →d g⃗a(⃗h)+ − − →d f ⃗a(⃗h)r g (⃗h)
++ − − →d g⃗a(⃗h)r f (⃗h)+r f (⃗h)r g (⃗h).
+Les deux premiers termes de la seconde ligne sont négligeables devant ∥⃗h∥ puisque r f (⃗h) =
+o(∥⃗h∥) etr g (⃗h)=o(∥ ⃗h∥).
+D’après le Lemme I.1.2.1, il existe des constantesC f >0 etC g >0 telles que
+¯¯¯− − →d f ⃗a(⃗h)
+¯¯¯ ≤C f ∥⃗h∥et
+¯¯¯− − →d g⃗a(⃗h)
+¯¯¯ ≤C g ∥⃗h∥.
+Le produit − − →d f ⃗a(⃗h)− − →d g⃗a(⃗h) est donc majoré en valeur absolue par C f Cg ∥⃗h∥2 et est négligeable
+devant∥ ⃗h∥.
+Pour les trois derniers termes, on a par exemple
+0≤
+¯¯¯− − →d f ⃗a(⃗h)r g (⃗h)
+¯¯¯
+∥⃗h∥
+≤C f
+¯¯¯rg (⃗h)
+¯¯¯.
+Comme lim
+⃗h→⃗0
+rg (⃗h)=0, le théorème d’encadrement donne
+lim
+⃗h→⃗0
+¯¯¯− − →d f ⃗a(⃗h)r g (⃗h)
+¯¯¯
+∥⃗h∥
+=0.
+De même,
+lim
+⃗h→⃗0
+¯¯¯− − →d g⃗a(⃗h)r f (⃗h)
+¯¯¯
+∥⃗h∥
+=0.
+Enfin, comme lim
+⃗h→⃗0
+|r f (⃗h)|
+∥⃗h∥
+=0 et lim
+⃗h→⃗0
+rg (⃗h)=0, on a
+lim
+⃗h→⃗0
+|r f (⃗h)r g (⃗h)|
+∥⃗h∥
+=0.
+Tous ces termes sont donc négligeables devant∥⃗h∥.
+La partie linéaire de (f g)( ⃗a+ ⃗h)−(f g)( ⃗a) est donc
+g( ⃗a)− − →d f ⃗a(⃗h)+f( ⃗a)− − →d g⃗a(⃗h),
+ce qui donne la formule annoncée.■
+
+=== Cours original, page PDF 110 ===
+118Chapitre I.4. Règles de calcul des différentielles
+I.4.1.4 Application à la norme au carré
+La fonction norme au carré fournit une première application immédiate de la règle précé-
+dente et du produit scalaire.
+Proposition I.4.1.4 — Différentielle de la norme au carré.
+Soient n∈N ∗ et f :
+− →
+Rn − →Rdéfinie par f (⃗x) = ∥⃗x∥2. Alors f est différentiable sur
+− →
+Rn et, pour
+tout (⃗a,⃗h)∈
+− →
+Rn ×
+− →
+Rn, − − →d f ⃗a(⃗h)=2〈 ⃗a| ⃗h〉.
+Démonstration.
+Soientn∈N ∗,f:
+− →
+Rn − →Rdéfinie parf( ⃗x)= ∥ ⃗x∥2 et (⃗a,⃗h)∈
+− →
+Rn2 .
+Commef( ⃗x)= 〈 ⃗x| ⃗x〉, on a
+f( ⃗a+ ⃗h)= 〈 ⃗a+ ⃗h| ⃗a+ ⃗h〉 =f( ⃗a)+2〈 ⃗a| ⃗h〉 + ∥⃗h∥2.
+L ’application⃗h7− →2〈⃗a| ⃗h〉 est linéaire et ∥⃗h∥2 =o (∥⃗h∥). Elle constitue donc la différentielle de f
+en ⃗a. ■
+Corollaire I.4.1.5 — Gradient de la norme au carré.
+Sous les hypothèses de la Proposition I.4.1.4,
+⃗∇f( ⃗a)=2 ⃗a.
+I.4.2 Composition et règle de la chaîne
+La composition constitue la règle fondamentale du calcul différentiel. Elle permet de calculer
+la différentielle d’une fonction obtenue en enchaînant plusieurs transformations et explique,
+sous une forme unique, les règles de calcul familières sur les fonctions composées.
+I.4.2.1 Différentielle d’une fonction composée
+Considérons deux fonctions f : U− →V et g : V− →
+− →
+Rq , où U est un ouvert de
+− →
+Rn et V un
+ouvert de
+− →
+Rp. Un petit déplacement⃗h dans l’espace de départ est d’abord transformé, au premier
+ordre, par − − →d f ⃗a ; le déplacement obtenu dans l’espace intermédiaire est ensuite transformé
+par − − − − − →d g f( ⃗a). Cette succession de deux approximations linéaires conduit naturellement à leur
+composition.
+Théorème I.4.2.1 — Différentielle d’une fonction composée – règle de la chaîne.
+Soient
+¡
+n,p,q
+¢
+∈
+¡
+N∗¢3, U un ouvert de
+− →
+Rn, V un ouvert de
+− →
+Rp, f : U− →V , g : V− →
+− →
+Rq et
+⃗a∈U.
+Sifest différentiable en ⃗aetgest différentiable enf( ⃗a), alorsg◦fest différentiable en ⃗aet
+− − − − − − − →d(g◦f) ⃗a = − − − − − →d g f( ⃗a) ◦ − − →d f ⃗a.
+Démonstration.
+Soient
+¡
+n,p,q
+¢
+∈
+¡
+N∗¢3, U un ouvert de
+− →
+Rn, V un ouvert de
+− →
+Rp, f : U− →V , g : V− →
+− →
+Rq et ⃗a∈U ,
+avecfdifférentiable en ⃗aetgdifférentiable enf( ⃗a).
+Commefest différentiable en ⃗a, il existe une fonction vectorieller f telle que
+f( ⃗a+ ⃗h)=f( ⃗a)+ − − →d f ⃗a(⃗h)+r f (⃗h),r f (⃗h)=o
+³
+∥⃗h∥
+´
+.
+
+=== Cours original, page PDF 111 ===
+I.4.2 Composition et règle de la chaîne 119
+Posons ⃗k=f( ⃗a+ ⃗h)−f( ⃗a). On a alors
+⃗k= − − →d f ⃗a(⃗h)+r f (⃗h).
+La différentiabilité defimplique sa continuité en ⃗a, donc ⃗ktend vers ⃗0 lorsque ⃗htend vers ⃗0.
+Commegest différentiable enf( ⃗a), il existe une fonction vectorieller g telle que
+g(f( ⃗a)+ ⃗k)=g(f( ⃗a))+ − − − − − →d g f( ⃗a)(⃗k)+r g (⃗k),r g (⃗k)=o
+³
+∥⃗k∥
+´
+.
+En remplaçant ⃗kpar son expression,
+g(f( ⃗a+ ⃗h))=g(f( ⃗a))+
+³− − − − − →d g f( ⃗a) ◦ − − →d f ⃗a
+´
+(⃗h)
++ − − − − − →d g f( ⃗a)(r f (⃗h))+r g (⃗k).
+D’après le Lemme I.1.2.1,− − − − − →d g f( ⃗a)(r f (⃗h))=o
+³
+∥⃗h∥
+´
+.
+De même, il existeC 1 >0 tel que
+∥− − →d f ⃗a(⃗h)∥ ≤C 1∥⃗h∥.
+Commer f (⃗h)=o(∥ ⃗h∥), il existeρ>0 tel que, pour tout ⃗hvérifiant∥ ⃗h∥ <ρ,
+∥r f (⃗h)∥ ≤ ∥⃗h∥.
+Pour∥ ⃗h∥ <ρ, on obtient donc
+∥⃗k∥ ≤∥− − →d f ⃗a(⃗h)∥ + ∥rf (⃗h)∥
+≤(C1 +1)∥⃗h∥.
+Puisquer g (⃗k)=o(∥ ⃗k∥), si ⃗k̸= ⃗0, on a
+∥rg (⃗k)∥
+∥⃗h∥
+=
+∥rg (⃗k)∥
+∥⃗k∥
+∥⃗k∥
+∥⃗h∥
+≤(C 1 +1)
+∥rg (⃗k)∥
+∥⃗k∥
+.
+Le membre de droite tend vers 0 lorsque ⃗h tend vers⃗0. Lorsque ⃗k= ⃗0, on a également rg (⃗k) =⃗0.
+Ainsir g (⃗k)=o(∥ ⃗h∥). On obtient donc
+g(f( ⃗a+ ⃗h))=g(f( ⃗a))+
+³− − − − − →d g f( ⃗a) ◦ − − →d f ⃗a
+´
+(⃗h)+o
+³
+∥⃗h∥
+´
+,
+ce qui donne la formule annoncée.■
+I.4.2.2 Règle de la chaîne pour les matrices jacobiennes
+La formule précédente est intrinsèque. Dès que des bases sont choisies, la composition des
+applications linéaires se traduit par un produit matriciel.
+Corollaire I.4.2.1 — Représentation matricielle de la règle de la chaîne.
+Sous les hypothèses du Théorème I.4.2.1, soient b une base de
+− →
+Rn, c une base de
+− →
+Rp et d une
+base de
+− →
+Rq . Alors
+− →M
+³− − − − − − − →d(g◦f) ⃗a;b,d
+´
+= − →M
+³− − − − − →d g f( ⃗a);c,d
+´ − →M
+³− − →d f ⃗a;b,c
+´
+.
+
+=== Cours original, page PDF 112 ===
+120Chapitre I.4. Règles de calcul des différentielles
+Corollaire I.4.2.2 — Règle de la chaîne pour les matrices jacobiennes.
+Sous les hypothèses du Théorème I.4.2.1, lorsque les bases choisies sont les bases canoniques,
+Jg◦f (⃗a)=J g (f( ⃗a))J f (⃗a).
+■ Remarque I.4.2.1 — Ordre du produit matriciel.
+L ’ordre du produitJg (f (⃗a))J f (⃗a) n’est pas une convention. Il traduit exactement l’ordre de
+la composition − − − − − →d g f( ⃗a) ◦ − − →d f ⃗a : le vecteur ⃗h est d’abord transformé par − − →d f ⃗a, puis le résultat
+est transformé par − − − − − →d g f( ⃗a). Le produit des matrices s’écrit donc dans le même ordre que la
+composition des applications linéaires. ■
+I.4.2.3 Règle de la chaîne et dérivées partielles
+La formule matricielle permet de retrouver immédiatement une expression de la règle de
+la chaîne uniquement en termes de dérivées partielles. Nous noterons f1, .. .,f p les fonctions
+composantes de f et g1, .. .,g q celles de g . Nous noterons également x1, .. .,x n les coordonnées
+dans l’espace de départ ety 1,. .. ,y p les coordonnées dans l’espace intermédiaire.
+Corollaire I.4.2.3 — Règle de la chaîne pour les dérivées partielles.
+Sous les hypothèses du Théorème I.4.2.1, pour touti∈ 1,qet toutj∈ 1,n,
+∂(g i ◦f)
+∂x j
+(⃗a)=
+pX
+k=1
+∂g i
+∂y k
+(f( ⃗a)) ∂f k
+∂x j
+(⃗a).
+Démonstration.
+Soient
+¡
+n,p,q
+¢
+∈
+¡
+N∗¢3, U un ouvert de
+− →
+Rn, V un ouvert de
+− →
+Rp, f : U− →V , g : V− →
+− →
+Rq et ⃗a∈U ,
+avecfdifférentiable en ⃗aetgdifférentiable enf( ⃗a). Soienti∈ 1,qetj∈ 1,n.
+Dans les bases canoniques, le coefficient situé à la ligne i et à la colonne j de Jg◦f (⃗a) est
+précisément ∂(g i ◦f)
+∂x j
+(⃗a). D’après le Corollaire I.4.2.2, cette matrice est le produitJg (f (⃗a))J f (⃗a).
+Le coefficient (i,j ) de ce produit est la somme, pour k∈  1,p , du produit du coefficient (i,k ) de
+Jg (f( ⃗a)) par le coefficient (k,j) deJ f (⃗a). On obtient exactement la formule annoncée.■
+■ Remarque I.4.2.2 — Cas d’une fonction composée à valeurs réelles.
+Lorsque g : V− →R , il n’y a qu’une seule fonction composante à l’arrivée. Pour toutj∈  1,n ,
+∂(g◦f)
+∂x j
+(⃗a)=
+pX
+k=1
+∂g
+∂y k
+(f( ⃗a)) ∂f k
+∂x j
+(⃗a).
+Chaque terme de la somme correspond à un chemin possible par la k-ième variable intermé-
+diaire : la variation dex j modifie d’abordf k, puis cette modification agit surg.■
+■ Remarque I.4.2.3 — Règle de la chaîne sous forme différentielle.
+Dans le cas où g : V− →R , la règle de la chaîne peut également être écrite directement avec les
+
+=== Cours original, page PDF 113 ===
+I.4.2 Composition et règle de la chaîne 121
+différentielles des fonctions composantes de f . En notant f1, .. .,f p les fonctions composantes
+def, on a
+− − − − − − − →d(g◦f) ⃗a =
+pX
+k=1
+∂g
+∂y k
+(f( ⃗a)) − − − − − →d(f k )⃗a.
+En effet, pour tout ⃗h∈
+− →
+Rn, − − − − − − − →d(g◦f) ⃗a(⃗h)= − − − − − →d g f( ⃗a)
+³− − →d f ⃗a(⃗h)
+´
+,
+et les composantes de − − →d f ⃗a(⃗h) sont précisément − − − − − →d(f k )⃗a(⃗h).
+Avec la Notation I.3.3.1,d x j désigne laj-ième forme de la base duale canonique,
+− − − − − →d(f k )⃗a =
+nX
+j=1
+∂f k
+∂x j
+(⃗a)d x j .
+On obtient alors
+− − − − − − − →d(g◦f) ⃗a =
+nX
+j=1
+Ã pX
+k=1
+∂g
+∂y k
+(f( ⃗a)) ∂f k
+∂x j
+(⃗a)
+!
+d xj .
+L ’identification du coefficient de chaque formed xj redonne exactement la règle de la chaîne
+pour les dérivées partielles. ■
+I.4.2.4 Notation de Leibniz
+La notation de Leibniz constitue une écriture historique et très efficace pour mémoriser la
+règle de la chaîne. Elle s’accorde naturellement avec l’écriture de la différentielle dans une base
+duale, mais elle doit être interprétée avec précision.
+■ Notation I.4.2.1 — Notation de Leibniz pour la règle de la chaîne.
+Supposons que les coordonnées intermédiaires soient notées yk =f k(x1,. .. ,x n) et que les
+coordonnées finales soient notées zi =g i (y1,. .. ,y p). La formule du Corollaire I.4.2.3 s’écrit alors
+∂zi
+∂x j
+=
+pX
+k=1
+∂zi
+∂y k
+∂y k
+∂x j
+.
+Cette écriture peut être lue de la façon suivante : pour mesurer l’effet dex j sur zi , on addi-
+tionne les effets transmis par chacune des variables intermédiaires yk. Le facteur ∂y k
+∂x j
+mesure
+l’effet dex j sury k, tandis que ∂zi
+∂y k
+mesure l’effet dey k surz i .
+La notation différentielle permet de comprendre l’origine de cette formule sans considérer
+les symboles comme de simples fractions. Dans les coordonnéesx 1, .. .,x n, on écrit
+d yk =
+nX
+j=1
+∂y k
+∂x j
+d xj ,
+et, dans les coordonnées intermédiairesy 1, .. .,y p,
+d zi =
+pX
+k=1
+∂zi
+∂y k
+d yk.
+En remplaçant chaqued y k par son expression dans la base duale (d x1, .. .,d xn), on obtient
+d zi =
+nX
+j=1
+Ã pX
+k=1
+∂zi
+∂y k
+∂y k
+∂x j
+!
+d xj .
+
+=== Cours original, page PDF 114 ===
+122Chapitre I.4. Règles de calcul des différentielles
+Or on a également
+d zi =
+nX
+j=1
+∂zi
+∂x j
+d xj .
+L ’unicité des coordonnées d’une forme linéaire dans la base duale (d x1,. .. ,d xn) conduit donc à
+∂zi
+∂x j
+=
+pX
+k=1
+∂zi
+∂y k
+∂y k
+∂x j
+.
+Cette présentation met en évidence que la règle de la chaîne est aussi une règle de changement
+d’expression d’une même forme linéaire à travers les variables intermédiaires.
+■ Remarque I.4.2.4 — Interprétation de la notation de Leibniz.
+Les symboles d xj , d yk et d zi désignent ici des différentielles, donc des formes linéaires. Ils
+ne sont pas des nombres infinitésimaux. De même, les écritures ∂zi
+∂y k
+et ∂y k
+∂x j
+ressemblent à
+des fractions, mais il n’y a pas de simplification algébrique des symboles∂yk.
+Dans le cas classique de trois fonctions d’une seule variable liées pary=f (x) et z=g (y),
+la règle de la chaîne s’écrit
+d z
+d x = d z
+d y
+d y
+d x.
+Cette écriture est un moyen mnémotechnique particulièrement efficace pour la relation
+(g◦f )′(x) =g ′(f (x))f ′(x). Sa justification rigoureuse est la composition des différentielles ;
+l’apparente « simplification » des symbolesd y n’est qu’une manière de mémoriser la formule,
+et non une opération sur des fractions ordinaires. ■
+■ Exemple I.4.2.1 — Composition avec une fonction exponentielle.
+Considérons q :
+− →
+R2 − →Rdéfinie par q(x,y ) =x 2 +x y+y 2 et f=exp◦q . Pour ⃗a=
+µa1
+a2
+¶
+et ⃗h=
+µh1
+h2
+¶
+,
+on a − − →d q⃗a(⃗h)=(2a 1 +a 2)h1 +(a 1 +2a 2)h2.
+La règle de la chaîne donne alors
+− − →d f ⃗a(⃗h)=e q(⃗a)− − →d q⃗a(⃗h).
+En termes de dérivées partielles,
+∂f
+∂x (⃗a)=e q(⃗a) ∂q
+∂x (⃗a) et ∂f
+∂y (⃗a)=e q(⃗a) ∂q
+∂y (⃗a).
+■
+■ Exemple I.4.2.2 — Composition de deux fonctions vectorielles.
+Considéronsf:
+− →
+R2 − →
+− →
+R3 etg:
+− →
+R3 − →
+− →
+R2 définies par
+f(x,y)=
+
+
+x+y
+x−y
+x y
+
+ etg(u,v,w)=
+µ u+w
+v 2 +w
+¶
+.
+La règle de la chaîne sous forme matricielle donne directement
+Jg◦f (x,y)=J g (f(x,y))J f (x,y).
+
+=== Cours original, page PDF 115 ===
+I.4.3 Règles usuelles pour les fonctions à valeurs réelles 123
+Ici,
+J f (x,y)=
+
+
+1 1
+1−1
+y x
+
+ etJ g (u,v,w)=
+µ1 0 1
+0 2v1
+¶
+.
+On obtient donc
+Jg◦f (x,y)=
+µ 1+y1+x
+2x−y−x+2y
+¶
+.
+■
+I.4.3 Règles usuelles pour les fonctions à valeurs réelles
+Les règles précédentes permettent de retrouver les formules usuelles d’inversion et de
+quotient. Ces opérations utilisent la structure multiplicative du corps R et ne concernent donc
+que des fonctions à valeurs réelles.
+I.4.3.1 Inverse multiplicatif d’une fonction à valeurs réelles
+■ Remarque I.4.3.1 — Une opération définie dans le corps des scalaires.
+Soitf:U− →R. La fonction 1
+f est définie uniquement aux vecteurs ⃗x∈Utels quef( ⃗x)̸=0.
+L ’inverse utilisé ici est l’inverse multiplicatif d’un scalaire du corpsR. Il ne s’agit pas de
+l’inverse d’un vecteur. ■
+Proposition I.4.3.1 — Différentielle de l’inverse surR ∗.
+La fonctionϕ:R ∗ − →Rdéfinie parϕ(x)= 1
+x est différentiable surR ∗ et, pour touta∈R ∗,
+− − − →dϕ a(h)= − h
+a2 .
+Démonstration.
+Soit ϕ : R∗ − →Rdéfinie par ϕ(x) = 1
+x et soit a∈R ∗. Pour |h| < |a|
+2 , on a |a+h| ≥ |a| − |h| > |a|
+2 ,
+donca+h̸=0, et
+ϕ(a+h)−ϕ(a)= 1
+a+h − 1
+a
+= − h
+a2 + h2
+a2(a+h) .
+Pourh̸=0 et|h| < |a|
+2 ,
+0≤ 1
+|h|
+¯¯¯¯
+h2
+a2(a+h)
+¯¯¯¯ ≤ 2|h|
+|a|3 .
+Comme lim
+h→0
+2|h|
+|a|3 =0, le théorème d’encadrement donne
+lim
+h→0
+1
+|h|
+¯¯¯¯
+h2
+a2(a+h)
+¯¯¯¯ =0.
+Le reste est donc o(|h|) et la partie linéaire est h7→ − h
+a2 , ce qui donne la formule annoncée. ■
+
+=== Cours original, page PDF 116 ===
+124Chapitre I.4. Règles de calcul des différentielles
+Proposition I.4.3.2 — Différentielle de l’inverse d’une fonction à valeurs réelles.
+Soient n∈N ∗, U un ouvert de
+− →
+Rn, ⃗a∈U et f : U− →R une fonction différentiable en ⃗a telle
+quef( ⃗a)̸=0. Alors 1
+f est différentiable en ⃗aet
+− − − − − →
+d
+µ 1
+f
+¶
+⃗a
+= − 1
+f( ⃗a)2
+− − →d f ⃗a.
+Démonstration.
+Soient n∈N ∗, U un ouvert de
+− →
+Rn, ⃗a∈U et f : U− →R une fonction différentiable en ⃗a telle que
+f( ⃗a)̸=0.
+D’après la Proposition I.2.2.1, f est continue en ⃗a. Comme U est ouvert, il existe donc ρ> 0 tel
+que B(⃗a,ρ ) ⊂U et, pour tout ⃗x∈B (⃗a,ρ ), |f (⃗x) −f (⃗a)| < |f( ⃗a)|
+2 , d’où|f (⃗x)| > |f( ⃗a)|
+2 > 0. Sur cette
+boule, 1
+f =ϕ◦favecϕ(x)= 1
+x . Le Théorème I.4.2.1 donne
+− − − − − →
+d
+µ 1
+f
+¶
+⃗a
+= − − − − − →dϕ f( ⃗a) ◦ − − →d f ⃗a.
+Comme − − − − − →dϕ f( ⃗a)(h)= − h
+f( ⃗a)2 , on obtient immédiatement la formule annoncée.■
+
+=== Cours original, page PDF 117 ===
+I.4.3 Règles usuelles pour les fonctions à valeurs réelles 125
+I.4.3.2 Quotient
+■ Remarque I.4.3.2 — Le quotient est uniquement un quotient de scalaires.
+Soientf,g:U− →R. Le quotient f
+g est défini aux vecteurs ⃗x∈Utels queg( ⃗x)̸=0 par
+µ f
+g
+¶
+(⃗x)= f( ⃗x)
+g(⃗x) .
+La division est ici effectuée dans le corps R. Cette formule ne doit pas être transposée
+à deux fonctions vectorielles : il n’existe pas de division de deux vecteurs dans un espace
+vectoriel. ■
+Proposition I.4.3.3 — Différentielle d’un quotient de fonctions à valeurs réelles.
+Soient n∈N ∗, U un ouvert de
+− →
+Rn, ⃗a∈U et f,g : U− →R deux fonctions différentiables en ⃗a
+telles queg( ⃗a)̸=0. Alors f
+g est différentiable en ⃗aet
+− − − − − →
+d
+µ f
+g
+¶
+⃗a
+= g( ⃗a)− − →d f ⃗a −f( ⃗a)− − →d g⃗a
+g( ⃗a)2 .
+Démonstration.
+Soient n∈N ∗, U un ouvert de
+− →
+Rn, ⃗a∈U et f,g : U− →R deux fonctions différentiables en ⃗a
+telles queg( ⃗a)̸=0.
+Comme f
+g =f 1
+g , la Proposition I.4.3.2 donne
+− − − − − →
+d
+µ 1
+g
+¶
+⃗a
+= − 1
+g( ⃗a)2
+− − →d g⃗a.
+En utilisant ensuite la Proposition I.4.1.3,
+− − − − − →
+d
+µ f
+g
+¶
+⃗a
+= 1
+g( ⃗a)
+− − →d f ⃗a − f( ⃗a)
+g( ⃗a)2
+− − →d g⃗a
+= g( ⃗a)− − →d f ⃗a −f( ⃗a)− − →d g⃗a
+g( ⃗a)2 .
+■

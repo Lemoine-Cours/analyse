@@ -1,0 +1,33 @@
+{
+  "status": "passed",
+  "count": 25,
+  "method": "Fractions exactes ; développement polynomial sur des droites, extraction du coefficient du premier ordre ; produits matriciels et géométrie exacte.",
+  "checks": [
+    "Développement quadratique exact",
+    "Gradient obtenu par coefficients de déplacement",
+    "Valeur numérique exacte",
+    "Variation affine",
+    "Erreur de linéarisation exacte",
+    "Reste majoré par trois normes au carré",
+    "Action différentielle vectorielle",
+    "Reste de F",
+    "Composition directe",
+    "Produit jacobien",
+    "Dérivée suivant le vecteur donné",
+    "Vecteur donné norme 5",
+    "Dérivée unitaire",
+    "Norme du gradient au carré",
+    "Direction maximale normalisée",
+    "Tangente de niveau perpendiculaire au gradient",
+    "Point de la figure sur niveau 4",
+    "Flèche à échelle 1/5",
+    "Trajectoire polynomiale directe",
+    "Dérivée trajectoire",
+    "Règle du produit contrôlée par développement",
+    "Contre-exemple deux chemins",
+    "Tangente à x² en 1",
+    "Intégrité cours-original.pdf",
+    "Intégrité td-original.pdf"
+  ],
+  "limit": "Les calculs exacts ne constituent pas une preuve des théorèmes généraux."
+}

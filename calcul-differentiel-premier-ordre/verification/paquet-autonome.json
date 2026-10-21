@@ -1,0 +1,6 @@
+{
+  "status": "passed",
+  "pages": 54,
+  "identite_pixels": true,
+  "method": "Deux compilations indépendantes, dépôt et paquet ; comparaison pixel par pixel à échelle 2."
+}

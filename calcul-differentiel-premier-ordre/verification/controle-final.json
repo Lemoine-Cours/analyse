@@ -1,0 +1,17 @@
+{
+  "status": "ready_for_teacher_review",
+  "pages": 54,
+  "core_slides": 48,
+  "complement_slides": 4,
+  "pdf_sha256": "515f3e640d292b5674571e8f73af330874d7218bfad87f3007575a4f56d6befc",
+  "body_sha256_lf": "4f7327a75a72c2db6118e10a9689e1ad0b2278169cf77ff07ffdaf8f3dc3581f",
+  "roles": "Documentation, pédagogie, rédaction, vérification scientifique et visuelle exécutées successivement par le même assistant.",
+  "pipeline": "Profil vérifié en prepare-only ; aucun agent autonome appelé.",
+  "reports": [
+    "calculs.json",
+    "scientifique.json",
+    "notations-dependances.json",
+    "visuel.json",
+    "paquet-autonome.json"
+  ]
+}

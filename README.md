@@ -2,7 +2,7 @@
 
 Dépôt de David Lemoine pour les supports universitaires d’analyse en **Beamer et PDF**, avec la charte **IMT Atlantique** partagée avec le [cours d’algèbre](https://github.com/Lemoine-Cours/algebre).
 
-Le dépôt est prêt à recevoir les chapitres. Aucun chapitre d’analyse n’a encore été généré : le contenu sera établi à partir du cours, des TD et des slides existants fournis par l’enseignant.
+Les chapitres sont construits à partir du cours, des TD et des supports existants fournis par l’enseignant.
 
 ## Organisation
 
@@ -40,3 +40,7 @@ cd analyse
 Ou `bash _modele-chapitre/beamer/build.sh`. LuaLaTeX, Montserrat, STIX Two Math et les dépendances du thème sont nécessaires. Après un clonage simple : `git submodule update --init --recursive`. Les scripts effectuent trois passages et bloquent l’export en cas de débordement ou de caractère manquant.
 
 La compilation seule ne valide pas la mise en page. Inspecter les pages rendues, vérifier les résultats et leurs hypothèses, puis compiler le paquet autonome avant de publier un chapitre.
+
+## Calcul différentiel du premier ordre
+
+[Chapitre](calcul-differentiel-premier-ordre/README.md) · [PDF](calcul-differentiel-premier-ordre/exports/calcul-differentiel-premier-ordre.pdf) · [Beamer autonome](calcul-differentiel-premier-ordre/exports/calcul-differentiel-premier-ordre-sources.zip). 48 slides de socle, 4 compléments ; définitions, théorèmes admis, exemples, figures et contrôles.
